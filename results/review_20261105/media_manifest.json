@@ -1,0 +1,548 @@
+{
+  "schema_version": "1.0",
+  "source_runs": [
+    "fast_20261105T182127Z",
+    "bootstrap_20261105T181834Z"
+  ],
+  "human_video_used": false,
+  "new_training_performed": false,
+  "observation_mode": "oracle_sim_state",
+  "placement_stability_check": "same original controller continued for 1s; specific Can in target and no grasp contact",
+  "fast_initial_success_replays": 9,
+  "fast_initial_stable_success_replays": 9,
+  "teacher_vs_failed_policy_initial_features_match": true,
+  "movies": [
+    {
+      "path": "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/videos/01_pipeline_fast.mp4",
+      "frames": 607,
+      "fps": 10,
+      "duration_seconds": 60.7,
+      "chapters": [
+        {
+          "title": "5단계 실행 증거 | fast",
+          "start_seconds": 0.0,
+          "end_seconds": 5.0,
+          "source_ids": []
+        },
+        {
+          "title": "1단계 | 실제 Panda 데모 선택",
+          "start_seconds": 5.0,
+          "end_seconds": 9.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/01_selection/selection.json"
+          ]
+        },
+        {
+          "title": "2단계 | 목표와 제약 정의",
+          "start_seconds": 9.0,
+          "end_seconds": 13.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/02_task/task_spec.json"
+          ]
+        },
+        {
+          "title": "3단계 | 실제 원본 데모에서 추출한 정보",
+          "start_seconds": 13.0,
+          "end_seconds": 17.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/figures/fast_source_geometry.png"
+          ]
+        },
+        {
+          "title": "3단계 | 실행된 로봇 시범: 목표 칸 표시",
+          "start_seconds": 17.0,
+          "end_seconds": 26.2,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_panda_scripted_42.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_teacher_1042.mp4"
+          ]
+        },
+        {
+          "title": "4단계 | 실제 학습 로그",
+          "start_seconds": 26.2,
+          "end_seconds": 30.2,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/figures/fast_training_loss.png"
+          ]
+        },
+        {
+          "title": "4단계 | 학습된 신경망의 성공 사례",
+          "start_seconds": 30.2,
+          "end_seconds": 42.8,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10001.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10009.mp4"
+          ]
+        },
+        {
+          "title": "5단계 | 실패 분석과 한 번의 피드백",
+          "start_seconds": 42.8,
+          "end_seconds": 47.8,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/before_after.json"
+          ]
+        },
+        {
+          "title": "5단계 | 같은 시드의 피드백 전·후",
+          "start_seconds": 47.8,
+          "end_seconds": 56.7,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10001.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_after_10001.mp4"
+          ]
+        },
+        {
+          "title": "이 영상에서 확인한 범위",
+          "start_seconds": 56.7,
+          "end_seconds": 60.7,
+          "source_ids": []
+        }
+      ]
+    },
+    {
+      "path": "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/videos/02_pipeline_bootstrap_feedback.mp4",
+      "frames": 703,
+      "fps": 10,
+      "duration_seconds": 70.3,
+      "chapters": [
+        {
+          "title": "5단계 실행 증거 | bootstrap",
+          "start_seconds": 0.0,
+          "end_seconds": 5.0,
+          "source_ids": []
+        },
+        {
+          "title": "1단계 | 실제 Panda 데모 선택",
+          "start_seconds": 5.0,
+          "end_seconds": 9.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/01_selection/selection.json"
+          ]
+        },
+        {
+          "title": "2단계 | 목표와 제약 정의",
+          "start_seconds": 9.0,
+          "end_seconds": 13.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/02_task/task_spec.json"
+          ]
+        },
+        {
+          "title": "3단계 | 실제 원본 데모에서 추출한 정보",
+          "start_seconds": 13.0,
+          "end_seconds": 17.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/figures/bootstrap_source_geometry.png"
+          ]
+        },
+        {
+          "title": "3단계 | 실행된 로봇 시범: 목표 칸 표시",
+          "start_seconds": 17.0,
+          "end_seconds": 26.7,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/bootstrap_teacher_1042.mp4"
+          ]
+        },
+        {
+          "title": "4단계 | 실제 학습 로그",
+          "start_seconds": 26.7,
+          "end_seconds": 30.7,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/figures/bootstrap_training_loss.png"
+          ]
+        },
+        {
+          "title": "4단계 | 작은 데이터로 학습한 초기 정책의 실패",
+          "start_seconds": 30.7,
+          "end_seconds": 46.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/bootstrap_bc_before_10002.mp4"
+          ]
+        },
+        {
+          "title": "5단계 | 추가 수집과 재학습",
+          "start_seconds": 46.0,
+          "end_seconds": 51.0,
+          "source_ids": []
+        },
+        {
+          "title": "5단계 | 실제로 실패 → 성공이 된 사례",
+          "start_seconds": 51.0,
+          "end_seconds": 66.3,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/bootstrap_bc_before_10002.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/bootstrap_bc_after_10002.mp4"
+          ]
+        },
+        {
+          "title": "이 영상에서 확인한 범위",
+          "start_seconds": 66.3,
+          "end_seconds": 70.3,
+          "source_ids": []
+        }
+      ]
+    },
+    {
+      "path": "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/videos/03_fast_success_gallery.mp4",
+      "frames": 551,
+      "fps": 10,
+      "duration_seconds": 55.1,
+      "chapters": [
+        {
+          "title": "fast 학습 정책 성공 사례 전체",
+          "start_seconds": 0.0,
+          "end_seconds": 5.0,
+          "source_ids": []
+        },
+        {
+          "title": "성공 사례 1–2 / 9",
+          "start_seconds": 5.0,
+          "end_seconds": 14.0,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10001.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10002.mp4"
+          ]
+        },
+        {
+          "title": "성공 사례 3–4 / 9",
+          "start_seconds": 14.0,
+          "end_seconds": 23.2,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10003.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10004.mp4"
+          ]
+        },
+        {
+          "title": "성공 사례 5–6 / 9",
+          "start_seconds": 23.2,
+          "end_seconds": 32.7,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10005.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10006.mp4"
+          ]
+        },
+        {
+          "title": "성공 사례 7–8 / 9",
+          "start_seconds": 32.7,
+          "end_seconds": 42.5,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10007.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10008.mp4"
+          ]
+        },
+        {
+          "title": "성공 사례 9–9 / 9",
+          "start_seconds": 42.5,
+          "end_seconds": 55.1,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10009.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/videos/04_failure_teacher_vs_policy.mp4",
+      "frames": 356,
+      "fps": 10,
+      "duration_seconds": 35.6,
+      "chapters": [
+        {
+          "title": "현재 핵심 실패 | 같은 seed10000",
+          "start_seconds": 0.0,
+          "end_seconds": 5.0,
+          "source_ids": []
+        },
+        {
+          "title": "같은 조건: 교사 성공 / 학습 정책 실패",
+          "start_seconds": 5.0,
+          "end_seconds": 20.3,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_teacher_10000.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10000.mp4"
+          ]
+        },
+        {
+          "title": "추가 데이터 후에도 남은 같은 실패",
+          "start_seconds": 20.3,
+          "end_seconds": 35.6,
+          "source_ids": [
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_before_10000.mp4",
+            "/home/dheo/Cross_Robot_Real2Sim/results/review_20261105/episodes/fast_bc_after_10000.mp4"
+          ]
+        }
+      ]
+    }
+  ],
+  "verified_media": [
+    {
+      "path": "episodes/bootstrap_bc_after_10002.mp4",
+      "frames": 98,
+      "duration_seconds": 9.8,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 361671,
+      "sha256": "db39495ef3f7e26afaf89735df26a63b00bafba1f50483409dfc00cd3dcbaabb"
+    },
+    {
+      "path": "episodes/bootstrap_bc_before_10002.mp4",
+      "frames": 153,
+      "duration_seconds": 15.3,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 354040,
+      "sha256": "331451cbe2ff73f3bcfcd3e84df2d04083fecf85aa4a9b11b7433db3d78b8e6a"
+    },
+    {
+      "path": "episodes/bootstrap_teacher_1042.mp4",
+      "frames": 97,
+      "duration_seconds": 9.7,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 373129,
+      "sha256": "5c25b32f536e75a235a5dd86c64e0b758821c929b584c3fdd72ef3f203851945"
+    },
+    {
+      "path": "episodes/fast_bc_after_10000.mp4",
+      "frames": 153,
+      "duration_seconds": 15.3,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 167370,
+      "sha256": "18a805e333b602d2e621aa2668154e84a537414e70396eaeb3ab283892fe2c77"
+    },
+    {
+      "path": "episodes/fast_bc_after_10001.mp4",
+      "frames": 89,
+      "duration_seconds": 8.9,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 342429,
+      "sha256": "c3db5e7ff7086f8c466b5b3156492d68923a089a70bc4fd584dca837dbd070b9"
+    },
+    {
+      "path": "episodes/fast_bc_before_10000.mp4",
+      "frames": 153,
+      "duration_seconds": 15.3,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 178984,
+      "sha256": "904e860db464bb19871c7937a2668d9c033eb1e9cdbd851c3a38bb74acae2f52"
+    },
+    {
+      "path": "episodes/fast_bc_before_10001.mp4",
+      "frames": 88,
+      "duration_seconds": 8.8,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 340415,
+      "sha256": "1564344c5b6a3083bf70b0d8eb12a3e003be0d2acc0bd51e78a8c153ac52b57d"
+    },
+    {
+      "path": "episodes/fast_bc_before_10002.mp4",
+      "frames": 90,
+      "duration_seconds": 9.0,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 348790,
+      "sha256": "4c63433f55704b696c97ad93d1f75002e4f764ea11f037eba97498a49ed18a38"
+    },
+    {
+      "path": "episodes/fast_bc_before_10003.mp4",
+      "frames": 91,
+      "duration_seconds": 9.1,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 361701,
+      "sha256": "409fefabd554b1debf80e134da378b5b9458dd2af02abef621b76d50102889f2"
+    },
+    {
+      "path": "episodes/fast_bc_before_10004.mp4",
+      "frames": 92,
+      "duration_seconds": 9.2,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 365292,
+      "sha256": "16f444bb4d1145be3a64c19503bfc96c739e50d859c1a386c087edbb2027dd0c"
+    },
+    {
+      "path": "episodes/fast_bc_before_10005.mp4",
+      "frames": 89,
+      "duration_seconds": 8.9,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 334387,
+      "sha256": "059bccaf5667691a5393268c0e17309499989bbd22ffb29f960c7bdbc135f8be"
+    },
+    {
+      "path": "episodes/fast_bc_before_10006.mp4",
+      "frames": 95,
+      "duration_seconds": 9.5,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 371453,
+      "sha256": "d5bb8df1d03c4112a3d53ba179605e7258933529690008b20aab16669e9e7d69"
+    },
+    {
+      "path": "episodes/fast_bc_before_10007.mp4",
+      "frames": 90,
+      "duration_seconds": 9.0,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 355611,
+      "sha256": "57a43de8044249a0c7bb2aa840c5f07de56eb1a7e32f3ced070b1eebed3b2794"
+    },
+    {
+      "path": "episodes/fast_bc_before_10008.mp4",
+      "frames": 98,
+      "duration_seconds": 9.8,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 373548,
+      "sha256": "4ceea28fc931fd33e7ad970ae4720ea9161e70f757e53c1ec43c12557041eebb"
+    },
+    {
+      "path": "episodes/fast_bc_before_10009.mp4",
+      "frames": 126,
+      "duration_seconds": 12.6,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 416304,
+      "sha256": "569de6db68508fb364fc86d46ae6bf3968ab589cc1ad7ec3576695afb6a6a303"
+    },
+    {
+      "path": "episodes/fast_panda_scripted_42.mp4",
+      "frames": 80,
+      "duration_seconds": 8.0,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 359368,
+      "sha256": "564258e3ff1ea2daf9961976260f1ffff313cd9a3602d561c1a94b2f2d293175"
+    },
+    {
+      "path": "episodes/fast_teacher_10000.mp4",
+      "frames": 92,
+      "duration_seconds": 9.2,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 345594,
+      "sha256": "973d0b4ec26b0126124fdefe065e217ae241152caa6cc5efa318bf767fd75120"
+    },
+    {
+      "path": "episodes/fast_teacher_1042.mp4",
+      "frames": 92,
+      "duration_seconds": 9.2,
+      "frame_shape": [
+        480,
+        640,
+        3
+      ],
+      "bytes": 366836,
+      "sha256": "dc855208ca5f521c1c02bcbf8599ef23ada8b5cf1049589bd74410a1972cec9d"
+    },
+    {
+      "path": "videos/01_pipeline_fast.mp4",
+      "frames": 607,
+      "duration_seconds": 60.7,
+      "frame_shape": [
+        720,
+        1280,
+        3
+      ],
+      "bytes": 2648840,
+      "sha256": "d4bb93a6db79ddf593fe1d5026d94c8556037418196879d1463aeb53457b20a5"
+    },
+    {
+      "path": "videos/02_pipeline_bootstrap_feedback.mp4",
+      "frames": 703,
+      "duration_seconds": 70.3,
+      "frame_shape": [
+        720,
+        1280,
+        3
+      ],
+      "bytes": 1891913,
+      "sha256": "c11f4a6746199d7bb6e082913a387d20170f5185c12e58cf86aa5d14aa8dfbfe"
+    },
+    {
+      "path": "videos/03_fast_success_gallery.mp4",
+      "frames": 551,
+      "duration_seconds": 55.1,
+      "frame_shape": [
+        720,
+        1280,
+        3
+      ],
+      "bytes": 3153006,
+      "sha256": "b46aab597cb8838739dc51f571e67fab5923b1260b7d9ad04f1d8cd3090d5a20"
+    },
+    {
+      "path": "videos/04_failure_teacher_vs_policy.mp4",
+      "frames": 356,
+      "duration_seconds": 35.6,
+      "frame_shape": [
+        720,
+        1280,
+        3
+      ],
+      "bytes": 1099135,
+      "sha256": "a1fc80155d771c099878f1bc90ebc836af3e3b7c8122e15258e8e4bc6279e0b2"
+    }
+  ],
+  "limitations": [
+    "Full human-video branch untested",
+    "Source transfer uses grasp offset and lift geometry plus hand-coded phases",
+    "Current success counts do not establish causal source-transfer advantage",
+    "10 fast evaluation seeds only"
+  ]
+}

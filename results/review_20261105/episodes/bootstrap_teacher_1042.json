@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "case_id": "bootstrap_teacher_1042",
+  "source_run_id": "bootstrap_20261105T181834Z",
+  "seed": 1042,
+  "mode": "bootstrap",
+  "teacher_origin": "source_retargeted",
+  "robot": "UR5e",
+  "source_demo_id": "demo_2",
+  "checkpoint": null,
+  "source_npz": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1042.npz",
+  "source_original_success": true,
+  "same_initial_features": true,
+  "terminal_step": 168,
+  "terminal": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20748844711656336,
+      0.40021982195193573,
+      0.8600613624253811
+    ],
+    "eef_position": [
+      0.18790794523457888,
+      0.40243559814019164,
+      0.9006108629870658
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.010245403248835893
+  },
+  "post_hold": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.2074549455775002,
+      0.4002885240660914,
+      0.8600574428122261
+    ],
+    "eef_position": [
+      0.1854774580927925,
+      0.40007298558081394,
+      1.095468848619732
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.010197625569574882
+  },
+  "post_hold_steps": 20,
+  "post_hold_seconds": 1.0,
+  "stable_placement_1s": true,
+  "max_lift_m": 0.23626619233945068,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": 0.0,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/bootstrap_teacher_1042.mp4",
+  "video_frames": 97,
+  "fps": 10,
+  "video_sha256": "5c25b32f536e75a235a5dd86c64e0b758821c929b584c3fdd72ef3f203851945",
+  "cache_key": {
+    "request": {
+      "case_id": "bootstrap_teacher_1042",
+      "run_id": "bootstrap_20261105T181834Z",
+      "seed": 1042,
+      "teacher_origin": "source_retargeted",
+      "source_demo_id": "demo_2",
+      "original_npz": "runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1042.npz",
+      "variant_label": "bootstrap 원본 데모 기반 교사"
+    },
+    "implementation_sha256": "396b96effb4432f5dcf5e3a6c77f4046e6a5eb890ba05dc05b84c218e518ea4b",
+    "config_sha256": "2ea8dcd8101995be168e36d52921afb3a98a0ba163ad74fcf9d1608e8543707f",
+    "checkpoint_sha256": null,
+    "original_npz_sha256": "db7606c058b92054d5571408401f3a62a3c8a4ac61e27ca4a9ec7f6297d8d21b"
+  }
+}

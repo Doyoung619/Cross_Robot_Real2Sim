@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "case_id": "bootstrap_bc_before_10002",
+  "source_run_id": "bootstrap_20261105T181834Z",
+  "seed": 10002,
+  "mode": "bootstrap",
+  "teacher_origin": "learned_policy",
+  "robot": "UR5e",
+  "source_demo_id": null,
+  "checkpoint": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/checkpoint.pt",
+  "source_npz": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10002.npz",
+  "source_original_success": false,
+  "same_initial_features": true,
+  "terminal_step": 300,
+  "terminal": {
+    "native_success": false,
+    "specific_can_inside": false,
+    "grasp_contact": false,
+    "object_position": [
+      0.04309565713872597,
+      -0.25389214308090285,
+      0.8600478611997433
+    ],
+    "eef_position": [
+      0.2212863837436196,
+      -0.1767308316978606,
+      0.8646155924267747
+    ],
+    "phase": "pregrasp",
+    "xy_error_m": 0.6743080502209374
+  },
+  "post_hold": {
+    "native_success": false,
+    "specific_can_inside": false,
+    "grasp_contact": false,
+    "object_position": [
+      0.04309565713872597,
+      -0.25389214308090285,
+      0.8600478611997433
+    ],
+    "eef_position": [
+      0.2212863837436196,
+      -0.1767308316978606,
+      0.8646155924267747
+    ],
+    "phase": "pregrasp",
+    "xy_error_m": 0.6743080502209374
+  },
+  "post_hold_steps": 0,
+  "post_hold_seconds": 0.0,
+  "stable_placement_1s": false,
+  "max_lift_m": 6.201863304600153e-05,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": 0.0,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/bootstrap_bc_before_10002.mp4",
+  "video_frames": 153,
+  "fps": 10,
+  "video_sha256": "331451cbe2ff73f3bcfcd3e84df2d04083fecf85aa4a9b11b7433db3d78b8e6a",
+  "cache_key": {
+    "request": {
+      "case_id": "bootstrap_bc_before_10002",
+      "run_id": "bootstrap_20261105T181834Z",
+      "seed": 10002,
+      "teacher_origin": "learned_policy",
+      "checkpoint": "runs/bootstrap_20261105T181834Z/04_policy/checkpoint.pt",
+      "config_path": "04_policy/effective_config.yaml",
+      "original_npz": "runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10002.npz",
+      "variant_label": "피드백 전"
+    },
+    "implementation_sha256": "396b96effb4432f5dcf5e3a6c77f4046e6a5eb890ba05dc05b84c218e518ea4b",
+    "config_sha256": "2ea8dcd8101995be168e36d52921afb3a98a0ba163ad74fcf9d1608e8543707f",
+    "checkpoint_sha256": "6fdaf3b16c448c2d1b7f538ade124c689fbc369fbe82849a0e35217f7a5c8c09",
+    "original_npz_sha256": "057796832155404e0188b3032be80ab492c7094efd49e060b9b38cba9bf1fde2"
+  }
+}

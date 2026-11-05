@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "case_id": "fast_bc_before_10004",
+  "source_run_id": "fast_20261105T182127Z",
+  "seed": 10004,
+  "mode": "fast",
+  "teacher_origin": "learned_policy",
+  "robot": "UR5e",
+  "source_demo_id": null,
+  "checkpoint": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/checkpoint.pt",
+  "source_npz": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10004.npz",
+  "source_original_success": true,
+  "same_initial_features": true,
+  "terminal_step": 158,
+  "terminal": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20173846145815114,
+      0.40268553162632725,
+      0.8600726127275116
+    ],
+    "eef_position": [
+      0.20033387254447432,
+      0.40256687250007467,
+      0.9067623726113282
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.004242520184583711
+  },
+  "post_hold": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20165162159875327,
+      0.4026799370219725,
+      0.8600488118565288
+    ],
+    "eef_position": [
+      0.1860317849470951,
+      0.38983615426626483,
+      1.1300694947140186
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.004155519128955002
+  },
+  "post_hold_steps": 20,
+  "post_hold_seconds": 1.0,
+  "stable_placement_1s": true,
+  "max_lift_m": 0.19705550850365428,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": 0.0,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/fast_bc_before_10004.mp4",
+  "video_frames": 92,
+  "fps": 10,
+  "video_sha256": "16f444bb4d1145be3a64c19503bfc96c739e50d859c1a386c087edbb2027dd0c",
+  "cache_key": {
+    "request": {
+      "case_id": "fast_bc_before_10004",
+      "run_id": "fast_20261105T182127Z",
+      "seed": 10004,
+      "teacher_origin": "learned_policy",
+      "checkpoint": "runs/fast_20261105T182127Z/04_policy/checkpoint.pt",
+      "config_path": "04_policy/effective_config.yaml",
+      "original_npz": "runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10004.npz",
+      "variant_label": "피드백 전"
+    },
+    "implementation_sha256": "396b96effb4432f5dcf5e3a6c77f4046e6a5eb890ba05dc05b84c218e518ea4b",
+    "config_sha256": "426d89de7824d67084636a72e079fea555ba0ada1b8451885bcba8fd5aeaf29a",
+    "checkpoint_sha256": "71148db0b7a100df0465191ce3329b0fa9a56faace25775495bcebbfde75220e",
+    "original_npz_sha256": "5b986f6503be5b121678f2313910e1c75970836bf98672685da44b0d79949674"
+  }
+}

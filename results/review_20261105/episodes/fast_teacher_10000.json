@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "case_id": "fast_teacher_10000",
+  "source_run_id": "fast_20261105T182127Z",
+  "seed": 10000,
+  "mode": "fast",
+  "teacher_origin": "source_retargeted",
+  "robot": "UR5e",
+  "source_demo_id": "demo_3",
+  "checkpoint": null,
+  "source_npz": null,
+  "source_original_success": null,
+  "same_initial_features": null,
+  "terminal_step": 158,
+  "terminal": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.2081200494180884,
+      0.3978408153149089,
+      0.8600717172945225
+    ],
+    "eef_position": [
+      0.20263924832221455,
+      0.4007482694067872,
+      0.905056991295913
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.011597131178547016
+  },
+  "post_hold": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20803090643781028,
+      0.3978454144832036,
+      0.860058007076265
+    ],
+    "eef_position": [
+      0.1996780017052408,
+      0.3981237440203376,
+      1.0740753254060285
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.011513694313081479
+  },
+  "post_hold_steps": 20,
+  "post_hold_seconds": 1.0,
+  "stable_placement_1s": true,
+  "max_lift_m": 0.19696483464435488,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": null,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/fast_teacher_10000.mp4",
+  "video_frames": 92,
+  "fps": 10,
+  "video_sha256": "973d0b4ec26b0126124fdefe065e217ae241152caa6cc5efa318bf767fd75120",
+  "cache_key": {
+    "request": {
+      "case_id": "fast_teacher_10000",
+      "run_id": "fast_20261105T182127Z",
+      "seed": 10000,
+      "teacher_origin": "source_retargeted",
+      "source_demo_id": "demo_3",
+      "variant_label": "학습 정책 실패 시드의 교사 진단; 학습에 사용하지 않음"
+    },
+    "implementation_sha256": "396b96effb4432f5dcf5e3a6c77f4046e6a5eb890ba05dc05b84c218e518ea4b",
+    "config_sha256": "426d89de7824d67084636a72e079fea555ba0ada1b8451885bcba8fd5aeaf29a",
+    "checkpoint_sha256": null,
+    "original_npz_sha256": null
+  }
+}

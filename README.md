@@ -79,6 +79,8 @@ Diagnostic causes are deterministic rules on simulator state. In particular, the
 
 ## Results and evidence
 
+Start with the [five-stage success videos and current issue specification](results/review_20261105/README.md). This review includes all nine successful fast-policy evaluations, a bootstrap failure-to-success feedback example, a same-seed teacher/policy failure comparison, and independently checked one-second post-release stability. These are frozen-model replays of the no-human-video path; full human-video transfer remains untested.
+
 See [recorded experiment summaries](results/README.md). Raw local runs are under `runs/RUN_ID/`, including `FINAL_REPORT.md`, input hashes, environment/configuration, stage status/exception traces, executed trajectories, checkpoints, evaluation CSVs, and videos. Large datasets, models, human clips, and raw runs are gitignored.
 
 An executed bootstrap run, `bootstrap_20261105T181834Z`, recorded:

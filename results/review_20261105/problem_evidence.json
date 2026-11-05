@@ -1,0 +1,184 @@
+{
+  "before": {
+    "source_npz": "runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10000.npz",
+    "seed": 10000,
+    "success": false,
+    "phases_seen": [
+      0
+    ],
+    "terminal_phase": "pregrasp",
+    "horizon_seconds": 15.0,
+    "max_lift_m": 6.201863304600153e-05,
+    "had_grasp_contact": false,
+    "pregrasp_target_xyz_m": [
+      -0.007538300650787088,
+      -0.32686416919104344,
+      1.084164393478019
+    ],
+    "last_recorded_eef_xyz_m": [
+      -0.01776439300502102,
+      -0.32238847770137924,
+      1.1494328723219653
+    ],
+    "pregrasp_distance_at_last_recorded_step_m": 0.06621615444701279,
+    "phase_transition_threshold_m": 0.028,
+    "native_failure_code": "unreachable_waypoint",
+    "collision": false
+  },
+  "after": {
+    "source_npz": "runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10000.npz",
+    "seed": 10000,
+    "success": false,
+    "phases_seen": [
+      0
+    ],
+    "terminal_phase": "pregrasp",
+    "horizon_seconds": 15.0,
+    "max_lift_m": 6.201863304600153e-05,
+    "had_grasp_contact": false,
+    "pregrasp_target_xyz_m": [
+      -0.007538300650787088,
+      -0.32686416919104344,
+      1.084164393478019
+    ],
+    "last_recorded_eef_xyz_m": [
+      -0.024827718961696364,
+      -0.31953233495759187,
+      1.1361827296972316
+    ],
+    "pregrasp_distance_at_last_recorded_step_m": 0.055304494227607415,
+    "phase_transition_threshold_m": 0.028,
+    "native_failure_code": "unreachable_waypoint",
+    "collision": false
+  },
+  "distribution_observation": {
+    "outside_full_training_range_features": [
+      "object_x",
+      "goal_minus_object_x"
+    ],
+    "max_abs_initial_zscore": 7.546995162963867,
+    "max_zscore_feature": "object_minus_eef_y",
+    "causal_conclusion": "Unproven; distribution and parameter conditioning require controlled comparison."
+  },
+  "teacher_conditioning": {
+    "source_parameter_sets": {
+      "demo_3": {
+        "grasp_offset": [
+          0.00471316974084729,
+          -0.002264542780533424,
+          0.022811592007326076
+        ],
+        "clearance": 0.2013528014706929,
+        "source_raw_grasp_offset": [
+          0.00471316974084729,
+          -0.002264542780533424,
+          0.022811592007326076
+        ],
+        "source_lift_clearance": 0.2013528014706929,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "demo_5": {
+        "grasp_offset": [
+          -0.010327284932054794,
+          0.001896788510704961,
+          0.014244039494504146
+        ],
+        "clearance": 0.25,
+        "source_raw_grasp_offset": [
+          -0.010327284932054794,
+          0.001896788510704961,
+          0.014244039494504146
+        ],
+        "source_lift_clearance": 0.2738817496684991,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "demo_7": {
+        "grasp_offset": [
+          -0.011302503920461893,
+          3.2476171827333644e-05,
+          0.008643082741767505
+        ],
+        "clearance": 0.22358291521106932,
+        "source_raw_grasp_offset": [
+          -0.011302503920461893,
+          3.2476171827333644e-05,
+          0.008643082741767505
+        ],
+        "source_lift_clearance": 0.22358291521106932,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "demo_4": {
+        "grasp_offset": [
+          -0.000976554947612035,
+          -8.81339783287069e-05,
+          0.012820004127023221
+        ],
+        "clearance": 0.2107146721257922,
+        "source_raw_grasp_offset": [
+          -0.000976554947612035,
+          -8.81339783287069e-05,
+          0.012820004127023221
+        ],
+        "source_lift_clearance": 0.2107146721257922,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "demo_1": {
+        "grasp_offset": [
+          -0.0005411851037711163,
+          0.0009717861931019534,
+          0.02411592889167291
+        ],
+        "clearance": 0.21320129007339816,
+        "source_raw_grasp_offset": [
+          -0.0005411851037711163,
+          0.0009717861931019534,
+          0.02411592889167291
+        ],
+        "source_lift_clearance": 0.21320129007339816,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      }
+    },
+    "explicit_feature_names": [
+      "eef_x",
+      "eef_y",
+      "eef_z",
+      "object_x",
+      "object_y",
+      "object_z",
+      "goal_x",
+      "goal_y",
+      "goal_z",
+      "object_minus_eef_x",
+      "object_minus_eef_y",
+      "object_minus_eef_z",
+      "goal_minus_object_x",
+      "goal_minus_object_y",
+      "goal_minus_object_z",
+      "gripper_opening",
+      "grasp_contact",
+      "object_lift",
+      "phase_pregrasp",
+      "phase_grasp",
+      "phase_close",
+      "phase_lift",
+      "phase_transport",
+      "phase_lower",
+      "phase_open",
+      "phase_retreat"
+    ],
+    "observation": "Teacher grasp offset and lift clearance vary with source demo; these parameters are not explicit BC features. Evaluation phase tracker uses first successful teacher parameters.",
+    "causal_conclusion": "Structural mismatch confirmed; contribution to failure remains a hypothesis."
+  },
+  "baseline_summary": {
+    "successes": 9,
+    "episodes": 10,
+    "success_only_mean_xy_error_m": 0.006525246927845111,
+    "all_mean_xy_error_m": 0.08154574625548805
+  },
+  "feedback_summary": {
+    "successes": 9,
+    "episodes": 10,
+    "success_only_mean_xy_error_m": 0.00989441948014424,
+    "all_mean_xy_error_m": 0.08457800155255726
+  }
+}
