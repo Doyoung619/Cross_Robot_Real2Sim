@@ -1,0 +1,152 @@
+{
+  "run_id": "fast_20261105T182127Z",
+  "status": "completed_degraded",
+  "exit_code": 0,
+  "started_at": "2026-11-05T18:29:31.480305+00:00",
+  "finished_at": "2026-11-05T18:29:32.224141+00:00",
+  "reason": null,
+  "schema_version": "1.0",
+  "stages": {
+    "1": {
+      "status": "completed_degraded",
+      "started_at": "2026-11-05T18:21:27.214141+00:00",
+      "finished_at": "2026-11-05T18:21:27.282992+00:00",
+      "duration_seconds": 0.06872953311540186
+    },
+    "2": {
+      "status": "completed_degraded",
+      "started_at": "2026-11-05T18:21:27.284376+00:00",
+      "finished_at": "2026-11-05T18:21:27.286221+00:00",
+      "duration_seconds": 0.0013491238933056593
+    },
+    "3": {
+      "status": "completed",
+      "started_at": "2026-11-05T18:24:42.653091+00:00",
+      "finished_at": "2026-11-05T18:24:55.096165+00:00",
+      "duration_seconds": 12.44184605893679
+    },
+    "4": {
+      "status": "completed",
+      "started_at": "2026-11-05T18:27:30.556905+00:00",
+      "finished_at": "2026-11-05T18:27:46.360640+00:00",
+      "duration_seconds": 15.80242468090728
+    },
+    "5": {
+      "status": "completed",
+      "started_at": "2026-11-05T18:27:46.367006+00:00",
+      "finished_at": "2026-11-05T18:28:05.452488+00:00",
+      "duration_seconds": 19.08373837196268
+    }
+  },
+  "raw_local_run": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z",
+  "exported_files": {
+    "FINAL_REPORT.md": {
+      "bytes": 4518,
+      "sha256": "2f839e130541d76d40301e1a6af402c66c2e71b7d66663cc117ef59099aed3b7",
+      "note": "Local NPZ link clarified for the compact export"
+    },
+    "manifest.json": {
+      "bytes": 1567,
+      "sha256": "ea8a10699b76e088d2920104aeb98f744a6cde858acbe4e6eaf813a80fb8fe69"
+    },
+    "environment.json": {
+      "bytes": 601,
+      "sha256": "00fb2293899092024a3d5175b9d314a80c0014f354b72ca662fa62280d670b91"
+    },
+    "config.yaml": {
+      "bytes": 949,
+      "sha256": "714704b4fe5d48b95b6000c597aa0915dd5b7f831fbcf578d531f5bd8ed52ca2"
+    },
+    "01_selection/selection.json": {
+      "bytes": 16750,
+      "sha256": "a13553301dc440d4c0cfa15c0782c1f391f9a4cf8986c0b7c76ab66329ece940"
+    },
+    "01_selection/source_inspection.json": {
+      "bytes": 10635,
+      "sha256": "edcf4b08a25c14727fab9ff9071aceb30ea31c9841db629cee0f731a50b4c79f"
+    },
+    "02_task/task_spec.json": {
+      "bytes": 1647,
+      "sha256": "1cae74ed07f99b03cadb93283a6d9b54509279dfac2daec3d76f6bc65f5e56c8"
+    },
+    "03_retarget/stats.json": {
+      "bytes": 34763,
+      "sha256": "44093c9485601692d4083cd7b51351dd0bea9c5c87be73ad32c9657a2855d3e6"
+    },
+    "03_retarget/attempts.csv": {
+      "bytes": 3513,
+      "sha256": "a417772b2bc39c637b5754296e8c2ed04cf11c6451a1c9584688824a2e630cb4"
+    },
+    "04_policy/eval.csv": {
+      "bytes": 1862,
+      "sha256": "bd4b4e4a8ad2284483fc230f559758908b31b14cfaec1cf49f58b94fdb4e3996"
+    },
+    "04_policy/eval_metrics.json": {
+      "bytes": 560,
+      "sha256": "2988e02419c6fb4b0bfe23e62bfe220d0fdece8e8025d94407c155bf5bee2ba3"
+    },
+    "04_policy/train_metrics.json": {
+      "bytes": 268,
+      "sha256": "48b747bbc1f88484e09532c522fae293ae0942c87362359fd523bf6e96a19078"
+    },
+    "04_policy/train_log.csv": {
+      "bytes": 18132,
+      "sha256": "8276067b8164d00a2c456328439c511e1054ec94280f2d518c5be26d3b412ae4"
+    },
+    "04_policy/dataset_metadata.json": {
+      "bytes": 30531,
+      "sha256": "7a6dd6d179353f5e54ab022773ae18d0714696a67269489dc255239720024f39"
+    },
+    "05_diagnosis/failure_report.csv": {
+      "bytes": 16182,
+      "sha256": "28ed337a4697c9cb1ebc1aa940e2e4f1229a0d2c1c16b65bc65b1b953bc06b50"
+    },
+    "05_diagnosis/feedback_requests.json": {
+      "bytes": 3219,
+      "sha256": "fc0f4e3273cfaa89c46b8a29b41cd2b504bb5a5b02b44662a1bebec1b66a3752"
+    },
+    "05_diagnosis/before_after.json": {
+      "bytes": 1907,
+      "sha256": "68def25fcb60651a9f2589bbe2ed02efe2dcda82e7f84414614483ddabfa5370"
+    },
+    "05_diagnosis/metrics.json": {
+      "bytes": 2724,
+      "sha256": "4090d8a0379650c82c98416b80891df2868e77d94bfa42248d10a735aeeda22f"
+    },
+    "05_diagnosis/feedback_run/04_policy/eval.csv": {
+      "bytes": 2123,
+      "sha256": "cd20e03f6ab99c8c9ea5ac40af503f0d6c97b42ff1ab7a5ada0de786032b2cef"
+    },
+    "05_diagnosis/feedback_run/04_policy/eval_metrics.json": {
+      "bytes": 586,
+      "sha256": "787c0b66a75c9f6887a8a4481e66805a3cde2da6a0aac7fa056929ad03bbb345"
+    },
+    "videos/source.mp4": {
+      "bytes": 87724,
+      "sha256": "b1bd6629459c12e794ade61e7ce928e2046be477ef62f18f5ce137687e7a7466"
+    },
+    "videos/target_teacher.mp4": {
+      "bytes": 88886,
+      "sha256": "e2973c6cfff5deeca1529dd76ff2881ee222f83020476f23bd24d581372fbedd"
+    },
+    "videos/target_bc.mp4": {
+      "bytes": 39168,
+      "sha256": "afb510738bcde98d5b1a37cad357552366ad52d7ad9973dbce1a4ba3c8e7fb6f"
+    },
+    "videos/comparison.mp4": {
+      "bytes": 209979,
+      "sha256": "93f2066825e1e83b70ecdab12dda801ebd010f4b83d5989ae6bd97efc1af706d"
+    },
+    "05_diagnosis/feedback_run/videos/target_bc.mp4": {
+      "bytes": 34256,
+      "sha256": "fcf72ee673c6879f80325dfe79cf21e00e4ce537f810b0a90925c91cbbe1a0b6"
+    }
+  },
+  "excluded": [
+    "source HDF5",
+    "model checkpoints",
+    "trajectory NPZs",
+    "raw logs",
+    "historical intermediate attempts"
+  ]
+}

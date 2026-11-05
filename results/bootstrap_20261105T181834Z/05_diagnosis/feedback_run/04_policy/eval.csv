@@ -1,0 +1,4 @@
+seed,success,placement_error,lift_achieved,steps,failure_code,teacher_origin,robot,rollout_path,diagnostic_oracle_used
+10000,False,0.23947194091335655,True,300,horizon_timeout,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10000.npz,True
+10001,False,0.5304184820417063,False,300,unreachable_waypoint,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10001.npz,True
+10002,True,0.006745614959302857,True,169,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10002.npz,True

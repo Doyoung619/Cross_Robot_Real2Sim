@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "model_name": "MLP_BC_2x128",
+  "seed": 42,
+  "mode": "fast",
+  "schema_version": "1.0",
+  "privileged_state_used": true,
+  "teacher_origin": "learned_policy",
+  "seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009
+  ],
+  "episodes": 10,
+  "successes": 9,
+  "success_rate": 0.9,
+  "mean_placement_error": 0.08154574625548805,
+  "checkpoint": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/checkpoint.pt",
+  "fresh_process_evaluation": true
+}

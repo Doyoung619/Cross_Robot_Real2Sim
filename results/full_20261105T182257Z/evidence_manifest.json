@@ -1,0 +1,92 @@
+{
+  "run_id": "full_20261105T182257Z",
+  "status": "partial",
+  "exit_code": 0,
+  "started_at": "2026-11-05T18:22:57.958528+00:00",
+  "finished_at": "2026-11-05T18:22:58.777762+00:00",
+  "reason": "requires_human_video",
+  "schema_version": "1.0",
+  "stages": {
+    "1": {
+      "status": "completed_degraded",
+      "started_at": "2026-11-05T18:22:57.959180+00:00",
+      "finished_at": "2026-11-05T18:22:58.024809+00:00",
+      "duration_seconds": 0.06551762018352747
+    },
+    "2": {
+      "status": "skipped_missing_input",
+      "started_at": "2026-11-05T18:22:58.025999+00:00",
+      "finished_at": "2026-11-05T18:22:58.027347+00:00",
+      "duration_seconds": 0.0010110558941960335
+    },
+    "3": {
+      "status": "skipped_missing_input",
+      "started_at": "2026-11-05T18:22:58.028184+00:00",
+      "finished_at": "2026-11-05T18:22:58.028616+00:00",
+      "duration_seconds": 7.237400859594345e-05
+    },
+    "4": {
+      "status": "skipped_missing_input",
+      "started_at": "2026-11-05T18:22:58.029653+00:00",
+      "finished_at": "2026-11-05T18:22:58.030086+00:00",
+      "duration_seconds": 6.910995580255985e-05
+    },
+    "5": {
+      "status": "completed_degraded",
+      "started_at": "2026-11-05T18:22:58.031151+00:00",
+      "finished_at": "2026-11-05T18:22:58.612964+00:00",
+      "duration_seconds": 0.58145842095837
+    }
+  },
+  "raw_local_run": "/home/dheo/Cross_Robot_Real2Sim/runs/full_20261105T182257Z",
+  "exported_files": {
+    "FINAL_REPORT.md": {
+      "bytes": 3761,
+      "sha256": "2575499f323631fc1997327980a87a98c4812b8f4ea97ebdfa0555a1443ed1e2",
+      "note": "Local NPZ link clarified for the compact export"
+    },
+    "manifest.json": {
+      "bytes": 1711,
+      "sha256": "53a67437a68567aa6e5d0a4b62ee1e090decb81c96f75754275ed0b0951ba251"
+    },
+    "environment.json": {
+      "bytes": 601,
+      "sha256": "d8382b7d56ddf64bfa3e9a8ef80355ac0d3ed77c377229c991dc3092ed473a44"
+    },
+    "config.yaml": {
+      "bytes": 1061,
+      "sha256": "cb70058fb4f0a75da614ee9b580ac4d743b9fd0b7ecf65e1cdc53ebd653cbe37"
+    },
+    "01_selection/selection.json": {
+      "bytes": 10718,
+      "sha256": "baedb2dd396ac02c64e57db13f285de79ae6d8f80136784913e844f3b87d5dcd"
+    },
+    "01_selection/source_inspection.json": {
+      "bytes": 7581,
+      "sha256": "82557889fd2aebbfe58d8b11db0a3d4af7ab16f7170e2ec7bf23fb07d8e5e5af"
+    },
+    "05_diagnosis/failure_report.csv": {
+      "bytes": 33,
+      "sha256": "ecf5f1cdf0d0ef13a1d32b4997e3e89bbba0543a00e344d7c5f4fb8d99341d38"
+    },
+    "05_diagnosis/feedback_requests.json": {
+      "bytes": 410,
+      "sha256": "7a6d04f2eeb6db4714aed1872566655934be6f7fdd861c789cdd84b9316fde99"
+    },
+    "05_diagnosis/before_after.json": {
+      "bytes": 319,
+      "sha256": "bee30e8fa4f05dbc360d64f5073d32a59919aa8620f3adce120cea6d8081e3e6"
+    },
+    "05_diagnosis/metrics.json": {
+      "bytes": 389,
+      "sha256": "09311724058de849dd91493c186721fde14af00b0da482b22e4200ade699ab2a"
+    }
+  },
+  "excluded": [
+    "source HDF5",
+    "model checkpoints",
+    "trajectory NPZs",
+    "raw logs",
+    "historical intermediate attempts"
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "full",
+  "model_controller_name": "hdf5_schema_inspector",
+  "input_ids": [
+    "/home/dheo/Cross_Robot_Real2Sim/data/source/v1.5/can/ph/low_dim_v15.hdf5"
+  ],
+  "privileged_state_used": false,
+  "observation_mode": "input_metadata_or_rgb",
+  "created_at": "2026-11-05T18:22:58.016011+00:00",
+  "units": {
+    "length": "meters",
+    "time": "seconds",
+    "angle": "radians"
+  },
+  "path": "/home/dheo/Cross_Robot_Real2Sim/data/source/v1.5/can/ph/low_dim_v15.hdf5",
+  "size_bytes": 46889752,
+  "sha256": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+  "root_keys": [
+    "data",
+    "mask"
+  ],
+  "data_attrs": {
+    "env_args": {
+      "env_name": "PickPlaceCan",
+      "env_version": "1.5.1",
+      "type": 1,
+      "env_kwargs": {
+        "has_renderer": false,
+        "has_offscreen_renderer": false,
+        "ignore_done": true,
+        "use_object_obs": true,
+        "use_camera_obs": false,
+        "control_freq": 20,
+        "controller_configs": {
+          "type": "BASIC",
+          "body_parts": {
+            "right": {
+              "type": "OSC_POSE",
+              "input_max": 1,
+              "input_min": -1,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "kp": 150,
+              "damping": 1,
+              "impedance_mode": "fixed",
+              "kp_limits": [
+                0,
+                300
+              ],
+              "damping_limits": [
+                0,
+                10
+              ],
+              "position_limits": null,
+              "orientation_limits": null,
+              "uncouple_pos_ori": true,
+              "control_delta": true,
+              "interpolation": null,
+              "ramp_ratio": 0.2,
+              "input_ref_frame": "world",
+              "gripper": {
+                "type": "GRIP"
+              }
+            }
+          }
+        },
+        "robots": [
+          "Panda"
+        ],
+        "camera_depths": false,
+        "camera_heights": 84,
+        "camera_widths": 84,
+        "lite_physics": false,
+        "reward_shaping": false
+      }
+    },
+    "total": 23207
+  },
+  "demo_count": 200,
+  "demonstrations": [
+    {
+      "demo_id": "demo_0",
+      "num_samples": 118,
+      "consistent_shapes": true,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "observation_shapes": {
+        "object": [
+          118,
+          14
+        ],
+        "robot0_eef_pos": [
+          118,
+          3
+        ],
+        "robot0_eef_quat": [
+          118,
+          4
+        ],
+        "robot0_eef_quat_site": [
+          118,
+          4
+        ],
+        "robot0_gripper_qpos": [
+          118,
+          2
+        ],
+        "robot0_gripper_qvel": [
+          118,
+          2
+        ],
+        "robot0_joint_pos": [
+          118,
+          7
+        ],
+        "robot0_joint_pos_cos": [
+          118,
+          7
+        ],
+        "robot0_joint_pos_sin": [
+          118,
+          7
+        ],
+        "robot0_joint_vel": [
+          118,
+          7
+        ]
+      },
+      "source_robot": "Panda",
+      "task": "Can",
+      "dataset_type": "PH",
+      "source_policy_type": "human_demonstration_dataset"
+    },
+    {
+      "demo_id": "demo_1",
+      "num_samples": 118,
+      "consistent_shapes": true,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "observation_shapes": {
+        "object": [
+          118,
+          14
+        ],
+        "robot0_eef_pos": [
+          118,
+          3
+        ],
+        "robot0_eef_quat": [
+          118,
+          4
+        ],
+        "robot0_eef_quat_site": [
+          118,
+          4
+        ],
+        "robot0_gripper_qpos": [
+          118,
+          2
+        ],
+        "robot0_gripper_qvel": [
+          118,
+          2
+        ],
+        "robot0_joint_pos": [
+          118,
+          7
+        ],
+        "robot0_joint_pos_cos": [
+          118,
+          7
+        ],
+        "robot0_joint_pos_sin": [
+          118,
+          7
+        ],
+        "robot0_joint_vel": [
+          118,
+          7
+        ]
+      },
+      "source_robot": "Panda",
+      "task": "Can",
+      "dataset_type": "PH",
+      "source_policy_type": "human_demonstration_dataset"
+    },
+    {
+      "demo_id": "demo_2",
+      "num_samples": 113,
+      "consistent_shapes": true,
+      "actions_shape": [
+        113,
+        7
+      ],
+      "observation_shapes": {
+        "object": [
+          113,
+          14
+        ],
+        "robot0_eef_pos": [
+          113,
+          3
+        ],
+        "robot0_eef_quat": [
+          113,
+          4
+        ],
+        "robot0_eef_quat_site": [
+          113,
+          4
+        ],
+        "robot0_gripper_qpos": [
+          113,
+          2
+        ],
+        "robot0_gripper_qvel": [
+          113,
+          2
+        ],
+        "robot0_joint_pos": [
+          113,
+          7
+        ],
+        "robot0_joint_pos_cos": [
+          113,
+          7
+        ],
+        "robot0_joint_pos_sin": [
+          113,
+          7
+        ],
+        "robot0_joint_vel": [
+          113,
+          7
+        ]
+      },
+      "source_robot": "Panda",
+      "task": "Can",
+      "dataset_type": "PH",
+      "source_policy_type": "human_demonstration_dataset"
+    },
+    {
+      "demo_id": "demo_3",
+      "num_samples": 98,
+      "consistent_shapes": true,
+      "actions_shape": [
+        98,
+        7
+      ],
+      "observation_shapes": {
+        "object": [
+          98,
+          14
+        ],
+        "robot0_eef_pos": [
+          98,
+          3
+        ],
+        "robot0_eef_quat": [
+          98,
+          4
+        ],
+        "robot0_eef_quat_site": [
+          98,
+          4
+        ],
+        "robot0_gripper_qpos": [
+          98,
+          2
+        ],
+        "robot0_gripper_qvel": [
+          98,
+          2
+        ],
+        "robot0_joint_pos": [
+          98,
+          7
+        ],
+        "robot0_joint_pos_cos": [
+          98,
+          7
+        ],
+        "robot0_joint_pos_sin": [
+          98,
+          7
+        ],
+        "robot0_joint_vel": [
+          98,
+          7
+        ]
+      },
+      "source_robot": "Panda",
+      "task": "Can",
+      "dataset_type": "PH",
+      "source_policy_type": "human_demonstration_dataset"
+    },
+    {
+      "demo_id": "demo_4",
+      "num_samples": 102,
+      "consistent_shapes": true,
+      "actions_shape": [
+        102,
+        7
+      ],
+      "observation_shapes": {
+        "object": [
+          102,
+          14
+        ],
+        "robot0_eef_pos": [
+          102,
+          3
+        ],
+        "robot0_eef_quat": [
+          102,
+          4
+        ],
+        "robot0_eef_quat_site": [
+          102,
+          4
+        ],
+        "robot0_gripper_qpos": [
+          102,
+          2
+        ],
+        "robot0_gripper_qvel": [
+          102,
+          2
+        ],
+        "robot0_joint_pos": [
+          102,
+          7
+        ],
+        "robot0_joint_pos_cos": [
+          102,
+          7
+        ],
+        "robot0_joint_pos_sin": [
+          102,
+          7
+        ],
+        "robot0_joint_vel": [
+          102,
+          7
+        ]
+      },
+      "source_robot": "Panda",
+      "task": "Can",
+      "dataset_type": "PH",
+      "source_policy_type": "human_demonstration_dataset"
+    }
+  ]
+}

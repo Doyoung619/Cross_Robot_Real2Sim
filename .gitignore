@@ -1,0 +1,15 @@
+.venv/
+.venv-perception/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.cache/
+.runs.lock
+runs/
+data/source/
+data/human/*
+!data/human/README.md
+*.hdf5
+*.pt
+*.npz

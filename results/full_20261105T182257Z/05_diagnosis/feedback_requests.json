@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "full",
+  "model_name": "deterministic_simulator_diagnostics",
+  "diagnostic_oracle_used": true,
+  "input_ids": [],
+  "ranked_bottlenecks": [],
+  "requests": [],
+  "unmeasured": [
+    "real-world friction",
+    "real-world mass",
+    "collision attribution unless explicitly logged",
+    "human-video interpretation accuracy without a real human clip"
+  ]
+}

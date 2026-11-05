@@ -1,0 +1,14 @@
+{
+  "status": "completed_degraded",
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "full",
+  "model_name": "deterministic_simulator_diagnostics",
+  "privileged_state_used": true,
+  "diagnostic_oracle_used": true,
+  "input_ids": [],
+  "episodes_analyzed": 0,
+  "correction_status": "intervention_not_executed",
+  "comparison_video_error": null,
+  "duration_seconds": 0.580930643947795
+}

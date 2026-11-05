@@ -1,0 +1,12 @@
+{
+  "status": "intervention_not_executed",
+  "reason": "No learned-policy baseline evaluation exists.",
+  "before": null,
+  "after": null,
+  "improvement_claimed": false,
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "full",
+  "model_name": "deterministic_simulator_diagnostics",
+  "diagnostic_oracle_used": true
+}

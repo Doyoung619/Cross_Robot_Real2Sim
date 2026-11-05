@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "task_id": "can_to_bin",
+  "object": "can",
+  "goal": {
+    "relation": "inside",
+    "receptacle": "bin"
+  },
+  "stages": [
+    "pre_grasp",
+    "grasp",
+    "close",
+    "lift",
+    "transport",
+    "lower",
+    "open",
+    "retreat"
+  ],
+  "constraints": [
+    "Lift before transporting",
+    "Keep can above source bin wall during transport",
+    "Release only over assigned can target bin"
+  ],
+  "unknowns": {
+    "mass": "unknown",
+    "friction": "unknown",
+    "contact_state": "unknown"
+  },
+  "task_source": "provided_seed",
+  "goal_pose_source": "simulator_oracle",
+  "semantic_to_simulator": {
+    "can": "Can",
+    "bin": "PickPlaceCan.target_bin_placements[can_index]"
+  },
+  "assumptions": [
+    "The provided task means the Can object's assigned receptacle in robosuite PickPlaceCan",
+    "Metric object/goal poses come from privileged simulator state, not human video"
+  ],
+  "seed": 42,
+  "mode": "bootstrap",
+  "model_controller_name": "provided_task_seed",
+  "input_ids": [
+    "/home/dheo/Cross_Robot_Real2Sim/data/task_seeds/can_to_bin.json"
+  ],
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "created_at": "2026-11-05T18:23:40.638013+00:00",
+  "units": {
+    "length": "meters",
+    "time": "seconds",
+    "angle": "radians"
+  },
+  "status": "completed_degraded",
+  "reason": "Provided task seed validated; human-video interpretation not run",
+  "perception_status": "skipped_missing_input",
+  "segmentation": {
+    "status": "skipped_missing_input",
+    "reason": "optional_sam2_disabled; no masks were generated"
+  },
+  "duration_seconds": 0.00015922309830784798
+}

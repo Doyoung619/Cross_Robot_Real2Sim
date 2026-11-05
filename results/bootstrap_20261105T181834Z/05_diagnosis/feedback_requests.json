@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "bootstrap",
+  "model_name": "deterministic_simulator_diagnostics",
+  "diagnostic_oracle_used": true,
+  "input_ids": [
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/Panda_source_scripted_42.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1042.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1043.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1044.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10000.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10001.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10002.npz"
+  ],
+  "ranked_bottlenecks": [
+    {
+      "reason_code": "unreachable_waypoint",
+      "count": 3,
+      "next_experiment": "Check workspace limits and source object-relative offsets; use reachable target starts."
+    }
+  ],
+  "requests": [
+    {
+      "reason_code": "unreachable_waypoint",
+      "request": "Check workspace limits and source object-relative offsets; use reachable target starts.",
+      "automatic_intervention": "bounded_additional_teacher_collection_and_BC_retraining"
+    }
+  ],
+  "unmeasured": [
+    "real-world friction",
+    "real-world mass",
+    "collision attribution unless explicitly logged",
+    "human-video interpretation accuracy without a real human clip"
+  ]
+}

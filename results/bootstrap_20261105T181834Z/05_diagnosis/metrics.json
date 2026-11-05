@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "bootstrap",
+  "model_name": "deterministic_simulator_diagnostics",
+  "privileged_state_used": true,
+  "diagnostic_oracle_used": true,
+  "input_ids": [
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/Panda_source_scripted_42.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1042.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1043.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1044.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10000.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10001.npz",
+    "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/04_policy/eval_rollouts/eval_10002.npz"
+  ],
+  "episodes_analyzed": 12,
+  "correction_status": "completed",
+  "comparison_video_error": null,
+  "duration_seconds": 10.586348286131397
+}

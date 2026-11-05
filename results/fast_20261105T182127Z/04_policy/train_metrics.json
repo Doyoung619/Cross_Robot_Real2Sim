@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "steps": 2000,
+  "last_loss": 0.000498770794365555,
+  "duration_seconds": 1.4087781661655754,
+  "device": "cuda:0",
+  "feature_dim": 26,
+  "checkpoint": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/checkpoint.pt"
+}

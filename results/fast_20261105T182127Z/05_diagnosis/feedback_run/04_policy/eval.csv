@@ -1,0 +1,11 @@
+seed,success,placement_error,lift_achieved,steps,failure_code,teacher_origin,robot,rollout_path,diagnostic_oracle_used
+10000,False,0.7567302402042745,False,300,unreachable_waypoint,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10000.npz,True
+10001,True,0.011945975008654127,True,151,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10001.npz,True
+10002,True,0.011597212797481844,True,157,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10002.npz,True
+10003,True,0.007962594350567724,True,159,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10003.npz,True
+10004,True,0.007846217182770896,True,160,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10004.npz,True
+10005,True,0.012834183777316394,True,149,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10005.npz,True
+10006,True,0.008127902142920595,True,164,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10006.npz,True
+10007,True,0.010040378635879922,True,158,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10007.npz,True
+10008,True,0.011274391393490141,True,169,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10008.npz,True
+10009,True,0.007420920032216524,True,176,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/05_diagnosis/feedback_run/04_policy/eval_rollouts/eval_10009.npz,True

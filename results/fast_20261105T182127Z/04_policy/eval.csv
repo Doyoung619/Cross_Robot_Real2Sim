@@ -1,0 +1,11 @@
+seed,success,placement_error,lift_achieved,steps,failure_code,teacher_origin,robot,rollout_path,diagnostic_oracle_used
+10000,False,0.7567302402042745,False,300,unreachable_waypoint,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10000.npz,True
+10001,True,0.008480717314882464,True,150,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10001.npz,True
+10002,True,0.005954384881821158,True,154,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10002.npz,True
+10003,True,0.004860361748532509,True,156,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10003.npz,True
+10004,True,0.004242520184583711,True,158,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10004.npz,True
+10005,True,0.009080850523173756,True,151,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10005.npz,True
+10006,True,0.003532725883551014,True,164,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10006.npz,True
+10007,True,0.006870158166078463,True,154,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10007.npz,True
+10008,True,0.00538017391078336,True,170,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10008.npz,True
+10009,True,0.010325329737199563,True,225,success,learned_policy,UR5e,/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10009.npz,True

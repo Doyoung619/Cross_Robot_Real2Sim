@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "mode": "bootstrap",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "feature_dim": 26,
+  "action_dim": 4,
+  "action_units": "normalized OSC xyz delta; gripper -1=open,+1=close",
+  "normalization_source": "training_demonstrations_only",
+  "episodes": [
+    {
+      "schema_version": "1.0",
+      "episode_id": "UR5e_source_retargeted_1042",
+      "seed": 1042,
+      "mode": "bootstrap",
+      "robot": "UR5e",
+      "teacher_origin": "source_retargeted",
+      "source_policy_type": null,
+      "source_demo_id": "demo_2",
+      "success": true,
+      "native_task_success": true,
+      "reason_code": "success",
+      "placement_error_m": 0.010245403248835893,
+      "max_lift_m": 0.23626619233945068,
+      "had_grasp_contact": true,
+      "collision": false,
+      "collision_definition": "robot arm external contact; expected gripper-object contacts excluded",
+      "collision_pairs": [],
+      "min_joint_limit_margin_rad": 0.6615899999999999,
+      "gripper_action_layout_verified": true,
+      "final_object_position": [
+        0.20748844711656336,
+        0.40021982195193573,
+        0.8600613624253811
+      ],
+      "goal_position": [
+        0.1975,
+        0.4025,
+        0.8
+      ],
+      "final_phase": "retreat",
+      "steps": 168,
+      "duration_seconds": 1.419246013974771,
+      "privileged_state_used": true,
+      "observation_mode": "oracle_sim_state",
+      "diagnostic_oracle_used": true,
+      "frame": "target_world",
+      "units": {
+        "position": "m",
+        "timestamps": "s",
+        "angles": "rad"
+      },
+      "controller": {
+        "name": "BASIC/OSC_POSE",
+        "action_dim": 7,
+        "intermediary_dim": 4,
+        "xyz_delta_unit": "normalized",
+        "meters_per_unit": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "orientation": "initial_pose_hold",
+        "positive_gripper": "close",
+        "arm": "right"
+      },
+      "feature_names": [
+        "eef_x",
+        "eef_y",
+        "eef_z",
+        "object_x",
+        "object_y",
+        "object_z",
+        "goal_x",
+        "goal_y",
+        "goal_z",
+        "object_minus_eef_x",
+        "object_minus_eef_y",
+        "object_minus_eef_z",
+        "goal_minus_object_x",
+        "goal_minus_object_y",
+        "goal_minus_object_z",
+        "gripper_opening",
+        "grasp_contact",
+        "object_lift",
+        "phase_pregrasp",
+        "phase_grasp",
+        "phase_close",
+        "phase_lift",
+        "phase_transport",
+        "phase_lower",
+        "phase_open",
+        "phase_retreat"
+      ],
+      "feature_dim": 26,
+      "transfer_parameters": {
+        "grasp_offset": [
+          -0.008205462257543969,
+          0.000421462917065088,
+          0.00844671994696955
+        ],
+        "clearance": 0.24306310764912475,
+        "source_raw_grasp_offset": [
+          -0.008205462257543969,
+          0.000421462917065088,
+          0.00844671994696955
+        ],
+        "source_lift_clearance": 0.24306310764912475,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "render_error": null,
+      "video_path": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/videos/target_teacher.mp4",
+      "path": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1042.npz",
+      "samples": 168
+    },
+    {
+      "schema_version": "1.0",
+      "episode_id": "UR5e_source_retargeted_1043",
+      "seed": 1043,
+      "mode": "bootstrap",
+      "robot": "UR5e",
+      "teacher_origin": "source_retargeted",
+      "source_policy_type": null,
+      "source_demo_id": "demo_0",
+      "success": true,
+      "native_task_success": true,
+      "reason_code": "success",
+      "placement_error_m": 0.010919704987776033,
+      "max_lift_m": 0.16410959643797463,
+      "had_grasp_contact": true,
+      "collision": false,
+      "collision_definition": "robot arm external contact; expected gripper-object contacts excluded",
+      "collision_pairs": [],
+      "min_joint_limit_margin_rad": 0.6615899999999999,
+      "gripper_action_layout_verified": true,
+      "final_object_position": [
+        0.20700471384032942,
+        0.3971240933942719,
+        0.8600553857398358
+      ],
+      "goal_position": [
+        0.1975,
+        0.4025,
+        0.8
+      ],
+      "final_phase": "retreat",
+      "steps": 147,
+      "duration_seconds": 0.9511958949733526,
+      "privileged_state_used": true,
+      "observation_mode": "oracle_sim_state",
+      "diagnostic_oracle_used": true,
+      "frame": "target_world",
+      "units": {
+        "position": "m",
+        "timestamps": "s",
+        "angles": "rad"
+      },
+      "controller": {
+        "name": "BASIC/OSC_POSE",
+        "action_dim": 7,
+        "intermediary_dim": 4,
+        "xyz_delta_unit": "normalized",
+        "meters_per_unit": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "orientation": "initial_pose_hold",
+        "positive_gripper": "close",
+        "arm": "right"
+      },
+      "feature_names": [
+        "eef_x",
+        "eef_y",
+        "eef_z",
+        "object_x",
+        "object_y",
+        "object_z",
+        "goal_x",
+        "goal_y",
+        "goal_z",
+        "object_minus_eef_x",
+        "object_minus_eef_y",
+        "object_minus_eef_z",
+        "goal_minus_object_x",
+        "goal_minus_object_y",
+        "goal_minus_object_z",
+        "gripper_opening",
+        "grasp_contact",
+        "object_lift",
+        "phase_pregrasp",
+        "phase_grasp",
+        "phase_close",
+        "phase_lift",
+        "phase_transport",
+        "phase_lower",
+        "phase_open",
+        "phase_retreat"
+      ],
+      "feature_dim": 26,
+      "transfer_parameters": {
+        "grasp_offset": [
+          -0.007488422751157617,
+          -0.00374945396545015,
+          0.006708263660520575
+        ],
+        "clearance": 0.18,
+        "source_raw_grasp_offset": [
+          -0.007488422751157617,
+          -0.00374945396545015,
+          0.006708263660520575
+        ],
+        "source_lift_clearance": 0.15070879588426078,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "render_error": null,
+      "path": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1043.npz",
+      "samples": 147
+    },
+    {
+      "schema_version": "1.0",
+      "episode_id": "UR5e_source_retargeted_1044",
+      "seed": 1044,
+      "mode": "bootstrap",
+      "robot": "UR5e",
+      "teacher_origin": "source_retargeted",
+      "source_policy_type": null,
+      "source_demo_id": "demo_2",
+      "success": true,
+      "native_task_success": true,
+      "reason_code": "success",
+      "placement_error_m": 0.010416775587680597,
+      "max_lift_m": 0.24183626552238446,
+      "had_grasp_contact": true,
+      "collision": false,
+      "collision_definition": "robot arm external contact; expected gripper-object contacts excluded",
+      "collision_pairs": [],
+      "min_joint_limit_margin_rad": 0.6615899999999999,
+      "gripper_action_layout_verified": true,
+      "final_object_position": [
+        0.20785704941097186,
+        0.40138611439421,
+        0.8600561700944512
+      ],
+      "goal_position": [
+        0.1975,
+        0.4025,
+        0.8
+      ],
+      "final_phase": "retreat",
+      "steps": 181,
+      "duration_seconds": 1.0812817448750138,
+      "privileged_state_used": true,
+      "observation_mode": "oracle_sim_state",
+      "diagnostic_oracle_used": true,
+      "frame": "target_world",
+      "units": {
+        "position": "m",
+        "timestamps": "s",
+        "angles": "rad"
+      },
+      "controller": {
+        "name": "BASIC/OSC_POSE",
+        "action_dim": 7,
+        "intermediary_dim": 4,
+        "xyz_delta_unit": "normalized",
+        "meters_per_unit": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "orientation": "initial_pose_hold",
+        "positive_gripper": "close",
+        "arm": "right"
+      },
+      "feature_names": [
+        "eef_x",
+        "eef_y",
+        "eef_z",
+        "object_x",
+        "object_y",
+        "object_z",
+        "goal_x",
+        "goal_y",
+        "goal_z",
+        "object_minus_eef_x",
+        "object_minus_eef_y",
+        "object_minus_eef_z",
+        "goal_minus_object_x",
+        "goal_minus_object_y",
+        "goal_minus_object_z",
+        "gripper_opening",
+        "grasp_contact",
+        "object_lift",
+        "phase_pregrasp",
+        "phase_grasp",
+        "phase_close",
+        "phase_lift",
+        "phase_transport",
+        "phase_lower",
+        "phase_open",
+        "phase_retreat"
+      ],
+      "feature_dim": 26,
+      "transfer_parameters": {
+        "grasp_offset": [
+          -0.008205462257543969,
+          0.000421462917065088,
+          0.00844671994696955
+        ],
+        "clearance": 0.24306310764912475,
+        "source_raw_grasp_offset": [
+          -0.008205462257543969,
+          0.000421462917065088,
+          0.00844671994696955
+        ],
+        "source_lift_clearance": 0.24306310764912475,
+        "embodiment_calibration": "grip_site_xy_clip_2.5cm_z_clip_-1.5_to_4cm"
+      },
+      "render_error": null,
+      "path": "/home/dheo/Cross_Robot_Real2Sim/runs/bootstrap_20261105T181834Z/03_retarget/rollouts/UR5e_source_retargeted_1044.npz",
+      "samples": 181
+    }
+  ],
+  "eval_seeds": [
+    10000,
+    10001,
+    10002
+  ],
+  "samples": 496,
+  "rejected": []
+}

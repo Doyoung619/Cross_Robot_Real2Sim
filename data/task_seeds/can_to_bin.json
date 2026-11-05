@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "can_to_bin",
+  "object": "can",
+  "goal": {"relation": "inside", "receptacle": "bin"},
+  "stages": ["pre_grasp", "grasp", "close", "lift", "transport", "lower", "open", "retreat"],
+  "constraints": ["Lift before transporting", "Keep can above source bin wall during transport", "Release only over assigned can target bin"],
+  "unknowns": {"mass": "unknown", "friction": "unknown", "contact_state": "unknown"},
+  "task_source": "provided_seed",
+  "goal_pose_source": "simulator_oracle",
+  "semantic_to_simulator": {"can": "Can", "bin": "PickPlaceCan.target_bin_placements[can_index]"},
+  "assumptions": ["The provided task means the Can object's assigned receptacle in robosuite PickPlaceCan", "Metric object/goal poses come from privileged simulator state, not human video"]
+}

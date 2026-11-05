@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cross-robot-real2sim"
+version = "0.1.0"
+description = "Traceable five-stage Panda to UR5e real2sim research MVP"
+requires-python = ">=3.10,<3.13"
+dependencies = []
+
+[project.scripts]
+crossrobot = "cross_robot_real2sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["sim: actual MuJoCo integration", "gpu: requires CUDA", "integration: end-to-end integration"]
