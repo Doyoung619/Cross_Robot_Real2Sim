@@ -94,8 +94,15 @@ def replay_case(root: Path, output: Path, raw: Path, request: dict) -> dict:
         writer = imageio.get_writer(str(video_path), fps=10, codec="libx264", quality=7)
         records = {key: [] for key in ("features", "actions", "object_positions", "eef_positions", "timestamps", "phases", "grasp_contacts")}
         frame_count = 0
-        role = {"source_scripted": "Panda 규칙 기반 정책", "source_retargeted": "UR5e 교사: 원본 잡기·들기 정보 + 규칙 제어",
-                "learned_policy": "UR5e 학습 정책: 저장된 신경망"}[origin]
+        language=request.get("language","ko")
+        if language not in ("ko","en"):
+            raise ValueError(f"Unsupported review language: {language}")
+        roles = ({"source_scripted":"Panda scripted smoke policy",
+                  "source_retargeted":"UR5e teacher: source geometry + scripted OSC",
+                  "learned_policy":"UR5e learned policy: frozen MLP"} if language=="en" else
+                 {"source_scripted": "Panda 규칙 기반 정책", "source_retargeted": "UR5e 교사: 원본 잡기·들기 정보 + 규칙 제어",
+                  "learned_policy": "UR5e 학습 정책: 저장된 신경망"})
+        role=roles[origin]
 
         def snapshot():
             return {"native_success": goal_success(env), "specific_can_inside": not env.not_in_bin(obs["object_pos"], idx),
@@ -109,15 +116,21 @@ def replay_case(root: Path, output: Path, raw: Path, request: dict) -> dict:
             draw = ImageDraw.Draw(im)
             draw.polygon(polygon, outline=(30,255,80), width=3)
             gx,gy = min(x for x,y in polygon), min(y for x,y in polygon)
-            draw.text((gx,max(84,gy-22)), "초록색: 캔의 목표 칸", font=font(16), fill=(30,255,80))
+            draw.text((gx,max(84,gy-22)), "TARGET CAN BIN" if language=="en" else "초록색: 캔의 목표 칸", font=font(16), fill=(30,255,80))
             draw.rectangle((0,0,640,79),fill=(8,14,25))
             draw.text((8,3),role,font=font(18),fill="white")
             draw.text((8,29),f"{config['mode']} / seed {request['seed']} / {request.get('variant_label','')}",font=font(16),fill="white")
-            draw.text((8,53),"사람 영상 없음 · 정확한 시뮬레이터 좌표 사용",font=font(15),fill=(255,210,110))
+            draw.text((8,53),"NO HUMAN VIDEO | oracle_sim_state" if language=="en" else "사람 영상 없음 · 정확한 시뮬레이터 좌표 사용",font=font(15),fill=(255,210,110))
             draw.rectangle((0,432,640,480),fill=(8,14,25))
             state=snapshot()
+            if language=="en":
+                message={"실제 시뮬레이터 재실행 시작":"Replay start", "원 실험과 동일한 제어 실행":"Original controller replay",
+                         "원래 평가 종료 지점":"Original evaluation endpoint", "같은 정책으로 종료 후 1초 추가 검사":"Same policy: 1s stability check",
+                         "최종 상태":"Final state"}.get(message,message)
             draw.text((8,435),f"{message} | {sim_step/config['control_hz']:.2f}s | phase={state['phase']}",font=font(15),fill="white")
-            draw.text((8,457),f"캔이 목표 칸 안: {state['specific_can_inside']} / 잡기 접촉: {state['grasp_contact']} / XY 오차: {1000*state['xy_error_m']:.1f}mm",font=font(14),fill="white")
+            measurement=(f"Can in goal: {state['specific_can_inside']} | grasp contact: {state['grasp_contact']} | XY error: {1000*state['xy_error_m']:.1f}mm" if language=="en" else
+                         f"캔이 목표 칸 안: {state['specific_can_inside']} / 잡기 접촉: {state['grasp_contact']} / XY 오차: {1000*state['xy_error_m']:.1f}mm")
+            draw.text((8,457),measurement,font=font(14),fill="white")
             writer.append_data(np.asarray(im))
             frame_count += 1
 
@@ -181,7 +194,7 @@ def replay_case(root: Path, output: Path, raw: Path, request: dict) -> dict:
               "privileged_state_used":True,"observation_mode":"oracle_sim_state",
               "controller":adapter.description(),"hold_controller":"same original policy; no scripted override",
               "video_path":str(video_path.relative_to(output)),"video_frames":frame_count,"fps":10,
-              "video_sha256":file_sha256(video_path),"cache_key":cache_key}
+              "video_sha256":file_sha256(video_path),"video_language":language,"cache_key":cache_key}
         meta_path.write_text(json.dumps(meta,indent=2,ensure_ascii=False)+"\n")
         np.savez_compressed(raw/"rollouts"/f"{request['case_id']}.npz",
                             **{key:np.asarray(values) for key,values in records.items()},metadata_json=json.dumps(meta))

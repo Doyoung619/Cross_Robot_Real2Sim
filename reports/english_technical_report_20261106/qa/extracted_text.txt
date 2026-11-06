@@ -1,0 +1,1247 @@
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                               06 NOV 2026
+
+
+
+
+RESEARCH PROTOTYPE / ENGLISH EDITION
+
+
+
+Cross-Robot
+Real2Sim
+Technical methods, measured evidence, failure analysis, and reproducible execution. Evidence
+freeze: 06 November 2026.
+
+Task: can pick, lift, transport, and place inside its assigned bin. Source embodiment A is the
+7-DoF Franka Panda; target embodiment B is the 6-DoF UR5e. Both operate in headless
+robosuite/MuJoCo PickPlaceCan.
+
+
+
+
+  1                           2                            3                     4                      5
+  Selection                   Task                         Retarget              Learn                  Diagnose
+  Panda HDF5                  Provided TaskSpec            Executed UR5e         Saved MLP / held-out   Rules / bounded
+  metadata                                                 teachers              eval                   iteration
+
+
+
+
+Solid pipeline: executed bootstrap/fast. Human-video models remain an untested full-mode branch.
+
+
+  Executed                    Teacher placement                   Saved learned policy             Feedback result
+  experiment
+
+
+  Bootstrap                   3/3 source-retargeted               0/3 held-out seeds               1/3 on the same seeds
+                              UR5e
+
+
+  Fast                        10/10 source-retargeted             9/10 held-out seeds              9/10; no improvement
+                              UR5e
+
+
+  Full / real human           No real human clip                  Retargeting and training         requires_human_video
+  video                       supplied                            skipped
+
+
+
+   Claim boundary
+   This is a working simulation infrastructure baseline using oracle_sim_state. Source information is
+   limited to grasp offset and lift clearance inside a hand-coded controller. No real-human-video
+   inference, vision-only policy, full-motion transfer, or physical-robot transfer has been
+   demonstrated.
+
+Original runs: bootstrap_20261105T181834Z and fast_20261105T182127Z. Later review videos re-execute frozen policies;
+they do not introduce new policy training.
+
+Repository and experiment index
+
+English case studies and provenance
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   01 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                         06 NOV 2026
+
+
+
+
+01 / SYSTEM MAP
+
+
+What the five stages establish
+Each boundary has an independently runnable module and explicit evidence artifacts.
+
+
+  Boundary                          Executed method / model                           Input to output
+
+
+  1. Data Selection                 Deterministic metadata filter and diverse-start   Can HDF5 episodes to selection.json
+                                    selector; CLIP reserved for full mode.
+
+
+  2. Task Understanding             Pydantic-validated provided task seed; Qwen       Selection plus seed to
+                                    reserved for actual human frames.                 task_spec.json
+
+
+  3. Cross-Robot                    Source-relative grasp/lift extraction plus        Source trace plus task to executed
+  Retargeting                       BASIC/OSC_POSE feedback control.                  UR5e NPZ
+
+
+  4. Policy Learning                26-128-128-4 MLP behavior cloning,                Successful executed teachers to
+                                    fresh-process evaluation.                         checkpoint and eval.csv
+
+
+  5. Failure Analysis               Deterministic simulator-state rules and bounded   Actual rollout evidence to feedback
+                                    additional data collection.                       and before/after metrics
+
+
+
+Three separate meanings of success
+Teacher success is placement achieved by the executed source-grounded controller. Learned-policy
+success is placement achieved by the saved MLP in closed loop on different simulator seeds.
+Human-video understanding success would require actual CLIP and Qwen inference on a real
+human clip; it is currently untested.
+
+The dataset source is human-operated Panda robot demonstration data, not a video of an unaided
+person. The executable Panda scripted branch validates live source control, while the new original-state
+source videos reconstruct recorded HDF5 states. These are distinct evidence types.
+
+1_Data Selection
+
+2_Task Understanding
+
+3_Cross-Robot-Retargeting
+
+4_Policy Learning
+
+5_Failure Analysis
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                             02 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                          06 NOV 2026
+
+
+
+
+02 / DATA AND ENVIRONMENT
+
+
+Small, inspectable inputs
+The implementation uses one minimal dataset file and records runtime compatibility rather than
+assuming checkpoint interchangeability.
+
+
+  Item                              Verified value
+
+
+  Public dataset                    robomimic/robomimic_datasets; v1.5/can/ph/low_dim_v15.hdf5; PH = proficient human
+                                    robot demonstrations.
+
+
+  Downloaded scope                  One file, 46,889,752 bytes, 200 recorded Panda episodes; no full repository download.
+
+
+  Dataset SHA-256                   3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962
+
+
+  Recorded source                   PickPlaceCan, robosuite 1.5.1 metadata, Panda, 20 Hz, OSC_POSE, lite_physics=false.
+  environment
+
+
+  Executed simulator                robosuite 1.5.2; MuJoCo 3.3.7; offscreen EGL; 20 Hz; 300-step / 15-second episode cap.
+
+
+  Compute stack                     Python 3.10.12; PyTorch 2.6.0+cu124; NumPy 1.26.4; h5py 3.14.0; Pydantic 2.12.3.
+
+
+  Host evidence                     NVIDIA RTX 4090, driver 550.163.01; CUDA_VISIBLE_DEVICES=0. No heavyweight
+                                    perception model used.
+
+
+
+Contracts and units
+JSON carries light metadata and provenance; NPZ carries typed trajectory arrays; CSV carries
+attempt/evaluation rows; MP4 supplies visual evidence. Positions are meters, times seconds, and angles
+radians. Named frames distinguish source_world, target_world, object_relative, and human_image_px.
+
+The downloaded data include actions [T,7], EEF position [T,3], EEF quaternion [T,4], gripper
+observations, object state [T,14], simulator states [T,71], and an original model XML per episode. T
+varies by demonstration. No old learned robomimic checkpoint is loaded into the newer simulator.
+
+Dataset inspection and recorded versions
+
+Original execution environment
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                               03 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                           06 NOV 2026
+
+
+
+
+03 / STAGE 1
+
+
+Data selection: what actually ran
+Fast mode chooses five episodes from the first eight inspected source IDs; it does not search or
+rank the entire 200-episode corpus.
+
+Deterministic selection algorithm
+1. Enumerate source demos by numeric ID and inspect at most eight candidates (demo_0 through
+demo_7). Require nonempty actions and consistent observation lengths; retain the Can/Panda task
+provenance.
+2. Sort coherent candidates by sample count, breaking ties by demo ID. Select the shortest
+demonstration first.
+3. Repeatedly select the remaining candidate with the greatest minimum Euclidean
+initial-object-position distance to the already selected set. Stop after five selections.
+
+  selected = [shortest_consistent_demo]
+  while len(selected) < 5:
+      next = argmax_d min_s ||object_start[d] - object_start[s]||_2
+      selected.append(next)
+
+
+
+  Selection order               Samples             Initial can position [x,y,z] m
+
+
+  demo_3                        98                  [-0.00836, -0.08959, 0.86000]
+
+
+  demo_5                        134                 [-0.01880, -0.40074, 0.86000]
+
+
+  demo_7                        115                 [0.19077, -0.27073, 0.86000]
+
+
+  demo_4                        102                 [0.13630, -0.08713, 0.86000]
+
+
+  demo_1                        118                 [0.10021, -0.19378, 0.86000]
+
+
+
+Output and limitation
+selection.json records all inspected shapes, selected IDs, initial positions, source file hash, reasons, and
+strategy. The observed source-selection method is a metadata baseline. It supplies reproducible
+diversity but does not demonstrate task-aware learned retrieval or optimal source selection.
+
+
+   Human branch status
+   No human clip exists in the recorded runs. human_clip_selection is skipped_missing_input in
+   bootstrap/fast. No CLIP score was computed, and no distractor rejection result is invented.
+
+Selection evidence
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                               04 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                      06 NOV 2026
+
+
+
+
+04 / STAGES 1-2, FULL BRANCH
+
+
+Human-video models: implemented,
+untested
+Keep the proposed perception interface separate from the measured metadata-and-seed
+baseline.
+
+
+  Component                  Implemented full-mode path                                    Current evidence
+
+
+  Video sampling             Scan data/human for real MP4 clips; sample 4-6 ordered        No human clip supplied.
+                             frames at reduced resolution; preserve timestamps and
+                             annotated frames.
+
+
+  CLIP ranker                openai/clip-vit-base-patch32 through Transformers CLIPModel   Code exists; model
+                             / CLIPProcessor. Mean frame-to-task cosine similarity ranks   inference not executed.
+                             actual clips.
+
+
+  Qwen task                  Qwen/Qwen2.5-VL-3B-Instruct through                           Code exists; weights and
+  interpreter                Qwen2_5_VLForConditionalGeneration, AutoProcessor, and        inference not tested in
+                             qwen-vl-utils. Deterministic local generation on ordered      recorded runs.
+                             images.
+
+
+  GPU scheduling             CLIP, Qwen, and BC are sequential; model references are       Bootstrap/fast load only the
+                             released between perception stages.                           small BC model.
+
+
+  SAM2 segmentation          Optional interface reports the absence of implemented mask    Not implemented; no
+                             prompting/weights.                                            segmentation achievement
+                                                                                           claimed.
+
+
+
+Missing input is an auditable outcome
+The recorded full run full_20261105T182257Z reports partial / requires_human_video. Step 2 has
+skipped_missing_input; retargeting and policy learning are skipped. Diagnosis records zero episodes
+and no feasible corrective iteration. A successful script exit or generated report does not imply
+human-video processing succeeded.
+
+To validate this branch, supply a real clip with provenance and file hash; retain sampled frames, actual
+CLIP scores, Qwen prompt/raw text, parsed JSON, semantic mapping assumptions, and a human review
+of goal correctness. Then verify that the validated JSON gates the same downstream retargeting
+pipeline.
+
+Recorded missing-human full report
+
+CLIP implementation
+
+Qwen implementation
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                             05 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                              06 NOV 2026
+
+
+
+
+05 / STAGE 2
+
+
+Task understanding: provided semantics
+Bootstrap and fast modes validate an explicit task specification; they do not infer goals from
+invented video.
+
+Executed task representation
+
+  task_source: provided_seed
+  object: can
+  goal: {relation: inside, receptacle: bin}
+  goal_pose_source: simulator_oracle
+  unknowns: {mass: unknown, friction: unknown, contact_state: unknown}
+
+
+The seed contains eight ordered stages: pre-grasp, grasp, close, lift, transport, lower, open, and retreat.
+Constraints require lifting before transport, clearing the source bin wall, and releasing over the assigned
+target compartment. Pydantic rejects unsupported object/goal relations and fabricated known physical
+properties.
+
+  Semantic label                            Declared simulator binding / assumption
+
+
+  can                                       Can object in PickPlaceCan. The object identity is fixed for this MVP.
+
+
+  bin                                       The Can object's assigned target_bin_placements[can_index] entry. The visual
+                                            receptacle in a future clip need not look identical.
+
+
+  Metric object and target poses            Read from privileged simulator state; no metric 3D position is reconstructed from
+                                            monocular video.
+
+
+  Mass / friction / contact in task         Remain unknown. Simulator contact used by controller/features is a separate
+  JSON                                      privileged observation, not an inferred human-video contact fact.
+
+
+
+Interface to retargeting
+task_spec.json includes schema version, seed, mode, task source, model/controller name, input IDs,
+units, privilege flags, semantic mapping, and assumptions. Stage 3 validates the task before collection
+and refuses unsupported semantic mappings. The controller still implements only the fixed
+can-inside-bin scenario; it is not a general task planner.
+
+Executed task JSON
+
+Editable provided seed
+
+Validated task schema
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   06 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                          06 NOV 2026
+
+
+
+
+06 / STAGE 3, SOURCE GEOMETRY
+
+
+What crosses the embodiment boundary
+The source contribution is a measured grasp offset and lift clearance, not a copied joint
+trajectory or a learned source policy.
+
+Schema discovery matters
+For the actual 14D object observation, indices 0:7 contain EEF-relative pose; world can position is 7:10
+and world quaternion is 10:14. Treating the first three values as world XYZ produces physically
+implausible geometry. The adapter explicitly decodes and tests this layout. EEF pose and actions are
+read from their named datasets. Timestamps are reconstructed from the recorded 20 Hz control rate.
+
+Extraction and calibration
+
+  r[t] = eef_position[t] - can_world_position[t]
+  closing = {t : recorded_gripper_action[t] > 0}
+  grasp_t = argmin_t_in_closing ||r[t]||_2
+  grasp_offset = r[grasp_t]
+  source_lift = max_t can_z[t] - can_z[0]
+
+
+When closing actions are absent, a geometric nearest-approach fallback is explicitly labeled. The target
+clips XY offsets to +/-25 mm and Z offset to [-15,40] mm. Lift is clipped to [0.12,0.25] m and combined
+with the configured minimum clearance. Object-relative axes remain world-aligned for the cylindrical
+can; this is a translation-relative construction, not a full rotating object-frame motion transfer.
+
+  Source demo              Applied grasp offset [x,y,z] mm                   Applied clearance m
+
+
+  demo_3                   [4.71, -2.26, 22.81]                              0.20135
+
+
+  demo_5                   [-10.33, 1.90, 14.24]                             0.25000 (source lift 0.27388)
+
+
+  demo_7                   [-11.30, 0.03, 8.64]                              0.22358
+
+
+  demo_4                   [-0.98, -0.09, 12.82]                             0.21071
+
+
+  demo_1                   [-0.54, 0.97, 24.12]                              0.21320
+
+
+
+   Scientific limit / P02
+   The overall phase sequence, target generation, gripper timing, and orientation handling are
+   hand-coded. Source quaternions may be stored, but their full time-varying orientation is not
+   transferred. No source-parameter ablation has isolated the benefit of the source information.
+
+Source extraction
+
+Parameter calibration
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                               07 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                   06 NOV 2026
+
+
+
+
+07 / STAGE 3, EXECUTED CONTROL
+
+
+The target uses its own closed-loop
+controller
+Live UR5e feedback drives task-space waypoints; Panda joint angles are never copied into the
+6-DoF target.
+
+
+  Phase                  Target construction                                   Gripper / transition
+
+
+  Pregrasp               Current can + grasp offset + clearance in Z.          Open; EEF error below 28 mm
+                                                                               advances.
+
+
+  Grasp                  Current can + grasp offset.                           Open; EEF error below 17 mm
+                                                                               advances.
+
+
+  Close                  Current can + grasp offset.                           Close; 14 control steps.
+
+
+  Lift                   Initial pickup position + grasp offset + clearance.   Close; EEF error below 28 mm.
+
+
+  Transport              Goal XY with initial object Z + offset + clearance.   Close; EEF error below 28 mm.
+
+
+  Lower                  Goal XY with initial object Z + offset + 15 mm.       Close; EEF error below 17 mm.
+
+
+  Open                   Same lower target.                                    Open; 14 control steps.
+
+
+  Retreat                Place position + clearance.                           Open; evaluate actual placement
+                                                                               predicate.
+
+
+The teacher action is normalized XYZ = clip(0.6 * (waypoint - EEF) / 0.05, -1, 1), with positive gripper
+closure during close through lower. The phase tracker is computed online from simulator observations
+and elapsed phase steps. It is shared with policy evaluation, making this a hybrid learned-controller
+system rather than an autonomous learned phase planner.
+
+Executed outcomes and retained provenance
+Fast mode executed one scripted Panda success and ten source-retargeted UR5e successes. Bootstrap
+executed one scripted Panda success and three source-retargeted UR5e successes. The separate
+target_scripted_bootstrap fallback had zero attempts in these runs; therefore no source-versus-oracle
+comparison was performed. Attempt rows retain seed, source ID, origin, placement error, lift, and
+failure code.
+
+
+   Code does not prove physical infeasibility / P05
+   The historical unreachable_waypoint label means an early waypoint was not reached by the
+   horizon. It is not an IK infeasibility certificate. At failed learned-policy seed 10000, the teacher
+   succeeds from the same initial features.
+
+Fast attempt-level CSV
+
+Waypoint controller
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                       08 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                               06 NOV 2026
+
+
+
+
+08 / STAGE 4, EXECUTED DATA
+
+
+What the target policy learns from
+Only successful, actually executed UR5e teacher trajectories enter behavior cloning.
+
+
+
+  Source demos                        UR5e teachers                    Shared B model                   Held-out cases
+  3, 5, 7, 4, 1                       10 executed successes            One baseline checkpoint          10001 / 10003 / 10009
+
+
+
+
+The fast baseline pools ten source-retargeted UR5e episodes from seeds 1042-1051. Five source IDs
+each contribute two executed target rollouts. These produce 1,620 state-action rows; rows are
+temporally correlated samples from ten episodes, not 1,620 independent demonstrations. Bootstrap
+uses three episodes and 496 rows.
+
+  Feature group                                            Dimension   Runtime source
+                                                           s
+
+
+  EEF / can / goal XYZ                                     9           Actual target simulator positions.
+
+
+  Can minus EEF; goal minus can                            6           Online coordinate differences.
+
+
+  Gripper opening, grasp contact, object lift              3           Observed gripper state, privileged sim contact, current
+                                                                       Z minus initial Z.
+
+
+  Eight-phase one-hot encoding                             8           Same online PhaseTracker in collection and inference.
+
+
+  Total                                                    26          Runtime-validated, finite float32 vector.
+
+
+
+Filtering and separation
+The dataset builder accepts success=true, robot=UR5e, and teacher_origin in {source_retargeted,
+target_scripted_bootstrap}. Failed episodes, Panda episodes, learned-policy review rollouts, and any
+episode whose seed overlaps held-out evaluation are excluded or rejected. A zero-success dataset
+yields blocked_insufficient_teacher_data instead of invented training arrays.
+
+Normalization mean and standard deviation are fitted only on accepted training rows; standard
+deviation has a 0.001 floor. The same statistics are saved with the model. Per-episode origins, source
+IDs, seeds, sample counts, and paths remain in dataset_metadata.json.
+
+
+   Known conditioning gap / P06
+   Source-specific grasp offset, lift clearance, and the current waypoint are not explicit components of
+   the 26D input. They vary across teachers; evaluation uses the first successful teacher's tracker
+   parameters. The structural mismatch is verified, while its contribution to the failure remains a
+   hypothesis.
+
+Fast training dataset metadata
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   09 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                              06 NOV 2026
+
+
+
+
+09 / STAGE 4, MODEL AND LOSS
+
+
+A small behavior-cloning model
+The first learned target policy is deliberately low-dimensional; ACT, SmolVLA, and RGB policy
+learning are outside the executed baseline.
+
+
+
+  26D state                           MLP 26-128-128-4               4D intermediary               7D OSC vector
+  Training-only scaling               XYZ + gripper logit            Clip XYZ; threshold grip      XYZ / zero rot / grip
+
+
+
+
+  Setting                           Fast baseline value
+
+
+  Network                           26 input features -> Linear 128 + ReLU -> Linear 128 + ReLU -> 4 outputs.
+
+
+  Outputs                           Three normalized XYZ regression values and one gripper logit. XYZ is clipped; logit >= 0
+                                    closes, otherwise opens.
+
+
+  Optimizer / budget                Adam; learning rate 0.001; 2,000 updates; batch size 128; training seed 42; gradient
+                                    norm clipped to 10.
+
+
+  Loss                              L = MSE(predicted_XYZ, executed_XYZ) + 0.1 * BCEWithLogits(gripper_logit, close_label).
+
+
+  Class weighting                   Positive-class BCE weight = (# open / # close), clamped to [0.25,4]; computed only from
+                                    training rows.
+
+
+  Checkpoint                        Model weights, model dimensions, optimizer, normalization, dataset provenance, step,
+                                    CPU/CUDA/sampling RNG states.
+
+
+
+Action adapter and units
+The intermediary is not sent directly to robosuite. BASIC/OSC_POSE expects seven values: XYZ delta,
+three orientation deltas, and the gripper command. The adapter uses the installed composite
+controller's create_action_vector API, verifies 6D arm control and 7D environment action dimensions,
+inserts zero orientation deltas, and clips normalized values. Each XYZ unit maps to 0.05 m per control
+step in the tested controller.
+
+Zero orientation delta holds the controller's initial orientation. BC does not learn orientation motion.
+Fresh-process evaluation loads the saved checkpoint and the same normalization and feature builder;
+training loss alone is never treated as task success.
+
+Observed final losses: fast 0.000499 after 2,000 updates; bootstrap 0.002245 after 300 updates. These are fitting
+diagnostics, not independent control-performance measures.
+
+Training implementation
+
+Installed action adapter
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   10 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                          06 NOV 2026
+
+
+
+
+10 / STAGE 4, HELD-OUT EVALUATION
+
+
+Actual closed-loop target performance
+One shared baseline checkpoint is evaluated on simulator seeds 10000-10009; these seeds are
+excluded from teacher training.
+
+
+  Seed                     Native                 Steps / seconds   Can-to-goal XY error mm
+                           success
+
+
+  10000                    No                     300 / 15.00       756.73
+
+
+  10001                    Yes                    150 / 7.50        8.48
+
+
+  10002                    Yes                    154 / 7.70        5.95
+
+
+  10003                    Yes                    156 / 7.80        4.86
+
+
+  10004                    Yes                    158 / 7.90        4.24
+
+
+  10005                    Yes                    151 / 7.55        9.08
+
+
+  10006                    Yes                    164 / 8.20        3.53
+
+
+  10007                    Yes                    154 / 7.70        6.87
+
+
+  10008                    Yes                    170 / 8.50        5.38
+
+
+  10009                    Yes                    225 / 11.25       10.33
+
+
+
+What is measured
+Each episode executes the learned XYZ/gripper outputs through the same action adapter and online
+phase tracker. The original goal predicate delegates to installed robosuite _check_success(). Mean
+placement error is the final can-to-target XY distance; it is not a full 3D pose/orientation score. Fast
+baseline success is 9/10; all-episode mean XY error is 81.55 mm, dominated by failed seed 10000.
+Success-only mean is 6.53 mm.
+
+Stronger review predicate is separate / P09
+Later review re-executes the frozen policy and checks the specific Can inside its assigned
+compartment, no grasp contact, and one additional second under the same policy. No scripted override
+assists the learned rollout. These stability annotations supplement rather than overwrite the original
+evaluation. Review videos and NPZ are excluded from training.
+
+
+   Evaluation limits / P07
+   Ten simulator seeds and one training seed do not establish broad generalization. The policy
+   depends on exact simulator state and a manual phase tracker. No unseen object class, task family,
+   camera estimator, physical robot, or perception robustness result is available.
+
+Original fast evaluation CSV
+
+Review stability annotations
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                              11 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                           06 NOV 2026
+
+
+
+
+11 / STAGE 5, DIAGNOSTIC RULES
+
+
+Evidence first, causal claims second
+Diagnostics operate on executed state/action arrays and native task outcomes; no large model
+performs failure attribution.
+
+
+  Recorded                    Rule / evidence                                         Interpretation limit
+  condition
+
+
+  Task success                Native simulator goal predicate; later review adds      Different predicates stay
+                              specific-Can, release, and stability checks.            separate.
+
+
+  Lift achieved               Maximum can Z minus initial can Z >= 0.06 m.            This is measured motion, not
+                                                                                      proof of a secure grasp.
+
+
+  Object drop                 Task failed, lift achieved, final object height below   A deterministic rule on simulator
+                              initial + 0.03 m.                                       state.
+
+
+  Premature release           Close-to-open action change while lifted > 0.04 m and   A plausible failure symptom, not
+                              > 0.10 m from goal XY.                                  unique cause.
+
+
+  Gripper/action              Wrong action dimensions, nonfinite values, or           Adapter integrity check, not
+  mismatch                    magnitude outside normalized bounds.                    contact inference.
+
+
+  Grasp failed                Insufficient lift with no recorded contact, where the   Missing observations remain
+                              retained failure code supports this diagnosis.          unknown.
+
+
+  Early waypoint /            Retained phase/horizon code plus phase and EEF-object   unreachable_waypoint is not
+  timeout                     records.                                                proven infeasibility.
+
+
+  Collision / semantic        Use explicit collision logs when present; unsupported   Do not force a physical or
+  mismatch                    parsing/selection causes remain unknown.                semantic cause.
+
+
+failure_report.csv contains one row per analyzed episode with seed, teacher origin, step attribution,
+reason, XY error, lift/drop/release flags, diagnostic_oracle_used=true, confidence type, and evidence.
+Native task outcomes and deterministic rule-based interpretations are distinguished from unknowns.
+
+feedback_requests.json ranks observed failure codes and suggests bounded experiments. The
+implemented automatic intervention is generic successful-teacher collection plus BC retraining. The
+failure-report language must not imply that a causal model selected a proven remedy.
+
+Detector implementation
+
+Feedback request evidence
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                               12 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                           06 NOV 2026
+
+
+
+
+12 / STAGE 5, CORRECTIVE ITERATION
+
+
+More data did not solve the fast failure
+The before/after comparison uses identical evaluation seeds and retains a negative result.
+
+
+
+Bootstrap / before                                                                                              0/3
+
+
+Bootstrap / after                                                                                               1/3
+
+
+Fast / before                                                                                                   9/10
+
+
+Fast / after                                                                                                    9/10
+
+
+
+
+  Metric                                        Bootstrap before -> after            Fast before -> after
+
+
+  Held-out success                              0/3 -> 1/3                           9/10 -> 9/10
+
+
+  All-episode mean XY error                     653.82 -> 258.88 mm                  81.55 -> 84.58 mm
+
+
+  Additional teacher successes                  2 from new training seeds            3 from seeds 542-544
+
+
+  Fast success-only mean error                  Not the primary reported bootstrap   6.53 -> 9.89 mm
+                                                statistic
+
+
+  Improvement claim                             A measured small-set increase only   false; the same failure persists
+
+
+
+Executed intervention
+After observing learned-policy failures, select a feasible successful source-retargeted teacher origin,
+collect bounded additional trajectories on training seeds distinct from the evaluation set, merge
+successful data with the original teachers, retrain BC, and evaluate on the same held-out seeds.
+Baseline and corrective fast models each use 2,000 updates; bootstrap uses 300 updates. The
+intervention does not directly query or add the failed held-out trajectory to training.
+
+The fast failure at seed 10000 remains. A bootstrap failure at seed 10002 changes to a stable reviewed
+success. Additional data and retraining have not been isolated using a retraining-only control. The
+already-inspected held-out seeds are appropriate for a debugging before/after comparison, while final
+method selection requires a separate untouched evaluation set.
+
+Bootstrap measured correction
+
+Fast measured correction
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                13 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                               06 NOV 2026
+
+
+
+
+13 / FAILURE CASE AND CONDITIONING
+
+
+The persistent pregrasp stall
+Observed behavior is specific; the root cause remains unresolved.
+
+
+  Fast seed 10000                                          Baseline checkpoint               After feedback
+
+
+  Observed phase                                           pregrasp only                     pregrasp only
+
+
+  Episode budget                                           300 steps / 15 seconds            300 steps / 15 seconds
+
+
+  Final recorded pregrasp EEF error                        66.22 mm                          55.30 mm
+
+
+  Advance threshold                                        28 mm                             28 mm
+
+
+  Maximum can lift                                         0.062 mm                          0.062 mm
+
+
+  Grasp contact                                            Not observed                      Not observed
+
+
+  Final can-goal XY error                                  756.73 mm                         756.73 mm
+
+
+  Arm collision evidence                                   No reported collision in review   No reported collision in review
+                                                           evidence                          evidence
+
+
+The source-grounded teacher succeeds from the same initial features. Therefore the learned failure
+does not demonstrate an unreachable physical target. The policy approaches but settles outside the
+phase transition threshold, so no subsequent grasp/lift sequence begins. Both checkpoints show this
+symptom.
+
+Two testable hypotheses, not established causes
+Conditioning mismatch: five teacher-specific grasp/clearance settings are pooled, but the policy
+input does not explicitly include those parameters or the waypoint. Evaluation uses one fixed
+parameter set.
+Distribution shift: initial object_x and goal_minus_object_x are outside the full training feature range
+in the reviewed failure; the largest initial absolute z-score is 7.55 on object_minus_eef_y. Range/z-score
+observations alone do not establish causality.
+
+
+   Next controlled comparison
+   Compare fixed-parameter teachers, parameter-conditioned BC, and the existing mixed-teacher
+   baseline at equal training budget. Log waypoint error, XYZ outputs, normalized features, and phase
+   transitions over time. Keep seed 10000 as a regression case; evaluate final gains on new
+   untouched seeds and multiple training seeds.
+
+Numeric failure and conditioning evidence
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   14 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                        06 NOV 2026
+
+
+
+
+14 / OPEN ISSUES
+
+
+Nine explicit limits and acceptance gates
+Observed symptoms, confirmed implementation structure, and untested branches remain
+separate.
+
+
+  ID / priority          Current problem                       Evidence status / next acceptance gate
+
+
+  P01 / P0               Learned policy stalls before grasp.   Observed at fast seed 10000. Require phase-completion
+                                                               and final-placement gains on new seeds without
+                                                               regressing current successes.
+
+
+  P02 / P0               Retargeting transfers grasp/lift      Structure confirmed. Compare source on/off and
+                         summaries only; source benefit not    mismatched source at identical target starts/controller
+                         isolated.                             settings.
+
+
+  P03 / P0               Real human-video selection and task   No clip. Require actual frames, scores, Qwen raw text,
+                         extraction untested.                  reviewed JSON, and downstream use.
+
+
+  P04 / P1               Generic feedback does not improve     9/10 stays 9/10; mean error worsens. Add targeted-data
+                         fast success.                         and retraining-only controls.
+
+
+  P05 / P1               Historical failure code overstates    Rename future observed timeout code; preserve old CSV
+                         reachability evidence.                with migration history.
+
+
+  P06 / P1               Teacher conditioning parameters       Structure confirmed; causal effect unproven. Compare
+                         absent from BC input.                 fixed versus explicit conditioning.
+
+
+  P07 / P1               Small evaluation and                  Expand training/evaluation seeds and state estimation
+                         privileged/manual state               only when making broader claims.
+                         dependencies.
+
+
+  P08 / P1               Default videos show only the first    Review media adds success/failure galleries and labels.
+                         evaluation seed.                      Integrate representative export into future pipeline runs.
+
+
+  P09 / P1               Default native success ends without   Review adds specific-Can/release/one-second checks.
+                         stability dwell.                      Integrate as additional fields without rewriting old
+                                                               metrics.
+
+
+P0 items define the current research claim and main unsolved failure. P1 items must be addressed or
+explicitly held fixed before a stronger comparison. The review does not relabel absent experiments as
+completed fixes.
+
+Original issue register and evidence
+
+English stage-specific limitations
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                             15 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                           06 NOV 2026
+
+
+
+
+15 / THREE CASE STUDIES
+
+
+Source lineage is many-to-one
+Three visual case studies use three source demonstrations, but their B videos are executions of
+the same pooled-data baseline policy.
+
+
+
+
+Source A: demo_3                                Target B teacher: 1042              Learned B: 10001
+Original recorded states                        Source-grounded controller          Shared baseline checkpoint
+
+Illustrative frames occur at different times; they do not imply synchronized full-motion transfer. Video identities, frame
+indices, and hashes are preserved with the report figures.
+
+
+  Case         Source A             Executed training-teacher lineage             B held-out example
+               demo
+
+
+  01           demo_3               UR5e seeds 1042 and 1047; source-derived      Seed 10001; 150 steps; 8.48 mm
+                                    grasp/lift parameters.                        terminal XY error.
+
+
+  02           demo_5               UR5e seeds 1043 and 1048; source-derived      Seed 10003; 156 steps; 4.86 mm
+                                    grasp/lift parameters.                        terminal XY error.
+
+
+  03           demo_7               UR5e seeds 1044 and 1049; source-derived      Seed 10009; 225 steps; 10.33 mm
+                                    grasp/lift parameters.                        terminal XY error.
+
+
+
+   Do not read a case row as an individually trained A-to-B model
+   The shared baseline B checkpoint was trained on all five selected source IDs: demo_3, demo_5,
+   demo_7, demo_4, and demo_1, through ten executed UR5e teacher episodes. Each case shows a
+   source example and a successful B policy execution. The case pairing does not establish that one
+   source alone caused that B behavior.
+
+The three held-out B seeds are absent from the training-teacher set. Later video replays use frozen
+checkpoint weights and do not retrain. The reviewed successful B examples also remain inside the
+assigned Can compartment with no grasp contact after an additional second under the same learned
+policy.
+
+Case 01: demo_3 and shared-policy B execution
+
+Case 02: demo_5 and shared-policy B execution
+
+Case 03: demo_7 and shared-policy B execution
+
+Training lineage table
+
+Shared checkpoint and case manifest
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                16 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                           06 NOV 2026
+
+
+
+
+16 / SOURCE VIDEO PROVENANCE
+
+
+Recorded states versus executed actions
+The new source A videos reconstruct original HDF5 states. Earlier Panda videos show a separate
+live scripted policy.
+
+
+  Evidence type                   How generated                                     What it establishes
+
+
+  Original-source state           Restore each demo's original model XML using      Visualizes the recorded
+  reconstruction                  compatible installed asset paths. Set recorded    demonstration trajectory and
+                                  state vector [time(1), qpos(37), qvel(33)] and    supports source-state/observation
+                                  forward kinematics for each frame. No physics     alignment checks.
+                                  step advances a source action.
+
+
+  Live scripted Panda             Execute hand-coded waypoint/gripper actions       Shows the source-policy branch can
+  source branch                   using current simulator feedback.                 run in the current simulator; it is not
+                                                                                    a replay of the original HDF5
+                                                                                    demonstration.
+
+
+  Executed UR5e                   Run current target OSC feedback control using     Provides actual target action/state
+  source-grounded                 extracted source grasp/lift parameters.           trajectories for successful-teacher BC
+  teacher                                                                           training.
+
+
+  Learned B video                 Execute the frozen shared baseline policy on a    Provides an independent target
+                                  held-out target seed.                             rollout; it does not replay teacher
+                                                                                    actions.
+
+
+The source HDF5 records robosuite 1.5.1, while the current simulator is 1.5.2. Reusing original XML and
+numerically checking reconstructed Can/EEF positions is therefore an explicit compatibility step. A
+successful state reconstruction does not prove that replaying the recorded actions under newer physics
+reproduces the same dynamics or task success.
+
+  Source               Recorded duration                   Max position error (m)       Evidence
+
+
+  demo_3               98 frames                           Can: 0.0                     All-frame source metadata
+                       4.90 s at 20 Hz                     EEF: 4.81e-16
+                                                           Tolerance: 1e-08
+
+
+  demo_5               134 frames                          Can: 0.0                     All-frame source metadata
+                       6.70 s at 20 Hz                     EEF: 6.89e-16
+                                                           Tolerance: 1e-08
+
+
+  demo_7               115 frames                          Can: 0.0                     All-frame source metadata
+                       5.75 s at 20 Hz                     EEF: 5.82e-16
+                                                           Tolerance: 1e-08
+
+
+All recorded source frames pass the 1e-8 m position tolerance. Source clips visualize stored successful demonstrations
+(terminal reward=1, done=1 for demo_3/5/7); they do not validate execution of the old actions under new dynamics.
+
+Original-state source videos, per-frame CSVs, and validation metadata
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                  17 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                         06 NOV 2026
+
+
+
+
+17 / REPRODUCIBLE EXECUTION
+
+
+SSH-safe runs and exact artifacts
+The runnable baseline is detached; report and media generation do not replace actual
+training/evaluation evidence.
+
+
+  cd /home/dheo/Cross_Robot_Real2Sim
+  bash scripts/setup.sh
+  bash scripts/preflight.sh
+  bash scripts/launch.sh bootstrap
+  bash scripts/status.sh RUN_ID
+  tail -f runs/RUN_ID/logs/pipeline.log
+  bash scripts/resume.sh bootstrap RUN_ID
+  bash scripts/stop.sh RUN_ID
+
+
+launch.sh creates a detached tmux session with absolute project paths, activates the project
+environment inside it, exports CUDA_VISIBLE_DEVICES=0 and EGL settings, and stores run/session/PID
+metadata. Logs include timestamps. A project GPU lock prevents unintended concurrent project
+launches. tmux survives SSH/VS Code disconnection while the host stays running; it is not host-reboot
+persistence.
+
+The supervisor uses pipefail so tee does not hide a failed pipeline, records an exit code, handles signals,
+and preserves artifacts for resumption. Status checks both live process/session identity and persisted
+outcomes; disappearance alone never means success. Resume validates frozen configuration,
+input/artifact hashes, JSON/NPZ/checkpoint readability, and seed splits.
+
+Dependency and artifact reproduction
+
+  bash scripts/launch.sh fast
+  # Real human input later:
+  cp /path/to/real_human_can_clip.mp4 data/human/
+  bash scripts/setup.sh full
+  bash scripts/launch.sh full
+  # Rebuild this PDF, without retraining:
+  .venv/bin/python -m pip install -r requirements-report.txt
+  .venv/bin/python scripts/build_english_report.py
+
+
+Simulation, optional perception, review plotting, and PDF dependencies have separate requirement
+files. Original environment snapshots and lockfiles remain historical evidence. Raw
+runs/checkpoints/datasets stay local and gitignored; compact metrics, manifests, selected videos, and
+this report are versioned.
+
+Setup and detached runtime scripts
+
+Exact bootstrap dependency lock
+
+Report builder and editable source
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                             18 / 19
+CROSS-ROBOT REAL2SIM / TECHNICAL REPORT                                                                             06 NOV 2026
+
+
+
+
+18 / VERIFICATION AND RESEARCH NEXT STEPS
+
+
+What to trust, what to test next
+The evidence supports an honest baseline and specific next experiments, not an
+already-complete general real-to-sim method.
+
+
+  Verification area                      Executed evidence / remaining boundary
+
+
+  Input and schema tests                 HDF5 14D object-layout regression; task validation; unknown physics;
+                                         missing-human behavior; artifact contracts.
+
+
+  Simulator and controller tests         Headless Panda/UR5e steps and render; native goal predicate; action
+                                         dimension/clipping; seeded reset and frame transforms.
+
+
+  Learning and diagnosis tests           Shared online 26D feature contract; successful-teacher filtering; held-out seed
+                                         separation; saved-policy normalization/load; optimizer/sampling-state resume;
+                                         actual-state diagnostic cases.
+
+
+  Runtime and integration tests          Isolated tmux process fixtures verify detached launch, duplicate-run prevention,
+                                         nonzero exit preservation, scoped stop; missing-human full pipeline skips training.
+
+
+  Report QA                              Embedded DejaVu fonts, English text extraction, page count, text margin bounds,
+                                         layout audit, and rendered contact sheets. Report QA is not a new robotics
+                                         experiment.
+
+
+
+A prioritized experimental sequence
+First: resolve the pregrasp stall with equal-budget fixed-parameter versus parameter-conditioned
+policies, plus a retraining-only control.
+Second: isolate source-information value with source-on/source-off/mismatched-source ablations
+under matched target starts.
+Third: validate real human input end to end and only then expand evaluation seeds, training seeds,
+state-estimation conditions, and physical-robot claims.
+
+Primary references and evidence entry points
+Robomimic Can PH v1.5 dataset
+Robosuite controller documentation
+CLIP model card (planned full branch)
+Qwen2.5-VL-3B model card (planned full branch)
+
+Experiment index and original reports
+
+English source/B videos and lineage
+
+Numerical failure evidence
+
+PDF layout and font QA
+
+All measurements in this edition are traced to preserved execution or review artifacts. No real human clip, full-model
+inference, source-action equivalence, unseen-task transfer, or physical-robot execution is claimed.
+
+
+
+
+Simulation evidence / oracle_sim_state / English edition                                                                   19 / 19
+

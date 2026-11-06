@@ -1,0 +1,240 @@
+{
+  "status": "passed",
+  "page_count": 19,
+  "intended_page_count": 19,
+  "english_text_check": "passed",
+  "embedded_fonts": [
+    {
+      "name": "/AAAAAA+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "name": "/AAAAAA+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "name": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "characters": 1639,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 2,
+      "characters": 1753,
+      "links": 5,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.36,
+        818.57
+      ]
+    },
+    {
+      "page": 3,
+      "characters": 1732,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.34,
+        818.57
+      ]
+    },
+    {
+      "page": 4,
+      "characters": 1771,
+      "links": 1,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 5,
+      "characters": 1984,
+      "links": 3,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 6,
+      "characters": 1841,
+      "links": 3,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.35,
+        818.57
+      ]
+    },
+    {
+      "page": 7,
+      "characters": 1989,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 8,
+      "characters": 2098,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 9,
+      "characters": 2180,
+      "links": 1,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 10,
+      "characters": 2090,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 11,
+      "characters": 1837,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 12,
+      "characters": 2132,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 13,
+      "characters": 1703,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 14,
+      "characters": 1924,
+      "links": 1,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 15,
+      "characters": 2110,
+      "links": 2,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 16,
+      "characters": 1950,
+      "links": 5,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    },
+    {
+      "page": 17,
+      "characters": 2325,
+      "links": 4,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.34,
+        818.57
+      ]
+    },
+    {
+      "page": 18,
+      "characters": 2076,
+      "links": 3,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.36,
+        818.57
+      ]
+    },
+    {
+      "page": 19,
+      "characters": 2247,
+      "links": 8,
+      "text_bounds": [
+        47.0,
+        27.61,
+        548.27,
+        818.57
+      ]
+    }
+  ],
+  "issues": [],
+  "pdf_sha256": "fa7a6587f7a29c14e16dfb82088ea16d4aa01488a7c22582db14d69dcf880010",
+  "validation_tools": [
+    "ReportLab layout audit",
+    "PyMuPDF text bounds",
+    "pypdf font descriptors",
+    "pdftotext"
+  ],
+  "body_bottom_margin_points": 49
+}

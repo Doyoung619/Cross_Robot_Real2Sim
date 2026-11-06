@@ -1,0 +1,1196 @@
+[
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 656.89,
+    "height": 74
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 612.09,
+    "height": 30.8
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 561.79,
+    "height": 42.0
+  },
+  {
+    "page": 1,
+    "kind": "Graphic",
+    "bottom_y": 430.79,
+    "height": 131
+  },
+  {
+    "page": 1,
+    "kind": "Table",
+    "bottom_y": 274.39,
+    "height": 147.4
+  },
+  {
+    "page": 1,
+    "kind": "Table",
+    "bottom_y": 183.39,
+    "height": 82.0
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 144.39,
+    "height": 23.0
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 126.89,
+    "height": 11.5
+  },
+  {
+    "page": 1,
+    "kind": "Paragraph",
+    "bottom_y": 109.39,
+    "height": 11.5
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 680.49,
+    "height": 15.4
+  },
+  {
+    "page": 2,
+    "kind": "Table",
+    "bottom_y": 470.29,
+    "height": 210.2
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 430.29,
+    "height": 15
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 365.99,
+    "height": 56.0
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 315.69,
+    "height": 42.0
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 298.19,
+    "height": 11.5
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 280.69,
+    "height": 11.5
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 263.19,
+    "height": 11.5
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 245.69,
+    "height": 11.5
+  },
+  {
+    "page": 2,
+    "kind": "Paragraph",
+    "bottom_y": 228.19,
+    "height": 11.5
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 3,
+    "kind": "Table",
+    "bottom_y": 426.89,
+    "height": 238.2
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 386.89,
+    "height": 15
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 336.59,
+    "height": 42.0
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 286.29,
+    "height": 42.0
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 268.79,
+    "height": 11.5
+  },
+  {
+    "page": 3,
+    "kind": "Paragraph",
+    "bottom_y": 251.29,
+    "height": 11.5
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 644.09,
+    "height": 15
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 537.79,
+    "height": 98.0
+  },
+  {
+    "page": 4,
+    "kind": "Table",
+    "bottom_y": 477.79,
+    "height": 60
+  },
+  {
+    "page": 4,
+    "kind": "Table",
+    "bottom_y": 316.09,
+    "height": 152.7
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 276.09,
+    "height": 15
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 225.79,
+    "height": 42.0
+  },
+  {
+    "page": 4,
+    "kind": "Table",
+    "bottom_y": 171.79,
+    "height": 54.0
+  },
+  {
+    "page": 4,
+    "kind": "Paragraph",
+    "bottom_y": 144.29,
+    "height": 11.5
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 683.89,
+    "height": 52
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 639.09,
+    "height": 30.8
+  },
+  {
+    "page": 5,
+    "kind": "Table",
+    "bottom_y": 371.39,
+    "height": 267.7
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 331.39,
+    "height": 15
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 267.09,
+    "height": 56.0
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 202.79,
+    "height": 56.0
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 185.29,
+    "height": 11.5
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 167.79,
+    "height": 11.5
+  },
+  {
+    "page": 5,
+    "kind": "Paragraph",
+    "bottom_y": 150.29,
+    "height": 11.5
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 644.09,
+    "height": 15
+  },
+  {
+    "page": 6,
+    "kind": "Table",
+    "bottom_y": 573.09,
+    "height": 71
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 499.79,
+    "height": 56.0
+  },
+  {
+    "page": 6,
+    "kind": "Table",
+    "bottom_y": 338.09,
+    "height": 161.7
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 298.09,
+    "height": 15
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 233.79,
+    "height": 56.0
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 216.29,
+    "height": 11.5
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 198.79,
+    "height": 11.5
+  },
+  {
+    "page": 6,
+    "kind": "Paragraph",
+    "bottom_y": 181.29,
+    "height": 11.5
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 644.09,
+    "height": 15
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 579.79,
+    "height": 56.0
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 557.09,
+    "height": 15
+  },
+  {
+    "page": 7,
+    "kind": "Table",
+    "bottom_y": 486.09,
+    "height": 71
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 412.79,
+    "height": 56.0
+  },
+  {
+    "page": 7,
+    "kind": "Table",
+    "bottom_y": 260.09,
+    "height": 152.7
+  },
+  {
+    "page": 7,
+    "kind": "Table",
+    "bottom_y": 183.09,
+    "height": 68.0
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 155.59,
+    "height": 11.5
+  },
+  {
+    "page": 7,
+    "kind": "Paragraph",
+    "bottom_y": 138.09,
+    "height": 11.5
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 683.89,
+    "height": 52
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 639.09,
+    "height": 30.8
+  },
+  {
+    "page": 8,
+    "kind": "Table",
+    "bottom_y": 375.39,
+    "height": 263.7
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 302.09,
+    "height": 56.0
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 279.39,
+    "height": 15
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 201.09,
+    "height": 70.0
+  },
+  {
+    "page": 8,
+    "kind": "Table",
+    "bottom_y": 133.09,
+    "height": 68.0
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 105.59,
+    "height": 11.5
+  },
+  {
+    "page": 8,
+    "kind": "Paragraph",
+    "bottom_y": 88.09,
+    "height": 11.5
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 680.49,
+    "height": 15.4
+  },
+  {
+    "page": 9,
+    "kind": "Graphic",
+    "bottom_y": 576.49,
+    "height": 104
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 503.19,
+    "height": 56.0
+  },
+  {
+    "page": 9,
+    "kind": "Table",
+    "bottom_y": 327.79,
+    "height": 175.4
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 287.79,
+    "height": 15
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 223.49,
+    "height": 56.0
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 173.19,
+    "height": 42.0
+  },
+  {
+    "page": 9,
+    "kind": "Table",
+    "bottom_y": 91.19,
+    "height": 82.0
+  },
+  {
+    "page": 9,
+    "kind": "Paragraph",
+    "bottom_y": 63.69,
+    "height": 11.5
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 10,
+    "kind": "Graphic",
+    "bottom_y": 562.09,
+    "height": 103
+  },
+  {
+    "page": 10,
+    "kind": "Table",
+    "bottom_y": 328.89,
+    "height": 224.2
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 288.89,
+    "height": 15
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 210.59,
+    "height": 70.0
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 160.29,
+    "height": 42.0
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 131.29,
+    "height": 23.0
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 113.79,
+    "height": 11.5
+  },
+  {
+    "page": 10,
+    "kind": "Paragraph",
+    "bottom_y": 96.29,
+    "height": 11.5
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 11,
+    "kind": "Table",
+    "bottom_y": 373.69,
+    "height": 291.4
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 333.69,
+    "height": 15
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 255.39,
+    "height": 70.0
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 232.69,
+    "height": 15
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 168.39,
+    "height": 56.0
+  },
+  {
+    "page": 11,
+    "kind": "Table",
+    "bottom_y": 100.39,
+    "height": 68.0
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 72.89,
+    "height": 11.5
+  },
+  {
+    "page": 11,
+    "kind": "Paragraph",
+    "bottom_y": 55.39,
+    "height": 11.5
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 12,
+    "kind": "Table",
+    "bottom_y": 332.69,
+    "height": 332.4
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 273.39,
+    "height": 42.0
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 223.09,
+    "height": 42.0
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 205.59,
+    "height": 11.5
+  },
+  {
+    "page": 12,
+    "kind": "Paragraph",
+    "bottom_y": 188.09,
+    "height": 11.5
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 680.49,
+    "height": 15.4
+  },
+  {
+    "page": 13,
+    "kind": "Graphic",
+    "bottom_y": 535.49,
+    "height": 145
+  },
+  {
+    "page": 13,
+    "kind": "Table",
+    "bottom_y": 362.29,
+    "height": 164.2
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 322.29,
+    "height": 15
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 243.99,
+    "height": 70.0
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 179.69,
+    "height": 56.0
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 162.19,
+    "height": 11.5
+  },
+  {
+    "page": 13,
+    "kind": "Paragraph",
+    "bottom_y": 144.69,
+    "height": 11.5
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 680.49,
+    "height": 15.4
+  },
+  {
+    "page": 14,
+    "kind": "Table",
+    "bottom_y": 439.79,
+    "height": 240.7
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 366.49,
+    "height": 56.0
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 343.79,
+    "height": 15
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 251.49,
+    "height": 84.0
+  },
+  {
+    "page": 14,
+    "kind": "Table",
+    "bottom_y": 169.49,
+    "height": 82.0
+  },
+  {
+    "page": 14,
+    "kind": "Paragraph",
+    "bottom_y": 141.99,
+    "height": 11.5
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 15,
+    "kind": "Table",
+    "bottom_y": 260.89,
+    "height": 404.2
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 201.59,
+    "height": 42.0
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 184.09,
+    "height": 11.5
+  },
+  {
+    "page": 15,
+    "kind": "Paragraph",
+    "bottom_y": 166.59,
+    "height": 11.5
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 16,
+    "kind": "Table",
+    "bottom_y": 504.771,
+    "height": 160.319
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 469.771,
+    "height": 23.0
+  },
+  {
+    "page": 16,
+    "kind": "Table",
+    "bottom_y": 322.371,
+    "height": 147.4
+  },
+  {
+    "page": 16,
+    "kind": "Table",
+    "bottom_y": 231.371,
+    "height": 82.0
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 157.071,
+    "height": 56.0
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 139.571,
+    "height": 11.5
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 122.071,
+    "height": 11.5
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 104.571,
+    "height": 11.5
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 87.071,
+    "height": 11.5
+  },
+  {
+    "page": 16,
+    "kind": "Paragraph",
+    "bottom_y": 69.571,
+    "height": 11.5
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 17,
+    "kind": "Table",
+    "bottom_y": 411.39,
+    "height": 253.7
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 338.09,
+    "height": 56.0
+  },
+  {
+    "page": 17,
+    "kind": "Table",
+    "bottom_y": 167.39,
+    "height": 170.7
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 131.39,
+    "height": 23.0
+  },
+  {
+    "page": 17,
+    "kind": "Paragraph",
+    "bottom_y": 113.89,
+    "height": 11.5
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 18,
+    "kind": "Table",
+    "bottom_y": 561.09,
+    "height": 104
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 473.79,
+    "height": 70.0
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 409.49,
+    "height": 56.0
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 386.79,
+    "height": 15
+  },
+  {
+    "page": 18,
+    "kind": "Table",
+    "bottom_y": 282.79,
+    "height": 104
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 209.49,
+    "height": 56.0
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 191.99,
+    "height": 11.5
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 174.49,
+    "height": 11.5
+  },
+  {
+    "page": 18,
+    "kind": "Paragraph",
+    "bottom_y": 156.99,
+    "height": 11.5
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 746.89,
+    "height": 12
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 709.89,
+    "height": 26
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 665.09,
+    "height": 30.8
+  },
+  {
+    "page": 19,
+    "kind": "Table",
+    "bottom_y": 431.89,
+    "height": 233.2
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 391.89,
+    "height": 15
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 299.59,
+    "height": 84.0
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 276.89,
+    "height": 15
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 212.59,
+    "height": 56.0
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 195.09,
+    "height": 11.5
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 177.59,
+    "height": 11.5
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 160.09,
+    "height": 11.5
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 142.59,
+    "height": 11.5
+  },
+  {
+    "page": 19,
+    "kind": "Paragraph",
+    "bottom_y": 113.59,
+    "height": 23.0
+  }
+]

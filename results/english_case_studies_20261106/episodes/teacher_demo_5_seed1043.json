@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "case_id": "teacher_demo_5_seed1043",
+  "source_run_id": "fast_20261105T182127Z",
+  "seed": 1043,
+  "mode": "fast",
+  "teacher_origin": "source_retargeted",
+  "robot": "UR5e",
+  "source_demo_id": "demo_5",
+  "checkpoint": null,
+  "source_npz": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/03_retarget/rollouts/UR5e_source_retargeted_1043.npz",
+  "source_original_success": true,
+  "same_initial_features": true,
+  "terminal_step": 162,
+  "terminal": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.24737107218311952,
+      0.4013100761539193,
+      0.8600559050643217
+    ],
+    "eef_position": [
+      0.1863817835279315,
+      0.4040617768513735,
+      0.8952095495768392
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.04988526595552426
+  },
+  "post_hold": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.24739579206619952,
+      0.40131006789225193,
+      0.8600585959938225
+    ],
+    "eef_position": [
+      0.18226956781153372,
+      0.4007893889919422,
+      1.1025258091690202
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.04990997900555026
+  },
+  "post_hold_steps": 20,
+  "post_hold_seconds": 1.0,
+  "stable_placement_1s": true,
+  "max_lift_m": 0.24712069107720147,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": 0.0,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/teacher_demo_5_seed1043.mp4",
+  "video_frames": 94,
+  "fps": 10,
+  "video_sha256": "51a712b02d201450738dcab5166ed5a3a57d27bd32f72e52e7bbb6da377f7a70",
+  "video_language": "en",
+  "cache_key": {
+    "request": {
+      "case_id": "teacher_demo_5_seed1043",
+      "run_id": "fast_20261105T182127Z",
+      "seed": 1043,
+      "teacher_origin": "source_retargeted",
+      "source_demo_id": "demo_5",
+      "language": "en",
+      "original_npz": "runs/fast_20261105T182127Z/03_retarget/rollouts/UR5e_source_retargeted_1043.npz",
+      "variant_label": "training demonstration from demo_5"
+    },
+    "implementation_sha256": "7c6d7849e7d8769cc44102769ef6900fb3ffc6f7bd490db5a21fd2f69af033a9",
+    "config_sha256": "426d89de7824d67084636a72e079fea555ba0ada1b8451885bcba8fd5aeaf29a",
+    "checkpoint_sha256": null,
+    "original_npz_sha256": "bb0d0ba32fae087f4e1409b5ea3bd3fef49c4b5c21c1333c5ce0a47e56dc3007"
+  }
+}

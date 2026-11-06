@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "demo_id": "demo_7",
+  "robot": "Panda",
+  "role": "original_source_robot_A_motion",
+  "mode": "source_dataset_state_reconstruction",
+  "source_dataset_path": "/home/dheo/Cross_Robot_Real2Sim/data/source/v1.5/can/ph/low_dim_v15.hdf5",
+  "source_dataset_sha256": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+  "source_dataset_id": "robomimic/robomimic_datasets/v1.5/can/ph/low_dim_v15.hdf5",
+  "source_policy_type": "recorded_human_demonstration_dataset",
+  "scripted_controller_used": false,
+  "action_replay_used": false,
+  "state_reconstruction_used": true,
+  "source_env_version": "1.5.1",
+  "installed_robosuite": "1.5.2",
+  "installed_mujoco": "3.3.7",
+  "source_model_xml_sha256": "38ab4b1c15e8d4c69f1bbe17382a1023eb77bebe0f415b1e9a949f45594055cf",
+  "resolved_model_xml_sha256": "3e56b5786f990a3f95d984630bbc8039773400064ee7beb1f9cc67367d57b442",
+  "model_changes": "Only asset file paths resolved; original scene, robot, cameras and states retained",
+  "asset_path_rewrites": [
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/arenas/../textures/light-gray-floor-tile.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/light-gray-floor-tile.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/arenas/../textures/steel-brushed.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/steel-brushed.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/arenas/../textures/light-gray-plaster.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/light-gray-plaster.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/arenas/../textures/light-wood.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/light-wood.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/arenas/../textures/dark-wood.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/dark-wood.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/../textures/ceramic.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/ceramic.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/../textures/bread.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/bread.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/../textures/cereal.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/cereal.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/../textures/soda.png",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/textures/soda.png"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link0.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link0.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link1.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link1.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link2.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link2.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link3.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link3.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link4.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link4.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link5.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link5.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link6.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link6.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/meshes/link7.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/meshes/link7.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_3.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_3.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_4.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_4.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_5.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_5.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_6.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_6.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_7.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_7.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_8.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_8.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_9.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_9.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_10.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_10.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_11.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link0_vis/link0_vis_11.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link1_vis/link1_vis.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link1_vis/link1_vis.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link2_vis/link2_vis.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link2_vis/link2_vis.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_3.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link3_vis/link3_vis_3.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_3.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link4_vis/link4_vis_3.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link5_vis/link5_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_3.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_3.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_4.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_4.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_5.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_5.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_6.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_6.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_7.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_7.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_8.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_8.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_9.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_9.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_10.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_10.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_11.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_11.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_12.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_12.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_13.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_13.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_14.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_14.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_15.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_15.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_16.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link6_vis/link6_vis_16.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_0.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_0.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_1.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_1.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_2.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_2.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_3.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_3.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_4.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_4.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_5.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_5.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_6.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_6.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_7.obj",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/robots/panda/obj_meshes/link7_vis/link7_vis_7.obj"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/bases/meshes/rethink_mount/pedestal.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/bases/meshes/rethink_mount/pedestal.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/grippers/meshes/panda_gripper/hand.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/grippers/meshes/panda_gripper/hand.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/grippers/meshes/panda_gripper/hand_vis.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/grippers/meshes/panda_gripper/hand_vis.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/grippers/meshes/panda_gripper/finger.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/grippers/meshes/panda_gripper/finger.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/grippers/meshes/panda_gripper/finger_vis.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/grippers/meshes/panda_gripper/finger_vis.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/grippers/meshes/panda_gripper/finger_longer.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/grippers/meshes/panda_gripper/finger_longer.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/milk.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/milk.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/bread.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/bread.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/cereal.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/cereal.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/can.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/can.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/milk.msh",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/milk.msh"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/bread.stl",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/bread.stl"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/cereal.msh",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/cereal.msh"
+    },
+    {
+      "original": "/home/soroushn/code/robosuite-dev/robosuite/models/assets/objects/meshes/can.msh",
+      "resolved": "/home/dheo/Cross_Robot_Real2Sim/.venv/lib/python3.10/site-packages/robosuite/models/assets/objects/meshes/can.msh"
+    }
+  ],
+  "camera": "agentview",
+  "render_collision_mesh": false,
+  "render_visual_mesh": true,
+  "state_shape": [
+    115,
+    71
+  ],
+  "action_shape": [
+    115,
+    7
+  ],
+  "object_observation_layout": "robosuite1.5: EEF-relative[0:7], Can world pos[7:10], quat[10:14]",
+  "validated_frames": 115,
+  "encoded_frames": 115,
+  "control_hz": 20.0,
+  "video_fps": 20.0,
+  "speed_multiplier": 1.0,
+  "timestamp_source": "Original simulator state times, checked against metadata control frequency",
+  "source_first_timestamp_s": 0.0,
+  "source_last_timestamp_s": 5.699999999999594,
+  "video_duration_s": 5.75,
+  "max_eef_position_error_m": 5.822058658345461e-16,
+  "max_can_position_error_m": 0.0,
+  "tolerance_m": 1e-08,
+  "video_path": "/home/dheo/Cross_Robot_Real2Sim/results/english_case_studies_20261106/source/source_demo_7.mp4",
+  "video_sha256": "a308e187191be51c2c1285b831a35812a7a8cdd07bc3944212c0c7d763fba6cb",
+  "width": 640,
+  "height": 480,
+  "validation_npz": "/home/dheo/Cross_Robot_Real2Sim/results/english_case_studies_20261106/source/source_demo_7_validation.npz",
+  "frame_validation_csv": "/home/dheo/Cross_Robot_Real2Sim/results/english_case_studies_20261106/source/source_demo_7_frame_validation.csv",
+  "render_backend": "egl",
+  "device": "CPU state reconstruction; GPU 0 EGL rendering",
+  "privileged_state_used": true,
+  "human_video_used": false,
+  "labels_language": "English",
+  "duration_seconds": 0.6469845280516893,
+  "method_reference": "https://robosuite.ai/docs/algorithms/demonstrations.html"
+}

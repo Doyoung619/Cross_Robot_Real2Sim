@@ -1,0 +1,26 @@
+[
+  {
+    "video": "results/english_case_studies_20261106/source/source_demo_3.mp4",
+    "sha256": "ed8b5b4b2e877d9048bea6b812cfd4e3e98aaf703355763782968f0eba184434",
+    "frame_index": 63,
+    "frame_count": 98,
+    "video_duration_s": 4.9,
+    "figure": "reports/english_technical_report_20261106/figures/case01_panel_01.png"
+  },
+  {
+    "video": "results/english_case_studies_20261106/episodes/teacher_demo_3_seed1042.mp4",
+    "sha256": "d2da02e49e6b0b6c7d7936994daf548fb241c21537f6c7799084b949e99e36d2",
+    "frame_index": 59,
+    "frame_count": 92,
+    "video_duration_s": 9.2,
+    "figure": "reports/english_technical_report_20261106/figures/case01_panel_02.png"
+  },
+  {
+    "video": "results/english_case_studies_20261106/episodes/learned_shared_policy_seed10001.mp4",
+    "sha256": "ea9600308d372408f4626797e783dc2b37e5470052bdb7a59d2533d7e86adeaf",
+    "frame_index": 57,
+    "frame_count": 88,
+    "video_duration_s": 8.8,
+    "figure": "reports/english_technical_report_20261106/figures/case01_panel_03.png"
+  }
+]

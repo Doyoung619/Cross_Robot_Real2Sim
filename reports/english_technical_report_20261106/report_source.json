@@ -1,0 +1,1549 @@
+{
+  "schema_version": "1.0",
+  "title": "Cross-Robot Real2Sim Technical Report",
+  "language": "en",
+  "edition_date": "2026-11-06",
+  "source_run_ids": [
+    "bootstrap_20261105T181834Z",
+    "fast_20261105T182127Z",
+    "full_20261105T182257Z"
+  ],
+  "evidence_policy": "Original metrics remain immutable; later replay validation is separate; no absent result is invented.",
+  "pages": [
+    {
+      "eyebrow": "RESEARCH PROTOTYPE / ENGLISH EDITION",
+      "title": "Cross-Robot<br/>Real2Sim",
+      "subtitle": "Technical methods, measured evidence, failure analysis, and reproducible execution. Evidence freeze: 06 November 2026.",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Task: <b>can pick, lift, transport, and place inside its assigned bin</b>. Source embodiment A is the 7-DoF Franka Panda; target embodiment B is the 6-DoF UR5e. Both operate in headless robosuite/MuJoCo PickPlaceCan."
+        },
+        {
+          "type": "graphic",
+          "name": "pipeline",
+          "height": 131
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Executed experiment",
+            "Teacher placement",
+            "Saved learned policy",
+            "Feedback result"
+          ],
+          "rows": [
+            [
+              "Bootstrap",
+              "3/3 source-retargeted UR5e",
+              "0/3 held-out seeds",
+              "1/3 on the same seeds"
+            ],
+            [
+              "Fast",
+              "10/10 source-retargeted UR5e",
+              "9/10 held-out seeds",
+              "9/10; no improvement"
+            ],
+            [
+              "Full / real human video",
+              "No real human clip supplied",
+              "Retargeting and training skipped",
+              "requires_human_video"
+            ]
+          ],
+          "widths": [
+            1.1,
+            1.4,
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Claim boundary",
+          "text": "This is a working simulation infrastructure baseline using <b>oracle_sim_state</b>. Source information is limited to grasp offset and lift clearance inside a hand-coded controller. No real-human-video inference, vision-only policy, full-motion transfer, or physical-robot transfer has been demonstrated."
+        },
+        {
+          "type": "small",
+          "text": "Original runs: bootstrap_20261105T181834Z and fast_20261105T182127Z. Later review videos re-execute frozen policies; they do not introduce new policy training."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Repository and experiment index",
+              "path": "results/README.md"
+            },
+            {
+              "label": "English case studies and provenance",
+              "path": "results/english_case_studies_20261106/README.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "01 / SYSTEM MAP",
+      "title": "What the five stages establish",
+      "subtitle": "Each boundary has an independently runnable module and explicit evidence artifacts.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Boundary",
+            "Executed method / model",
+            "Input to output"
+          ],
+          "rows": [
+            [
+              "1. Data Selection",
+              "Deterministic metadata filter and diverse-start selector; CLIP reserved for full mode.",
+              "Can HDF5 episodes to selection.json"
+            ],
+            [
+              "2. Task Understanding",
+              "Pydantic-validated provided task seed; Qwen reserved for actual human frames.",
+              "Selection plus seed to task_spec.json"
+            ],
+            [
+              "3. Cross-Robot Retargeting",
+              "Source-relative grasp/lift extraction plus BASIC/OSC_POSE feedback control.",
+              "Source trace plus task to executed UR5e NPZ"
+            ],
+            [
+              "4. Policy Learning",
+              "26-128-128-4 MLP behavior cloning, fresh-process evaluation.",
+              "Successful executed teachers to checkpoint and eval.csv"
+            ],
+            [
+              "5. Failure Analysis",
+              "Deterministic simulator-state rules and bounded additional data collection.",
+              "Actual rollout evidence to feedback and before/after metrics"
+            ]
+          ],
+          "widths": [
+            1.3,
+            2.4,
+            1.8
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Three separate meanings of success"
+        },
+        {
+          "type": "p",
+          "text": "<b>Teacher success</b> is placement achieved by the executed source-grounded controller. <b>Learned-policy success</b> is placement achieved by the saved MLP in closed loop on different simulator seeds. <b>Human-video understanding success</b> would require actual CLIP and Qwen inference on a real human clip; it is currently untested."
+        },
+        {
+          "type": "p",
+          "text": "The dataset source is human-operated Panda robot demonstration data, not a video of an unaided person. The executable Panda scripted branch validates live source control, while the new original-state source videos reconstruct recorded HDF5 states. These are distinct evidence types."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "1_Data Selection",
+              "path": "1_Data Selection/README.md"
+            },
+            {
+              "label": "2_Task Understanding",
+              "path": "2_Task Understanding/README.md"
+            },
+            {
+              "label": "3_Cross-Robot-Retargeting",
+              "path": "3_Cross-Robot-Retargeting/README.md"
+            },
+            {
+              "label": "4_Policy Learning",
+              "path": "4_Policy Learning/README.md"
+            },
+            {
+              "label": "5_Failure Analysis",
+              "path": "5_Failure Analysis/README.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "02 / DATA AND ENVIRONMENT",
+      "title": "Small, inspectable inputs",
+      "subtitle": "The implementation uses one minimal dataset file and records runtime compatibility rather than assuming checkpoint interchangeability.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Item",
+            "Verified value"
+          ],
+          "rows": [
+            [
+              "Public dataset",
+              "robomimic/robomimic_datasets; v1.5/can/ph/low_dim_v15.hdf5; PH = proficient human robot demonstrations."
+            ],
+            [
+              "Downloaded scope",
+              "One file, 46,889,752 bytes, 200 recorded Panda episodes; no full repository download."
+            ],
+            [
+              "Dataset SHA-256",
+              "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962"
+            ],
+            [
+              "Recorded source environment",
+              "PickPlaceCan, robosuite 1.5.1 metadata, Panda, 20 Hz, OSC_POSE, lite_physics=false."
+            ],
+            [
+              "Executed simulator",
+              "robosuite 1.5.2; MuJoCo 3.3.7; offscreen EGL; 20 Hz; 300-step / 15-second episode cap."
+            ],
+            [
+              "Compute stack",
+              "Python 3.10.12; PyTorch 2.6.0+cu124; NumPy 1.26.4; h5py 3.14.0; Pydantic 2.12.3."
+            ],
+            [
+              "Host evidence",
+              "NVIDIA RTX 4090, driver 550.163.01; CUDA_VISIBLE_DEVICES=0. No heavyweight perception model used."
+            ]
+          ],
+          "widths": [
+            1.35,
+            4.2
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Contracts and units"
+        },
+        {
+          "type": "p",
+          "text": "JSON carries light metadata and provenance; NPZ carries typed trajectory arrays; CSV carries attempt/evaluation rows; MP4 supplies visual evidence. Positions are meters, times seconds, and angles radians. Named frames distinguish source_world, target_world, object_relative, and human_image_px."
+        },
+        {
+          "type": "p",
+          "text": "The downloaded data include actions [T,7], EEF position [T,3], EEF quaternion [T,4], gripper observations, object state [T,14], simulator states [T,71], and an original model XML per episode. T varies by demonstration. No old learned robomimic checkpoint is loaded into the newer simulator."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Dataset inspection and recorded versions",
+              "path": "results/fast_20261105T182127Z/01_selection/source_inspection.json"
+            },
+            {
+              "label": "Original execution environment",
+              "path": "results/fast_20261105T182127Z/environment.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "03 / STAGE 1",
+      "title": "Data selection: what actually ran",
+      "subtitle": "Fast mode chooses five episodes from the first eight inspected source IDs; it does not search or rank the entire 200-episode corpus.",
+      "blocks": [
+        {
+          "type": "h",
+          "text": "Deterministic selection algorithm"
+        },
+        {
+          "type": "p",
+          "text": "1. Enumerate source demos by numeric ID and inspect at most eight candidates (demo_0 through demo_7). Require nonempty actions and consistent observation lengths; retain the Can/Panda task provenance.<br/>2. Sort coherent candidates by sample count, breaking ties by demo ID. Select the shortest demonstration first.<br/>3. Repeatedly select the remaining candidate with the greatest minimum Euclidean initial-object-position distance to the already selected set. Stop after five selections."
+        },
+        {
+          "type": "code",
+          "text": "selected = [shortest_consistent_demo]\nwhile len(selected) < 5:\n    next = argmax_d min_s ||object_start[d] - object_start[s]||_2\n    selected.append(next)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Selection order",
+            "Samples",
+            "Initial can position [x,y,z] m"
+          ],
+          "rows": [
+            [
+              "demo_3",
+              "98",
+              "[-0.00836, -0.08959, 0.86000]"
+            ],
+            [
+              "demo_5",
+              "134",
+              "[-0.01880, -0.40074, 0.86000]"
+            ],
+            [
+              "demo_7",
+              "115",
+              "[0.19077, -0.27073, 0.86000]"
+            ],
+            [
+              "demo_4",
+              "102",
+              "[0.13630, -0.08713, 0.86000]"
+            ],
+            [
+              "demo_1",
+              "118",
+              "[0.10021, -0.19378, 0.86000]"
+            ]
+          ],
+          "widths": [
+            1.2,
+            0.8,
+            3.7
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Output and limitation"
+        },
+        {
+          "type": "p",
+          "text": "selection.json records all inspected shapes, selected IDs, initial positions, source file hash, reasons, and strategy. The observed source-selection method is a metadata baseline. It supplies reproducible diversity but does not demonstrate task-aware learned retrieval or optimal source selection."
+        },
+        {
+          "type": "callout",
+          "title": "Human branch status",
+          "text": "No human clip exists in the recorded runs. human_clip_selection is skipped_missing_input in bootstrap/fast. No CLIP score was computed, and no distractor rejection result is invented."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Selection evidence",
+              "path": "results/fast_20261105T182127Z/01_selection/selection.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "04 / STAGES 1-2, FULL BRANCH",
+      "title": "Human-video models: implemented, untested",
+      "subtitle": "Keep the proposed perception interface separate from the measured metadata-and-seed baseline.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Component",
+            "Implemented full-mode path",
+            "Current evidence"
+          ],
+          "rows": [
+            [
+              "Video sampling",
+              "Scan data/human for real MP4 clips; sample 4-6 ordered frames at reduced resolution; preserve timestamps and annotated frames.",
+              "No human clip supplied."
+            ],
+            [
+              "CLIP ranker",
+              "openai/clip-vit-base-patch32 through Transformers CLIPModel / CLIPProcessor. Mean frame-to-task cosine similarity ranks actual clips.",
+              "Code exists; model inference not executed."
+            ],
+            [
+              "Qwen task interpreter",
+              "Qwen/Qwen2.5-VL-3B-Instruct through Qwen2_5_VLForConditionalGeneration, AutoProcessor, and qwen-vl-utils. Deterministic local generation on ordered images.",
+              "Code exists; weights and inference not tested in recorded runs."
+            ],
+            [
+              "GPU scheduling",
+              "CLIP, Qwen, and BC are sequential; model references are released between perception stages.",
+              "Bootstrap/fast load only the small BC model."
+            ],
+            [
+              "SAM2 segmentation",
+              "Optional interface reports the absence of implemented mask prompting/weights.",
+              "Not implemented; no segmentation achievement claimed."
+            ]
+          ],
+          "widths": [
+            1.1,
+            3.1,
+            1.5
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Missing input is an auditable outcome"
+        },
+        {
+          "type": "p",
+          "text": "The recorded full run full_20261105T182257Z reports partial / requires_human_video. Step 2 has skipped_missing_input; retargeting and policy learning are skipped. Diagnosis records zero episodes and no feasible corrective iteration. A successful script exit or generated report does not imply human-video processing succeeded."
+        },
+        {
+          "type": "p",
+          "text": "To validate this branch, supply a real clip with provenance and file hash; retain sampled frames, actual CLIP scores, Qwen prompt/raw text, parsed JSON, semantic mapping assumptions, and a human review of goal correctness. Then verify that the validated JSON gates the same downstream retargeting pipeline."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Recorded missing-human full report",
+              "path": "results/full_20261105T182257Z/FINAL_REPORT.md"
+            },
+            {
+              "label": "CLIP implementation",
+              "path": "src/cross_robot_real2sim/stage1_selection/clip_ranker.py"
+            },
+            {
+              "label": "Qwen implementation",
+              "path": "src/cross_robot_real2sim/stage2_task/qwen_vl.py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "05 / STAGE 2",
+      "title": "Task understanding: provided semantics",
+      "subtitle": "Bootstrap and fast modes validate an explicit task specification; they do not infer goals from invented video.",
+      "blocks": [
+        {
+          "type": "h",
+          "text": "Executed task representation"
+        },
+        {
+          "type": "code",
+          "text": "task_source: provided_seed\nobject: can\ngoal: {relation: inside, receptacle: bin}\ngoal_pose_source: simulator_oracle\nunknowns: {mass: unknown, friction: unknown, contact_state: unknown}"
+        },
+        {
+          "type": "p",
+          "text": "The seed contains eight ordered stages: pre-grasp, grasp, close, lift, transport, lower, open, and retreat. Constraints require lifting before transport, clearing the source bin wall, and releasing over the assigned target compartment. Pydantic rejects unsupported object/goal relations and fabricated known physical properties."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Semantic label",
+            "Declared simulator binding / assumption"
+          ],
+          "rows": [
+            [
+              "can",
+              "Can object in PickPlaceCan. The object identity is fixed for this MVP."
+            ],
+            [
+              "bin",
+              "The Can object's assigned target_bin_placements[can_index] entry. The visual receptacle in a future clip need not look identical."
+            ],
+            [
+              "Metric object and target poses",
+              "Read from privileged simulator state; no metric 3D position is reconstructed from monocular video."
+            ],
+            [
+              "Mass / friction / contact in task JSON",
+              "Remain unknown. Simulator contact used by controller/features is a separate privileged observation, not an inferred human-video contact fact."
+            ]
+          ],
+          "widths": [
+            1.65,
+            4.0
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Interface to retargeting"
+        },
+        {
+          "type": "p",
+          "text": "task_spec.json includes schema version, seed, mode, task source, model/controller name, input IDs, units, privilege flags, semantic mapping, and assumptions. Stage 3 validates the task before collection and refuses unsupported semantic mappings. The controller still implements only the fixed can-inside-bin scenario; it is not a general task planner."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Executed task JSON",
+              "path": "results/fast_20261105T182127Z/02_task/task_spec.json"
+            },
+            {
+              "label": "Editable provided seed",
+              "path": "data/task_seeds/can_to_bin.json"
+            },
+            {
+              "label": "Validated task schema",
+              "path": "src/cross_robot_real2sim/schemas.py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "06 / STAGE 3, SOURCE GEOMETRY",
+      "title": "What crosses the embodiment boundary",
+      "subtitle": "The source contribution is a measured grasp offset and lift clearance, not a copied joint trajectory or a learned source policy.",
+      "blocks": [
+        {
+          "type": "h",
+          "text": "Schema discovery matters"
+        },
+        {
+          "type": "p",
+          "text": "For the actual 14D object observation, indices 0:7 contain EEF-relative pose; world can position is 7:10 and world quaternion is 10:14. Treating the first three values as world XYZ produces physically implausible geometry. The adapter explicitly decodes and tests this layout. EEF pose and actions are read from their named datasets. Timestamps are reconstructed from the recorded 20 Hz control rate."
+        },
+        {
+          "type": "h",
+          "text": "Extraction and calibration"
+        },
+        {
+          "type": "code",
+          "text": "r[t] = eef_position[t] - can_world_position[t]\nclosing = {t : recorded_gripper_action[t] > 0}\ngrasp_t = argmin_t_in_closing ||r[t]||_2\ngrasp_offset = r[grasp_t]\nsource_lift = max_t can_z[t] - can_z[0]"
+        },
+        {
+          "type": "p",
+          "text": "When closing actions are absent, a geometric nearest-approach fallback is explicitly labeled. The target clips XY offsets to +/-25 mm and Z offset to [-15,40] mm. Lift is clipped to [0.12,0.25] m and combined with the configured minimum clearance. Object-relative axes remain world-aligned for the cylindrical can; this is a translation-relative construction, not a full rotating object-frame motion transfer."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Source demo",
+            "Applied grasp offset [x,y,z] mm",
+            "Applied clearance m"
+          ],
+          "rows": [
+            [
+              "demo_3",
+              "[4.71, -2.26, 22.81]",
+              "0.20135"
+            ],
+            [
+              "demo_5",
+              "[-10.33, 1.90, 14.24]",
+              "0.25000 (source lift 0.27388)"
+            ],
+            [
+              "demo_7",
+              "[-11.30, 0.03, 8.64]",
+              "0.22358"
+            ],
+            [
+              "demo_4",
+              "[-0.98, -0.09, 12.82]",
+              "0.21071"
+            ],
+            [
+              "demo_1",
+              "[-0.54, 0.97, 24.12]",
+              "0.21320"
+            ]
+          ],
+          "widths": [
+            1.0,
+            3.1,
+            1.6
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Scientific limit / P02",
+          "text": "The overall phase sequence, target generation, gripper timing, and orientation handling are hand-coded. Source quaternions may be stored, but their full time-varying orientation is not transferred. No source-parameter ablation has isolated the benefit of the source information."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Source extraction",
+              "path": "src/cross_robot_real2sim/stage3_retarget/source_trace.py"
+            },
+            {
+              "label": "Parameter calibration",
+              "path": "src/cross_robot_real2sim/stage3_retarget/waypoints.py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "07 / STAGE 3, EXECUTED CONTROL",
+      "title": "The target uses its own closed-loop controller",
+      "subtitle": "Live UR5e feedback drives task-space waypoints; Panda joint angles are never copied into the 6-DoF target.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Phase",
+            "Target construction",
+            "Gripper / transition"
+          ],
+          "rows": [
+            [
+              "Pregrasp",
+              "Current can + grasp offset + clearance in Z.",
+              "Open; EEF error below 28 mm advances."
+            ],
+            [
+              "Grasp",
+              "Current can + grasp offset.",
+              "Open; EEF error below 17 mm advances."
+            ],
+            [
+              "Close",
+              "Current can + grasp offset.",
+              "Close; 14 control steps."
+            ],
+            [
+              "Lift",
+              "Initial pickup position + grasp offset + clearance.",
+              "Close; EEF error below 28 mm."
+            ],
+            [
+              "Transport",
+              "Goal XY with initial object Z + offset + clearance.",
+              "Close; EEF error below 28 mm."
+            ],
+            [
+              "Lower",
+              "Goal XY with initial object Z + offset + 15 mm.",
+              "Close; EEF error below 17 mm."
+            ],
+            [
+              "Open",
+              "Same lower target.",
+              "Open; 14 control steps."
+            ],
+            [
+              "Retreat",
+              "Place position + clearance.",
+              "Open; evaluate actual placement predicate."
+            ]
+          ],
+          "widths": [
+            1.0,
+            3.0,
+            2.0
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The teacher action is normalized XYZ = clip(0.6 * (waypoint - EEF) / 0.05, -1, 1), with positive gripper closure during close through lower. The phase tracker is computed online from simulator observations and elapsed phase steps. It is shared with policy evaluation, making this a hybrid learned-controller system rather than an autonomous learned phase planner."
+        },
+        {
+          "type": "h",
+          "text": "Executed outcomes and retained provenance"
+        },
+        {
+          "type": "p",
+          "text": "Fast mode executed one scripted Panda success and ten source-retargeted UR5e successes. Bootstrap executed one scripted Panda success and three source-retargeted UR5e successes. The separate target_scripted_bootstrap fallback had zero attempts in these runs; therefore no source-versus-oracle comparison was performed. Attempt rows retain seed, source ID, origin, placement error, lift, and failure code."
+        },
+        {
+          "type": "callout",
+          "title": "Code does not prove physical infeasibility / P05",
+          "text": "The historical unreachable_waypoint label means an early waypoint was not reached by the horizon. It is not an IK infeasibility certificate. At failed learned-policy seed 10000, the teacher succeeds from the same initial features."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Fast attempt-level CSV",
+              "path": "results/fast_20261105T182127Z/03_retarget/attempts.csv"
+            },
+            {
+              "label": "Waypoint controller",
+              "path": "src/cross_robot_real2sim/stage3_retarget/controller.py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "08 / STAGE 4, EXECUTED DATA",
+      "title": "What the target policy learns from",
+      "subtitle": "Only successful, actually executed UR5e teacher trajectories enter behavior cloning.",
+      "blocks": [
+        {
+          "type": "graphic",
+          "name": "lineage",
+          "height": 104
+        },
+        {
+          "type": "p",
+          "text": "The fast baseline pools ten source-retargeted UR5e episodes from seeds 1042-1051. Five source IDs each contribute two executed target rollouts. These produce <b>1,620 state-action rows</b>; rows are temporally correlated samples from ten episodes, not 1,620 independent demonstrations. Bootstrap uses three episodes and 496 rows."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature group",
+            "Dimensions",
+            "Runtime source"
+          ],
+          "rows": [
+            [
+              "EEF / can / goal XYZ",
+              "9",
+              "Actual target simulator positions."
+            ],
+            [
+              "Can minus EEF; goal minus can",
+              "6",
+              "Online coordinate differences."
+            ],
+            [
+              "Gripper opening, grasp contact, object lift",
+              "3",
+              "Observed gripper state, privileged sim contact, current Z minus initial Z."
+            ],
+            [
+              "Eight-phase one-hot encoding",
+              "8",
+              "Same online PhaseTracker in collection and inference."
+            ],
+            [
+              "Total",
+              "26",
+              "Runtime-validated, finite float32 vector."
+            ]
+          ],
+          "widths": [
+            2.2,
+            0.7,
+            2.8
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Filtering and separation"
+        },
+        {
+          "type": "p",
+          "text": "The dataset builder accepts success=true, robot=UR5e, and teacher_origin in {source_retargeted, target_scripted_bootstrap}. Failed episodes, Panda episodes, learned-policy review rollouts, and any episode whose seed overlaps held-out evaluation are excluded or rejected. A zero-success dataset yields blocked_insufficient_teacher_data instead of invented training arrays."
+        },
+        {
+          "type": "p",
+          "text": "Normalization mean and standard deviation are fitted only on accepted training rows; standard deviation has a 0.001 floor. The same statistics are saved with the model. Per-episode origins, source IDs, seeds, sample counts, and paths remain in dataset_metadata.json."
+        },
+        {
+          "type": "callout",
+          "title": "Known conditioning gap / P06",
+          "text": "Source-specific grasp offset, lift clearance, and the current waypoint are not explicit components of the 26D input. They vary across teachers; evaluation uses the first successful teacher's tracker parameters. The structural mismatch is verified, while its contribution to the failure remains a hypothesis."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Fast training dataset metadata",
+              "path": "results/fast_20261105T182127Z/04_policy/dataset_metadata.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "09 / STAGE 4, MODEL AND LOSS",
+      "title": "A small behavior-cloning model",
+      "subtitle": "The first learned target policy is deliberately low-dimensional; ACT, SmolVLA, and RGB policy learning are outside the executed baseline.",
+      "blocks": [
+        {
+          "type": "graphic",
+          "name": "action",
+          "height": 103
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Setting",
+            "Fast baseline value"
+          ],
+          "rows": [
+            [
+              "Network",
+              "26 input features -> Linear 128 + ReLU -> Linear 128 + ReLU -> 4 outputs."
+            ],
+            [
+              "Outputs",
+              "Three normalized XYZ regression values and one gripper logit. XYZ is clipped; logit >= 0 closes, otherwise opens."
+            ],
+            [
+              "Optimizer / budget",
+              "Adam; learning rate 0.001; 2,000 updates; batch size 128; training seed 42; gradient norm clipped to 10."
+            ],
+            [
+              "Loss",
+              "L = MSE(predicted_XYZ, executed_XYZ) + 0.1 * BCEWithLogits(gripper_logit, close_label)."
+            ],
+            [
+              "Class weighting",
+              "Positive-class BCE weight = (# open / # close), clamped to [0.25,4]; computed only from training rows."
+            ],
+            [
+              "Checkpoint",
+              "Model weights, model dimensions, optimizer, normalization, dataset provenance, step, CPU/CUDA/sampling RNG states."
+            ]
+          ],
+          "widths": [
+            1.35,
+            4.35
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Action adapter and units"
+        },
+        {
+          "type": "p",
+          "text": "The intermediary is not sent directly to robosuite. BASIC/OSC_POSE expects seven values: XYZ delta, three orientation deltas, and the gripper command. The adapter uses the installed composite controller's create_action_vector API, verifies 6D arm control and 7D environment action dimensions, inserts zero orientation deltas, and clips normalized values. Each XYZ unit maps to 0.05 m per control step in the tested controller."
+        },
+        {
+          "type": "p",
+          "text": "Zero orientation delta holds the controller's initial orientation. BC does not learn orientation motion. Fresh-process evaluation loads the saved checkpoint and the same normalization and feature builder; training loss alone is never treated as task success."
+        },
+        {
+          "type": "small",
+          "text": "Observed final losses: fast 0.000499 after 2,000 updates; bootstrap 0.002245 after 300 updates. These are fitting diagnostics, not independent control-performance measures."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Training implementation",
+              "path": "src/cross_robot_real2sim/stage4_policy/train.py"
+            },
+            {
+              "label": "Installed action adapter",
+              "path": "src/cross_robot_real2sim/adapters/robot_action_adapter.py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "10 / STAGE 4, HELD-OUT EVALUATION",
+      "title": "Actual closed-loop target performance",
+      "subtitle": "One shared baseline checkpoint is evaluated on simulator seeds 10000-10009; these seeds are excluded from teacher training.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Seed",
+            "Native success",
+            "Steps / seconds",
+            "Can-to-goal XY error mm"
+          ],
+          "rows": [
+            [
+              "10000",
+              "No",
+              "300 / 15.00",
+              "756.73"
+            ],
+            [
+              "10001",
+              "Yes",
+              "150 / 7.50",
+              "8.48"
+            ],
+            [
+              "10002",
+              "Yes",
+              "154 / 7.70",
+              "5.95"
+            ],
+            [
+              "10003",
+              "Yes",
+              "156 / 7.80",
+              "4.86"
+            ],
+            [
+              "10004",
+              "Yes",
+              "158 / 7.90",
+              "4.24"
+            ],
+            [
+              "10005",
+              "Yes",
+              "151 / 7.55",
+              "9.08"
+            ],
+            [
+              "10006",
+              "Yes",
+              "164 / 8.20",
+              "3.53"
+            ],
+            [
+              "10007",
+              "Yes",
+              "154 / 7.70",
+              "6.87"
+            ],
+            [
+              "10008",
+              "Yes",
+              "170 / 8.50",
+              "5.38"
+            ],
+            [
+              "10009",
+              "Yes",
+              "225 / 11.25",
+              "10.33"
+            ]
+          ],
+          "widths": [
+            1,
+            0.9,
+            1.4,
+            2.3
+          ]
+        },
+        {
+          "type": "h",
+          "text": "What is measured"
+        },
+        {
+          "type": "p",
+          "text": "Each episode executes the learned XYZ/gripper outputs through the same action adapter and online phase tracker. The original goal predicate delegates to installed robosuite _check_success(). Mean placement error is the final can-to-target <b>XY distance</b>; it is not a full 3D pose/orientation score. Fast baseline success is 9/10; all-episode mean XY error is 81.55 mm, dominated by failed seed 10000. Success-only mean is 6.53 mm."
+        },
+        {
+          "type": "h",
+          "text": "Stronger review predicate is separate / P09"
+        },
+        {
+          "type": "p",
+          "text": "Later review re-executes the frozen policy and checks the specific Can inside its assigned compartment, no grasp contact, and one additional second under the same policy. No scripted override assists the learned rollout. These stability annotations supplement rather than overwrite the original evaluation. Review videos and NPZ are excluded from training."
+        },
+        {
+          "type": "callout",
+          "title": "Evaluation limits / P07",
+          "text": "Ten simulator seeds and one training seed do not establish broad generalization. The policy depends on exact simulator state and a manual phase tracker. No unseen object class, task family, camera estimator, physical robot, or perception robustness result is available."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Original fast evaluation CSV",
+              "path": "results/fast_20261105T182127Z/04_policy/eval.csv"
+            },
+            {
+              "label": "Review stability annotations",
+              "path": "results/review_20261105/cases.csv"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "11 / STAGE 5, DIAGNOSTIC RULES",
+      "title": "Evidence first, causal claims second",
+      "subtitle": "Diagnostics operate on executed state/action arrays and native task outcomes; no large model performs failure attribution.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Recorded condition",
+            "Rule / evidence",
+            "Interpretation limit"
+          ],
+          "rows": [
+            [
+              "Task success",
+              "Native simulator goal predicate; later review adds specific-Can, release, and stability checks.",
+              "Different predicates stay separate."
+            ],
+            [
+              "Lift achieved",
+              "Maximum can Z minus initial can Z >= 0.06 m.",
+              "This is measured motion, not proof of a secure grasp."
+            ],
+            [
+              "Object drop",
+              "Task failed, lift achieved, final object height below initial + 0.03 m.",
+              "A deterministic rule on simulator state."
+            ],
+            [
+              "Premature release",
+              "Close-to-open action change while lifted > 0.04 m and > 0.10 m from goal XY.",
+              "A plausible failure symptom, not unique cause."
+            ],
+            [
+              "Gripper/action mismatch",
+              "Wrong action dimensions, nonfinite values, or magnitude outside normalized bounds.",
+              "Adapter integrity check, not contact inference."
+            ],
+            [
+              "Grasp failed",
+              "Insufficient lift with no recorded contact, where the retained failure code supports this diagnosis.",
+              "Missing observations remain unknown."
+            ],
+            [
+              "Early waypoint / timeout",
+              "Retained phase/horizon code plus phase and EEF-object records.",
+              "unreachable_waypoint is not proven infeasibility."
+            ],
+            [
+              "Collision / semantic mismatch",
+              "Use explicit collision logs when present; unsupported parsing/selection causes remain unknown.",
+              "Do not force a physical or semantic cause."
+            ]
+          ],
+          "widths": [
+            1.15,
+            2.8,
+            1.8
+          ]
+        },
+        {
+          "type": "p",
+          "text": "failure_report.csv contains one row per analyzed episode with seed, teacher origin, step attribution, reason, XY error, lift/drop/release flags, diagnostic_oracle_used=true, confidence type, and evidence. Native task outcomes and deterministic rule-based interpretations are distinguished from unknowns."
+        },
+        {
+          "type": "p",
+          "text": "feedback_requests.json ranks observed failure codes and suggests bounded experiments. The implemented automatic intervention is generic successful-teacher collection plus BC retraining. The failure-report language must not imply that a causal model selected a proven remedy."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Detector implementation",
+              "path": "src/cross_robot_real2sim/stage5_diagnosis/detectors.py"
+            },
+            {
+              "label": "Feedback request evidence",
+              "path": "results/fast_20261105T182127Z/05_diagnosis/feedback_requests.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "12 / STAGE 5, CORRECTIVE ITERATION",
+      "title": "More data did not solve the fast failure",
+      "subtitle": "The before/after comparison uses identical evaluation seeds and retains a negative result.",
+      "blocks": [
+        {
+          "type": "graphic",
+          "name": "success",
+          "height": 145
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Metric",
+            "Bootstrap before -> after",
+            "Fast before -> after"
+          ],
+          "rows": [
+            [
+              "Held-out success",
+              "0/3 -> 1/3",
+              "9/10 -> 9/10"
+            ],
+            [
+              "All-episode mean XY error",
+              "653.82 -> 258.88 mm",
+              "81.55 -> 84.58 mm"
+            ],
+            [
+              "Additional teacher successes",
+              "2 from new training seeds",
+              "3 from seeds 542-544"
+            ],
+            [
+              "Fast success-only mean error",
+              "Not the primary reported bootstrap statistic",
+              "6.53 -> 9.89 mm"
+            ],
+            [
+              "Improvement claim",
+              "A measured small-set increase only",
+              "false; the same failure persists"
+            ]
+          ],
+          "widths": [
+            2.0,
+            2.1,
+            2.1
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Executed intervention"
+        },
+        {
+          "type": "p",
+          "text": "After observing learned-policy failures, select a feasible successful source-retargeted teacher origin, collect bounded additional trajectories on training seeds distinct from the evaluation set, merge successful data with the original teachers, retrain BC, and evaluate on the same held-out seeds. Baseline and corrective fast models each use 2,000 updates; bootstrap uses 300 updates. The intervention does not directly query or add the failed held-out trajectory to training."
+        },
+        {
+          "type": "p",
+          "text": "The fast failure at seed 10000 remains. A bootstrap failure at seed 10002 changes to a stable reviewed success. Additional data and retraining have not been isolated using a retraining-only control. The already-inspected held-out seeds are appropriate for a debugging before/after comparison, while final method selection requires a separate untouched evaluation set."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Bootstrap measured correction",
+              "path": "results/bootstrap_20261105T181834Z/05_diagnosis/before_after.json"
+            },
+            {
+              "label": "Fast measured correction",
+              "path": "results/fast_20261105T182127Z/05_diagnosis/before_after.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "13 / FAILURE CASE AND CONDITIONING",
+      "title": "The persistent pregrasp stall",
+      "subtitle": "Observed behavior is specific; the root cause remains unresolved.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Fast seed 10000",
+            "Baseline checkpoint",
+            "After feedback"
+          ],
+          "rows": [
+            [
+              "Observed phase",
+              "pregrasp only",
+              "pregrasp only"
+            ],
+            [
+              "Episode budget",
+              "300 steps / 15 seconds",
+              "300 steps / 15 seconds"
+            ],
+            [
+              "Final recorded pregrasp EEF error",
+              "66.22 mm",
+              "55.30 mm"
+            ],
+            [
+              "Advance threshold",
+              "28 mm",
+              "28 mm"
+            ],
+            [
+              "Maximum can lift",
+              "0.062 mm",
+              "0.062 mm"
+            ],
+            [
+              "Grasp contact",
+              "Not observed",
+              "Not observed"
+            ],
+            [
+              "Final can-goal XY error",
+              "756.73 mm",
+              "756.73 mm"
+            ],
+            [
+              "Arm collision evidence",
+              "No reported collision in review evidence",
+              "No reported collision in review evidence"
+            ]
+          ],
+          "widths": [
+            2.2,
+            1.8,
+            1.8
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The source-grounded teacher succeeds from the same initial features. Therefore the learned failure does not demonstrate an unreachable physical target. The policy approaches but settles outside the phase transition threshold, so no subsequent grasp/lift sequence begins. Both checkpoints show this symptom."
+        },
+        {
+          "type": "h",
+          "text": "Two testable hypotheses, not established causes"
+        },
+        {
+          "type": "p",
+          "text": "<b>Conditioning mismatch:</b> five teacher-specific grasp/clearance settings are pooled, but the policy input does not explicitly include those parameters or the waypoint. Evaluation uses one fixed parameter set.<br/><b>Distribution shift:</b> initial object_x and goal_minus_object_x are outside the full training feature range in the reviewed failure; the largest initial absolute z-score is 7.55 on object_minus_eef_y. Range/z-score observations alone do not establish causality."
+        },
+        {
+          "type": "callout",
+          "title": "Next controlled comparison",
+          "text": "Compare fixed-parameter teachers, parameter-conditioned BC, and the existing mixed-teacher baseline at equal training budget. Log waypoint error, XYZ outputs, normalized features, and phase transitions over time. Keep seed 10000 as a regression case; evaluate final gains on new untouched seeds and multiple training seeds."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Numeric failure and conditioning evidence",
+              "path": "results/review_20261105/problem_evidence.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "14 / OPEN ISSUES",
+      "title": "Nine explicit limits and acceptance gates",
+      "subtitle": "Observed symptoms, confirmed implementation structure, and untested branches remain separate.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "ID / priority",
+            "Current problem",
+            "Evidence status / next acceptance gate"
+          ],
+          "rows": [
+            [
+              "P01 / P0",
+              "Learned policy stalls before grasp.",
+              "Observed at fast seed 10000. Require phase-completion and final-placement gains on new seeds without regressing current successes."
+            ],
+            [
+              "P02 / P0",
+              "Retargeting transfers grasp/lift summaries only; source benefit not isolated.",
+              "Structure confirmed. Compare source on/off and mismatched source at identical target starts/controller settings."
+            ],
+            [
+              "P03 / P0",
+              "Real human-video selection and task extraction untested.",
+              "No clip. Require actual frames, scores, Qwen raw text, reviewed JSON, and downstream use."
+            ],
+            [
+              "P04 / P1",
+              "Generic feedback does not improve fast success.",
+              "9/10 stays 9/10; mean error worsens. Add targeted-data and retraining-only controls."
+            ],
+            [
+              "P05 / P1",
+              "Historical failure code overstates reachability evidence.",
+              "Rename future observed timeout code; preserve old CSV with migration history."
+            ],
+            [
+              "P06 / P1",
+              "Teacher conditioning parameters absent from BC input.",
+              "Structure confirmed; causal effect unproven. Compare fixed versus explicit conditioning."
+            ],
+            [
+              "P07 / P1",
+              "Small evaluation and privileged/manual state dependencies.",
+              "Expand training/evaluation seeds and state estimation only when making broader claims."
+            ],
+            [
+              "P08 / P1",
+              "Default videos show only the first evaluation seed.",
+              "Review media adds success/failure galleries and labels. Integrate representative export into future pipeline runs."
+            ],
+            [
+              "P09 / P1",
+              "Default native success ends without stability dwell.",
+              "Review adds specific-Can/release/one-second checks. Integrate as additional fields without rewriting old metrics."
+            ]
+          ],
+          "widths": [
+            1.0,
+            2.0,
+            3.0
+          ]
+        },
+        {
+          "type": "p",
+          "text": "P0 items define the current research claim and main unsolved failure. P1 items must be addressed or explicitly held fixed before a stronger comparison. The review does not relabel absent experiments as completed fixes."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Original issue register and evidence",
+              "path": "results/review_20261105/CURRENT_ISSUES.md"
+            },
+            {
+              "label": "English stage-specific limitations",
+              "path": "5_Failure Analysis/METHODS.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "15 / THREE CASE STUDIES",
+      "title": "Source lineage is many-to-one",
+      "subtitle": "Three visual case studies use three source demonstrations, but their B videos are executions of the same pooled-data baseline policy.",
+      "blocks": [
+        {
+          "type": "filmstrip",
+          "panels": [
+            {
+              "path": "results/english_case_studies_20261106/source/source_demo_3.mp4",
+              "label": "<b>Source A: demo_3</b><br/>Original recorded states"
+            },
+            {
+              "path": "results/english_case_studies_20261106/episodes/teacher_demo_3_seed1042.mp4",
+              "label": "<b>Target B teacher: 1042</b><br/>Source-grounded controller"
+            },
+            {
+              "path": "results/english_case_studies_20261106/episodes/learned_shared_policy_seed10001.mp4",
+              "label": "<b>Learned B: 10001</b><br/>Shared baseline checkpoint"
+            }
+          ]
+        },
+        {
+          "type": "small",
+          "text": "Illustrative frames occur at different times; they do not imply synchronized full-motion transfer. Video identities, frame indices, and hashes are preserved with the report figures."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Case",
+            "Source A demo",
+            "Executed training-teacher lineage",
+            "B held-out example"
+          ],
+          "rows": [
+            [
+              "01",
+              "demo_3",
+              "UR5e seeds 1042 and 1047; source-derived grasp/lift parameters.",
+              "Seed 10001; 150 steps; 8.48 mm terminal XY error."
+            ],
+            [
+              "02",
+              "demo_5",
+              "UR5e seeds 1043 and 1048; source-derived grasp/lift parameters.",
+              "Seed 10003; 156 steps; 4.86 mm terminal XY error."
+            ],
+            [
+              "03",
+              "demo_7",
+              "UR5e seeds 1044 and 1049; source-derived grasp/lift parameters.",
+              "Seed 10009; 225 steps; 10.33 mm terminal XY error."
+            ]
+          ],
+          "widths": [
+            0.55,
+            0.9,
+            2.4,
+            2.15
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Do not read a case row as an individually trained A-to-B model",
+          "text": "The shared baseline B checkpoint was trained on <b>all five</b> selected source IDs: demo_3, demo_5, demo_7, demo_4, and demo_1, through ten executed UR5e teacher episodes. Each case shows a source example and a successful B policy execution. The case pairing does not establish that one source alone caused that B behavior."
+        },
+        {
+          "type": "p",
+          "text": "The three held-out B seeds are absent from the training-teacher set. Later video replays use frozen checkpoint weights and do not retrain. The reviewed successful B examples also remain inside the assigned Can compartment with no grasp contact after an additional second under the same learned policy."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Case 01: demo_3 and shared-policy B execution",
+              "path": "results/english_case_studies_20261106/videos/case_01_demo_3_to_ur5e.mp4"
+            },
+            {
+              "label": "Case 02: demo_5 and shared-policy B execution",
+              "path": "results/english_case_studies_20261106/videos/case_02_demo_5_to_ur5e.mp4"
+            },
+            {
+              "label": "Case 03: demo_7 and shared-policy B execution",
+              "path": "results/english_case_studies_20261106/videos/case_03_demo_7_to_ur5e.mp4"
+            },
+            {
+              "label": "Training lineage table",
+              "path": "results/english_case_studies_20261106/training_lineage.csv"
+            },
+            {
+              "label": "Shared checkpoint and case manifest",
+              "path": "results/english_case_studies_20261106/case_manifest.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "16 / SOURCE VIDEO PROVENANCE",
+      "title": "Recorded states versus executed actions",
+      "subtitle": "The new source A videos reconstruct original HDF5 states. Earlier Panda videos show a separate live scripted policy.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Evidence type",
+            "How generated",
+            "What it establishes"
+          ],
+          "rows": [
+            [
+              "Original-source state reconstruction",
+              "Restore each demo's original model XML using compatible installed asset paths. Set recorded state vector [time(1), qpos(37), qvel(33)] and forward kinematics for each frame. No physics step advances a source action.",
+              "Visualizes the recorded demonstration trajectory and supports source-state/observation alignment checks."
+            ],
+            [
+              "Live scripted Panda source branch",
+              "Execute hand-coded waypoint/gripper actions using current simulator feedback.",
+              "Shows the source-policy branch can run in the current simulator; it is not a replay of the original HDF5 demonstration."
+            ],
+            [
+              "Executed UR5e source-grounded teacher",
+              "Run current target OSC feedback control using extracted source grasp/lift parameters.",
+              "Provides actual target action/state trajectories for successful-teacher BC training."
+            ],
+            [
+              "Learned B video",
+              "Execute the frozen shared baseline policy on a held-out target seed.",
+              "Provides an independent target rollout; it does not replay teacher actions."
+            ]
+          ],
+          "widths": [
+            1.4,
+            2.7,
+            2.1
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The source HDF5 records robosuite 1.5.1, while the current simulator is 1.5.2. Reusing original XML and numerically checking reconstructed Can/EEF positions is therefore an explicit compatibility step. A successful state reconstruction does <b>not</b> prove that replaying the recorded actions under newer physics reproduces the same dynamics or task success."
+        },
+        {
+          "type": "source_validation"
+        },
+        {
+          "type": "small",
+          "text": "All recorded source frames pass the 1e-8 m position tolerance. Source clips visualize stored successful demonstrations (terminal reward=1, done=1 for demo_3/5/7); they do not validate execution of the old actions under new dynamics."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Original-state source videos, per-frame CSVs, and validation metadata",
+              "path": "results/english_case_studies_20261106/source/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "17 / REPRODUCIBLE EXECUTION",
+      "title": "SSH-safe runs and exact artifacts",
+      "subtitle": "The runnable baseline is detached; report and media generation do not replace actual training/evaluation evidence.",
+      "blocks": [
+        {
+          "type": "code",
+          "text": "cd /home/dheo/Cross_Robot_Real2Sim\nbash scripts/setup.sh\nbash scripts/preflight.sh\nbash scripts/launch.sh bootstrap\nbash scripts/status.sh RUN_ID\ntail -f runs/RUN_ID/logs/pipeline.log\nbash scripts/resume.sh bootstrap RUN_ID\nbash scripts/stop.sh RUN_ID"
+        },
+        {
+          "type": "p",
+          "text": "launch.sh creates a detached tmux session with absolute project paths, activates the project environment inside it, exports CUDA_VISIBLE_DEVICES=0 and EGL settings, and stores run/session/PID metadata. Logs include timestamps. A project GPU lock prevents unintended concurrent project launches. tmux survives SSH/VS Code disconnection while the host stays running; it is not host-reboot persistence."
+        },
+        {
+          "type": "p",
+          "text": "The supervisor uses pipefail so tee does not hide a failed pipeline, records an exit code, handles signals, and preserves artifacts for resumption. Status checks both live process/session identity and persisted outcomes; disappearance alone never means success. Resume validates frozen configuration, input/artifact hashes, JSON/NPZ/checkpoint readability, and seed splits."
+        },
+        {
+          "type": "h",
+          "text": "Dependency and artifact reproduction"
+        },
+        {
+          "type": "code",
+          "text": "bash scripts/launch.sh fast\n# Real human input later:\ncp /path/to/real_human_can_clip.mp4 data/human/\nbash scripts/setup.sh full\nbash scripts/launch.sh full\n# Rebuild this PDF, without retraining:\n.venv/bin/python -m pip install -r requirements-report.txt\n.venv/bin/python scripts/build_english_report.py"
+        },
+        {
+          "type": "p",
+          "text": "Simulation, optional perception, review plotting, and PDF dependencies have separate requirement files. Original environment snapshots and lockfiles remain historical evidence. Raw runs/checkpoints/datasets stay local and gitignored; compact metrics, manifests, selected videos, and this report are versioned."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Setup and detached runtime scripts",
+              "path": "scripts/launch.sh"
+            },
+            {
+              "label": "Exact bootstrap dependency lock",
+              "path": "requirements-working-bootstrap.lock"
+            },
+            {
+              "label": "Report builder and editable source",
+              "path": "reports/english_technical_report_20261106/report_source.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "18 / VERIFICATION AND RESEARCH NEXT STEPS",
+      "title": "What to trust, what to test next",
+      "subtitle": "The evidence supports an honest baseline and specific next experiments, not an already-complete general real-to-sim method.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Verification area",
+            "Executed evidence / remaining boundary"
+          ],
+          "rows": [
+            [
+              "Input and schema tests",
+              "HDF5 14D object-layout regression; task validation; unknown physics; missing-human behavior; artifact contracts."
+            ],
+            [
+              "Simulator and controller tests",
+              "Headless Panda/UR5e steps and render; native goal predicate; action dimension/clipping; seeded reset and frame transforms."
+            ],
+            [
+              "Learning and diagnosis tests",
+              "Shared online 26D feature contract; successful-teacher filtering; held-out seed separation; saved-policy normalization/load; optimizer/sampling-state resume; actual-state diagnostic cases."
+            ],
+            [
+              "Runtime and integration tests",
+              "Isolated tmux process fixtures verify detached launch, duplicate-run prevention, nonzero exit preservation, scoped stop; missing-human full pipeline skips training."
+            ],
+            [
+              "Report QA",
+              "Embedded DejaVu fonts, English text extraction, page count, text margin bounds, layout audit, and rendered contact sheets. Report QA is not a new robotics experiment."
+            ]
+          ],
+          "widths": [
+            1.65,
+            4.4
+          ]
+        },
+        {
+          "type": "h",
+          "text": "A prioritized experimental sequence"
+        },
+        {
+          "type": "p",
+          "text": "<b>First:</b> resolve the pregrasp stall with equal-budget fixed-parameter versus parameter-conditioned policies, plus a retraining-only control.<br/><b>Second:</b> isolate source-information value with source-on/source-off/mismatched-source ablations under matched target starts.<br/><b>Third:</b> validate real human input end to end and only then expand evaluation seeds, training seeds, state-estimation conditions, and physical-robot claims."
+        },
+        {
+          "type": "h",
+          "text": "Primary references and evidence entry points"
+        },
+        {
+          "type": "p",
+          "text": "<link href=\"https://huggingface.co/datasets/robomimic/robomimic_datasets/tree/main/v1.5/can/ph\" color=\"#12617A\"><u>Robomimic Can PH v1.5 dataset</u></link><br/><link href=\"https://robosuite.ai/docs/modules/controllers.html\" color=\"#12617A\"><u>Robosuite controller documentation</u></link><br/><link href=\"https://huggingface.co/openai/clip-vit-base-patch32\" color=\"#12617A\"><u>CLIP model card (planned full branch)</u></link><br/><link href=\"https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct\" color=\"#12617A\"><u>Qwen2.5-VL-3B model card (planned full branch)</u></link>"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Experiment index and original reports",
+              "path": "results/README.md"
+            },
+            {
+              "label": "English source/B videos and lineage",
+              "path": "results/english_case_studies_20261106/README.md"
+            },
+            {
+              "label": "Numerical failure evidence",
+              "path": "results/review_20261105/problem_evidence.json"
+            },
+            {
+              "label": "PDF layout and font QA",
+              "path": "reports/english_technical_report_20261106/qa/qa_report.json"
+            }
+          ]
+        },
+        {
+          "type": "small",
+          "text": "All measurements in this edition are traced to preserved execution or review artifacts. No real human clip, full-model inference, source-action equivalence, unseen-task transfer, or physical-robot execution is claimed."
+        }
+      ]
+    }
+  ]
+}

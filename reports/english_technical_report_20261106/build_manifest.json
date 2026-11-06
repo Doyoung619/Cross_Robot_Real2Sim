@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "language": "en",
+  "page_count": 19,
+  "pdf": "reports/english_technical_report_20261106/Cross_Robot_Real2Sim_Technical_Report.pdf",
+  "pdf_sha256": "fa7a6587f7a29c14e16dfb82088ea16d4aa01488a7c22582db14d69dcf880010",
+  "report_generation_runs_training": false,
+  "inputs": [
+    {
+      "path": "reports/english_technical_report_20261106/report_source.json",
+      "sha256": "f5d8f1d4bbcd9ac1b4adebd40201857e7d226aa1d70c8494fe70942e683f77cc"
+    },
+    {
+      "path": "scripts/build_english_report.py",
+      "sha256": "d32316851b048fceaf7fcfef99bcc32ebff466b9d431abb8521f14e944092de8"
+    },
+    {
+      "path": "requirements-report.txt",
+      "sha256": "6272fe9edde9bae450010c8d44c0e9964f5e6aaa90ba20bd3388c3c17b0eba96"
+    },
+    {
+      "path": "results/english_case_studies_20261106/case_manifest.json",
+      "sha256": "00028b5be301ff1685e2a234b5e98c539a5f5961135ed3d60070753ddb1fce6d"
+    },
+    {
+      "path": "results/review_20261105/problem_evidence.json",
+      "sha256": "06c883fd5d9dfe714f26c2d3a148e8f67bb72792beef4868d5d99676634e4f7f"
+    },
+    {
+      "path": "results/english_case_studies_20261106/source/source_demo_7.json",
+      "sha256": "83edb19142f298d1ad6bffbdbe91cc481659d43c39865dd7c574412bbe445272"
+    },
+    {
+      "path": "results/english_case_studies_20261106/source/source_demo_5.json",
+      "sha256": "c08cec2f734733c3da1004983a3e3f8e3f3ef996ed378a579bc512204905ec07"
+    },
+    {
+      "path": "results/english_case_studies_20261106/source/source_demo_3.json",
+      "sha256": "93c75a48c806587b504b2a01d07f6dcfc2366f33f3acd7f61cc107e7ceba92e7"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/01_selection/selection.json",
+      "sha256": "0115d1774652519cec78f48a35b553fd17dfed8a6a83b625c13eff375c638791"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/01_selection/source_inspection.json",
+      "sha256": "801e776f861fc455b9c65f3f4102cfdb0b736d1647937780f6d6272c92eb3e43"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/02_task/task_spec.json",
+      "sha256": "55ac18fd2e6e621e2ee589b4e18f3dcfd72bed2b7ac1703514413cbfe220620a"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/03_retarget/attempts.csv",
+      "sha256": "08805bd3f9616501762cb67e4f4dcc875b4e97813bd646c3d4dad3160a2415e9"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/04_policy/dataset_metadata.json",
+      "sha256": "743baafa79c12d68cddaeedae2a8a519bde40d217b4eadcfafb253470f8cceb8"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/04_policy/eval.csv",
+      "sha256": "b736dbedefab4474269ae23e60f87bb4a54014ece4818b7595bdf9c0c5a29a93"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/04_policy/train_metrics.json",
+      "sha256": "ffacb57c122412798f697d87420f30304ac073bd929613eeb2af008bb4ac6d4d"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/05_diagnosis/before_after.json",
+      "sha256": "5396617bd0bf21d6a1a74cd6e664975efa999928f5bd1277f042390f703d1197"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/environment.json",
+      "sha256": "0c86da1d1cf805718179ea705a37c0af470b1de7837f0e6d7ca6822ca47c5a17"
+    },
+    {
+      "path": "results/bootstrap_20261105T181834Z/config.yaml",
+      "sha256": "6b5ef2addf6134e12f7c28053e9dcb4622df75ca300c6aacf3536a3733e5b36d"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/01_selection/selection.json",
+      "sha256": "a13553301dc440d4c0cfa15c0782c1f391f9a4cf8986c0b7c76ab66329ece940"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/01_selection/source_inspection.json",
+      "sha256": "edcf4b08a25c14727fab9ff9071aceb30ea31c9841db629cee0f731a50b4c79f"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/02_task/task_spec.json",
+      "sha256": "1cae74ed07f99b03cadb93283a6d9b54509279dfac2daec3d76f6bc65f5e56c8"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/03_retarget/attempts.csv",
+      "sha256": "a417772b2bc39c637b5754296e8c2ed04cf11c6451a1c9584688824a2e630cb4"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/04_policy/dataset_metadata.json",
+      "sha256": "7a6dd6d179353f5e54ab022773ae18d0714696a67269489dc255239720024f39"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/04_policy/eval.csv",
+      "sha256": "bd4b4e4a8ad2284483fc230f559758908b31b14cfaec1cf49f58b94fdb4e3996"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/04_policy/train_metrics.json",
+      "sha256": "48b747bbc1f88484e09532c522fae293ae0942c87362359fd523bf6e96a19078"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/05_diagnosis/before_after.json",
+      "sha256": "68def25fcb60651a9f2589bbe2ed02efe2dcda82e7f84414614483ddabfa5370"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/environment.json",
+      "sha256": "00fb2293899092024a3d5175b9d314a80c0014f354b72ca662fa62280d670b91"
+    },
+    {
+      "path": "results/fast_20261105T182127Z/config.yaml",
+      "sha256": "714704b4fe5d48b95b6000c597aa0915dd5b7f831fbcf578d531f5bd8ed52ca2"
+    },
+    {
+      "path": "results/full_20261105T182257Z/01_selection/selection.json",
+      "sha256": "baedb2dd396ac02c64e57db13f285de79ae6d8f80136784913e844f3b87d5dcd"
+    },
+    {
+      "path": "results/full_20261105T182257Z/01_selection/source_inspection.json",
+      "sha256": "82557889fd2aebbfe58d8b11db0a3d4af7ab16f7170e2ec7bf23fb07d8e5e5af"
+    },
+    {
+      "path": "results/full_20261105T182257Z/05_diagnosis/before_after.json",
+      "sha256": "bee30e8fa4f05dbc360d64f5073d32a59919aa8620f3adce120cea6d8081e3e6"
+    },
+    {
+      "path": "results/full_20261105T182257Z/environment.json",
+      "sha256": "d8382b7d56ddf64bfa3e9a8ef80355ac0d3ed77c377229c991dc3092ed473a44"
+    },
+    {
+      "path": "results/full_20261105T182257Z/config.yaml",
+      "sha256": "cb70058fb4f0a75da614ee9b580ac4d743b9fd0b7ecf65e1cdc53ebd653cbe37"
+    }
+  ],
+  "qa_report": "qa/qa_report.json"
+}

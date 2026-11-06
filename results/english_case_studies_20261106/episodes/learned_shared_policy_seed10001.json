@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "case_id": "learned_shared_policy_seed10001",
+  "source_run_id": "fast_20261105T182127Z",
+  "seed": 10001,
+  "mode": "fast",
+  "teacher_origin": "learned_policy",
+  "robot": "UR5e",
+  "source_demo_id": null,
+  "checkpoint": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/checkpoint.pt",
+  "source_npz": "/home/dheo/Cross_Robot_Real2Sim/runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10001.npz",
+  "source_original_success": true,
+  "same_initial_features": true,
+  "terminal_step": 150,
+  "terminal": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20591122729708292,
+      0.40141656955379934,
+      0.8600716995528739
+    ],
+    "eef_position": [
+      0.1946574927419091,
+      0.4040836944526667,
+      0.9023427947290394
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.008480717314882464
+  },
+  "post_hold": {
+    "native_success": true,
+    "specific_can_inside": true,
+    "grasp_contact": false,
+    "object_position": [
+      0.20584013899016726,
+      0.4013577694075272,
+      0.8600493304999746
+    ],
+    "eef_position": [
+      0.18316568366364244,
+      0.3913720901798012,
+      1.1282624588234242
+    ],
+    "phase": "retreat",
+    "xy_error_m": 0.008417993175436103
+  },
+  "post_hold_steps": 20,
+  "post_hold_seconds": 1.0,
+  "stable_placement_1s": true,
+  "max_lift_m": 0.2045208648860788,
+  "goal_position": [
+    0.1975,
+    0.4025,
+    0.8
+  ],
+  "original_terminal_position_delta_m": 0.0,
+  "training_performed": false,
+  "usage": "held_out_review_only_never_training",
+  "privileged_state_used": true,
+  "observation_mode": "oracle_sim_state",
+  "controller": {
+    "name": "BASIC/OSC_POSE",
+    "action_dim": 7,
+    "intermediary_dim": 4,
+    "xyz_delta_unit": "normalized",
+    "meters_per_unit": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "orientation": "initial_pose_hold",
+    "positive_gripper": "close",
+    "arm": "right"
+  },
+  "hold_controller": "same original policy; no scripted override",
+  "video_path": "episodes/learned_shared_policy_seed10001.mp4",
+  "video_frames": 88,
+  "fps": 10,
+  "video_sha256": "ea9600308d372408f4626797e783dc2b37e5470052bdb7a59d2533d7e86adeaf",
+  "video_language": "en",
+  "cache_key": {
+    "request": {
+      "case_id": "learned_shared_policy_seed10001",
+      "run_id": "fast_20261105T182127Z",
+      "seed": 10001,
+      "teacher_origin": "learned_policy",
+      "language": "en",
+      "checkpoint": "runs/fast_20261105T182127Z/04_policy/checkpoint.pt",
+      "original_npz": "runs/fast_20261105T182127Z/04_policy/eval_rollouts/eval_10001.npz",
+      "variant_label": "shared BC model; held-out evaluation"
+    },
+    "implementation_sha256": "7c6d7849e7d8769cc44102769ef6900fb3ffc6f7bd490db5a21fd2f69af033a9",
+    "config_sha256": "426d89de7824d67084636a72e079fea555ba0ada1b8451885bcba8fd5aeaf29a",
+    "checkpoint_sha256": "71148db0b7a100df0465191ce3329b0fa9a56faace25775495bcebbfde75220e",
+    "original_npz_sha256": "867339c920a3b97ecfe6bc43f9e2b4c085c50cee2eb8baa6b7ad453c4918530b"
+  }
+}

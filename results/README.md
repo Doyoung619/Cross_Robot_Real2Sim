@@ -1,6 +1,8 @@
 # Executed experiments
 
-New review package: [watching guide](review_20261105/README.md), [fast five-stage video](review_20261105/videos/01_pipeline_fast.mp4), [bootstrap feedback failure-to-success video](review_20261105/videos/02_pipeline_bootstrap_feedback.mp4), [all nine fast-policy successes](review_20261105/videos/03_fast_success_gallery.mp4), and [current issue specification](review_20261105/CURRENT_ISSUES.md). The new videos label the no-human-video path, use frozen controllers/checkpoints, and add a one-second stability check with the same policy. They do not represent a completed human-video full run.
+Current English showcase: [three original-A / B-training / learned-B case videos](english_case_studies_20261106/README.md) and the [19-page English technical PDF](../reports/english_technical_report_20261106/Cross_Robot_Real2Sim_Technical_Report.pdf). The A videos reconstruct the actual recorded HDF5 source states; B training lineage and the shared checkpoint are explicit. Start with these deliverables for the current review.
+
+Historical 2026-11-05 review package: [watching guide](review_20261105/README.md), [fast five-stage video](review_20261105/videos/01_pipeline_fast.mp4), [bootstrap feedback failure-to-success video](review_20261105/videos/02_pipeline_bootstrap_feedback.mp4), [all nine fast-policy successes](review_20261105/videos/03_fast_success_gallery.mp4), and [issue specification](review_20261105/CURRENT_ISSUES.md). These earlier videos include Korean annotations, use frozen controllers/checkpoints, and add a one-second stability check with the same policy. They do not represent a completed human-video full run.
 
 All results below come from actual headless MuJoCo rollouts on the tested RTX 4090 host. Inputs use **oracle_sim_state**, a provided task seed, and public robomimic Panda demonstrations. No real human video was supplied. Teacher, scripted-source, and learned-policy success are separate measurements.
 
