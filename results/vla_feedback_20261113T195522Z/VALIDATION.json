@@ -1,0 +1,19 @@
+{
+  "pytest": {
+    "passed": 58,
+    "failed": 0,
+    "command": "CROSSROBOT_TEST_RUN=fast_20261105T182127Z .venv/bin/python -m pytest -q"
+  },
+  "shell_syntax": "passed",
+  "python_compilation": "passed",
+  "source_sha256": {
+    "scripts/run_vla_feedback.py": "3b3929a3f0130e0a2e8c1a4bf4e07dc162c790b54c9973afebb016d859a3bd98",
+    "scripts/vla_feedback_processing.py": "847fb6cce06749ca82cef71118cf18c3abf401012bc3094c6d6f4a01b876d6ca",
+    "scripts/vla_feedback_rollouts.py": "21c48dce1325dd64b9a7ca9f3330de334a9347cd463b60c65f69293767c2a3c9",
+    "scripts/package_vla_feedback.py": "81ef15029e2a38b8a40b1a46fe3f3fbd1ef5c9dbf59751b028259f967ca0cd17",
+    "scripts/make_vla_feedback_final_video.py": "4a8b775432836ea2a115a562831ff50be96874b55d65ccde8abf6f7f0ec5ac2f",
+    "scripts/launch_vla_feedback.sh": "03d274b06d6c2252e59e5884089eff5f95b3446a279512e09be56025c76c6521"
+  },
+  "pdf_and_video_checks": "qa/verification.json",
+  "data_checks": "data_verification.json"
+}

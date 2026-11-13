@@ -1,0 +1,424 @@
+{
+  "round_index": 1,
+  "parent_training_rows": 189,
+  "new_rows_start": 189,
+  "new_rows_count": 138,
+  "total_training_rows": 327,
+  "selected_new_source_ids": [
+    "demo_37",
+    "demo_36"
+  ],
+  "diagnostic_used": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 2,
+    "failed_episodes": 2,
+    "dominant_hypothesis": "contact_without_sufficient_plate_response",
+    "contact_fraction": 0.0909090909090909,
+    "plate_contact_fraction": 0.0909090909090909,
+    "contact_rate": 0.0909090909090909,
+    "mean_eef_plate_gap_m": 0.10036968574413238,
+    "mean_near_surface_gap_m": 0.007703924717165678,
+    "mean_near_plate_height_m": 0.011373038800421266,
+    "mean_closest_surface_vector_m": [
+      -0.0008073640690623131,
+      -0.026126654851261158,
+      -0.020469043391934567
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.10212737686175889,
+      0.2438224016228292
+    ],
+    "direction_alignment": 0.6116978734251692,
+    "response_gain": 0.06959089550949922,
+    "mean_goal_error_m": 0.2643587530392398,
+    "mean_plate_displacement_m": 0.01984068185585754,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.38633824569159303,
+        0.92235717589009
+      ],
+      "measured_contact_gap_vector_m": [
+        -0.0008073640690623131,
+        -0.026126654851261158,
+        -0.020469043391934567
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.0909090909090909,
+          "near_surface_gap_m": 0.007703924717165678
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": 0.6116978734251692
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": 0.06959089550949922
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "direction_used": [
+    -0.38633824569159303,
+    0.92235717589009
+  ],
+  "controller_lookahead_frames": 5,
+  "optimizations": [
+    {
+      "demo_id": "demo_37",
+      "trials": [
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_objective": 0.04503831117101355,
+          "finger_plate_signed_distances_m": [
+            0.0616747746393031,
+            0.07130358052305662,
+            0.004108760723889302
+          ],
+          "max_ik_error_m": 0.0004608358868654453,
+          "max_orientation_error_rad": 0.00018593595399338505,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            -0.006
+          ],
+          "static_objective": 0.04147855521849668,
+          "finger_plate_signed_distances_m": [
+            0.055612110565352986,
+            0.06532186533368495,
+            -0.0018866868098571564
+          ],
+          "max_ik_error_m": 0.0003566879246776964,
+          "max_orientation_error_rad": 0.00016905365845588745,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            -0.01
+          ],
+          "static_objective": 0.04434129833523406,
+          "finger_plate_signed_distances_m": [
+            0.05157666660132191,
+            0.06133582893150376,
+            -0.005883771971666229
+          ],
+          "max_ik_error_m": 0.00029682225631704796,
+          "max_orientation_error_rad": 0.00015812692877140413,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0023180294741495583,
+            0.00553414305534054,
+            0.0
+          ],
+          "static_objective": 0.045621424537334705,
+          "finger_plate_signed_distances_m": [
+            0.061789058820591804,
+            0.07167470436715563,
+            0.003946717016155854
+          ],
+          "max_ik_error_m": 0.00027834130235504756,
+          "max_orientation_error_rad": 0.00015502212264748762,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0046360589482991165,
+            0.01106828611068108,
+            0.0
+          ],
+          "static_objective": 0.046313223024639374,
+          "finger_plate_signed_distances_m": [
+            0.062055398231440594,
+            0.0721109084268893,
+            0.0037840762974044235
+          ],
+          "max_ik_error_m": 0.00014982989589071755,
+          "max_orientation_error_rad": 0.00012446070036294227,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.00553414305534054,
+            -0.0023180294741495583,
+            0.0
+          ],
+          "static_objective": 0.045369385385658094,
+          "finger_plate_signed_distances_m": [
+            0.06158192265243589,
+            0.07119323041586992,
+            0.0041829702155749505
+          ],
+          "max_ik_error_m": 0.0001285617715434442,
+          "max_orientation_error_rad": 0.00011760135211465429,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.00553414305534054,
+            0.0023180294741495583,
+            -0.0
+          ],
+          "static_objective": 0.025588777817765185,
+          "finger_plate_signed_distances_m": [
+            0.0,
+            0.07175713792663473,
+            0.0
+          ],
+          "max_ik_error_m": 0.001041444983341938,
+          "max_orientation_error_rad": 0.0002538650801697909,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0023180294741495583,
+            0.00553414305534054,
+            -0.006
+          ],
+          "static_objective": 0.041850531356170034,
+          "finger_plate_signed_distances_m": [
+            0.05575697474889366,
+            0.06570458017915315,
+            -0.002049065277599883
+          ],
+          "max_ik_error_m": 0.00020101896946018655,
+          "max_orientation_error_rad": 0.00013798782490225743,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.00048636485281256024,
+            -0.015738979635267186,
+            -0.01
+          ],
+          "static_objective": 0.044660090905466604,
+          "finger_plate_signed_distances_m": [
+            0.05223968052439741,
+            0.06134207208161574,
+            -0.00541564965847349
+          ],
+          "max_ik_error_m": 0.0003094656844640334,
+          "max_orientation_error_rad": 0.00016029602703384184,
+          "arm_collisions": 0
+        }
+      ],
+      "chosen": {
+        "offset_m": [
+          0.00553414305534054,
+          0.0023180294741495583,
+          -0.0
+        ],
+        "static_objective": 0.025588777817765185,
+        "finger_plate_signed_distances_m": [
+          0.0,
+          0.07175713792663473,
+          0.0
+        ],
+        "max_ik_error_m": 0.001041444983341938,
+        "max_orientation_error_rad": 0.0002538650801697909,
+        "arm_collisions": 0
+      },
+      "baseline_objective": 0.04503831117101355,
+      "optimized_objective": 0.025588777817765185,
+      "physical_dynamics_verified": false
+    },
+    {
+      "demo_id": "demo_36",
+      "trials": [
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_objective": 0.02231130271213112,
+          "finger_plate_signed_distances_m": [
+            0.05424331298620851,
+            0.006145146282996668,
+            0.006229922030429582
+          ],
+          "max_ik_error_m": 0.0011436788729634858,
+          "max_orientation_error_rad": 0.0008349021572249912,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            -0.006
+          ],
+          "static_objective": 0.017933353864761914,
+          "finger_plate_signed_distances_m": [
+            0.048366920398862624,
+            0.0001474484871880285,
+            0.00023103696674665883
+          ],
+          "max_ik_error_m": 0.0011009331642809193,
+          "max_orientation_error_rad": 0.0008926348432843661,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.0,
+            0.0,
+            -0.01
+          ],
+          "static_objective": 0.021803800269761826,
+          "finger_plate_signed_distances_m": [
+            0.04448597537444779,
+            -0.0038503486818748938,
+            -0.0037682252189386806
+          ],
+          "max_ik_error_m": 0.0010745320224396916,
+          "max_orientation_error_rad": 0.0009313735334720197,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0023180294741495583,
+            0.00553414305534054,
+            0.0
+          ],
+          "static_objective": 0.024505636861029252,
+          "finger_plate_signed_distances_m": [
+            0.054155200122295064,
+            0.006332473633796156,
+            0.007524961782162345
+          ],
+          "max_ik_error_m": 0.001961822316515967,
+          "max_orientation_error_rad": 0.0023384462268328456,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0046360589482991165,
+            0.01106828611068108,
+            0.0
+          ],
+          "static_objective": 0.02266135169442489,
+          "finger_plate_signed_distances_m": [
+            0.05289175702742712,
+            0.006529230090608212,
+            0.0
+          ],
+          "max_ik_error_m": 0.0017780173129748778,
+          "max_orientation_error_rad": 0.0022094052946138648,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.00553414305534054,
+            -0.0023180294741495583,
+            0.0
+          ],
+          "static_objective": 0.024533903261540764,
+          "finger_plate_signed_distances_m": [
+            0.054448666907420694,
+            0.006022468296989898,
+            0.007751418823212721
+          ],
+          "max_ik_error_m": 0.0019940984699429727,
+          "max_orientation_error_rad": 0.0023922398736901645,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            0.00553414305534054,
+            0.0023180294741495583,
+            -0.0
+          ],
+          "static_objective": 0.023300410150885742,
+          "finger_plate_signed_distances_m": [
+            0.05417784391271509,
+            0.00626554732794818,
+            0.006139125363838782
+          ],
+          "max_ik_error_m": 0.0011350579315264353,
+          "max_orientation_error_rad": 0.0008112021113757172,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.0023180294741495583,
+            0.00553414305534054,
+            -0.006
+          ],
+          "static_objective": 0.017963360422929554,
+          "finger_plate_signed_distances_m": [
+            0.048273065630320626,
+            0.00033827181554438546,
+            0.00014699662457429003
+          ],
+          "max_ik_error_m": 0.001043996866884702,
+          "max_orientation_error_rad": 0.0010508231313920112,
+          "arm_collisions": 0
+        },
+        {
+          "offset_m": [
+            -0.00048636485281256024,
+            -0.015738979635267186,
+            -0.01
+          ],
+          "static_objective": 0.006733622559478559,
+          "finger_plate_signed_distances_m": [
+            0.0,
+            -0.0029820638949031716,
+            -0.0034687138693934956
+          ],
+          "max_ik_error_m": 0.001279458108547164,
+          "max_orientation_error_rad": 0.0006160967280647695,
+          "arm_collisions": 0
+        }
+      ],
+      "chosen": {
+        "offset_m": [
+          -0.00048636485281256024,
+          -0.015738979635267186,
+          -0.01
+        ],
+        "static_objective": 0.006733622559478559,
+        "finger_plate_signed_distances_m": [
+          0.0,
+          -0.0029820638949031716,
+          -0.0034687138693934956
+        ],
+        "max_ik_error_m": 0.001279458108547164,
+        "max_orientation_error_rad": 0.0006160967280647695,
+        "arm_collisions": 0
+      },
+      "baseline_objective": 0.02231130271213112,
+      "optimized_objective": 0.006733622559478559,
+      "physical_dynamics_verified": false
+    }
+  ],
+  "full_action_chunk_recomputed": true,
+  "actions_id_pad_included": true,
+  "target_physics_steps_during_processing": 0,
+  "executed_target_training_demonstrations": 0,
+  "pseudo_label_limit": "static contact-distance improvement is not a verified target force/friction model",
+  "duration_seconds": 7.097387498011813
+}

@@ -1,0 +1,2098 @@
+{
+  "started_at": "2026-11-13T20:03:50.353449+00:00",
+  "events": [
+    {
+      "stage": "feedback_requested",
+      "at": "2026-11-13T20:03:51.092092+00:00",
+      "details": {
+        "round": 1,
+        "diagnostic": {
+          "status": "diagnosed",
+          "classification": "heuristic_candidates_not_causal_proof",
+          "evaluated_episodes": 2,
+          "failed_episodes": 2,
+          "dominant_hypothesis": "contact_without_sufficient_plate_response",
+          "contact_fraction": 0.0909090909090909,
+          "plate_contact_fraction": 0.0909090909090909,
+          "contact_rate": 0.0909090909090909,
+          "mean_eef_plate_gap_m": 0.10036968574413238,
+          "mean_near_surface_gap_m": 0.007703924717165678,
+          "mean_near_plate_height_m": 0.011373038800421266,
+          "mean_closest_surface_vector_m": [
+            -0.0008073640690623131,
+            -0.026126654851261158,
+            -0.020469043391934567
+          ],
+          "mean_remaining_goal_vector_xy": [
+            -0.10212737686175889,
+            0.2438224016228292
+          ],
+          "direction_alignment": 0.6116978734251692,
+          "response_gain": 0.06959089550949922,
+          "mean_goal_error_m": 0.2643587530392398,
+          "mean_plate_displacement_m": 0.01984068185585754,
+          "feedback_request": {
+            "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+            "desired_push_direction_xy": [
+              -0.38633824569159303,
+              0.92235717589009
+            ],
+            "measured_contact_gap_vector_m": [
+              -0.0008073640690623131,
+              -0.026126654851261158,
+              -0.020469043391934567
+            ],
+            "max_contact_position_correction_m": 0.02,
+            "max_height_correction_m": 0.01,
+            "require_recomputed_full_action_chunks": true,
+            "target_trace_action_supervision_allowed": false
+          },
+          "hypotheses": [
+            {
+              "name": "contact_geometry",
+              "evidence": {
+                "contact_fraction": 0.0909090909090909,
+                "near_surface_gap_m": 0.007703924717165678
+              }
+            },
+            {
+              "name": "push_direction",
+              "evidence": {
+                "alignment": 0.6116978734251692
+              }
+            },
+            {
+              "name": "contact_dynamics_or_action_scale",
+              "evidence": {
+                "response_gain": 0.06959089550949922
+              },
+              "causally_verified": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:03:54.589979+00:00",
+      "details": {
+        "round_index": 1,
+        "demo_id": "demo_37",
+        "new_anchors": 86,
+        "offset_m": [
+          0.00553414305534054,
+          0.0023180294741495583,
+          -0.0
+        ]
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:03:55.169840+00:00",
+      "details": {
+        "round_index": 1,
+        "demo_id": "demo_36",
+        "new_anchors": 138,
+        "offset_m": [
+          -0.00048636485281256024,
+          -0.015738979635267186,
+          -0.01
+        ]
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:04:10.789026+00:00",
+      "details": {
+        "round": "round_1",
+        "step": 1,
+        "total_step": 101,
+        "loss": 0.17449185252189636
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:04:12.747808+00:00",
+      "details": {
+        "round": "round_1",
+        "step": 26,
+        "total_step": 126,
+        "loss": 0.08523277193307877
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:04:14.608087+00:00",
+      "details": {
+        "round": "round_1",
+        "step": 51,
+        "total_step": 151,
+        "loss": 0.23327632248401642
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:04:16.570446+00:00",
+      "details": {
+        "round": "round_1",
+        "step": 76,
+        "total_step": 176,
+        "loss": 0.05529966205358505
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:04:18.358010+00:00",
+      "details": {
+        "round": "round_1",
+        "step": 100,
+        "total_step": 200,
+        "loss": 0.11205850541591644
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:29.532441+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_40",
+        "step": 0,
+        "goal_error_m": 0.25228742881561717,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:31.805110+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_40",
+        "step": 50,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:34.011907+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_40",
+        "step": 100,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:36.271989+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_40",
+        "step": 150,
+        "goal_error_m": 0.21346158436274842,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:38.470685+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_40",
+        "step": 200,
+        "goal_error_m": 0.20158329802052638,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:04:39.291409+00:00",
+      "details": {
+        "condition": "feedback_round_1",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_40",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.20158329802052638,
+        "initial_goal_error_m": 0.25228747142534386,
+        "goal_progress_m": 0.050704173404817476,
+        "plate_displacement_m": 0.06284762507493628,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21183186769485474,
+          -0.01197242084890604,
+          1.1768211126327515,
+          3.1423165798187256,
+          -0.02304147556424141,
+          -0.09473205357789993,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05658638233732274,
+          -0.018666375618357458,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.06399313452127463,
+          0.04374299616904272,
+          0.9024998346667837
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.11399313452127463,
+          0.16625700383095726
+        ],
+        "video": "videos/feedback_round_1_demo_40.mp4",
+        "trace": "feedback_round_1_demo_40_trace.json",
+        "duration_seconds": 10.020683332812041,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 15,
+        "contact_fraction": 0.06818181818181818,
+        "plate_contact_fraction": 0.06818181818181818,
+        "contact_rate": 0.06818181818181818,
+        "max_contact_normal_force_N": 15.370472847808346,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.0006156714442909887,
+        "mean_eef_plate_gap_m": 0.06434477725737187,
+        "mean_near_plate_height_m": 0.027178423545199667,
+        "mean_closest_surface_vector_m": [
+          -0.00010583254195997488,
+          -0.004654662693749148,
+          -0.03359637525971624
+        ],
+        "mean_push_direction_alignment": 0.64508108987189,
+        "direction_alignment": 0.64508108987189,
+        "response_gain": 0.1260549767044604,
+        "best_goal_error_m": 0.18819932942110834,
+        "final_window_progress_m": 1.124766946247746e-12,
+        "max_plate_displacement_m": 0.08986032480526422
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:39.694591+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_41",
+        "step": 0,
+        "goal_error_m": 0.257119636231151,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:41.773432+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_41",
+        "step": 50,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:43.949639+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_41",
+        "step": 100,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:46.084383+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_41",
+        "step": 150,
+        "goal_error_m": 0.25324968018532956,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:04:48.169964+00:00",
+      "details": {
+        "stage": "feedback_round_1",
+        "demo": "demo_41",
+        "step": 200,
+        "goal_error_m": 0.2534917921487757,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:04:48.778754+00:00",
+      "details": {
+        "condition": "feedback_round_1",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_41",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.2604229220724436,
+        "initial_goal_error_m": 0.2571196785021768,
+        "goal_progress_m": -0.0033032435702667895,
+        "plate_displacement_m": 0.012232329471456995,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.19728083908557892,
+          -0.0057396250776946545,
+          1.1755731105804443,
+          3.1053645610809326,
+          -0.027197321876883507,
+          -0.0623849481344223,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05685730227500485,
+          -0.02386330627862727,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.06889539609875425,
+          -0.021698042994045104,
+          0.902475272170996
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.11889539609875426,
+          0.2316980429940451
+        ],
+        "video": "videos/feedback_round_1_demo_41.mp4",
+        "trace": "feedback_round_1_demo_41_trace.json",
+        "duration_seconds": 9.29705827217549,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 7,
+        "contact_fraction": 0.031818181818181815,
+        "plate_contact_fraction": 0.031818181818181815,
+        "contact_rate": 0.031818181818181815,
+        "max_contact_normal_force_N": 1.0304829358240646,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.0068964178060722395,
+        "mean_eef_plate_gap_m": 0.07137792135686644,
+        "mean_near_plate_height_m": 0.018991645144899354,
+        "mean_closest_surface_vector_m": [
+          -0.002493340725275632,
+          -0.010962116745051816,
+          -0.018690739671282246
+        ],
+        "mean_push_direction_alignment": 0.30875168312367984,
+        "direction_alignment": 0.30875168312367984,
+        "response_gain": 0.11173509630209129,
+        "best_goal_error_m": 0.24944159912742492,
+        "final_window_progress_m": -0.007173241887114046,
+        "max_plate_displacement_m": 0.022696781530932617
+      }
+    },
+    {
+      "stage": "feedback_requested",
+      "at": "2026-11-13T20:04:48.938213+00:00",
+      "details": {
+        "round": 2,
+        "diagnostic": {
+          "status": "diagnosed",
+          "classification": "heuristic_candidates_not_causal_proof",
+          "evaluated_episodes": 2,
+          "failed_episodes": 2,
+          "dominant_hypothesis": "early_progress_then_stall",
+          "contact_fraction": 0.049999999999999996,
+          "plate_contact_fraction": 0.049999999999999996,
+          "contact_rate": 0.049999999999999996,
+          "mean_eef_plate_gap_m": 0.06786134930711915,
+          "mean_near_surface_gap_m": 0.003756044625181614,
+          "mean_near_plate_height_m": 0.02308503434504951,
+          "mean_closest_surface_vector_m": [
+            -0.0012995866336178033,
+            -0.0078083897194004825,
+            -0.02614355746549924
+          ],
+          "mean_remaining_goal_vector_xy": [
+            -0.11644426531001445,
+            0.1989775234125012
+          ],
+          "direction_alignment": 0.4769163864977849,
+          "response_gain": 0.11889503650327585,
+          "mean_goal_error_m": 0.231003110046485,
+          "mean_plate_displacement_m": 0.03753997727319664,
+          "feedback_request": {
+            "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+            "desired_push_direction_xy": [
+              -0.5050810453836195,
+              0.8630719191319981
+            ],
+            "measured_contact_gap_vector_m": [
+              -0.0012995866336178033,
+              -0.0078083897194004825,
+              -0.02614355746549924
+            ],
+            "max_contact_position_correction_m": 0.02,
+            "max_height_correction_m": 0.01,
+            "require_recomputed_full_action_chunks": true,
+            "target_trace_action_supervision_allowed": false
+          },
+          "hypotheses": [
+            {
+              "name": "contact_geometry",
+              "evidence": {
+                "contact_fraction": 0.049999999999999996,
+                "near_surface_gap_m": 0.003756044625181614
+              }
+            },
+            {
+              "name": "push_direction",
+              "evidence": {
+                "alignment": 0.4769163864977849
+              }
+            },
+            {
+              "name": "contact_dynamics_or_action_scale",
+              "evidence": {
+                "response_gain": 0.11889503650327585
+              },
+              "causally_verified": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:04:50.604908+00:00",
+      "details": {
+        "round_index": 2,
+        "demo_id": "demo_14",
+        "new_anchors": 78,
+        "offset_m": [
+          0.006904575353055985,
+          0.004040648363068956,
+          -0.0
+        ]
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:04:50.980743+00:00",
+      "details": {
+        "round_index": 2,
+        "demo_id": "demo_33",
+        "new_anchors": 123,
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.01
+        ]
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:05.877240+00:00",
+      "details": {
+        "round": "round_2",
+        "step": 1,
+        "total_step": 201,
+        "loss": 0.09083299338817596
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:07.384478+00:00",
+      "details": {
+        "round": "round_2",
+        "step": 26,
+        "total_step": 226,
+        "loss": 0.197382852435112
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:08.887741+00:00",
+      "details": {
+        "round": "round_2",
+        "step": 51,
+        "total_step": 251,
+        "loss": 0.11929536610841751
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:10.388290+00:00",
+      "details": {
+        "round": "round_2",
+        "step": 76,
+        "total_step": 276,
+        "loss": 0.05912213772535324
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:11.895701+00:00",
+      "details": {
+        "round": "round_2",
+        "step": 100,
+        "total_step": 300,
+        "loss": 0.09148959815502167
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:22.610693+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_40",
+        "step": 0,
+        "goal_error_m": 0.25228742881561717,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:24.219006+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_40",
+        "step": 50,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:25.859538+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_40",
+        "step": 100,
+        "goal_error_m": 0.24586736577094948,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:27.484888+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_40",
+        "step": 150,
+        "goal_error_m": 0.2461348314015678,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:29.115241+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_40",
+        "step": 200,
+        "goal_error_m": 0.2461348314015678,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:05:29.705261+00:00",
+      "details": {
+        "condition": "feedback_round_2",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_40",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.2461348314015678,
+        "initial_goal_error_m": 0.25228747142534386,
+        "goal_progress_m": 0.0061526400237760515,
+        "plate_displacement_m": 0.006204654588847828,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21183186769485474,
+          -0.01197242084890604,
+          1.1768211126327515,
+          3.1423165798187256,
+          -0.02304147556424141,
+          -0.09473205357789993,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05658638233732274,
+          -0.018666375618357458,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.053288183770294366,
+          -0.013414203493224917,
+          0.9024998346667837
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.10328818377029436,
+          0.2234142034932249
+        ],
+        "video": "videos/feedback_round_2_demo_40.mp4",
+        "trace": "feedback_round_2_demo_40_trace.json",
+        "duration_seconds": 7.284090453991666,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 3,
+        "contact_fraction": 0.013636363636363636,
+        "plate_contact_fraction": 0.013636363636363636,
+        "contact_rate": 0.013636363636363636,
+        "max_contact_normal_force_N": 12.620686014189197,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.005393620378002329,
+        "mean_eef_plate_gap_m": 0.06048051397883756,
+        "mean_near_plate_height_m": 0.02204733883761642,
+        "mean_closest_surface_vector_m": [
+          -0.0036195060668145445,
+          -0.012412442313891731,
+          -0.02649956850685435
+        ],
+        "mean_push_direction_alignment": 0.405406022866831,
+        "direction_alignment": 0.405406022866831,
+        "response_gain": 0.23071762332878723,
+        "best_goal_error_m": 0.23545909666282902,
+        "final_window_progress_m": 0.0,
+        "max_plate_displacement_m": 0.03477465337909396
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:30.094255+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_41",
+        "step": 0,
+        "goal_error_m": 0.257119636231151,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:31.696258+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_41",
+        "step": 50,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:33.340151+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_41",
+        "step": 100,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:34.982977+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_41",
+        "step": 150,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:05:36.628173+00:00",
+      "details": {
+        "stage": "feedback_round_2",
+        "demo": "demo_41",
+        "step": 200,
+        "goal_error_m": 0.26502414318755385,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:05:37.252286+00:00",
+      "details": {
+        "condition": "feedback_round_2",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_41",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.2786018483705667,
+        "initial_goal_error_m": 0.2571196785021768,
+        "goal_progress_m": -0.021482169868389855,
+        "plate_displacement_m": 0.02148424649087243,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.19728083908557892,
+          -0.0057396250776946545,
+          1.1755731105804443,
+          3.1053645610809326,
+          -0.027197321876883507,
+          -0.0623849481344223,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05685730227500485,
+          -0.02386330627862727,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.06556311953733339,
+          -0.04350375799639783,
+          0.9024996635908681
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.11556311953733339,
+          0.2535037579963978
+        ],
+        "video": "videos/feedback_round_2_demo_41.mp4",
+        "trace": "feedback_round_2_demo_41_trace.json",
+        "duration_seconds": 7.343032652977854,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 10,
+        "contact_fraction": 0.045454545454545456,
+        "plate_contact_fraction": 0.045454545454545456,
+        "contact_rate": 0.045454545454545456,
+        "max_contact_normal_force_N": 16.340329331405343,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.0035722999052460775,
+        "mean_eef_plate_gap_m": 0.09496135611541735,
+        "mean_near_plate_height_m": 0.0246473716952241,
+        "mean_closest_surface_vector_m": [
+          3.133529787392967e-05,
+          -0.008543919646357433,
+          -0.033449399531797826
+        ],
+        "mean_push_direction_alignment": 0.2596635786644934,
+        "direction_alignment": 0.2596635786644934,
+        "response_gain": 0.12650889729285045,
+        "best_goal_error_m": 0.2571196163877213,
+        "final_window_progress_m": -0.02148223198284538,
+        "max_plate_displacement_m": 0.042947635062797175
+      }
+    },
+    {
+      "stage": "feedback_requested",
+      "at": "2026-11-13T20:05:37.413660+00:00",
+      "details": {
+        "round": 3,
+        "diagnostic": {
+          "status": "diagnosed",
+          "classification": "heuristic_candidates_not_causal_proof",
+          "evaluated_episodes": 2,
+          "failed_episodes": 2,
+          "dominant_hypothesis": "insufficient_plate_contact",
+          "contact_fraction": 0.029545454545454545,
+          "plate_contact_fraction": 0.029545454545454545,
+          "contact_rate": 0.029545454545454545,
+          "mean_eef_plate_gap_m": 0.07772093504712746,
+          "mean_near_surface_gap_m": 0.004482960141624203,
+          "mean_near_plate_height_m": 0.02334735526642026,
+          "mean_closest_surface_vector_m": [
+            -0.0017940853844703075,
+            -0.010478180980124582,
+            -0.02997448401932609
+          ],
+          "mean_remaining_goal_vector_xy": [
+            -0.10942565165381388,
+            0.23845898074481137
+          ],
+          "direction_alignment": 0.3325348007656622,
+          "response_gain": 0.17861326031081884,
+          "mean_goal_error_m": 0.2623683398860672,
+          "mean_plate_displacement_m": 0.01384445053986013,
+          "feedback_request": {
+            "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+            "desired_push_direction_xy": [
+              -0.41707028678763075,
+              0.9088742354577357
+            ],
+            "measured_contact_gap_vector_m": [
+              -0.0017940853844703075,
+              -0.010478180980124582,
+              -0.02997448401932609
+            ],
+            "max_contact_position_correction_m": 0.02,
+            "max_height_correction_m": 0.01,
+            "require_recomputed_full_action_chunks": true,
+            "target_trace_action_supervision_allowed": false
+          },
+          "hypotheses": [
+            {
+              "name": "contact_geometry",
+              "evidence": {
+                "contact_fraction": 0.029545454545454545,
+                "near_surface_gap_m": 0.004482960141624203
+              }
+            },
+            {
+              "name": "push_direction",
+              "evidence": {
+                "alignment": 0.3325348007656622
+              }
+            },
+            {
+              "name": "contact_dynamics_or_action_scale",
+              "evidence": {
+                "response_gain": 0.17861326031081884
+              },
+              "causally_verified": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:05:39.331396+00:00",
+      "details": {
+        "round_index": 3,
+        "demo_id": "demo_10",
+        "new_anchors": 95,
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.01
+        ]
+      }
+    },
+    {
+      "stage": "feedback_processing",
+      "at": "2026-11-13T20:05:39.706518+00:00",
+      "details": {
+        "round_index": 3,
+        "demo_id": "demo_28",
+        "new_anchors": 142,
+        "offset_m": [
+          -0.009088742354577357,
+          -0.004170702867876307,
+          0.0
+        ]
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:56.116504+00:00",
+      "details": {
+        "round": "round_3",
+        "step": 1,
+        "total_step": 301,
+        "loss": 0.07568952441215515
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:57.639021+00:00",
+      "details": {
+        "round": "round_3",
+        "step": 26,
+        "total_step": 326,
+        "loss": 0.13891208171844482
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:05:59.171916+00:00",
+      "details": {
+        "round": "round_3",
+        "step": 51,
+        "total_step": 351,
+        "loss": 0.09158645570278168
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:00.696077+00:00",
+      "details": {
+        "round": "round_3",
+        "step": 76,
+        "total_step": 376,
+        "loss": 0.10237504541873932
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:02.122454+00:00",
+      "details": {
+        "round": "round_3",
+        "step": 100,
+        "total_step": 400,
+        "loss": 0.08894414454698563
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:12.772285+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_40",
+        "step": 0,
+        "goal_error_m": 0.25228742881561717,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:14.388176+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_40",
+        "step": 50,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:16.068611+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_40",
+        "step": 100,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:17.726976+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_40",
+        "step": 150,
+        "goal_error_m": 0.24763007731547967,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:19.389457+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_40",
+        "step": 200,
+        "goal_error_m": 0.2576983388575699,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:06:20.014819+00:00",
+      "details": {
+        "condition": "feedback_round_3",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_40",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.2597535806670069,
+        "initial_goal_error_m": 0.25228747142534386,
+        "goal_progress_m": -0.0074661092416630215,
+        "plate_displacement_m": 0.010495730166418096,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21183186769485474,
+          -0.01197242084890604,
+          1.1768211126327515,
+          3.1423165798187256,
+          -0.02304147556424141,
+          -0.09473205357789993,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05658638233732274,
+          -0.018666375618357458,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.052913607720586356,
+          -0.0284967756915479,
+          0.9024998346521808
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.10291360772058636,
+          0.2384967756915479
+        ],
+        "video": "videos/feedback_round_3_demo_40.mp4",
+        "trace": "feedback_round_3_demo_40_trace.json",
+        "duration_seconds": 7.437139046145603,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 26,
+        "contact_fraction": 0.11818181818181818,
+        "plate_contact_fraction": 0.11818181818181818,
+        "contact_rate": 0.11818181818181818,
+        "max_contact_normal_force_N": 33.27753889848379,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.001184701905869077,
+        "mean_eef_plate_gap_m": 0.08520893419588342,
+        "mean_near_plate_height_m": 0.003541012710997367,
+        "mean_closest_surface_vector_m": [
+          -0.003395316691251794,
+          -0.019086443589566928,
+          -0.020702703963691785
+        ],
+        "mean_push_direction_alignment": 0.5427998465528554,
+        "direction_alignment": 0.5427998465528554,
+        "response_gain": 0.07058711374652855,
+        "best_goal_error_m": 0.24073759044930884,
+        "final_window_progress_m": -0.002735789488672369,
+        "max_plate_displacement_m": 0.034800940180036134
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:20.403701+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_41",
+        "step": 0,
+        "goal_error_m": 0.257119636231151,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:22.003932+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_41",
+        "step": 50,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:23.650782+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_41",
+        "step": 100,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:25.289185+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_41",
+        "step": 150,
+        "goal_error_m": 0.2571196163877213,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:06:26.959395+00:00",
+      "details": {
+        "stage": "feedback_round_3",
+        "demo": "demo_41",
+        "step": 200,
+        "goal_error_m": 0.27208587365156683,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:06:27.567245+00:00",
+      "details": {
+        "condition": "feedback_round_3",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_41",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.2753429215776187,
+        "initial_goal_error_m": 0.2571196785021768,
+        "goal_progress_m": -0.018223243075441875,
+        "plate_displacement_m": 0.018959145824960066,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.19728083908557892,
+          -0.0057396250776946545,
+          1.1755731105804443,
+          3.1053645610809326,
+          -0.027197321876883507,
+          -0.0623849481344223,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05685730227500485,
+          -0.02386330627862727,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.059492136890864446,
+          -0.04263649067775396,
+          0.9025873695015211
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.10949213689086446,
+          0.25263649067775396
+        ],
+        "video": "videos/feedback_round_3_demo_41.mp4",
+        "trace": "feedback_round_3_demo_41_trace.json",
+        "duration_seconds": 7.3491925469134,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 21,
+        "contact_fraction": 0.09545454545454546,
+        "plate_contact_fraction": 0.09545454545454546,
+        "contact_rate": 0.09545454545454546,
+        "max_contact_normal_force_N": 17.424720781705656,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.002411120556386298,
+        "mean_eef_plate_gap_m": 0.09453759277449439,
+        "mean_near_plate_height_m": 0.015546648233281711,
+        "mean_closest_surface_vector_m": [
+          -0.004792924785017493,
+          -0.007512539993572815,
+          -0.023966902856430262
+        ],
+        "mean_push_direction_alignment": 0.2799757581460573,
+        "direction_alignment": 0.2799757581460573,
+        "response_gain": 0.09940066308589388,
+        "best_goal_error_m": 0.25699864688343316,
+        "final_window_progress_m": -0.010631857991278748,
+        "max_plate_displacement_m": 0.03836761410448563
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:38.117236+00:00",
+      "details": {
+        "round": "control",
+        "step": 1,
+        "total_step": 101,
+        "loss": 0.026664771139621735
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:39.631143+00:00",
+      "details": {
+        "round": "control",
+        "step": 26,
+        "total_step": 126,
+        "loss": 0.066825732588768
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:41.185826+00:00",
+      "details": {
+        "round": "control",
+        "step": 51,
+        "total_step": 151,
+        "loss": 0.07071731239557266
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:43.999314+00:00",
+      "details": {
+        "round": "control",
+        "step": 76,
+        "total_step": 176,
+        "loss": 0.03506137430667877
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:47.801318+00:00",
+      "details": {
+        "round": "control",
+        "step": 101,
+        "total_step": 201,
+        "loss": 0.03688497096300125
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:51.561681+00:00",
+      "details": {
+        "round": "control",
+        "step": 126,
+        "total_step": 226,
+        "loss": 0.05744195729494095
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:55.301667+00:00",
+      "details": {
+        "round": "control",
+        "step": 151,
+        "total_step": 251,
+        "loss": 0.041027553379535675
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:06:59.054426+00:00",
+      "details": {
+        "round": "control",
+        "step": 176,
+        "total_step": 276,
+        "loss": 0.02839457429945469
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:07:01.015119+00:00",
+      "details": {
+        "round": "control",
+        "step": 201,
+        "total_step": 301,
+        "loss": 0.03581685945391655
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:07:02.549177+00:00",
+      "details": {
+        "round": "control",
+        "step": 226,
+        "total_step": 326,
+        "loss": 0.03375480696558952
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:07:04.345280+00:00",
+      "details": {
+        "round": "control",
+        "step": 251,
+        "total_step": 351,
+        "loss": 0.030616680160164833
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:07:08.278110+00:00",
+      "details": {
+        "round": "control",
+        "step": 276,
+        "total_step": 376,
+        "loss": 0.0351487398147583
+      }
+    },
+    {
+      "stage": "feedback_training",
+      "at": "2026-11-13T20:07:12.035971+00:00",
+      "details": {
+        "round": "control",
+        "step": 300,
+        "total_step": 400,
+        "loss": 0.05522877722978592
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:29.428760+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_40",
+        "step": 0,
+        "goal_error_m": 0.25228742881561717,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:33.514787+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_40",
+        "step": 50,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:38.280418+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_40",
+        "step": 100,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:42.431020+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_40",
+        "step": 150,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:46.597300+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_40",
+        "step": 200,
+        "goal_error_m": 0.25228740881995004,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:07:47.338632+00:00",
+      "details": {
+        "condition": "no_feedback_control",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_40",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.25228740881995004,
+        "initial_goal_error_m": 0.25228747142534386,
+        "goal_progress_m": 6.26053938135307e-08,
+        "plate_displacement_m": 0.00018523702497640293,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21183186769485474,
+          -0.01197242084890604,
+          1.1768211126327515,
+          3.1423165798187256,
+          -0.02304147556424141,
+          -0.09473205357789993,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05658638233732274,
+          -0.018666375618357458,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.05658629743186059,
+          -0.018666346122142664,
+          0.9024998346667837
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.1065862974318606,
+          0.22866634612214265
+        ],
+        "video": "videos/no_feedback_control_demo_40.mp4",
+        "trace": "no_feedback_control_demo_40_trace.json",
+        "duration_seconds": 18.111333342967555,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 0,
+        "contact_fraction": 0.0,
+        "plate_contact_fraction": 0.0,
+        "contact_rate": 0.0,
+        "max_contact_normal_force_N": 0.0,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.014013865755888222,
+        "mean_eef_plate_gap_m": 0.08715985922338193,
+        "mean_near_plate_height_m": 0.03527310719350192,
+        "mean_closest_surface_vector_m": [
+          -0.003943184553122083,
+          -0.001720705938998118,
+          -0.027346377817833868
+        ],
+        "mean_push_direction_alignment": 0.40648309142932554,
+        "direction_alignment": 0.40648309142932554,
+        "response_gain": null,
+        "best_goal_error_m": 0.25228740881995004,
+        "final_window_progress_m": 0.0,
+        "max_plate_displacement_m": 0.00018523702497640293
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:47.730373+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_41",
+        "step": 0,
+        "goal_error_m": 0.257119636231151,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:49.415436+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_41",
+        "step": 50,
+        "goal_error_m": 0.25711961638772135,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:51.519237+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_41",
+        "step": 100,
+        "goal_error_m": 0.25711961638772135,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:55.496025+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_41",
+        "step": 150,
+        "goal_error_m": 0.24932026492610745,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:07:59.300144+00:00",
+      "details": {
+        "stage": "no_feedback_control",
+        "demo": "demo_41",
+        "step": 200,
+        "goal_error_m": 0.24932026492610745,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:08:00.712956+00:00",
+      "details": {
+        "condition": "no_feedback_control",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_41",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.24932026492610745,
+        "initial_goal_error_m": 0.2571196785021768,
+        "goal_progress_m": 0.007799413576069364,
+        "plate_displacement_m": 0.008406524657470759,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.19728083908557892,
+          -0.0057396250776946545,
+          1.1755731105804443,
+          3.1053645610809326,
+          -0.027197321876883507,
+          -0.0623849481344223,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.05685730227500485,
+          -0.02386330627862727,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.05080357779444662,
+          -0.01803340370801679,
+          0.9024998346667839
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.10080357779444662,
+          0.22803340370801678
+        ],
+        "video": "videos/no_feedback_control_demo_41.mp4",
+        "trace": "no_feedback_control_demo_41_trace.json",
+        "duration_seconds": 13.169363416032866,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 5,
+        "contact_fraction": 0.022727272727272728,
+        "plate_contact_fraction": 0.022727272727272728,
+        "contact_rate": 0.022727272727272728,
+        "max_contact_normal_force_N": 11.422219280351737,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.007609046344485263,
+        "mean_eef_plate_gap_m": 0.05598172667706602,
+        "mean_near_plate_height_m": 0.023685767836135282,
+        "mean_closest_surface_vector_m": [
+          0.0007083592996452544,
+          -0.00405879764921568,
+          -0.02692964506473698
+        ],
+        "mean_push_direction_alignment": 0.7661983216899517,
+        "direction_alignment": 0.7661983216899517,
+        "response_gain": 0.11627435966377857,
+        "best_goal_error_m": 0.23293788564239432,
+        "final_window_progress_m": 0.0,
+        "max_plate_displacement_m": 0.04509989934147399
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:12.736620+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_47",
+        "step": 0,
+        "goal_error_m": 0.25411144506459254,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:14.683201+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_47",
+        "step": 50,
+        "goal_error_m": 0.254111424560913,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:18.880083+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_47",
+        "step": 100,
+        "goal_error_m": 0.24668266498113975,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:23.496776+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_47",
+        "step": 150,
+        "goal_error_m": 0.24622083622786228,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:27.539290+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_47",
+        "step": 200,
+        "goal_error_m": 0.24951356700692284,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:08:28.950749+00:00",
+      "details": {
+        "condition": "final_original100",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_47",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.24951356700692284,
+        "initial_goal_error_m": 0.2541114888053598,
+        "goal_progress_m": 0.0045979217984369325,
+        "plate_displacement_m": 0.020870306480406973,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.20667016506195068,
+          0.0005658758454956114,
+          1.1689492464065552,
+          3.115734577178955,
+          0.07743997871875763,
+          -0.08679492771625519,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.06324879859039102,
+          -0.017480457096229574,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.0788791868790789,
+          -0.0036519958013629954,
+          0.9024998346667837
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.1288791868790789,
+          0.213651995801363
+        ],
+        "video": "videos/final_original100_demo_47.mp4",
+        "trace": "final_original100_demo_47_trace.json",
+        "duration_seconds": 16.454453561920673,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 116,
+        "contact_fraction": 0.5272727272727272,
+        "plate_contact_fraction": 0.5272727272727272,
+        "contact_rate": 0.5272727272727272,
+        "max_contact_normal_force_N": 46.07295671046587,
+        "min_gripper_plate_distance_m": -0.0005723181024095815,
+        "mean_near_surface_gap_m": -0.0003077561355302686,
+        "mean_eef_plate_gap_m": 0.11760959801685243,
+        "mean_near_plate_height_m": -0.00931298801763158,
+        "mean_closest_surface_vector_m": [
+          4.851898401573939e-06,
+          -1.2265350509854667e-05,
+          0.0003072956594783864
+        ],
+        "mean_push_direction_alignment": 0.5767848808465977,
+        "direction_alignment": 0.5767848808465977,
+        "response_gain": 0.026648876943839266,
+        "best_goal_error_m": 0.24535599659716043,
+        "final_window_progress_m": 1.01133573737755e-10,
+        "max_plate_displacement_m": 0.036481376342953134
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:29.410446+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_48",
+        "step": 0,
+        "goal_error_m": 0.24991750919481515,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:33.109321+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_48",
+        "step": 50,
+        "goal_error_m": 0.24991748904275415,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:34.908367+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_48",
+        "step": 100,
+        "goal_error_m": 0.23115488198253656,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:36.646495+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_48",
+        "step": 150,
+        "goal_error_m": 0.24137680379119175,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:39.218375+00:00",
+      "details": {
+        "stage": "final_original100",
+        "demo": "demo_48",
+        "step": 200,
+        "goal_error_m": 0.24137680379119175,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:08:40.627721+00:00",
+      "details": {
+        "condition": "final_original100",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_48",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.24137680379119175,
+        "initial_goal_error_m": 0.24991755215260356,
+        "goal_progress_m": 0.008540748361411804,
+        "plate_displacement_m": 0.017019503331186507,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21361565589904785,
+          -0.003645567689090967,
+          1.176056981086731,
+          3.137706756591797,
+          0.007936447858810425,
+          -0.08707738667726517,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.0573604196250587,
+          -0.01568235015587865,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.06656300693709594,
+          -0.0013665697839514272,
+          0.9024998346667839
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.11656300693709594,
+          0.2113665697839514
+        ],
+        "video": "videos/final_original100_demo_48.mp4",
+        "trace": "final_original100_demo_48_trace.json",
+        "duration_seconds": 11.43528852192685,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 48,
+        "contact_fraction": 0.21818181818181817,
+        "plate_contact_fraction": 0.21818181818181817,
+        "contact_rate": 0.21818181818181817,
+        "max_contact_normal_force_N": 45.22097848551272,
+        "min_gripper_plate_distance_m": -3.7752100660989595e-05,
+        "mean_near_surface_gap_m": 0.00016268488479455215,
+        "mean_eef_plate_gap_m": 0.11277470951104553,
+        "mean_near_plate_height_m": -0.00031662066345698107,
+        "mean_closest_surface_vector_m": [
+          -0.001807486197041379,
+          0.0006702448441302119,
+          -0.0049931977761011655
+        ],
+        "mean_push_direction_alignment": 0.7811617886025083,
+        "direction_alignment": 0.7811617886025083,
+        "response_gain": 0.0211068318357376,
+        "best_goal_error_m": 0.22170435019617715,
+        "final_window_progress_m": 0.0,
+        "max_plate_displacement_m": 0.05475400490991783
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:52.501304+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_47",
+        "step": 0,
+        "goal_error_m": 0.25411144506459254,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:54.261602+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_47",
+        "step": 50,
+        "goal_error_m": 0.254111424560913,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:08:58.015959+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_47",
+        "step": 100,
+        "goal_error_m": 0.10913541267601917,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:02.401437+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_47",
+        "step": 150,
+        "goal_error_m": 0.05365385383261487,
+        "contact": true
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:09:04.378002+00:00",
+      "details": {
+        "condition": "final_selected_round_1",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_47",
+        "success": true,
+        "ever_success": true,
+        "stable_success_steps": 20,
+        "steps": 173,
+        "goal_error_m": 0.037685976387302526,
+        "initial_goal_error_m": 0.2541114888053598,
+        "goal_progress_m": 0.21642551241805724,
+        "plate_displacement_m": 0.2224111468012779,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.20667016506195068,
+          0.0005658758454956114,
+          1.1689492464065552,
+          3.115734577178955,
+          0.07743997871875763,
+          -0.08679492771625519,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.06324879859039102,
+          -0.017480457096229574,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          -0.018455952673448524,
+          0.18937947880084977,
+          0.9024515758732392
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.03154404732655148,
+          0.020620521199150227
+        ],
+        "video": "videos/final_selected_round_1_demo_47.mp4",
+        "trace": "final_selected_round_1_demo_47_trace.json",
+        "duration_seconds": 12.115471195196733,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 106,
+        "contact_fraction": 0.6127167630057804,
+        "plate_contact_fraction": 0.6127167630057804,
+        "contact_rate": 0.6127167630057804,
+        "max_contact_normal_force_N": 45.68883451059581,
+        "min_gripper_plate_distance_m": -0.001045046731498109,
+        "mean_near_surface_gap_m": -0.000447031724363763,
+        "mean_eef_plate_gap_m": 0.04560875200282678,
+        "mean_near_plate_height_m": 0.0026035903279367093,
+        "mean_closest_surface_vector_m": [
+          1.5135538546736391e-05,
+          0.0004431403904633385,
+          2.6396211700193748e-05
+        ],
+        "mean_push_direction_alignment": 0.6452922956007024,
+        "direction_alignment": 0.6452922956007024,
+        "response_gain": 0.11115969049027978,
+        "best_goal_error_m": 0.037685976387302526,
+        "final_window_progress_m": 0.02232933781237364,
+        "max_plate_displacement_m": 0.23347797694228176
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:04.960747+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_48",
+        "step": 0,
+        "goal_error_m": 0.24991750919481515,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:06.820189+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_48",
+        "step": 50,
+        "goal_error_m": 0.24991748904275413,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:08.607777+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_48",
+        "step": 100,
+        "goal_error_m": 0.24991748904275413,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:10.425278+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_48",
+        "step": 150,
+        "goal_error_m": 0.24991748904275413,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout",
+      "at": "2026-11-13T20:09:13.800091+00:00",
+      "details": {
+        "stage": "final_selected_round_1",
+        "demo": "demo_48",
+        "step": 200,
+        "goal_error_m": 0.24991748904275413,
+        "contact": false
+      }
+    },
+    {
+      "stage": "feedback_rollout_completed",
+      "at": "2026-11-13T20:09:14.433402+00:00",
+      "details": {
+        "condition": "final_selected_round_1",
+        "robot": "UR5e",
+        "source_initial_scene_id": "demo_48",
+        "success": false,
+        "ever_success": false,
+        "stable_success_steps": 0,
+        "steps": 220,
+        "goal_error_m": 0.24991748904275413,
+        "initial_goal_error_m": 0.24991755215260356,
+        "goal_progress_m": 6.310984942969888e-08,
+        "plate_displacement_m": 0.00018523702497651398,
+        "arm_collision_steps": 0,
+        "initial_canonical_state": [
+          -0.21361565589904785,
+          -0.003645567689090967,
+          1.176056981086731,
+          3.137706756591797,
+          0.007936447858810425,
+          -0.08707738667726517,
+          0.03999999910593033,
+          -0.03999999910593033
+        ],
+        "initial_plate_position": [
+          0.0573604196250587,
+          -0.01568235015587865,
+          0.9023145976636144
+        ],
+        "final_plate_position": [
+          0.057360334719596534,
+          -0.01568232065966383,
+          0.9024998346667839
+        ],
+        "goal_position": [
+          -0.05,
+          0.21,
+          0.895
+        ],
+        "remaining_goal_vector_xy": [
+          -0.10736033471959654,
+          0.22568232065966382
+        ],
+        "video": "videos/final_selected_round_1_demo_48.mp4",
+        "trace": "final_selected_round_1_demo_48_trace.json",
+        "duration_seconds": 9.758410505950451,
+        "training_usage": "diagnostic_only_not_action_supervision",
+        "contact_steps": 0,
+        "contact_fraction": 0.0,
+        "plate_contact_fraction": 0.0,
+        "contact_rate": 0.0,
+        "max_contact_normal_force_N": 0.0,
+        "min_gripper_plate_distance_m": 0.0,
+        "mean_near_surface_gap_m": 0.008687393276328321,
+        "mean_eef_plate_gap_m": 0.12207449829478709,
+        "mean_near_plate_height_m": 0.021443022501153687,
+        "mean_closest_surface_vector_m": [
+          -0.015100504880980742,
+          -0.019006678558114963,
+          -0.011004925537783388
+        ],
+        "mean_push_direction_alignment": 0.19883657448499628,
+        "direction_alignment": 0.19883657448499628,
+        "response_gain": null,
+        "best_goal_error_m": 0.24991748904275413,
+        "final_window_progress_m": 0.0,
+        "max_plate_displacement_m": 0.00018523702497651398
+      }
+    },
+    {
+      "stage": "packaging",
+      "at": "2026-11-13T20:09:14.587861+00:00",
+      "details": {
+        "rounds": 3
+      }
+    },
+    {
+      "stage": "completed",
+      "at": "2026-11-13T20:09:22.338291+00:00",
+      "details": {
+        "summary": "/home/dheo/Cross_Robot_Real2Sim/runs/vla_feedback_20261113T195522Z/summary.json"
+      }
+    }
+  ],
+  "current_stage": "completed"
+}

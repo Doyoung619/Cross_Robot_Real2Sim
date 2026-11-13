@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "pdf_pages": [
+    {
+      "page": 1,
+      "text_characters": 1564,
+      "layout_passed": true
+    },
+    {
+      "page": 2,
+      "text_characters": 2395,
+      "layout_passed": true
+    },
+    {
+      "page": 3,
+      "text_characters": 2168,
+      "layout_passed": true
+    },
+    {
+      "page": 4,
+      "text_characters": 1371,
+      "layout_passed": true
+    }
+  ],
+  "videos": [
+    "control/videos/no_feedback_control_demo_41.mp4",
+    "control/videos/no_feedback_control_demo_40.mp4",
+    "rounds/round_3/videos/feedback_round_3_demo_40.mp4",
+    "rounds/round_3/videos/feedback_round_3_demo_41.mp4",
+    "rounds/round_2/videos/feedback_round_2_demo_40.mp4",
+    "rounds/round_2/videos/feedback_round_2_demo_41.mp4",
+    "rounds/round_1/videos/feedback_round_1_demo_40.mp4",
+    "rounds/round_1/videos/feedback_round_1_demo_41.mp4",
+    "rounds/baseline/videos/baseline_100_demo_40.mp4",
+    "rounds/baseline/videos/baseline_100_demo_41.mp4",
+    "final/videos/final_original100_demo_48.mp4",
+    "final/videos/final_original100_demo_47.mp4",
+    "final/videos/final_selected_round_1_demo_48.mp4",
+    "final/videos/final_selected_round_1_demo_47.mp4",
+    "videos/feedback_rounds_demo_41.mp4",
+    "videos/final_comparison_demo_47.mp4",
+    "videos/final_comparison_demo_48.mp4",
+    "videos/feedback_rounds_demo_40.mp4"
+  ]
+}

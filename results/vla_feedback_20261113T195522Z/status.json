@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "supervisor_pid": 3724513,
+  "started_at": "2026-11-13T20:03:50.335750+00:00",
+  "deadline": "2026-11-13T20:19:22Z",
+  "training_data_protocol": "source_only_no_executed_B_demonstrations",
+  "worker_pid": 3724514,
+  "exit_code": 0,
+  "finished_at": "2026-11-13T20:09:24.662822+00:00",
+  "feedback_protocol": "B development diagnostics allowed; zero B action supervision"
+}

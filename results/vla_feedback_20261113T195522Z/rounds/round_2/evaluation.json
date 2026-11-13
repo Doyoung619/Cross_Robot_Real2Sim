@@ -1,0 +1,136 @@
+[
+  {
+    "condition": "feedback_round_2",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_40",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.2461348314015678,
+    "initial_goal_error_m": 0.25228747142534386,
+    "goal_progress_m": 0.0061526400237760515,
+    "plate_displacement_m": 0.006204654588847828,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21183186769485474,
+      -0.01197242084890604,
+      1.1768211126327515,
+      3.1423165798187256,
+      -0.02304147556424141,
+      -0.09473205357789993,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05658638233732274,
+      -0.018666375618357458,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.053288183770294366,
+      -0.013414203493224917,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.10328818377029436,
+      0.2234142034932249
+    ],
+    "video": "videos/feedback_round_2_demo_40.mp4",
+    "trace": "feedback_round_2_demo_40_trace.json",
+    "duration_seconds": 7.284090453991666,
+    "training_usage": "diagnostic_only_not_action_supervision",
+    "contact_steps": 3,
+    "contact_fraction": 0.013636363636363636,
+    "plate_contact_fraction": 0.013636363636363636,
+    "contact_rate": 0.013636363636363636,
+    "max_contact_normal_force_N": 12.620686014189197,
+    "min_gripper_plate_distance_m": 0.0,
+    "mean_near_surface_gap_m": 0.005393620378002329,
+    "mean_eef_plate_gap_m": 0.06048051397883756,
+    "mean_near_plate_height_m": 0.02204733883761642,
+    "mean_closest_surface_vector_m": [
+      -0.0036195060668145445,
+      -0.012412442313891731,
+      -0.02649956850685435
+    ],
+    "mean_push_direction_alignment": 0.405406022866831,
+    "direction_alignment": 0.405406022866831,
+    "response_gain": 0.23071762332878723,
+    "best_goal_error_m": 0.23545909666282902,
+    "final_window_progress_m": 0.0,
+    "max_plate_displacement_m": 0.03477465337909396
+  },
+  {
+    "condition": "feedback_round_2",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_41",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.2786018483705667,
+    "initial_goal_error_m": 0.2571196785021768,
+    "goal_progress_m": -0.021482169868389855,
+    "plate_displacement_m": 0.02148424649087243,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.19728083908557892,
+      -0.0057396250776946545,
+      1.1755731105804443,
+      3.1053645610809326,
+      -0.027197321876883507,
+      -0.0623849481344223,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05685730227500485,
+      -0.02386330627862727,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.06556311953733339,
+      -0.04350375799639783,
+      0.9024996635908681
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.11556311953733339,
+      0.2535037579963978
+    ],
+    "video": "videos/feedback_round_2_demo_41.mp4",
+    "trace": "feedback_round_2_demo_41_trace.json",
+    "duration_seconds": 7.343032652977854,
+    "training_usage": "diagnostic_only_not_action_supervision",
+    "contact_steps": 10,
+    "contact_fraction": 0.045454545454545456,
+    "plate_contact_fraction": 0.045454545454545456,
+    "contact_rate": 0.045454545454545456,
+    "max_contact_normal_force_N": 16.340329331405343,
+    "min_gripper_plate_distance_m": 0.0,
+    "mean_near_surface_gap_m": 0.0035722999052460775,
+    "mean_eef_plate_gap_m": 0.09496135611541735,
+    "mean_near_plate_height_m": 0.0246473716952241,
+    "mean_closest_surface_vector_m": [
+      3.133529787392967e-05,
+      -0.008543919646357433,
+      -0.033449399531797826
+    ],
+    "mean_push_direction_alignment": 0.2596635786644934,
+    "direction_alignment": 0.2596635786644934,
+    "response_gain": 0.12650889729285045,
+    "best_goal_error_m": 0.2571196163877213,
+    "final_window_progress_m": -0.02148223198284538,
+    "max_plate_displacement_m": 0.042947635062797175
+  }
+]

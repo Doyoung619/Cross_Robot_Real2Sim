@@ -1,0 +1,274 @@
+[
+  {
+    "condition": "final_original100",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_47",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.24951356700692284,
+    "initial_goal_error_m": 0.2541114888053598,
+    "goal_progress_m": 0.0045979217984369325,
+    "plate_displacement_m": 0.020870306480406973,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.20667016506195068,
+      0.0005658758454956114,
+      1.1689492464065552,
+      3.115734577178955,
+      0.07743997871875763,
+      -0.08679492771625519,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.06324879859039102,
+      -0.017480457096229574,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.0788791868790789,
+      -0.0036519958013629954,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.1288791868790789,
+      0.213651995801363
+    ],
+    "video": "videos/final_original100_demo_47.mp4",
+    "trace": "final_original100_demo_47_trace.json",
+    "duration_seconds": 16.454453561920673,
+    "training_usage": "reserved_final_evaluation_only_no_feedback",
+    "contact_steps": 116,
+    "contact_fraction": 0.5272727272727272,
+    "plate_contact_fraction": 0.5272727272727272,
+    "contact_rate": 0.5272727272727272,
+    "max_contact_normal_force_N": 46.07295671046587,
+    "min_gripper_plate_distance_m": -0.0005723181024095815,
+    "mean_near_surface_gap_m": -0.0003077561355302686,
+    "mean_eef_plate_gap_m": 0.11760959801685243,
+    "mean_near_plate_height_m": -0.00931298801763158,
+    "mean_closest_surface_vector_m": [
+      4.851898401573939e-06,
+      -1.2265350509854667e-05,
+      0.0003072956594783864
+    ],
+    "mean_push_direction_alignment": 0.5767848808465977,
+    "direction_alignment": 0.5767848808465977,
+    "response_gain": 0.026648876943839266,
+    "best_goal_error_m": 0.24535599659716043,
+    "final_window_progress_m": 1.01133573737755e-10,
+    "max_plate_displacement_m": 0.036481376342953134,
+    "evaluation_role": "reserved_final"
+  },
+  {
+    "condition": "final_original100",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_48",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.24137680379119175,
+    "initial_goal_error_m": 0.24991755215260356,
+    "goal_progress_m": 0.008540748361411804,
+    "plate_displacement_m": 0.017019503331186507,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21361565589904785,
+      -0.003645567689090967,
+      1.176056981086731,
+      3.137706756591797,
+      0.007936447858810425,
+      -0.08707738667726517,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.0573604196250587,
+      -0.01568235015587865,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.06656300693709594,
+      -0.0013665697839514272,
+      0.9024998346667839
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.11656300693709594,
+      0.2113665697839514
+    ],
+    "video": "videos/final_original100_demo_48.mp4",
+    "trace": "final_original100_demo_48_trace.json",
+    "duration_seconds": 11.43528852192685,
+    "training_usage": "reserved_final_evaluation_only_no_feedback",
+    "contact_steps": 48,
+    "contact_fraction": 0.21818181818181817,
+    "plate_contact_fraction": 0.21818181818181817,
+    "contact_rate": 0.21818181818181817,
+    "max_contact_normal_force_N": 45.22097848551272,
+    "min_gripper_plate_distance_m": -3.7752100660989595e-05,
+    "mean_near_surface_gap_m": 0.00016268488479455215,
+    "mean_eef_plate_gap_m": 0.11277470951104553,
+    "mean_near_plate_height_m": -0.00031662066345698107,
+    "mean_closest_surface_vector_m": [
+      -0.001807486197041379,
+      0.0006702448441302119,
+      -0.0049931977761011655
+    ],
+    "mean_push_direction_alignment": 0.7811617886025083,
+    "direction_alignment": 0.7811617886025083,
+    "response_gain": 0.0211068318357376,
+    "best_goal_error_m": 0.22170435019617715,
+    "final_window_progress_m": 0.0,
+    "max_plate_displacement_m": 0.05475400490991783,
+    "evaluation_role": "reserved_final"
+  },
+  {
+    "condition": "final_selected_round_1",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_47",
+    "success": true,
+    "ever_success": true,
+    "stable_success_steps": 20,
+    "steps": 173,
+    "goal_error_m": 0.037685976387302526,
+    "initial_goal_error_m": 0.2541114888053598,
+    "goal_progress_m": 0.21642551241805724,
+    "plate_displacement_m": 0.2224111468012779,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.20667016506195068,
+      0.0005658758454956114,
+      1.1689492464065552,
+      3.115734577178955,
+      0.07743997871875763,
+      -0.08679492771625519,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.06324879859039102,
+      -0.017480457096229574,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      -0.018455952673448524,
+      0.18937947880084977,
+      0.9024515758732392
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.03154404732655148,
+      0.020620521199150227
+    ],
+    "video": "videos/final_selected_round_1_demo_47.mp4",
+    "trace": "final_selected_round_1_demo_47_trace.json",
+    "duration_seconds": 12.115471195196733,
+    "training_usage": "reserved_final_evaluation_only_no_feedback",
+    "contact_steps": 106,
+    "contact_fraction": 0.6127167630057804,
+    "plate_contact_fraction": 0.6127167630057804,
+    "contact_rate": 0.6127167630057804,
+    "max_contact_normal_force_N": 45.68883451059581,
+    "min_gripper_plate_distance_m": -0.001045046731498109,
+    "mean_near_surface_gap_m": -0.000447031724363763,
+    "mean_eef_plate_gap_m": 0.04560875200282678,
+    "mean_near_plate_height_m": 0.0026035903279367093,
+    "mean_closest_surface_vector_m": [
+      1.5135538546736391e-05,
+      0.0004431403904633385,
+      2.6396211700193748e-05
+    ],
+    "mean_push_direction_alignment": 0.6452922956007024,
+    "direction_alignment": 0.6452922956007024,
+    "response_gain": 0.11115969049027978,
+    "best_goal_error_m": 0.037685976387302526,
+    "final_window_progress_m": 0.02232933781237364,
+    "max_plate_displacement_m": 0.23347797694228176,
+    "evaluation_role": "reserved_final"
+  },
+  {
+    "condition": "final_selected_round_1",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_48",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.24991748904275413,
+    "initial_goal_error_m": 0.24991755215260356,
+    "goal_progress_m": 6.310984942969888e-08,
+    "plate_displacement_m": 0.00018523702497651398,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21361565589904785,
+      -0.003645567689090967,
+      1.176056981086731,
+      3.137706756591797,
+      0.007936447858810425,
+      -0.08707738667726517,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.0573604196250587,
+      -0.01568235015587865,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.057360334719596534,
+      -0.01568232065966383,
+      0.9024998346667839
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.10736033471959654,
+      0.22568232065966382
+    ],
+    "video": "videos/final_selected_round_1_demo_48.mp4",
+    "trace": "final_selected_round_1_demo_48_trace.json",
+    "duration_seconds": 9.758410505950451,
+    "training_usage": "reserved_final_evaluation_only_no_feedback",
+    "contact_steps": 0,
+    "contact_fraction": 0.0,
+    "plate_contact_fraction": 0.0,
+    "contact_rate": 0.0,
+    "max_contact_normal_force_N": 0.0,
+    "min_gripper_plate_distance_m": 0.0,
+    "mean_near_surface_gap_m": 0.008687393276328321,
+    "mean_eef_plate_gap_m": 0.12207449829478709,
+    "mean_near_plate_height_m": 0.021443022501153687,
+    "mean_closest_surface_vector_m": [
+      -0.015100504880980742,
+      -0.019006678558114963,
+      -0.011004925537783388
+    ],
+    "mean_push_direction_alignment": 0.19883657448499628,
+    "direction_alignment": 0.19883657448499628,
+    "response_gain": null,
+    "best_goal_error_m": 0.24991748904275413,
+    "final_window_progress_m": 0.0,
+    "max_plate_displacement_m": 0.00018523702497651398,
+    "evaluation_role": "reserved_final"
+  }
+]

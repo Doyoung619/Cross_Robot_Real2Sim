@@ -1,5 +1,7 @@
 # 3. Cross-Robot Retargeting
 
+Latest [VLA feedback experiment](../results/vla_feedback_20261113T195522Z/README.md): B rollout diagnostics change a bounded static contact-offset search (at most2cm XY/1cm Z), followed by smooth source TCP correction, UR5e IK/FK, static B rendering and full 50-action-chunk relabeling. A response-conditioned2–5-frame lookahead recomputes target TCP displacement labels; invalid current/future IK targets are masked. **No B physics is stepped during processing**, and this is heuristic controller inversion rather than dynamics-aware trajectory optimization. New anchors per round:138/123/142. See [feedback processing](../scripts/vla_feedback_processing.py) and the published per-round audits.
+
 Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): match A's full TCP poses using B IK/FK and static geometry, copy source object records, and render hypothetical B observations without advancing target physics. Retain 189 anchors from three A episodes. These are source-derived kinematic pseudo-labels, not successful B execution demonstrations. See [processing code](../scripts/vla_pilot_processing.py) and [English processing video](../results/vla_minimal_20261113T185314Z/videos/offline_source_processing.mp4). The wrapper below runs the historical executed-teacher baseline.
 
 Extract limited source-relative grasp/lift geometry and execute target UR5e demonstrations through its own closed-loop simulator controller.

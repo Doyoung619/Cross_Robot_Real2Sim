@@ -1,0 +1,22 @@
+{
+  "updates": 100,
+  "steps": 400,
+  "cumulative_steps": 400,
+  "training_frames": 592,
+  "new_rows_start": 450,
+  "new_rows_count": 142,
+  "sampling": "half_previous_source_half_new_corrective_source_when_available",
+  "optimizer_state_restored": true,
+  "parent_adapter": "/home/dheo/Cross_Robot_Real2Sim/runs/vla_feedback_20261113T195522Z/rounds/round_2/adapter.safetensors",
+  "parent_adapter_sha256": "697986a255ce14a96ac18a864d9ba6490418af8fb2ff0a04101325de6ae607de",
+  "adapter_sha256": "6835ceda6b708a6188e521d3f2224029ecfa9c08fc33d70ed1e5b795087ff4b7",
+  "executed_B_training_demonstrations": 0,
+  "B_rollout_actions_used_as_targets": false,
+  "padded_future_actions_masked": true,
+  "trainable_parameters": 334592,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "rank": 8,
+  "duration_seconds": 16.841342576080933,
+  "final_loss": 0.08894414454698563
+}

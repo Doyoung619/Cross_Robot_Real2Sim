@@ -1,0 +1,136 @@
+[
+  {
+    "condition": "feedback_round_3",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_40",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.2597535806670069,
+    "initial_goal_error_m": 0.25228747142534386,
+    "goal_progress_m": -0.0074661092416630215,
+    "plate_displacement_m": 0.010495730166418096,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21183186769485474,
+      -0.01197242084890604,
+      1.1768211126327515,
+      3.1423165798187256,
+      -0.02304147556424141,
+      -0.09473205357789993,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05658638233732274,
+      -0.018666375618357458,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.052913607720586356,
+      -0.0284967756915479,
+      0.9024998346521808
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.10291360772058636,
+      0.2384967756915479
+    ],
+    "video": "videos/feedback_round_3_demo_40.mp4",
+    "trace": "feedback_round_3_demo_40_trace.json",
+    "duration_seconds": 7.437139046145603,
+    "training_usage": "diagnostic_only_not_action_supervision",
+    "contact_steps": 26,
+    "contact_fraction": 0.11818181818181818,
+    "plate_contact_fraction": 0.11818181818181818,
+    "contact_rate": 0.11818181818181818,
+    "max_contact_normal_force_N": 33.27753889848379,
+    "min_gripper_plate_distance_m": 0.0,
+    "mean_near_surface_gap_m": 0.001184701905869077,
+    "mean_eef_plate_gap_m": 0.08520893419588342,
+    "mean_near_plate_height_m": 0.003541012710997367,
+    "mean_closest_surface_vector_m": [
+      -0.003395316691251794,
+      -0.019086443589566928,
+      -0.020702703963691785
+    ],
+    "mean_push_direction_alignment": 0.5427998465528554,
+    "direction_alignment": 0.5427998465528554,
+    "response_gain": 0.07058711374652855,
+    "best_goal_error_m": 0.24073759044930884,
+    "final_window_progress_m": -0.002735789488672369,
+    "max_plate_displacement_m": 0.034800940180036134
+  },
+  {
+    "condition": "feedback_round_3",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_41",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 220,
+    "goal_error_m": 0.2753429215776187,
+    "initial_goal_error_m": 0.2571196785021768,
+    "goal_progress_m": -0.018223243075441875,
+    "plate_displacement_m": 0.018959145824960066,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.19728083908557892,
+      -0.0057396250776946545,
+      1.1755731105804443,
+      3.1053645610809326,
+      -0.027197321876883507,
+      -0.0623849481344223,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05685730227500485,
+      -0.02386330627862727,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.059492136890864446,
+      -0.04263649067775396,
+      0.9025873695015211
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "remaining_goal_vector_xy": [
+      -0.10949213689086446,
+      0.25263649067775396
+    ],
+    "video": "videos/feedback_round_3_demo_41.mp4",
+    "trace": "feedback_round_3_demo_41_trace.json",
+    "duration_seconds": 7.3491925469134,
+    "training_usage": "diagnostic_only_not_action_supervision",
+    "contact_steps": 21,
+    "contact_fraction": 0.09545454545454546,
+    "plate_contact_fraction": 0.09545454545454546,
+    "contact_rate": 0.09545454545454546,
+    "max_contact_normal_force_N": 17.424720781705656,
+    "min_gripper_plate_distance_m": 0.0,
+    "mean_near_surface_gap_m": 0.002411120556386298,
+    "mean_eef_plate_gap_m": 0.09453759277449439,
+    "mean_near_plate_height_m": 0.015546648233281711,
+    "mean_closest_surface_vector_m": [
+      -0.004792924785017493,
+      -0.007512539993572815,
+      -0.023966902856430262
+    ],
+    "mean_push_direction_alignment": 0.2799757581460573,
+    "direction_alignment": 0.2799757581460573,
+    "response_gain": 0.09940066308589388,
+    "best_goal_error_m": 0.25699864688343316,
+    "final_window_progress_m": -0.010631857991278748,
+    "max_plate_displacement_m": 0.03836761410448563
+  }
+]

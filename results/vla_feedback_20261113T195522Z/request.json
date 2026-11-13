@@ -1,0 +1,16 @@
+{
+  "parent_run": "runs/vla_minimal_20261113T185314Z",
+  "rounds": 3,
+  "updates_per_round": 100,
+  "development_source_ids": [
+    "demo_40",
+    "demo_41"
+  ],
+  "final_source_ids": [
+    "demo_47",
+    "demo_48"
+  ],
+  "allowed_feedback": "B development rollout diagnostics guide A selection and offline optimization",
+  "training_supervision": "source-derived only; successful B trajectories are allowed by user but not required",
+  "deadline": "2026-11-13T20:19:22Z"
+}

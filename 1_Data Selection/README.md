@@ -1,5 +1,7 @@
 # 1. Data Selection
 
+Latest [VLA feedback experiment](../results/vla_feedback_20261113T195522Z/README.md): measured B remaining goal direction and contact failures rank unused successful A contact windows. The score combines push-direction agreement, plate displacement, rear approach and window length. Each round selects two new A episodes: **37/36, 14/33, 10/28**. Source IDs40–49 are excluded from all training data; development scenes40/41 guide feedback and final scenes47/48 remain reserved. See [feedback source processing](../scripts/vla_feedback_processing.py). This stage uses simulator measurements and heuristics, not a learned VLM diagnosis.
+
 Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): inspect 45 existing plate-pushing A episodes, filter with four-pose B IK/static arm-collision checks (35 eligible), then select three by length and initial plate-position diversity. See [vla_pilot_processing.py](../scripts/vla_pilot_processing.py). No B execution reward selects training data. The stage wrapper below runs the historical Can/MLP baseline.
 
 Choose coherent source Panda demonstrations and, when supplied, relevant real human clips for the can-inside-bin task.

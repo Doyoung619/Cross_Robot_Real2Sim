@@ -1,0 +1,118 @@
+{
+  "candidate_count": 45,
+  "eligible_count": 35,
+  "selected": [
+    "demo_5",
+    "demo_38",
+    "demo_26",
+    "demo_37",
+    "demo_36",
+    "demo_14",
+    "demo_33",
+    "demo_10",
+    "demo_28"
+  ],
+  "evaluation_source_ids": [
+    "demo_45",
+    "demo_46"
+  ],
+  "excluded_validation_ids": [
+    "demo_45",
+    "demo_46",
+    "demo_47",
+    "demo_48",
+    "demo_49"
+  ],
+  "target_rollout_training_calls": 0,
+  "method": "four_pose_B_IK_and_static_arm_collision_filter_then_shortest_and_farthest_plate_starts",
+  "feedback_selected": [
+    "demo_37",
+    "demo_36",
+    "demo_14",
+    "demo_33",
+    "demo_10",
+    "demo_28"
+  ],
+  "feedback_round": 3,
+  "new_rows_start": 450,
+  "new_rows_count": 142,
+  "training_source_candidates_exclude_ids": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "feedback_method": "remaining_goal_direction_and_source_contact_geometry_ranking_then_static_distance_optimization",
+  "diagnostic_used": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 2,
+    "failed_episodes": 2,
+    "dominant_hypothesis": "insufficient_plate_contact",
+    "contact_fraction": 0.029545454545454545,
+    "plate_contact_fraction": 0.029545454545454545,
+    "contact_rate": 0.029545454545454545,
+    "mean_eef_plate_gap_m": 0.07772093504712746,
+    "mean_near_surface_gap_m": 0.004482960141624203,
+    "mean_near_plate_height_m": 0.02334735526642026,
+    "mean_closest_surface_vector_m": [
+      -0.0017940853844703075,
+      -0.010478180980124582,
+      -0.02997448401932609
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.10942565165381388,
+      0.23845898074481137
+    ],
+    "direction_alignment": 0.3325348007656622,
+    "response_gain": 0.17861326031081884,
+    "mean_goal_error_m": 0.2623683398860672,
+    "mean_plate_displacement_m": 0.01384445053986013,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.41707028678763075,
+        0.9088742354577357
+      ],
+      "measured_contact_gap_vector_m": [
+        -0.0017940853844703075,
+        -0.010478180980124582,
+        -0.02997448401932609
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.029545454545454545,
+          "near_surface_gap_m": 0.004482960141624203
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": 0.3325348007656622
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": 0.17861326031081884
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "target_execution_used_as_diagnosis": true,
+  "executed_target_supervised_action_labels": false
+}

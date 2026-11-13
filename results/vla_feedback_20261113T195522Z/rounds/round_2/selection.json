@@ -1,0 +1,114 @@
+{
+  "candidate_count": 45,
+  "eligible_count": 35,
+  "selected": [
+    "demo_5",
+    "demo_38",
+    "demo_26",
+    "demo_37",
+    "demo_36",
+    "demo_14",
+    "demo_33"
+  ],
+  "evaluation_source_ids": [
+    "demo_45",
+    "demo_46"
+  ],
+  "excluded_validation_ids": [
+    "demo_45",
+    "demo_46",
+    "demo_47",
+    "demo_48",
+    "demo_49"
+  ],
+  "target_rollout_training_calls": 0,
+  "method": "four_pose_B_IK_and_static_arm_collision_filter_then_shortest_and_farthest_plate_starts",
+  "feedback_selected": [
+    "demo_37",
+    "demo_36",
+    "demo_14",
+    "demo_33"
+  ],
+  "feedback_round": 2,
+  "new_rows_start": 327,
+  "new_rows_count": 123,
+  "training_source_candidates_exclude_ids": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "feedback_method": "remaining_goal_direction_and_source_contact_geometry_ranking_then_static_distance_optimization",
+  "diagnostic_used": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 2,
+    "failed_episodes": 2,
+    "dominant_hypothesis": "early_progress_then_stall",
+    "contact_fraction": 0.049999999999999996,
+    "plate_contact_fraction": 0.049999999999999996,
+    "contact_rate": 0.049999999999999996,
+    "mean_eef_plate_gap_m": 0.06786134930711915,
+    "mean_near_surface_gap_m": 0.003756044625181614,
+    "mean_near_plate_height_m": 0.02308503434504951,
+    "mean_closest_surface_vector_m": [
+      -0.0012995866336178033,
+      -0.0078083897194004825,
+      -0.02614355746549924
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.11644426531001445,
+      0.1989775234125012
+    ],
+    "direction_alignment": 0.4769163864977849,
+    "response_gain": 0.11889503650327585,
+    "mean_goal_error_m": 0.231003110046485,
+    "mean_plate_displacement_m": 0.03753997727319664,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.5050810453836195,
+        0.8630719191319981
+      ],
+      "measured_contact_gap_vector_m": [
+        -0.0012995866336178033,
+        -0.0078083897194004825,
+        -0.02614355746549924
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.049999999999999996,
+          "near_surface_gap_m": 0.003756044625181614
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": 0.4769163864977849
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": 0.11889503650327585
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "target_execution_used_as_diagnosis": true,
+  "executed_target_supervised_action_labels": false
+}
