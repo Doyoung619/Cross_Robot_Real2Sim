@@ -1,5 +1,7 @@
 # 4. Policy Learning
 
+Duration follow-up: [600 seconds of additional B LoRA training](../results/vla_extra10m_20261113T193618Z/README.md), starting from the initial 100-update adapter, added 8,130 updates on the same source-derived data. No B execution demonstrations were added. Success stayed 0/2 and goal error worsened from 10.95 to 20.00 cm. Parent optimizer state was unavailable, so adapter weights continued with fresh AdamW; the new run saves optimizer/RNG state.
+
 Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): strictly load the existing 450M SmolVLA, freeze its base weights, and update 334,592 rank-eight LoRA parameters for 100 steps on source-derived synthetic observations/actions. No executed B demonstrations enter training. See [VLA learning code](../scripts/vla_pilot_learning.py) and [saved adapter](../results/vla_minimal_20261113T185314Z/adapter.safetensors). The wrapper below runs the historical state-MLP baseline, not this VLA experiment.
 
 Learn target task-space actions only from successfully executed UR5e teachers, then evaluate the saved model in fresh closed-loop episodes.

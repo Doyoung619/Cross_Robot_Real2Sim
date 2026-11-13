@@ -1,5 +1,7 @@
 # 5. Failure Analysis
 
+The [ten-minute duration comparison](../results/vla_extra10m_20261113T193618Z/README.md) tested the insufficient-training hypothesis: 100 → 8,230 updates on unchanged data reduced training loss but did not improve native task success (0/2 → 0/2); mean goal error worsened (10.95 → 20.00 cm). This does not identify the cause as overfitting or contact mismatch without additional evidence. Both outcomes and the unchanged original adapter are retained.
+
 Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): native final evaluation gives A 1/2 and B 0/2 before and after adaptation. Mean B goal error decreases from 20.47 to 10.95 cm, which is not task success. The source competence gate remains weak; static conversion supplies no verified target contact dynamics. Preserve both failure cases and use no B evaluation trajectory as training data. See [measured report](../results/vla_minimal_20261113T185314Z/FINAL_REPORT.md). The wrapper below runs the historical diagnosis/retraining baseline.
 
 Turn real rollout evidence into conservative diagnostic rules, feedback requests, and one bounded corrective collection/retraining comparison.

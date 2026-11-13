@@ -1,0 +1,16 @@
+{
+  "previous_successes": 0,
+  "extended_successes": 0,
+  "episodes_each": 2,
+  "previous_mean_goal_error_m": 0.10949752551136727,
+  "extended_mean_goal_error_m": 0.20002439957408197,
+  "same_source_initial_scenes": [
+    "demo_45",
+    "demo_46"
+  ],
+  "target_training_demonstrations": 0,
+  "selection_and_processing_unchanged": true,
+  "parent_adapter_preserved": true,
+  "target_test_set_reused": true,
+  "statistical_generalization_claimed": false
+}

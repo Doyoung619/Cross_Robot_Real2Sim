@@ -1,0 +1,166 @@
+[
+  {
+    "condition": "B_previous100_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_45",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.11209504221540524,
+    "plate_displacement_m": 0.13327548040867002,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21268989145755768,
+      0.011235377751290798,
+      1.1620843410491943,
+      3.1402406692504883,
+      0.02467683143913746,
+      -0.12345245480537415,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05476221660691738,
+      -0.006488132976587427,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      -0.024124901746748775,
+      0.10093223308576416,
+      0.9025175534391763
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_previous100_UR5e_demo_45.mp4",
+    "duration_seconds": 9.223553790012375,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_previous100_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_46",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.10690000880732928,
+    "plate_displacement_m": 0.18203478496917586,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21015064418315887,
+      0.008776015602052212,
+      1.1672686338424683,
+      3.138685703277588,
+      0.017896350473165512,
+      -0.09934757649898529,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05707312296827241,
+      -0.013756616725346867,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.048092233444075365,
+      0.16750852296095015,
+      0.9164197632647512
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_previous100_UR5e_demo_46.mp4",
+    "duration_seconds": 8.693444061093032,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_extra10min_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_45",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.2275223314277774,
+    "plate_displacement_m": 0.014036208769069051,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21268989145755768,
+      0.011235377751290798,
+      1.1620843410491943,
+      3.1402406692504883,
+      0.02467683143913746,
+      -0.12345245480537415,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05476221660691738,
+      -0.006488132976587427,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.04441178253779678,
+      0.002990757171649098,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_extra10min_UR5e_demo_45.mp4",
+    "duration_seconds": 9.11296230996959,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_extra10min_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_46",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.17252646772038657,
+    "plate_displacement_m": 0.08985035646171527,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21015064418315887,
+      0.008776015602052212,
+      1.1672686338424683,
+      3.138685703277588,
+      0.017896350473165512,
+      -0.09934757649898529,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05707312296827241,
+      -0.013756616725346867,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.05876658388429508,
+      0.07607758852897627,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_extra10min_UR5e_demo_46.mp4",
+    "duration_seconds": 8.826653559925035,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  }
+]

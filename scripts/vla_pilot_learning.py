@@ -123,3 +123,86 @@ def train(out, progress, steps=100):
     del optimizer,model,parameters
     torch.cuda.empty_cache()
     return result
+
+
+def continue_for_duration(out, parent, progress, seconds=600):
+    """Continue parent adapter weights for actual training wall time.
+
+    The initial pilot did not save optimizer/RNG state. AdamW is therefore
+    initialized afresh, explicitly recorded instead of claiming exact resume.
+    """
+    parent=Path(parent)
+    parent_meta=json.loads((parent/"training.json").read_text())
+    parent_hash=hashlib.sha256((parent/"adapter.safetensors").read_bytes()).hexdigest()
+    if parent_hash!=parent_meta["adapter_sha256"]:
+        raise ValueError("Parent adapter hash does not match its training record")
+    dataset_hash=hashlib.sha256((parent/"processed_source_data.npz").read_bytes()).hexdigest()
+    torch.manual_seed(43)
+    rng=np.random.default_rng(43)
+    model=load_model(adapter=True,adapter_path=parent/"adapter.safetensors")
+    contract=InputContract(model)
+    with np.load(parent/"processed_source_data.npz") as f:
+        images=f["images"].copy();states=f["states"].copy();actions=f["actions"].copy()
+    named=[(name,p) for name,p in model.named_parameters() if p.requires_grad]
+    if not named or any("lora_" not in name for name,p in named):
+        raise ValueError("Only LoRA parameters may be trained")
+    parameters=[p for _,p in named]
+    optimizer=torch.optim.AdamW(parameters,lr=1e-4)
+    model.train()
+    torch.cuda.synchronize()
+    start=time.monotonic();step=0;last_save=start;last_log=start;window=[];log=[]
+    torch.cuda.reset_peak_memory_stats()
+
+    def save_checkpoint():
+        weights={k:v.detach().cpu().contiguous() for k,v in model.state_dict().items() if "lora_" in k}
+        temp=out/"adapter.partial.safetensors"
+        save_file(weights,str(temp));temp.replace(out/"adapter.safetensors")
+        payload=dict(optimizer=optimizer.state_dict(),torch_rng_state=torch.get_rng_state(),
+                     cuda_rng_state=torch.cuda.get_rng_state(),numpy_rng_state=rng.bit_generator.state,
+                     additional_steps=step,training_seconds=time.monotonic()-start)
+        tmp=out/"optimizer.partial.pt";torch.save(payload,tmp);tmp.replace(out/"optimizer.pt")
+
+    progress("training_started",dict(requested_seconds=seconds,parent_steps=parent_meta["steps"],
+                training_frames=len(states),optimizer="fresh_AdamW_parent_optimizer_not_saved"))
+    while time.monotonic()-start<seconds:
+        ids=rng.integers(0,len(states),4)
+        batch=contract.batch(images[ids],states[ids],actions[ids])
+        optimizer.zero_grad(set_to_none=True)
+        with torch.autocast("cuda",dtype=torch.bfloat16):
+            loss,_=model(batch)
+        if not torch.isfinite(loss):raise RuntimeError("Nonfinite continued-training loss")
+        loss.backward();torch.nn.utils.clip_grad_norm_(parameters,1.);optimizer.step()
+        step+=1;window.append(float(loss.detach()))
+        now=time.monotonic()
+        if now-last_log>=20 or step==1:
+            row=dict(additional_step=step,total_step=parent_meta["steps"]+step,
+                     training_seconds=now-start,mean_recent_loss=float(np.mean(window)))
+            log.append(row);progress("training",row);write_json(out/"train_log.json",log)
+            window=[];last_log=now
+        if now-last_save>=60:
+            save_checkpoint();last_save=time.monotonic()
+    torch.cuda.synchronize()
+    elapsed=time.monotonic()-start
+    save_checkpoint()
+    if window:log.append(dict(additional_step=step,total_step=parent_meta["steps"]+step,
+                             training_seconds=elapsed,mean_recent_loss=float(np.mean(window))))
+    write_json(out/"train_log.json",log)
+    result=dict(status="completed",parent_run=str(parent),parent_adapter_sha256=parent_hash,
+                steps=parent_meta["steps"]+step,parent_steps=parent_meta["steps"],additional_steps=step,
+                requested_additional_training_seconds=seconds,additional_training_seconds=elapsed,
+                training_frames=len(states),batch_size=4,learning_rate=1e-4,rank=8,
+                trainable_parameters=sum(p.numel() for p in parameters),
+                expected_sample_exposures_per_frame=step*4/len(states),
+                exact_epoch_sweeps=False,sampling="uniform_with_replacement",
+                optimizer_resume="fresh_AdamW_parent_optimizer_not_saved",
+                source_checkpoint=parent_meta["source_checkpoint"],
+                normalization=parent_meta["normalization"],training_origin=parent_meta["training_origin"],
+                processed_training_data_sha256=dataset_hash,executed_target_training_episodes=0,
+                adapter_sha256=hashlib.sha256((out/"adapter.safetensors").read_bytes()).hexdigest(),
+                peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,
+                final_training_loss=log[-1]["mean_recent_loss"],
+                checkpoint_selection="last_time_budget_checkpoint_no_target_metric_selection")
+    write_json(out/"training.json",result)
+    del optimizer,model,parameters
+    torch.cuda.empty_cache()
+    return result

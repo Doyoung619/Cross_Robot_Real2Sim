@@ -1,5 +1,7 @@
 # Executed experiments
 
+Latest duration follow-up: [ten-minute B adapter continuation](vla_extra10m_20261113T193618Z/README.md). Same 189 source-derived anchors; 100 → 8,230 total updates. Success **0/2 → 0/2**, mean final XY error **10.95 → 20.00 cm**. The previous policy reproduced exactly; the extra training worsened goal distance. [English before/after video](vla_extra10m_20261113T193618Z/videos/training_duration_comparison_demo_45.mp4), [second scene](vla_extra10m_20261113T193618Z/videos/training_duration_comparison_demo_46.mp4), [PDF](vla_extra10m_20261113T193618Z/TEN_MINUTE_TRAINING_REPORT.pdf).
+
 Latest source-only VLA pilot: [measured report and English videos](vla_minimal_20261113T185314Z/README.md), [English PDF](vla_minimal_20261113T185314Z/SOURCE_ONLY_VLA_PILOT_REPORT.pdf), and [offline A-to-B data processing](vla_minimal_20261113T185314Z/videos/offline_source_processing.mp4). This experiment used a pretrained SmolVLA with 100 LoRA updates and **no executed B training demonstrations**. A: 1/2; B before/after: **0/2 → 0/2**. Mean B XY error: **20.47 → 10.95 cm**. Reduced distance did not establish task success.
 
 Historical English showcase: [three original-A / B-training / learned-B case videos](english_case_studies_20261106/README.md) and the [19-page English technical PDF](../reports/english_technical_report_20261106/Cross_Robot_Real2Sim_Technical_Report.pdf). These are the earlier state-MLP baseline, which trained on executed B teachers.

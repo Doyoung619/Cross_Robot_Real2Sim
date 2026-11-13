@@ -1,5 +1,7 @@
 # Cross-Robot Real2Sim
 
+**Latest training-duration test:** [100 updates vs ten more minutes](results/vla_extra10m_20261113T193618Z/README.md). Starting from the existing B adapter, 600.06 seconds added 8,130 updates (8,230 total), using exactly the same source-derived data and no executed B training demonstrations. Success remained **0/2 → 0/2**, while mean goal error worsened **10.95 → 20.00 cm**. [English video](results/vla_extra10m_20261113T193618Z/videos/training_duration_comparison_demo_45.mp4) · [English PDF](results/vla_extra10m_20261113T193618Z/TEN_MINUTE_TRAINING_REPORT.pdf). The original adapter is preserved.
+
 **Latest executed experiment:** [source-only SmolVLA Panda-to-UR5e pilot](results/vla_minimal_20261113T185314Z/README.md). It used three A demonstrations, offline B kinematics/static rendering, and 100 LoRA updates with **zero executed B training demonstrations**. A succeeded 1/2; B succeeded **0/2 before and 0/2 after adaptation**. Mean B goal error decreased from 20.47 to 10.95 cm; task transfer success was not achieved.
 
 **Start here:** [Latest English PDF](results/vla_minimal_20261113T185314Z/SOURCE_ONLY_VLA_PILOT_REPORT.pdf) · [A / B-before / B-after comparison](results/vla_minimal_20261113T185314Z/videos/comparison_demo_45.mp4) · [Offline processing video](results/vla_minimal_20261113T185314Z/videos/offline_source_processing.mp4). Re-run the minimal VLA pilot with `bash scripts/launch_source_only_vla_pilot.sh`; its tmux supervisor survives SSH disconnection and enforces a 60-minute maximum.

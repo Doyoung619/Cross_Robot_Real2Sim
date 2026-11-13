@@ -1,0 +1,109 @@
+{
+  "files": [
+    {
+      "path": "FINAL_REPORT.md",
+      "bytes": 2279,
+      "sha256": "031b4ca0665f459421c1fb2811de12c301a69bc016e8c7d2de60efd54c1f1c78"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2279,
+      "sha256": "031b4ca0665f459421c1fb2811de12c301a69bc016e8c7d2de60efd54c1f1c78"
+    },
+    {
+      "path": "TEN_MINUTE_TRAINING_REPORT.pdf",
+      "bytes": 118923,
+      "sha256": "596ff75e4647e71002604e23d4ad56331bb9415ed63eba4572ac7404dfc40160"
+    },
+    {
+      "path": "adapter.safetensors",
+      "bytes": 678968,
+      "sha256": "0c0bbb4d7aab26e0569305e4e8b581eb808902a24577a2196154c2713d906409"
+    },
+    {
+      "path": "comparison.json",
+      "bytes": 454,
+      "sha256": "0011918bb3cf60314511f571ccf138e42b6fc40009cf2f45a5a641109a59d469"
+    },
+    {
+      "path": "evaluation.json",
+      "bytes": 4481,
+      "sha256": "8609153c157619ab9a268ab63be9239441e65e8cf492574fd8c21def815f573b"
+    },
+    {
+      "path": "qa/page_01.png",
+      "bytes": 79679,
+      "sha256": "ad9e02a92d52cfd0073c5eb68dfdba2471ae5a196cf568724bb5497f5fef6d57"
+    },
+    {
+      "path": "qa/page_02.png",
+      "bytes": 75954,
+      "sha256": "82d7d8c05902eff5b56cfa3cee8dc16d37f1ba637cda56be03b830b4833b7e39"
+    },
+    {
+      "path": "request.json",
+      "bytes": 225,
+      "sha256": "6e3714202ae8998e35c8a8e133e2aee43eb4ca9e5230371393381c972634a884"
+    },
+    {
+      "path": "selection.json",
+      "bytes": 428,
+      "sha256": "e28a9bd21c662a1f375907d955c49a5af88aab2e93277788cb045ee126063bf5"
+    },
+    {
+      "path": "status.json",
+      "bytes": 326,
+      "sha256": "d1174877eab2bb51c020ad9b59c9b176a487282765293172a0fa3f37ab7f42fd"
+    },
+    {
+      "path": "train_log.json",
+      "bytes": 4640,
+      "sha256": "5db26e7bdc0374584c96c7eaa32be2f8516a5acf205f57b0db927d94315bfb94"
+    },
+    {
+      "path": "training.json",
+      "bytes": 1322,
+      "sha256": "e580a5f82e227fae8e178e467ab75ff3e681b99cb9a6d2685fea1d335a53800c"
+    },
+    {
+      "path": "training_loss.png",
+      "bytes": 64740,
+      "sha256": "a8271d68b6b782407b237aac3cd9544e5fd8091d496843bb236cd1fbf83c79eb"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 825,
+      "sha256": "cf9c3e5861d65c1041610de94904fe95a1836669a244bec99b11ef103937e8df"
+    },
+    {
+      "path": "videos/B_extra10min_UR5e_demo_45.mp4",
+      "bytes": 494002,
+      "sha256": "8623f5673c7148a0e68d7a5a774b56c5857c94279ba53fd29ddbb499a446f504"
+    },
+    {
+      "path": "videos/B_extra10min_UR5e_demo_46.mp4",
+      "bytes": 558050,
+      "sha256": "c853554df22a1f09801b966c9cd488061fb86dca61c7e22932f0f9fd8434b3a8"
+    },
+    {
+      "path": "videos/B_previous100_UR5e_demo_45.mp4",
+      "bytes": 551956,
+      "sha256": "90d9c0ab69c60c663ab852b85024d9553cd4db94c7ce1ee5a21b5d63e9387537"
+    },
+    {
+      "path": "videos/B_previous100_UR5e_demo_46.mp4",
+      "bytes": 526164,
+      "sha256": "7b4b3b9e05a52c3c4c981a9e54bc32de13afa3f4bda01f45b992c88f2515f9f5"
+    },
+    {
+      "path": "videos/training_duration_comparison_demo_45.mp4",
+      "bytes": 2065638,
+      "sha256": "289a11f8afe715e9c8d518621dc3327e5e523a7482b8052dcbd24c3fbf0b48a2"
+    },
+    {
+      "path": "videos/training_duration_comparison_demo_46.mp4",
+      "bytes": 2152837,
+      "sha256": "05fcdccccef0ad857c2fa94be0028c586f40f754cf96e0278e19359cc1efe4c0"
+    }
+  ]
+}

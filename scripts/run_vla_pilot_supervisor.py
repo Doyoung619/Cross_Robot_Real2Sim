@@ -15,8 +15,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-dir", required=True)
     parser.add_argument("--deadline", required=True)
+    parser.add_argument("--worker-script", default="scripts/run_source_only_vla_pilot.py")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    worker = (root / args.worker_script).resolve()
+    if not worker.is_relative_to(root / "scripts") or not worker.is_file():
+        raise ValueError("worker-script must be an existing repository script")
     out = (root / args.run_dir).resolve()
     out.mkdir(parents=True, exist_ok=True)
     deadline = datetime.fromisoformat(args.deadline.replace("Z", "+00:00")).timestamp()
@@ -34,7 +38,7 @@ def main():
     if (out / "READY").exists() and time.time() < deadline:
         status["status"] = "running"
         with (out / "worker.log").open("a", buffering=1) as log:
-            process = subprocess.Popen([sys.executable, "-u", str(root / "scripts/run_source_only_vla_pilot.py"),
+            process = subprocess.Popen([sys.executable, "-u", str(worker),
                                         "--run-dir", str(out), "--deadline", args.deadline],
                                        cwd=root, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             status["worker_pid"] = process.pid

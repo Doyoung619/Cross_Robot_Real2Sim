@@ -1,0 +1,6 @@
+{
+  "parent_run": "/home/dheo/Cross_Robot_Real2Sim/runs/vla_minimal_20261113T185314Z",
+  "additional_training_seconds": 600,
+  "requested_at": "2026-11-13T19:38:45.435718+00:00",
+  "executed_B_training_demos_allowed": false
+}

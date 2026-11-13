@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checks": [
+    "600_seconds_completed",
+    "exact_parent_adapter_weights",
+    "unchanged_source_training_data",
+    "new_adapter_hash_changed",
+    "zero_executed_B_training_demonstrations",
+    "only_LoRA_weights_saved",
+    "previous_policy_reproduced",
+    "four_matched_B_evaluations",
+    "all_videos_decode",
+    "PDF_layout_and_text"
+  ],
+  "previous_policy_max_goal_error_delta_m": 0.0,
+  "videos": [
+    "B_previous100_UR5e_demo_45.mp4",
+    "training_duration_comparison_demo_46.mp4",
+    "training_duration_comparison_demo_45.mp4",
+    "B_extra10min_UR5e_demo_46.mp4",
+    "B_previous100_UR5e_demo_46.mp4",
+    "B_extra10min_UR5e_demo_45.mp4"
+  ],
+  "pdf_pages": [
+    {
+      "page": 1,
+      "layout_passed": true
+    },
+    {
+      "page": 2,
+      "layout_passed": true
+    }
+  ]
+}

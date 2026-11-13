@@ -58,17 +58,19 @@ def frame(env, condition, demo, step, success, distance):
     return np.asarray(image)
 
 
-def evaluate(out, progress, deadline, horizon=200):
+def evaluate(out, progress, deadline, horizon=200, conditions=None):
     import imageio.v2 as imageio
     selection=json.loads((out/"selection.json").read_text())
     cases=selection["evaluation_source_ids"]
-    conditions=[("A_pretrained_Panda","Panda",False),
+    conditions=conditions or [("A_pretrained_Panda","Panda",False),
                 ("B_pretrained_UR5e","UR5e",False),
                 ("B_adapted_UR5e","UR5e",True)]
     rows=[]
     (out/"videos").mkdir(exist_ok=True)
-    for condition,robot,adapted in conditions:
-        policy=load_model(adapter=adapted,adapter_path=out/"adapter.safetensors" if adapted else None)
+    for entry in conditions:
+        condition,robot,adapted=entry[:3]
+        checkpoint=entry[3] if len(entry)>3 else (out/"adapter.safetensors" if adapted else None)
+        policy=load_model(adapter=adapted,adapter_path=checkpoint)
         contract=InputContract(policy)
         env=make_env(robot,256)
         try:
