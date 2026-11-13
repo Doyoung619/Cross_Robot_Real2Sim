@@ -1,5 +1,7 @@
 # 2. Task Understanding
 
+Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): use the fixed source task instruction, "push the plate to the front of the stove", and its LIBERO success predicate. No human-video VLM interpretation is claimed. Language is a real input to the pretrained SmolVLA. The stage wrapper below runs the historical baseline.
+
 Produce a validated can-inside-bin task contract, preserve unknown physical quantities, and declare how semantic labels map into the simulator.
 
 Recorded bootstrap/fast experiments validated a provided task seed. They did not infer a task from human video. Full mode explicitly requires a real clip and retains raw Qwen output for inspection.

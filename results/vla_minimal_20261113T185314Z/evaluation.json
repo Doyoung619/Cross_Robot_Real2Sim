@@ -1,0 +1,248 @@
+[
+  {
+    "condition": "A_pretrained_Panda",
+    "robot": "Panda",
+    "source_initial_scene_id": "demo_45",
+    "success": true,
+    "ever_success": true,
+    "stable_success_steps": 20,
+    "steps": 128,
+    "goal_error_m": 0.034529416375966425,
+    "plate_displacement_m": 0.24121836696797103,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.2124136984348297,
+      0.011158106848597527,
+      1.162127137184143,
+      3.1402390003204346,
+      0.02467338927090168,
+      -0.12376876175403595,
+      0.03406530246138573,
+      -0.03404642269015312
+    ],
+    "initial_plate_position": [
+      0.05476221660691738,
+      -0.006488132976587427,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      -0.08027015315991458,
+      0.19338679973815484,
+      0.9039180159264382
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/A_pretrained_Panda_demo_45.mp4",
+    "duration_seconds": 4.073237237986177,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "A_pretrained_Panda",
+    "robot": "Panda",
+    "source_initial_scene_id": "demo_46",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.12801672897464741,
+    "plate_displacement_m": 0.2180820783284376,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.20979756116867065,
+      0.008677550591528416,
+      1.16725754737854,
+      3.138683795928955,
+      0.01789339818060398,
+      -0.09966106712818146,
+      0.03406068682670593,
+      -0.03405120596289635
+    ],
+    "initial_plate_position": [
+      0.05707312296827241,
+      -0.013756616725346867,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.07784306135715455,
+      0.2033340746929517,
+      0.9024996568376618
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/A_pretrained_Panda_demo_46.mp4",
+    "duration_seconds": 5.793919471092522,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_pretrained_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_45",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.23911046254577217,
+    "plate_displacement_m": 0.010416094407442787,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21268989145755768,
+      0.011235377751290798,
+      1.1620843410491943,
+      3.1402406692504883,
+      0.02467683143913746,
+      -0.12345245480537415,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05476221660691738,
+      -0.006488132976587427,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.044797609734425134,
+      -0.00951589119581466,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_pretrained_UR5e_demo_45.mp4",
+    "duration_seconds": 5.892848927993327,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_pretrained_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_46",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.17027866761460422,
+    "plate_displacement_m": 0.1314095498318013,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21015064418315887,
+      0.008776015602052212,
+      1.1672686338424683,
+      3.138685703277588,
+      0.017896350473165512,
+      -0.09934757649898529,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05707312296827241,
+      -0.013756616725346867,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.09022698648931107,
+      0.11340177587175099,
+      0.9024998346667837
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_pretrained_UR5e_demo_46.mp4",
+    "duration_seconds": 6.006069259950891,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_adapted_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_45",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.11209504221540524,
+    "plate_displacement_m": 0.13327548040867002,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21268989145755768,
+      0.011235377751290798,
+      1.1620843410491943,
+      3.1402406692504883,
+      0.02467683143913746,
+      -0.12345245480537415,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05476221660691738,
+      -0.006488132976587427,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      -0.024124901746748775,
+      0.10093223308576416,
+      0.9025175534391763
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_adapted_UR5e_demo_45.mp4",
+    "duration_seconds": 6.736110716126859,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  },
+  {
+    "condition": "B_adapted_UR5e",
+    "robot": "UR5e",
+    "source_initial_scene_id": "demo_46",
+    "success": false,
+    "ever_success": false,
+    "stable_success_steps": 0,
+    "steps": 200,
+    "goal_error_m": 0.10690000880732928,
+    "plate_displacement_m": 0.18203478496917586,
+    "arm_collision_steps": 0,
+    "initial_canonical_state": [
+      -0.21015064418315887,
+      0.008776015602052212,
+      1.1672686338424683,
+      3.138685703277588,
+      0.017896350473165512,
+      -0.09934757649898529,
+      0.03999999910593033,
+      -0.03999999910593033
+    ],
+    "initial_plate_position": [
+      0.05707312296827241,
+      -0.013756616725346867,
+      0.9023145976636144
+    ],
+    "final_plate_position": [
+      0.048092233444075365,
+      0.16750852296095015,
+      0.9164197632647512
+    ],
+    "goal_position": [
+      -0.05,
+      0.21,
+      0.895
+    ],
+    "video": "videos/B_adapted_UR5e_demo_46.mp4",
+    "duration_seconds": 6.599466085899621,
+    "training_usage": "none_final_evaluation_only",
+    "native_success_predicate": "LIBERO On plate_1 main_table_stove_front_region"
+  }
+]

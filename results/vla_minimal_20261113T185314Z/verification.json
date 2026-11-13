@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "checks": [
+    "source_selection_and_evaluation_disjoint",
+    "zero_B_training_execution",
+    "source_lineage_complete",
+    "adapter_hash_matches",
+    "only_334592_LoRA_parameters_trainable",
+    "offline_processing_has_no_step_calls",
+    "six_real_final_evaluations",
+    "matched_object_initial_conditions",
+    "six_decodable_English_labeled_videos"
+  ],
+  "videos": [
+    {
+      "path": "videos/A_pretrained_Panda_demo_45.mp4",
+      "bytes": 377674,
+      "sha256": "8345e464eed4af5e90d6de3ac6260716284490d70ef77921edb529c901cb5dab",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "64"
+          }
+        ],
+        "format": {
+          "duration": "6.400000"
+        }
+      }
+    },
+    {
+      "path": "videos/A_pretrained_Panda_demo_46.mp4",
+      "bytes": 470084,
+      "sha256": "e085413820f203f62aad3ec761fd2a76732d799770ef6b2440691216eedea79e",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "100"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "videos/B_pretrained_UR5e_demo_45.mp4",
+      "bytes": 451178,
+      "sha256": "d5261348cbcf8c8ad66e1f727c8334dc8142ad7d82fa3b7281cd2b333b0138b0",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "100"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "videos/B_pretrained_UR5e_demo_46.mp4",
+      "bytes": 517651,
+      "sha256": "c56886bac05786bca83b283a1590b59dd5746a0971822e609ff0f327bb9f9604",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "100"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "videos/B_adapted_UR5e_demo_45.mp4",
+      "bytes": 551534,
+      "sha256": "56fc292a1d17f48956fe9f5b0d7b30a88bd5312abc4b7b5b6bb21c07c1763051",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "100"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "videos/B_adapted_UR5e_demo_46.mp4",
+      "bytes": 525389,
+      "sha256": "2fb23269ddf59b711304623f3e2cd8e5122021ce8f07655003ce2c2fe524c892",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 640,
+            "height": 360,
+            "nb_frames": "100"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    }
+  ]
+}

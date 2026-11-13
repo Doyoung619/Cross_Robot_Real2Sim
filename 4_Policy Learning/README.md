@@ -1,5 +1,7 @@
 # 4. Policy Learning
 
+Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): strictly load the existing 450M SmolVLA, freeze its base weights, and update 334,592 rank-eight LoRA parameters for 100 steps on source-derived synthetic observations/actions. No executed B demonstrations enter training. See [VLA learning code](../scripts/vla_pilot_learning.py) and [saved adapter](../results/vla_minimal_20261113T185314Z/adapter.safetensors). The wrapper below runs the historical state-MLP baseline, not this VLA experiment.
+
 Learn target task-space actions only from successfully executed UR5e teachers, then evaluate the saved model in fresh closed-loop episodes.
 
 The recorded fast checkpoint was trained on 10 successful UR5e teachers derived from five Panda demos and achieved 9/10 held-out placements. The English case studies show this shared frozen checkpoint across different episode seeds; each displayed source clip is context, not a separate per-case training checkpoint.

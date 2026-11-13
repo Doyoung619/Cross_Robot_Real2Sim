@@ -1,5 +1,7 @@
 # 5. Failure Analysis
 
+Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): native final evaluation gives A 1/2 and B 0/2 before and after adaptation. Mean B goal error decreases from 20.47 to 10.95 cm, which is not task success. The source competence gate remains weak; static conversion supplies no verified target contact dynamics. Preserve both failure cases and use no B evaluation trajectory as training data. See [measured report](../results/vla_minimal_20261113T185314Z/FINAL_REPORT.md). The wrapper below runs the historical diagnosis/retraining baseline.
+
 Turn real rollout evidence into conservative diagnostic rules, feedback requests, and one bounded corrective collection/retraining comparison.
 
 Fast BC remained 9/10 before and after three extra teachers, so no success-rate improvement is claimed. Bootstrap improved from 0/3 to 1/3 after two additional successful teachers. Both comparisons use identical before/after held-out seeds.

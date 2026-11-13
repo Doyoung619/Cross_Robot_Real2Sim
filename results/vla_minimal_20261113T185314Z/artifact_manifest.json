@@ -1,0 +1,154 @@
+{
+  "files": [
+    {
+      "path": "FINAL_REPORT.md",
+      "bytes": 5184,
+      "sha256": "d3dec73008e7a0490e1953d3e7d67ce55418e814a373fccf6c87437cee31cc17"
+    },
+    {
+      "path": "INPUT_CONTRACT_CORRECTION.md",
+      "bytes": 527,
+      "sha256": "c92f40c1de7ccf6c3b3740027739f0ff56b8e2c50e789c0be152e7423761a280"
+    },
+    {
+      "path": "README.md",
+      "bytes": 746,
+      "sha256": "6ce036707ea867555de9ff6f5b40de74abaf7f401594127f3e87f1f64042bc9a"
+    },
+    {
+      "path": "SOURCE_ONLY_VLA_PILOT_REPORT.pdf",
+      "bytes": 845876,
+      "sha256": "6f5ded494cd184fcc0633cd83a470e9fecf83bf967509f72059efc71d3957fca"
+    },
+    {
+      "path": "adapter.safetensors",
+      "bytes": 678968,
+      "sha256": "69bbd848539c89c2b534d846fbe8fecc99683fb22c2e810ba6d903f2c640f428"
+    },
+    {
+      "path": "evaluation.json",
+      "bytes": 6703,
+      "sha256": "a8717a558d72309bc7ca8ef06f7df91922792055e7696c214924eafa736e7aa8"
+    },
+    {
+      "path": "execution_manifest.json",
+      "bytes": 2543,
+      "sha256": "3e590583a6f9119cc78be8dc9e2e35666be08b164dddadde244d7ea22e597fb3"
+    },
+    {
+      "path": "figures/comparison_demo_45_last.png",
+      "bytes": 603922,
+      "sha256": "f3f26c3702422a9a65ee3ef3f6b11f564320ffdb32c04b3625bcdcb488beac81"
+    },
+    {
+      "path": "figures/comparison_demo_46_last.png",
+      "bytes": 574609,
+      "sha256": "29e3623d2e09fd6de271d6d1add4d763a9b302968d61b6640914fa9e67bd52a8"
+    },
+    {
+      "path": "processing_audit.json",
+      "bytes": 84759,
+      "sha256": "83c679e556909770c62f886d2e956e2532a6429d2340881771bb6bdab204718e"
+    },
+    {
+      "path": "qa/page_01.png",
+      "bytes": 57513,
+      "sha256": "0b022cb610a03cfc362961086a25e12e5eab0c111ed5bc073f8bcf8665285284"
+    },
+    {
+      "path": "qa/page_02.png",
+      "bytes": 97631,
+      "sha256": "5e024a89f0990b7f25c429c328f822cca090c04a2446fccaba30ca99a473506b"
+    },
+    {
+      "path": "qa/page_03.png",
+      "bytes": 173400,
+      "sha256": "4d2bbb1a8114595352a26be4a6eeda477eccc00b6f48caed91f5f4abde96fbb1"
+    },
+    {
+      "path": "qa/pdf_qa.json",
+      "bytes": 320,
+      "sha256": "a060eb01373aab322556b5c35db89aaa8d83fbaa116f513d638d5e024bc0c37f"
+    },
+    {
+      "path": "qa/pdf_text.txt",
+      "bytes": 4259,
+      "sha256": "288cab2b8a387d8ecb9a432278538e72b3be92ee084cf740169328e41d01bcdb"
+    },
+    {
+      "path": "selection.json",
+      "bytes": 428,
+      "sha256": "e28a9bd21c662a1f375907d955c49a5af88aab2e93277788cb045ee126063bf5"
+    },
+    {
+      "path": "selection_candidates.json",
+      "bytes": 48658,
+      "sha256": "ac8781938c5d17e376a24b2d8c365e42fa33a00c75161203fcbb7e01be7e8d04"
+    },
+    {
+      "path": "status.json",
+      "bytes": 314,
+      "sha256": "a014568063bc2972dbeca618b1e3f93141ea64aaeab0aeb7e67ac2d979a667df"
+    },
+    {
+      "path": "train_log.json",
+      "bytes": 1009,
+      "sha256": "3d2364f705803c9d70e7b44346e503f2cb18d370969693fe1db202ad15f0dd97"
+    },
+    {
+      "path": "training.json",
+      "bytes": 715,
+      "sha256": "f0eec00eda362b42fb0b03e65aa8d32e46e52656c369d8e75201afddd2dc8666"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 2964,
+      "sha256": "e6da3993735a57c3f2139fe79dbd3df264d5ae265cbc9487333923287faefb26"
+    },
+    {
+      "path": "videos/A_pretrained_Panda_demo_45.mp4",
+      "bytes": 377674,
+      "sha256": "8345e464eed4af5e90d6de3ac6260716284490d70ef77921edb529c901cb5dab"
+    },
+    {
+      "path": "videos/A_pretrained_Panda_demo_46.mp4",
+      "bytes": 470084,
+      "sha256": "e085413820f203f62aad3ec761fd2a76732d799770ef6b2440691216eedea79e"
+    },
+    {
+      "path": "videos/B_adapted_UR5e_demo_45.mp4",
+      "bytes": 551534,
+      "sha256": "56fc292a1d17f48956fe9f5b0d7b30a88bd5312abc4b7b5b6bb21c07c1763051"
+    },
+    {
+      "path": "videos/B_adapted_UR5e_demo_46.mp4",
+      "bytes": 525389,
+      "sha256": "2fb23269ddf59b711304623f3e2cd8e5122021ce8f07655003ce2c2fe524c892"
+    },
+    {
+      "path": "videos/B_pretrained_UR5e_demo_45.mp4",
+      "bytes": 451178,
+      "sha256": "d5261348cbcf8c8ad66e1f727c8334dc8142ad7d82fa3b7281cd2b333b0138b0"
+    },
+    {
+      "path": "videos/B_pretrained_UR5e_demo_46.mp4",
+      "bytes": 517651,
+      "sha256": "c56886bac05786bca83b283a1590b59dd5746a0971822e609ff0f327bb9f9604"
+    },
+    {
+      "path": "videos/comparison_demo_45.mp4",
+      "bytes": 2735683,
+      "sha256": "7b21b2b962250c17fd6c95c4de37bd0037c2ea9fd270544751d690548f1cc3cf"
+    },
+    {
+      "path": "videos/comparison_demo_46.mp4",
+      "bytes": 2924212,
+      "sha256": "c6c9d4805a3dbf1ef1da181843eb189c2ea1cda877defe6da72127120ae90b18"
+    },
+    {
+      "path": "videos/offline_source_processing.mp4",
+      "bytes": 891585,
+      "sha256": "2f8a0c8ed005e5eca9804a262a809e8739fdccb6f496f9fefc205f3dc5e6ab88"
+    }
+  ]
+}

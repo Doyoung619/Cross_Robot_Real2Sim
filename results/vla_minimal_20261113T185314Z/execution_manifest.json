@@ -1,0 +1,77 @@
+{
+  "code": [
+    {
+      "path": "scripts/launch_source_only_vla_pilot.sh",
+      "bytes": 1222,
+      "sha256": "01573f32e5177dd6525490a18b5fffebdfda5888940588da451832f3a86ccc89"
+    },
+    {
+      "path": "scripts/package_source_only_vla_pilot.py",
+      "bytes": 15010,
+      "sha256": "6f9688534133e0fd7e27f9eee6bd683af251a1d59b62af3d7bd46c0168ab6248"
+    },
+    {
+      "path": "scripts/run_source_only_vla_pilot.py",
+      "bytes": 6385,
+      "sha256": "56a83a879458b380c7dfb62d7b93d7de2182f47c0eda49fcce27b7ccb7967659"
+    },
+    {
+      "path": "scripts/run_vla_pilot_supervisor.py",
+      "bytes": 3237,
+      "sha256": "942ae4191a35116d2a3e9b3a49407a7c7b9cf3fff10e3bd2e8751aafc94fc64f"
+    },
+    {
+      "path": "scripts/verify_source_only_vla_pilot.py",
+      "bytes": 3336,
+      "sha256": "d5d44efade81ccece4290559ed6716dc5dc4f425efa3eecfeb5cb13626cc9691"
+    },
+    {
+      "path": "scripts/vla_pilot_common.py",
+      "bytes": 3715,
+      "sha256": "3f71000da8ac62ca8a4b7cde6232f86215185b6e1e805e5b2bcf997695f332a5"
+    },
+    {
+      "path": "scripts/vla_pilot_evaluate.py",
+      "bytes": 7388,
+      "sha256": "f61ff48e9f2c054f410c280e910c514e816fb40756cbf8eb929d616decab3124"
+    },
+    {
+      "path": "scripts/vla_pilot_learning.py",
+      "bytes": 6031,
+      "sha256": "1c6a5a0f171781d9349796210032949f381e56beea2351157d84fdd8eb601aea"
+    },
+    {
+      "path": "scripts/vla_pilot_processing.py",
+      "bytes": 13326,
+      "sha256": "6412e4935022538bdb7430d03cb2a48457d2045bf4e1296765a04ff51b5c1778"
+    }
+  ],
+  "source_policy_revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+  "source_policy_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+  "source_data_sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+  "regression_tests": {
+    "passed": 55,
+    "seconds": 5.6
+  },
+  "input_contract": "official LiberoProcessorStep rotate image 180 degrees; exact saved source normalizers",
+  "source_training_only": true,
+  "control_contract": {
+    "control_hz": 20,
+    "predicted_action_chunk": 50,
+    "executed_actions_before_replanning": 5,
+    "flow_steps": 10,
+    "input_render_pixels": 256,
+    "official_image_rotation_degrees": 180,
+    "native_horizon_steps": 200,
+    "object_goal_oracle_policy_inputs": false
+  },
+  "runtime_tests": {
+    "existing_run_relaunch_rejected": true,
+    "not_ready_deadline_produces_report": true,
+    "source_terminal_native_success": {
+      "demo_5": true,
+      "demo_45": true,
+      "demo_46": true
+    }
+  }
+}

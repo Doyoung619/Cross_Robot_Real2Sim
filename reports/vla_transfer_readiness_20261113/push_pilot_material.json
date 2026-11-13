@@ -1,0 +1,14 @@
+{
+  "repo": "yifengzhu-hf/LIBERO-datasets",
+  "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "filename": "libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+  "url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+  "path": "runs/vla_readiness_20261113/dataset/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+  "bytes": 762855139,
+  "sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+  "seconds": 9.343787075951695,
+  "demonstrations": 50,
+  "steps": 7638,
+  "positive_terminal_rewards": 50,
+  "task": "push the plate to the front of the stove"
+}

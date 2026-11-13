@@ -1,0 +1,69 @@
+Source-only VLA transfer: measured pilot
+Panda to UR5e | source-only VLA pilot | 1
+Task: push the plate to the front of the stove. A is Panda (7 arm joints); B is UR5e (6 arm joints)
+with a Robotiq85 gripper.
+Result: no successful B task completion was observed. The adapted B policy reduced mean final
+XY goal error, but remained unsuccessful in both evaluated cases. A succeeded once in two
+trials; robust source competence is not established.
+Condition
+Success / trials
+Mean XY error
+A pretrained Panda
+1/2
+8.13 cm
+B pretrained UR5e
+0/2
+20.47 cm
+B adapted UR5e
+0/2
+10.95 cm
+B before adaptation: 20.47 cm mean goal error. B after adaptation: 10.95 cm. The 9.52 cm
+reduction (46.5%) is descriptive only: two trials, zero B successes, and no control experiment
+isolating selection quality.
+All policy inputs are two RGB cameras, the task instruction and 8D robot proprioception. Object
+and goal ground-truth poses are used for offline source processing and evaluation metrics, not
+live policy input.
+
+Data selection, offline conversion and training
+Panda to UR5e | source-only VLA pilot | 2
+Source materials: 50 original task demonstrations, 7,638 recorded steps. Reserve five source
+episodes. Inspect the remaining 45 with four-pose B IK and unintended arm-collision probes; 35
+pass. Select the shortest eligible episode and then diversify initial plate positions.
+Selected source episodes: demo_5, demo_38, demo_26. They contain 396 original steps. Static
+per-frame checks retain 189 training anchors. Images and states of hypothetical B poses are
+rendered from A object records without target physics stepping.
+Pose conversion uses full EEF orientation and position, continuous warm-start IK, joint limits,
+static arm-contact checks, a fixed camera mount calibration and a source-compatible
+proprioception frame. OSC actions share world-frame units; the first action is corrected for
+residual TCP position error. Future chunk labels retain original source Cartesian commands.
+These are kinematic pseudo-labels, not verified successful B trajectories.
+The complete 450M-parameter SmolVLA checkpoint is loaded strictly from lerobot/smolvla_libero
+revision a24f1f380461b665158d52acd140152c79e8b36d. The visual/language backbone and
+original model weights are frozen. Rank-8 LoRA updates 334,592 parameters in action-expert
+Q/V and action projections.
+Training: 100 updates, batch four, LR 1e-4, action chunks of fifty at 20 Hz. Measured training
+wall time: 17.56 seconds, including model loading. Peak PyTorch allocated memory: 1.59 GiB.
+Evaluation executes five predicted actions before replanning, with ten flow steps per query. Two
+reserved starts per condition have 200-step maximum horizons.
+Images are rendered at 256px, rotated by the official LIBERO 180-degree convention, and
+passed through the saved VLA image preprocessing. Normalization uses the exact saved source
+checkpoint tensors. An earlier run with a missing image rotation is archived locally and excluded
+from final comparison.
+
+Observed limitations and review evidence
+Panda to UR5e | source-only VLA pilot | 3
+The source VLA succeeded on demo_45 but failed on demo_46. A successful original human
+record does not imply the pretrained VLA will succeed. A 1/2 baseline cannot substantiate a
+reliable competent-source transfer claim.
+Both adapted B cases moved the plate closer to the goal, but remained outside native success.
+Offline geometry and source object motion do not supply target friction, pushing-force or
+contact-timing supervision. The coarse source filter and tiny adapter run leave these issues
+unresolved.
+Other limits: only three selected source episodes; 100 updates; no held-out source validation for
+checkpoint selection; no random-subset comparison; only two final starts; incomplete dynamic
+feasibility of future action chunks. Repeated source scenes were used while correcting a
+documented input-contract bug, so this is an engineering pilot, not a benchmark result.
+The English comparison movies display A, unchanged B and adapted B together for both starts,
+including the failed source case. offline_source_processing.mp4 distinguishes original A records
+from hypothetical B kinematic rendering. Raw final rollout movies and per-seed metrics
+accompany the report.

@@ -1,0 +1,53 @@
+# Experiment design, NOT an executable configuration for the legacy MLP CLI.
+status: source_only_transfer_design_offline_processing_pending
+task: pick up the black bowl from table center and place it on the plate
+source_robot: Panda
+target_robot: UR5e
+source_policy:
+  repo: lerobot/smolvla_libero
+  revision: a24f1f380461b665158d52acd140152c79e8b36d
+  parameters: 450046176
+  source_rollout_success_verified: false
+source_data:
+  repo: yifengzhu-hf/LIBERO-datasets
+  revision: f13aa24a3da8c43c7225569f28c562979fa0e35a
+  file: libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5
+  task_demonstrations: 50
+  selected_demonstrations: [demo_43, demo_12, demo_33, demo_22, demo_30, demo_13, demo_14, demo_6, demo_10, demo_47]
+  selection_status: provisional_geometry_baseline_not_B_aware
+  final_selection_requirements: [task_relevance, source_quality, target_kinematic_feasibility, gripper_compatibility, coverage]
+data_protocol:
+  training_evidence: source_robot_demonstrations_or_future_human_videos_only
+  target_executed_demonstrations_allowed: false
+  target_simulator_rollout_training_allowed: false
+  target_rollout_reward_selection_allowed: false
+  target_test_feedback_for_tuning_allowed: false
+  allowed_target_knowledge: [robot_geometry, joint_limits, kinematics, collision_geometry, gripper_geometry, control_contract]
+offline_processing_plan:
+  method: source_object_relative_pose_and_contact_intent_to_target_kinematic_pseudo_labels
+  execute_target_during_processing: false
+  preserve_source_image_provenance: true
+  synthetic_target_states_must_be_labeled_synthetic: true
+  target_dynamics_or_task_success_verified: false
+  target_camera_domain_shift_solution: unresolved
+  human_video_3d_and_contact_recovery: future_work_with_uncertainty
+evaluation_plan:
+  held_out_target_episodes: 10
+  target_execution_for_final_evaluation_only: true
+  freeze_model_and_selection_before_target_evaluation: true
+fine_tuning_plan:
+  initialize_from_source_checkpoint: true
+  freeze_vision_language_backbone: true
+  adapter: LoRA
+  rank: 8
+  alpha: 16
+  modules: [action_expert_q_proj, action_expert_v_proj, action_in_proj, action_out_proj]
+  batch_size: 8
+  initial_steps: 5000
+  checkpoint_selection: held_out_source_episodes_and_offline_kinematic_checks_only
+  learning_rate: 0.0001
+  action_chunk: 50
+  image_streams: 2
+  state_dim: 8
+  action_dim: 7
+  action_semantics: cartesian_translation3_rotation3_gripper1_not_joint_angles

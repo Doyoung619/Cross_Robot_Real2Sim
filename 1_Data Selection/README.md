@@ -1,5 +1,7 @@
 # 1. Data Selection
 
+Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): inspect 45 existing plate-pushing A episodes, filter with four-pose B IK/static arm-collision checks (35 eligible), then select three by length and initial plate-position diversity. See [vla_pilot_processing.py](../scripts/vla_pilot_processing.py). No B execution reward selects training data. The stage wrapper below runs the historical Can/MLP baseline.
+
 Choose coherent source Panda demonstrations and, when supplied, relevant real human clips for the can-inside-bin task.
 
 The executed fast run selected five real Panda demonstrations (`demo_3`, `demo_5`, `demo_7`, `demo_4`, `demo_1`) from eight inspected candidates. No human clip was supplied; CLIP selection is implemented but untested on these recorded runs.

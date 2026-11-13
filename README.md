@@ -1,8 +1,10 @@
 # Cross-Robot Real2Sim
 
-Five-stage research MVP for **can pick → lift → transport → place**, using **Franka Panda** source demonstrations and a learned **UR5e** target policy in robosuite/MuJoCo `PickPlaceCan`.
+**Latest executed experiment:** [source-only SmolVLA Panda-to-UR5e pilot](results/vla_minimal_20261113T185314Z/README.md). It used three A demonstrations, offline B kinematics/static rendering, and 100 LoRA updates with **zero executed B training demonstrations**. A succeeded 1/2; B succeeded **0/2 before and 0/2 after adaptation**. Mean B goal error decreased from 20.47 to 10.95 cm; task transfer success was not achieved.
 
-**Start here:** [English technical report (PDF)](reports/english_technical_report_20261106/Cross_Robot_Real2Sim_Technical_Report.pdf) · [English case studies and videos](results/english_case_studies_20261106/README.md).
+**Start here:** [Latest English PDF](results/vla_minimal_20261113T185314Z/SOURCE_ONLY_VLA_PILOT_REPORT.pdf) · [A / B-before / B-after comparison](results/vla_minimal_20261113T185314Z/videos/comparison_demo_45.mp4) · [Offline processing video](results/vla_minimal_20261113T185314Z/videos/offline_source_processing.mp4). Re-run the minimal VLA pilot with `bash scripts/launch_source_only_vla_pilot.sh`; its tmux supervisor survives SSH disconnection and enforces a 60-minute maximum.
+
+The earlier five-stage MVP below covers **can pick → lift → transport → place** with a state-based MLP and executed target teachers. Its [19-page report](reports/english_technical_report_20261106/Cross_Robot_Real2Sim_Technical_Report.pdf) and [November 6 videos](results/english_case_studies_20261106/README.md) are historical baseline evidence, not VLA transfer results. The [November 13 preparation audit](reports/vla_transfer_readiness_20261113/README.md) records how the new source-only pilot was prepared.
 
 The current baseline executes real simulator trajectories and trains on successful target demonstrations. It uses **privileged simulator poses, goals, and grasp contact** (`oracle_sim_state`), source-derived grasp/lift summaries, and hand-coded manipulation phases. Real human-video task extraction and physical-robot transfer remain unverified.
 

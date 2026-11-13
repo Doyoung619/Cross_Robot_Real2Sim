@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "scope": "source_Panda_throughput_only_not_B_training",
+  "checkpoint_strict_load": true,
+  "batch_size": 8,
+  "action_chunk": 50,
+  "resize": [
+    512,
+    512
+  ],
+  "warmup_steps": 2,
+  "measured_steps": 6,
+  "seconds_per_step": 0.08914977754466236,
+  "seconds_each": [
+    0.1299317399971187,
+    0.11829018290154636,
+    0.08881226787343621,
+    0.08891258016228676,
+    0.08864817884750664,
+    0.08938697492703795
+  ],
+  "total_parameters": 450380768,
+  "trainable_parameters": 334592,
+  "lora_rank": 8,
+  "peak_allocated_gib": 2.284170150756836,
+  "losses": [
+    0.12259099632501602,
+    0.0894383043050766,
+    0.17285124957561493,
+    0.09554100036621094,
+    0.07452242076396942,
+    0.09504418820142746,
+    0.07043498009443283,
+    0.0832553282380104
+  ],
+  "duration_seconds": 11.688597172033042,
+  "caveats": [
+    "Repeated single source batch; excludes data loading and checkpoint I/O",
+    "Original HDF5 128px images; production preprocessing still requires validation",
+    "Other GPU workload active; not a source or target policy success evaluation"
+  ]
+}

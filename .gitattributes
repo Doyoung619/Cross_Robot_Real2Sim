@@ -1,4 +1,5 @@
 *.mp4 binary
 *.png binary
 *.pdf binary
+*.safetensors binary
 *.csv whitespace=cr-at-eol

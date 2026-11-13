@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "supervisor_pid": 2141660,
+  "started_at": "2026-11-13T19:06:14.676177+00:00",
+  "deadline": "2026-11-13T19:53:14Z",
+  "training_data_protocol": "source_only_no_executed_B_demonstrations",
+  "worker_pid": 2141661,
+  "exit_code": 0,
+  "finished_at": "2026-11-13T19:07:54.778793+00:00"
+}

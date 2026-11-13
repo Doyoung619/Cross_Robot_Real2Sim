@@ -1,0 +1,2946 @@
+{
+  "frames": [
+    {
+      "demo_id": "demo_5",
+      "frame": 0,
+      "position_error_m": 0.00015154474785642431,
+      "orientation_error_rad": 0.00011747996608977704,
+      "feasible": true,
+      "joint_margin_rad": 1.2491376595964931,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 2,
+      "position_error_m": 1.3101561429994455e-05,
+      "orientation_error_rad": 3.932990458055787e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.2480584004467574,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 4,
+      "position_error_m": 5.2270828736600265e-05,
+      "orientation_error_rad": 9.358583561824359e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.2518445946119134,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 6,
+      "position_error_m": 0.000240678034074848,
+      "orientation_error_rad": 0.00032601958628071916,
+      "feasible": true,
+      "joint_margin_rad": 1.2629228321575663,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 8,
+      "position_error_m": 0.0005250803331766525,
+      "orientation_error_rad": 0.0004978119857789133,
+      "feasible": true,
+      "joint_margin_rad": 1.2844126981114736,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 10,
+      "position_error_m": 0.0006940677441356648,
+      "orientation_error_rad": 0.0004567079139703183,
+      "feasible": true,
+      "joint_margin_rad": 1.316440862861735,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 12,
+      "position_error_m": 0.0007605688929308583,
+      "orientation_error_rad": 0.0004124774269846987,
+      "feasible": true,
+      "joint_margin_rad": 1.3570857201774285,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 14,
+      "position_error_m": 0.0007816359881551823,
+      "orientation_error_rad": 0.00040044965915130964,
+      "feasible": true,
+      "joint_margin_rad": 1.4037342617915225,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 16,
+      "position_error_m": 0.000780480681733525,
+      "orientation_error_rad": 0.0003921597401673391,
+      "feasible": true,
+      "joint_margin_rad": 1.4545673259450704,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 18,
+      "position_error_m": 0.0007726760441097959,
+      "orientation_error_rad": 0.00033715128145768826,
+      "feasible": true,
+      "joint_margin_rad": 1.5078389862236548,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 20,
+      "position_error_m": 0.0007654802111961508,
+      "orientation_error_rad": 0.00023718486558568888,
+      "feasible": true,
+      "joint_margin_rad": 1.5617455245862382,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 22,
+      "position_error_m": 0.000772864674891119,
+      "orientation_error_rad": 0.00017789789044406215,
+      "feasible": true,
+      "joint_margin_rad": 1.6142580923309846,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 24,
+      "position_error_m": 0.000699962826433028,
+      "orientation_error_rad": 0.0001522307522155866,
+      "feasible": true,
+      "joint_margin_rad": 1.6631296135131908,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 26,
+      "position_error_m": 0.0005839267171461181,
+      "orientation_error_rad": 0.00015083664487629817,
+      "feasible": true,
+      "joint_margin_rad": 1.7071982932117717,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 28,
+      "position_error_m": 0.0004807381283011896,
+      "orientation_error_rad": 0.00012120666830496404,
+      "feasible": true,
+      "joint_margin_rad": 1.7444455322859167,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 30,
+      "position_error_m": 0.0004012284238694409,
+      "orientation_error_rad": 8.265656389833977e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7739914399662402,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 32,
+      "position_error_m": 0.00030611823062219677,
+      "orientation_error_rad": 7.274459991230201e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7936830878256234,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 34,
+      "position_error_m": 0.00020870297671122764,
+      "orientation_error_rad": 6.616060687688131e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.8006828647968325,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 36,
+      "position_error_m": 0.0002081579948142209,
+      "orientation_error_rad": 5.042721947119875e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7936572142941938,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 38,
+      "position_error_m": 0.00025868400735089443,
+      "orientation_error_rad": 6.454324434005735e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7739064696717315,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 40,
+      "position_error_m": 0.0003401241108225524,
+      "orientation_error_rad": 9.315679335169387e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7429239841869297,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 42,
+      "position_error_m": 0.0004499367627285943,
+      "orientation_error_rad": 0.0002038480650038939,
+      "feasible": true,
+      "joint_margin_rad": 1.7020697986541478,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 44,
+      "position_error_m": 0.0005319947469648912,
+      "orientation_error_rad": 0.0003211373604514389,
+      "feasible": true,
+      "joint_margin_rad": 1.6548099772202476,
+      "arm_collision_count": 1
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 46,
+      "position_error_m": 0.00014710647291973835,
+      "orientation_error_rad": 0.00030402336270731123,
+      "feasible": true,
+      "joint_margin_rad": 1.629455323975723,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 48,
+      "position_error_m": 0.0016415427571388086,
+      "orientation_error_rad": 0.02159222536791296,
+      "feasible": true,
+      "joint_margin_rad": 1.629455323975723,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 50,
+      "position_error_m": 0.00010555879297329718,
+      "orientation_error_rad": 0.0004235177647158627,
+      "feasible": true,
+      "joint_margin_rad": 1.6050122809107994,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 52,
+      "position_error_m": 3.722009494765163e-05,
+      "orientation_error_rad": 0.00012422486061539198,
+      "feasible": true,
+      "joint_margin_rad": 1.5972190245333475,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 54,
+      "position_error_m": 4.74958805174394e-05,
+      "orientation_error_rad": 0.00010749507718486681,
+      "feasible": true,
+      "joint_margin_rad": 1.5910033892733164,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 56,
+      "position_error_m": 4.757611175833206e-05,
+      "orientation_error_rad": 0.0001199312170109151,
+      "feasible": true,
+      "joint_margin_rad": 1.5865755517952596,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 58,
+      "position_error_m": 5.834122764640592e-05,
+      "orientation_error_rad": 0.00016757708447476345,
+      "feasible": true,
+      "joint_margin_rad": 1.5832248476471729,
+      "arm_collision_count": 2
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 60,
+      "position_error_m": 8.77065518985734e-05,
+      "orientation_error_rad": 0.00022929990984781536,
+      "feasible": true,
+      "joint_margin_rad": 1.5809643392522101,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 62,
+      "position_error_m": 0.00010398995395518688,
+      "orientation_error_rad": 0.00023512343991203392,
+      "feasible": true,
+      "joint_margin_rad": 1.5799323989381688,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 64,
+      "position_error_m": 0.00010875457094690179,
+      "orientation_error_rad": 0.00022370829015754565,
+      "feasible": true,
+      "joint_margin_rad": 1.5804408682938111,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 66,
+      "position_error_m": 0.0001054320671198884,
+      "orientation_error_rad": 0.00021470041767343874,
+      "feasible": true,
+      "joint_margin_rad": 1.5799800809667626,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 68,
+      "position_error_m": 0.00010344347590143602,
+      "orientation_error_rad": 0.00020806880385478124,
+      "feasible": true,
+      "joint_margin_rad": 1.5772961345105243,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 70,
+      "position_error_m": 9.429236406325015e-05,
+      "orientation_error_rad": 0.00016876932034045204,
+      "feasible": true,
+      "joint_margin_rad": 1.5744245461934845,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 72,
+      "position_error_m": 8.997626302985282e-05,
+      "orientation_error_rad": 0.00013811773202936716,
+      "feasible": true,
+      "joint_margin_rad": 1.5726316035557406,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 74,
+      "position_error_m": 9.879581343057561e-05,
+      "orientation_error_rad": 9.706268577752662e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5723706959012302,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 76,
+      "position_error_m": 0.00013576247099363715,
+      "orientation_error_rad": 8.019782380512166e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5720373571289579,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 78,
+      "position_error_m": 0.0001708810504189756,
+      "orientation_error_rad": 0.00010294525569275493,
+      "feasible": true,
+      "joint_margin_rad": 1.5700429301952852,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 80,
+      "position_error_m": 0.00018687764289363314,
+      "orientation_error_rad": 0.00013491842201919713,
+      "feasible": true,
+      "joint_margin_rad": 1.5673698074955698,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 82,
+      "position_error_m": 0.0001907980583121711,
+      "orientation_error_rad": 0.00017536766571785235,
+      "feasible": true,
+      "joint_margin_rad": 1.564822117282505,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 84,
+      "position_error_m": 0.00017061475079780384,
+      "orientation_error_rad": 0.00022323655384335557,
+      "feasible": true,
+      "joint_margin_rad": 1.5636303232489865,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 86,
+      "position_error_m": 0.00015503901127027477,
+      "orientation_error_rad": 0.0002463777629972608,
+      "feasible": true,
+      "joint_margin_rad": 1.5640250863689733,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 88,
+      "position_error_m": 0.00014632050171255312,
+      "orientation_error_rad": 0.0002566325131181988,
+      "feasible": true,
+      "joint_margin_rad": 1.5656940612038175,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 90,
+      "position_error_m": 0.0001346520796550089,
+      "orientation_error_rad": 0.0002449722913344301,
+      "feasible": true,
+      "joint_margin_rad": 1.5688452370488877,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 92,
+      "position_error_m": 0.00012401765332082534,
+      "orientation_error_rad": 0.00021227556707413274,
+      "feasible": true,
+      "joint_margin_rad": 1.5725626848788838,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 94,
+      "position_error_m": 0.00011112084410190885,
+      "orientation_error_rad": 0.0001350210210748236,
+      "feasible": true,
+      "joint_margin_rad": 1.5735174911321541,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 96,
+      "position_error_m": 0.00013717921765016115,
+      "orientation_error_rad": 0.00017739008626254982,
+      "feasible": true,
+      "joint_margin_rad": 1.565814132138115,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 98,
+      "position_error_m": 0.0001559216211262947,
+      "orientation_error_rad": 0.0001550621362753296,
+      "feasible": true,
+      "joint_margin_rad": 1.545074325703355,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 100,
+      "position_error_m": 0.0001082306918834042,
+      "orientation_error_rad": 0.00011542489830734418,
+      "feasible": true,
+      "joint_margin_rad": 1.5176802214004304,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 102,
+      "position_error_m": 6.995864274097056e-05,
+      "orientation_error_rad": 9.878381363066217e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.488820535683397,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 104,
+      "position_error_m": 9.615354264955847e-05,
+      "orientation_error_rad": 8.675130679653197e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.459659484122374,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 106,
+      "position_error_m": 0.00013481599604690383,
+      "orientation_error_rad": 4.7424536302320565e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4321887583706572,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 108,
+      "position_error_m": 0.0001332499579103293,
+      "orientation_error_rad": 3.653096988996296e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4067054634909124,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 110,
+      "position_error_m": 0.00011471934652795094,
+      "orientation_error_rad": 3.586562754651594e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.3817795632003103,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 112,
+      "position_error_m": 0.00010699571731959005,
+      "orientation_error_rad": 3.3957421100429395e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.3568033718179446,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 114,
+      "position_error_m": 0.0001063305111600851,
+      "orientation_error_rad": 3.404788475632983e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.3319519848548464,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_5",
+      "frame": 116,
+      "position_error_m": 0.00010102821113828045,
+      "orientation_error_rad": 3.865658963277863e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.3079694562211022,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 0,
+      "position_error_m": 0.00097829678198711,
+      "orientation_error_rad": 0.00026427801464038933,
+      "feasible": true,
+      "joint_margin_rad": 1.2938128136637193,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 2,
+      "position_error_m": 3.9665719020800196e-05,
+      "orientation_error_rad": 3.823480341815225e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.3033487949787914,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 4,
+      "position_error_m": 0.0001677391249249109,
+      "orientation_error_rad": 0.00017275044885961568,
+      "feasible": true,
+      "joint_margin_rad": 1.3102076389911375,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 6,
+      "position_error_m": 0.00044773275311350624,
+      "orientation_error_rad": 0.000374361750457706,
+      "feasible": true,
+      "joint_margin_rad": 1.3225767169467353,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 8,
+      "position_error_m": 0.0006279899501046468,
+      "orientation_error_rad": 0.00036636458562494154,
+      "feasible": true,
+      "joint_margin_rad": 1.3460406993915952,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 10,
+      "position_error_m": 0.000706322498588691,
+      "orientation_error_rad": 0.0002833747126039759,
+      "feasible": true,
+      "joint_margin_rad": 1.3796931783937536,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 12,
+      "position_error_m": 0.0007404883296295985,
+      "orientation_error_rad": 0.00026984855962622567,
+      "feasible": true,
+      "joint_margin_rad": 1.4206182874164488,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 14,
+      "position_error_m": 0.0007415364406059966,
+      "orientation_error_rad": 0.0002799894887019182,
+      "feasible": true,
+      "joint_margin_rad": 1.4667314172719477,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 16,
+      "position_error_m": 0.0007319234398880148,
+      "orientation_error_rad": 0.00024586701828120504,
+      "feasible": true,
+      "joint_margin_rad": 1.5157014792137788,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 18,
+      "position_error_m": 0.0007057141247213454,
+      "orientation_error_rad": 0.00021535208190887357,
+      "feasible": true,
+      "joint_margin_rad": 1.5668383481428327,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 20,
+      "position_error_m": 0.0006372965427863063,
+      "orientation_error_rad": 0.00020009707153734424,
+      "feasible": true,
+      "joint_margin_rad": 1.6191115118524306,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 22,
+      "position_error_m": 0.0005639246436540036,
+      "orientation_error_rad": 0.0001911759815330802,
+      "feasible": true,
+      "joint_margin_rad": 1.670585018382754,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 24,
+      "position_error_m": 0.0005035970940101521,
+      "orientation_error_rad": 0.00017881290290176289,
+      "feasible": true,
+      "joint_margin_rad": 1.7189697606375396,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 26,
+      "position_error_m": 0.0004386118624137541,
+      "orientation_error_rad": 0.00015691858803394077,
+      "feasible": true,
+      "joint_margin_rad": 1.7617902084888222,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 28,
+      "position_error_m": 0.0003607277884326006,
+      "orientation_error_rad": 0.00011040028344686376,
+      "feasible": true,
+      "joint_margin_rad": 1.7958033947577734,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 30,
+      "position_error_m": 0.0002778002154744957,
+      "orientation_error_rad": 4.900320052030998e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.8182227843140035,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 32,
+      "position_error_m": 0.0001983219558797828,
+      "orientation_error_rad": 3.4136244757542006e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.827061537393769,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 34,
+      "position_error_m": 0.00016774290853002229,
+      "orientation_error_rad": 0.00010779068311345038,
+      "feasible": true,
+      "joint_margin_rad": 1.8215429191689299,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 36,
+      "position_error_m": 0.000191972216195604,
+      "orientation_error_rad": 0.00018237327401827272,
+      "feasible": true,
+      "joint_margin_rad": 1.8023475711969716,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 38,
+      "position_error_m": 0.0002902420475825096,
+      "orientation_error_rad": 0.000274660010507203,
+      "feasible": true,
+      "joint_margin_rad": 1.7701988542320284,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 40,
+      "position_error_m": 0.0004360512199262005,
+      "orientation_error_rad": 0.0003571017489149275,
+      "feasible": true,
+      "joint_margin_rad": 1.7268025729515368,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 42,
+      "position_error_m": 0.0005880850611718725,
+      "orientation_error_rad": 0.00041875828742744977,
+      "feasible": true,
+      "joint_margin_rad": 1.6753142536398986,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 44,
+      "position_error_m": 0.0004078910248479174,
+      "orientation_error_rad": 0.00038946183998262373,
+      "feasible": true,
+      "joint_margin_rad": 1.6319827557694246,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 46,
+      "position_error_m": 0.0006557422147127755,
+      "orientation_error_rad": 0.0004225114685434778,
+      "feasible": true,
+      "joint_margin_rad": 1.5769623121189669,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 48,
+      "position_error_m": 0.0007630387467891734,
+      "orientation_error_rad": 0.0004469382707462857,
+      "feasible": true,
+      "joint_margin_rad": 1.5186168484523979,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 50,
+      "position_error_m": 0.0007252122734379353,
+      "orientation_error_rad": 0.00046476947690133566,
+      "feasible": true,
+      "joint_margin_rad": 1.4653736558894799,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 52,
+      "position_error_m": 0.00022654494404899001,
+      "orientation_error_rad": 0.00030033248762876993,
+      "feasible": true,
+      "joint_margin_rad": 1.4416521167331706,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 54,
+      "position_error_m": 2.763112156331582e-05,
+      "orientation_error_rad": 8.405599978661186e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4360726928716616,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 56,
+      "position_error_m": 0.0017445916867476908,
+      "orientation_error_rad": 0.005919686928664041,
+      "feasible": true,
+      "joint_margin_rad": 1.4360726928716616,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 58,
+      "position_error_m": 8.933561888758866e-05,
+      "orientation_error_rad": 0.00013820429089587069,
+      "feasible": true,
+      "joint_margin_rad": 1.4528004902343756,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 60,
+      "position_error_m": 5.8002995076543074e-05,
+      "orientation_error_rad": 8.021072271079893e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4636308208220086,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 62,
+      "position_error_m": 3.7626200050147375e-05,
+      "orientation_error_rad": 7.24451503860158e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4738903781221298,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 64,
+      "position_error_m": 2.5730392092271004e-05,
+      "orientation_error_rad": 6.534632390172606e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.483943117214471,
+      "arm_collision_count": 1
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 66,
+      "position_error_m": 2.3718253954068e-05,
+      "orientation_error_rad": 5.9527665072803844e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.4943385307312196,
+      "arm_collision_count": 1
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 68,
+      "position_error_m": 2.9558072899792845e-05,
+      "orientation_error_rad": 5.3271083402131364e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5061036488481825,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 70,
+      "position_error_m": 3.969834259718005e-05,
+      "orientation_error_rad": 4.57228558712764e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5187659348273417,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 72,
+      "position_error_m": 5.427668172598604e-05,
+      "orientation_error_rad": 2.6887503832560594e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5314809349984166,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 74,
+      "position_error_m": 7.446942550585316e-05,
+      "orientation_error_rad": 4.211293532147619e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5436249529790464,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 76,
+      "position_error_m": 9.889760039109297e-05,
+      "orientation_error_rad": 0.00011194472694726912,
+      "feasible": true,
+      "joint_margin_rad": 1.5541843274110279,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 78,
+      "position_error_m": 0.00011694046884494368,
+      "orientation_error_rad": 0.00016118747661315595,
+      "feasible": true,
+      "joint_margin_rad": 1.5633540338836256,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 80,
+      "position_error_m": 0.00012604137517444608,
+      "orientation_error_rad": 0.00018358354567576328,
+      "feasible": true,
+      "joint_margin_rad": 1.5721410456834246,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 82,
+      "position_error_m": 0.00012174678645863095,
+      "orientation_error_rad": 0.00016013586345679106,
+      "feasible": true,
+      "joint_margin_rad": 1.5819346244772192,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 84,
+      "position_error_m": 0.00012389492501738476,
+      "orientation_error_rad": 0.00014928425246513985,
+      "feasible": true,
+      "joint_margin_rad": 1.5929762810879697,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 86,
+      "position_error_m": 0.0001293249600814101,
+      "orientation_error_rad": 0.0001520834986445676,
+      "feasible": true,
+      "joint_margin_rad": 1.6050550319129733,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 88,
+      "position_error_m": 0.0001302407005671763,
+      "orientation_error_rad": 0.0001428600892746245,
+      "feasible": true,
+      "joint_margin_rad": 1.6179067583494284,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 90,
+      "position_error_m": 0.00012107397647806546,
+      "orientation_error_rad": 0.00011372262028777678,
+      "feasible": true,
+      "joint_margin_rad": 1.6307484989576597,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 92,
+      "position_error_m": 0.00011193909853107581,
+      "orientation_error_rad": 9.611397374391961e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.6427686579262417,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 94,
+      "position_error_m": 0.00010127197723693486,
+      "orientation_error_rad": 8.408390116904463e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.6536317806935261,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 96,
+      "position_error_m": 9.52953024615192e-05,
+      "orientation_error_rad": 8.078129743081064e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.6625191182188612,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 98,
+      "position_error_m": 0.00011093420618047609,
+      "orientation_error_rad": 8.661150210450668e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.6687110809862007,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 100,
+      "position_error_m": 0.00021838591237637912,
+      "orientation_error_rad": 0.00016064792608294412,
+      "feasible": true,
+      "joint_margin_rad": 1.66574537317585,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 102,
+      "position_error_m": 0.00023068148909164294,
+      "orientation_error_rad": 9.974475150343057e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.6562517799014638,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 104,
+      "position_error_m": 0.0001964073761234258,
+      "orientation_error_rad": 0.00011664120440941546,
+      "feasible": true,
+      "joint_margin_rad": 1.6439181710384483,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 106,
+      "position_error_m": 0.00017300855911515648,
+      "orientation_error_rad": 0.00012212045913733216,
+      "feasible": true,
+      "joint_margin_rad": 1.6286777825448573,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 108,
+      "position_error_m": 0.0001519409214872239,
+      "orientation_error_rad": 0.0001110479231708623,
+      "feasible": true,
+      "joint_margin_rad": 1.6127889879863524,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 110,
+      "position_error_m": 0.00015367629056105658,
+      "orientation_error_rad": 6.534144562526717e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.5979569697644787,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 112,
+      "position_error_m": 0.0001997850179221767,
+      "orientation_error_rad": 0.00015048242746649478,
+      "feasible": true,
+      "joint_margin_rad": 1.5816561509111826,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 114,
+      "position_error_m": 0.00027327267413095946,
+      "orientation_error_rad": 0.00024022284787172905,
+      "feasible": true,
+      "joint_margin_rad": 1.5583939922004892,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 116,
+      "position_error_m": 0.00023339000095699386,
+      "orientation_error_rad": 0.00016579046313275426,
+      "feasible": true,
+      "joint_margin_rad": 1.5295273563200333,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 118,
+      "position_error_m": 0.0001527870895408407,
+      "orientation_error_rad": 0.00013128359574513868,
+      "feasible": true,
+      "joint_margin_rad": 1.500079753842364,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 120,
+      "position_error_m": 8.93763007603812e-05,
+      "orientation_error_rad": 0.00013725154847767706,
+      "feasible": true,
+      "joint_margin_rad": 1.4732621545178117,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 122,
+      "position_error_m": 5.9113672427797113e-05,
+      "orientation_error_rad": 0.00020118516559078,
+      "feasible": true,
+      "joint_margin_rad": 1.4498468142720555,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 124,
+      "position_error_m": 4.1730945141768874e-05,
+      "orientation_error_rad": 0.00027133986618515144,
+      "feasible": true,
+      "joint_margin_rad": 1.4271948366600455,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 126,
+      "position_error_m": 4.045122625891412e-05,
+      "orientation_error_rad": 0.00024418600112006256,
+      "feasible": true,
+      "joint_margin_rad": 1.4043927870355621,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 128,
+      "position_error_m": 4.381635676242714e-05,
+      "orientation_error_rad": 0.00022229330881520435,
+      "feasible": true,
+      "joint_margin_rad": 1.3793410608247778,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 130,
+      "position_error_m": 5.146112639812618e-05,
+      "orientation_error_rad": 0.0001932667521217457,
+      "feasible": true,
+      "joint_margin_rad": 1.3513894178461108,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_38",
+      "frame": 132,
+      "position_error_m": 7.137503478782477e-05,
+      "orientation_error_rad": 0.00017895538439561854,
+      "feasible": true,
+      "joint_margin_rad": 1.3213429058371517,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 0,
+      "position_error_m": 0.0003513964597482554,
+      "orientation_error_rad": 0.00019071911322295182,
+      "feasible": true,
+      "joint_margin_rad": 1.2681420829160366,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 2,
+      "position_error_m": 4.7042750805525534e-05,
+      "orientation_error_rad": 6.20456061012053e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.2791308174568004,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 4,
+      "position_error_m": 0.00010776962317687106,
+      "orientation_error_rad": 0.0001069390489395056,
+      "feasible": true,
+      "joint_margin_rad": 1.2939555073315945,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 6,
+      "position_error_m": 0.0002976453246525396,
+      "orientation_error_rad": 0.00024776344075273684,
+      "feasible": true,
+      "joint_margin_rad": 1.317285338472348,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 8,
+      "position_error_m": 0.000562546184550298,
+      "orientation_error_rad": 0.00042936215344861994,
+      "feasible": true,
+      "joint_margin_rad": 1.351331530561311,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 10,
+      "position_error_m": 0.0007286644421596505,
+      "orientation_error_rad": 0.000482473441270727,
+      "feasible": true,
+      "joint_margin_rad": 1.3963793535751483,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 12,
+      "position_error_m": 0.0007943022652481521,
+      "orientation_error_rad": 0.000463298272289889,
+      "feasible": true,
+      "joint_margin_rad": 1.4492410336885848,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 14,
+      "position_error_m": 0.0008114277123197285,
+      "orientation_error_rad": 0.0003940808657399233,
+      "feasible": true,
+      "joint_margin_rad": 1.5068794506561292,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 16,
+      "position_error_m": 0.0008013379452277389,
+      "orientation_error_rad": 0.000291108553693053,
+      "feasible": true,
+      "joint_margin_rad": 1.565688134790296,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 18,
+      "position_error_m": 0.0007927923696163277,
+      "orientation_error_rad": 0.00022503910214418375,
+      "feasible": true,
+      "joint_margin_rad": 1.6240021384318402,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 20,
+      "position_error_m": 0.0007743799743953478,
+      "orientation_error_rad": 0.00020681903075904612,
+      "feasible": true,
+      "joint_margin_rad": 1.6811645636532317,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 22,
+      "position_error_m": 0.0007666173311120623,
+      "orientation_error_rad": 0.00019878454581541373,
+      "feasible": true,
+      "joint_margin_rad": 1.7375430266683498,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 24,
+      "position_error_m": 0.0006990146686546397,
+      "orientation_error_rad": 0.00019610948101860936,
+      "feasible": true,
+      "joint_margin_rad": 1.7906106548074219,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 26,
+      "position_error_m": 0.0005882117126657601,
+      "orientation_error_rad": 0.00018509517718830255,
+      "feasible": true,
+      "joint_margin_rad": 1.836134185311318,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 28,
+      "position_error_m": 0.0004955398617065281,
+      "orientation_error_rad": 0.00014587731675203653,
+      "feasible": true,
+      "joint_margin_rad": 1.8723979755250086,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 30,
+      "position_error_m": 0.000406183675693975,
+      "orientation_error_rad": 0.0001038118910797041,
+      "feasible": true,
+      "joint_margin_rad": 1.898599209330795,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 32,
+      "position_error_m": 0.00030375049437549517,
+      "orientation_error_rad": 7.705693783574763e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.9154910422174691,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 34,
+      "position_error_m": 0.0002251864262278981,
+      "orientation_error_rad": 5.3170499946288355e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.924423052782273,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 36,
+      "position_error_m": 0.00019875127005431484,
+      "orientation_error_rad": 6.622589399435584e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.9266380262712857,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 38,
+      "position_error_m": 0.00019556118211944487,
+      "orientation_error_rad": 0.00010081044895438927,
+      "feasible": true,
+      "joint_margin_rad": 1.9234887541732382,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 40,
+      "position_error_m": 0.00022299614571987027,
+      "orientation_error_rad": 0.00013033753118955223,
+      "feasible": true,
+      "joint_margin_rad": 1.915278027243344,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 42,
+      "position_error_m": 0.00025045374266858525,
+      "orientation_error_rad": 0.00015484988472070174,
+      "feasible": true,
+      "joint_margin_rad": 1.9037361948604974,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 44,
+      "position_error_m": 0.00025653844174147863,
+      "orientation_error_rad": 0.000159963355475055,
+      "feasible": true,
+      "joint_margin_rad": 1.890247330509943,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 46,
+      "position_error_m": 0.00025722590553184176,
+      "orientation_error_rad": 0.0001705308215965429,
+      "feasible": true,
+      "joint_margin_rad": 1.873650992497018,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 48,
+      "position_error_m": 2.6988946733713228e-05,
+      "orientation_error_rad": 3.81710228042365e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.87008742971381,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 50,
+      "position_error_m": 0.00031275345506603025,
+      "orientation_error_rad": 0.00840437266842443,
+      "feasible": true,
+      "joint_margin_rad": 1.87008742971381,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 52,
+      "position_error_m": 0.0014231513281540058,
+      "orientation_error_rad": 0.014752432651830061,
+      "feasible": true,
+      "joint_margin_rad": 1.87008742971381,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 54,
+      "position_error_m": 3.658163739157846e-05,
+      "orientation_error_rad": 0.00010894797016690304,
+      "feasible": true,
+      "joint_margin_rad": 1.8774828661383602,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 56,
+      "position_error_m": 4.909155341717482e-05,
+      "orientation_error_rad": 4.880362947241986e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.8764397814172924,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 58,
+      "position_error_m": 9.281909288739587e-05,
+      "orientation_error_rad": 8.917933190533585e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.872482172632813,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 60,
+      "position_error_m": 0.00012810431451345454,
+      "orientation_error_rad": 0.00013447624212567993,
+      "feasible": true,
+      "joint_margin_rad": 1.863895046128619,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 62,
+      "position_error_m": 0.00014824614937330633,
+      "orientation_error_rad": 0.00019682472183007522,
+      "feasible": true,
+      "joint_margin_rad": 1.8502634050594502,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 64,
+      "position_error_m": 0.00014246988571374353,
+      "orientation_error_rad": 0.00026533459879783455,
+      "feasible": true,
+      "joint_margin_rad": 1.8335100231450019,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 66,
+      "position_error_m": 0.00015327215902022722,
+      "orientation_error_rad": 0.0003866855123762281,
+      "feasible": true,
+      "joint_margin_rad": 1.8140226970946867,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 68,
+      "position_error_m": 0.0001687914505727325,
+      "orientation_error_rad": 0.00042714230961624045,
+      "feasible": true,
+      "joint_margin_rad": 1.7929365517889408,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 70,
+      "position_error_m": 0.0001609675744396185,
+      "orientation_error_rad": 0.0003665254310034997,
+      "feasible": true,
+      "joint_margin_rad": 1.7721208156077877,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 72,
+      "position_error_m": 0.00012280167025859206,
+      "orientation_error_rad": 0.0002936405419208011,
+      "feasible": true,
+      "joint_margin_rad": 1.7535588613158928,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 74,
+      "position_error_m": 8.688773191286259e-05,
+      "orientation_error_rad": 0.00021973145486742804,
+      "feasible": true,
+      "joint_margin_rad": 1.738901779695047,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 76,
+      "position_error_m": 7.606402992627002e-05,
+      "orientation_error_rad": 0.00016292931594988225,
+      "feasible": true,
+      "joint_margin_rad": 1.7273382627896405,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 78,
+      "position_error_m": 4.594199582319351e-05,
+      "orientation_error_rad": 0.00011880893389644643,
+      "feasible": true,
+      "joint_margin_rad": 1.7191116829730186,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 80,
+      "position_error_m": 2.804196464726178e-05,
+      "orientation_error_rad": 7.981007329173559e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7162247062841103,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 82,
+      "position_error_m": 2.8251381539493987e-05,
+      "orientation_error_rad": 7.130064443476721e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7166633406298364,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 84,
+      "position_error_m": 3.616859862394389e-05,
+      "orientation_error_rad": 7.267453274596398e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7200967355607886,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 86,
+      "position_error_m": 5.356316922961679e-05,
+      "orientation_error_rad": 9.523935427695901e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7259479925256278,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 88,
+      "position_error_m": 6.142901843500601e-05,
+      "orientation_error_rad": 8.508769485903692e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7342102142105191,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 90,
+      "position_error_m": 6.427303535867759e-05,
+      "orientation_error_rad": 6.369290504612004e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7438835116462281,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 92,
+      "position_error_m": 6.172451761614733e-05,
+      "orientation_error_rad": 4.744342778982405e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.754939131751025,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 94,
+      "position_error_m": 6.777949130128864e-05,
+      "orientation_error_rad": 7.954592776731896e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.767741716729782,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 96,
+      "position_error_m": 8.086174951138515e-05,
+      "orientation_error_rad": 9.717275994895467e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.7815296809011214,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 98,
+      "position_error_m": 9.855160531338074e-05,
+      "orientation_error_rad": 0.00011123267560233938,
+      "feasible": true,
+      "joint_margin_rad": 1.7937643030924886,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 100,
+      "position_error_m": 9.642273435345355e-05,
+      "orientation_error_rad": 0.00011742542649124397,
+      "feasible": true,
+      "joint_margin_rad": 1.8039566419846504,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 102,
+      "position_error_m": 9.887943213232348e-05,
+      "orientation_error_rad": 0.00011193124656060781,
+      "feasible": true,
+      "joint_margin_rad": 1.8114895498269772,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 104,
+      "position_error_m": 0.00011203020329258193,
+      "orientation_error_rad": 0.00011768958688203416,
+      "feasible": true,
+      "joint_margin_rad": 1.8165423413714035,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 106,
+      "position_error_m": 0.0001356514637430558,
+      "orientation_error_rad": 0.00010883480077047752,
+      "feasible": true,
+      "joint_margin_rad": 1.8176938172579231,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 108,
+      "position_error_m": 0.00015410455017228917,
+      "orientation_error_rad": 8.13175335076577e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.8143816654380038,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 110,
+      "position_error_m": 0.0001698908608353594,
+      "orientation_error_rad": 6.171480017145099e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.8062303565616504,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 112,
+      "position_error_m": 0.0001803039208868734,
+      "orientation_error_rad": 5.565526594783783e-05,
+      "feasible": true,
+      "joint_margin_rad": 1.793159093156321,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 114,
+      "position_error_m": 0.00018932369034693216,
+      "orientation_error_rad": 0.00016139031984204374,
+      "feasible": true,
+      "joint_margin_rad": 1.7764439830016172,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 116,
+      "position_error_m": 6.263260571382952e-05,
+      "orientation_error_rad": 0.00018471370270394568,
+      "feasible": true,
+      "joint_margin_rad": 1.7637465997778736,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 118,
+      "position_error_m": 5.787903742025815e-05,
+      "orientation_error_rad": 0.00016364322607875288,
+      "feasible": true,
+      "joint_margin_rad": 1.7545824400265133,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 120,
+      "position_error_m": 0.00011312688062126032,
+      "orientation_error_rad": 0.00014065573336666178,
+      "feasible": true,
+      "joint_margin_rad": 1.7479242368980084,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 122,
+      "position_error_m": 0.00013627283863830705,
+      "orientation_error_rad": 0.00013289325451862016,
+      "feasible": true,
+      "joint_margin_rad": 1.7384936711052388,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 124,
+      "position_error_m": 0.00013212677319934436,
+      "orientation_error_rad": 0.00014214232965875211,
+      "feasible": true,
+      "joint_margin_rad": 1.7264641423965736,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 126,
+      "position_error_m": 0.00012575507455710278,
+      "orientation_error_rad": 0.00015741062360763393,
+      "feasible": true,
+      "joint_margin_rad": 1.7139170478132895,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 128,
+      "position_error_m": 0.00012689427031485907,
+      "orientation_error_rad": 0.00015055154067597967,
+      "feasible": true,
+      "joint_margin_rad": 1.7018151632673764,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 130,
+      "position_error_m": 0.00016095156974614273,
+      "orientation_error_rad": 0.00014321829285871224,
+      "feasible": true,
+      "joint_margin_rad": 1.688892839893692,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 132,
+      "position_error_m": 0.00012711852885754024,
+      "orientation_error_rad": 0.00015487596974418874,
+      "feasible": true,
+      "joint_margin_rad": 1.677078137065633,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 134,
+      "position_error_m": 6.663293831611693e-05,
+      "orientation_error_rad": 0.00016923754153360272,
+      "feasible": true,
+      "joint_margin_rad": 1.6649505121264678,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 136,
+      "position_error_m": 1.4826400606971775e-05,
+      "orientation_error_rad": 0.00013919243640876194,
+      "feasible": true,
+      "joint_margin_rad": 1.654403441661698,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 138,
+      "position_error_m": 2.399743502894674e-05,
+      "orientation_error_rad": 0.000138638324831861,
+      "feasible": true,
+      "joint_margin_rad": 1.6493144759113727,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 140,
+      "position_error_m": 4.117383857475291e-05,
+      "orientation_error_rad": 0.00012246496064754195,
+      "feasible": true,
+      "joint_margin_rad": 1.6545074242812907,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 142,
+      "position_error_m": 6.130237522162976e-05,
+      "orientation_error_rad": 0.0001924454992539242,
+      "feasible": true,
+      "joint_margin_rad": 1.6720784614877167,
+      "arm_collision_count": 0
+    },
+    {
+      "demo_id": "demo_26",
+      "frame": 144,
+      "position_error_m": 8.082252593499253e-05,
+      "orientation_error_rad": 0.00025897539252739296,
+      "feasible": true,
+      "joint_margin_rad": 1.6993851581459152,
+      "arm_collision_count": 0
+    }
+  ],
+  "lineage": [
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 0,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 2,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 4,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 6,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 8,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 10,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 12,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 14,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 16,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 18,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 20,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 22,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 24,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 26,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 28,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 30,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 32,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 34,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 36,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 38,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 40,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 42,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 60,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 62,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 64,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 66,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 68,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 70,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 72,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 74,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 76,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 78,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 80,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 82,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 84,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 86,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 88,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 90,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 92,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 94,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 96,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 98,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 100,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 102,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 104,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 106,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 108,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 110,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 112,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 114,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_5",
+      "source_frame": 116,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 0,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 2,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 4,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 6,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 8,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 10,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 12,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 14,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 16,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 18,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 20,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 22,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 24,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 26,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 28,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 30,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 32,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 34,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 36,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 38,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 40,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 42,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 44,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 46,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 48,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 50,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 52,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 54,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 56,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 58,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 60,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 62,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 68,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 70,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 72,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 74,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 76,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 78,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 80,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 82,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 84,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 86,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 88,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 90,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 92,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 94,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 96,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 98,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 100,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 102,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 104,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 106,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 108,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 110,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 112,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 114,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 116,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 118,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 120,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 122,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 124,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 126,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 128,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 130,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_38",
+      "source_frame": 132,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 0,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 2,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 4,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 6,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 8,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 10,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 12,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 14,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 16,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 18,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 20,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 22,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 24,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 26,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 28,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 30,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 32,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 34,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 36,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 38,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 40,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 42,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 44,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 46,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 48,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 50,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 52,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 54,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 56,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 58,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 60,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 62,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 64,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 66,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 68,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 70,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 72,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 74,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 76,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 78,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 80,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 82,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 84,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 86,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 88,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 90,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 92,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 94,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 96,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 98,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 100,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 102,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 104,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 106,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 108,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 110,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 112,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 114,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 116,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 118,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 120,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 122,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 124,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 126,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 128,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 130,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 132,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 134,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 136,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 138,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 140,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 142,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    },
+    {
+      "source_demo_id": "demo_26",
+      "source_frame": 144,
+      "origin": "source_derived_static_kinematic_render",
+      "executed_target_demo": false
+    }
+  ],
+  "accepted_frames": 189,
+  "image_shape": [
+    189,
+    2,
+    256,
+    256,
+    3
+  ],
+  "physics_steps_during_processing": 0,
+  "target_executed_training_episodes": 0,
+  "native_source_hz": 20,
+  "anchor_stride": 2,
+  "action_hz": 20,
+  "pseudo_label_limit": "kinematic conversion does not validate B contact dynamics",
+  "duration_seconds": 12.179789077024907
+}

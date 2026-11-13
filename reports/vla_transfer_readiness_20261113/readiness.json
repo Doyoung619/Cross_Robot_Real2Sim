@@ -1,0 +1,147 @@
+{
+  "status": "source_materials_ready_offline_B_conditioned_processing_not_implemented",
+  "task": "pick up the black bowl from table center and place it on the plate",
+  "source_robot": "Panda",
+  "target_robot": "UR5e",
+  "source_checkpoint": "lerobot/smolvla_libero",
+  "checkpoint_revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+  "checkpoint_training_dataset": "lerobot/libero",
+  "source_dataset_path": "runs/vla_readiness_20261113/dataset/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+  "source_demos": 50,
+  "source_steps": 5882,
+  "terminal_reward_successes": 50,
+  "consistent_demos": 50,
+  "selection": "task-specific successful demos; shortest then max-min initial bowl xyz diversity",
+  "selection_status": "provisional_geometry_baseline_not_B_aware",
+  "selected_source_demos": [
+    {
+      "demo_id": "demo_43",
+      "steps": 93,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.006267464863399212,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_12",
+      "steps": 124,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        -0.013234430118636828,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_33",
+      "steps": 121,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        -0.00364160423277563,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_22",
+      "steps": 117,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.014672752066741087,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_30",
+      "steps": 115,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.001377074815393048,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_13",
+      "steps": 122,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        -0.007903168808041604,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_14",
+      "steps": 114,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.009602076533591629,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_6",
+      "steps": 109,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.012009613740182055,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_10",
+      "steps": 109,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        0.0037227805298680806,
+        0.8981585151399347
+      ]
+    },
+    {
+      "demo_id": "demo_47",
+      "steps": 117,
+      "success": true,
+      "consistent": true,
+      "initial_bowl_xyz": [
+        -0.07500029343279396,
+        -0.010897334307597564,
+        0.8981585151399347
+      ]
+    }
+  ],
+  "selected_source_steps": 1141,
+  "download_files": 610,
+  "download_errors": [],
+  "download_bytes": 1923649618,
+  "target_training_episodes": 0,
+  "target_executed_training_demonstrations_allowed": false,
+  "target_simulator_rollout_training_allowed": false,
+  "target_evaluation_feedback_for_selection_or_tuning_allowed": false,
+  "allowed_target_knowledge": [
+    "robot_geometry",
+    "kinematics",
+    "joint_limits",
+    "collision_geometry",
+    "gripper_geometry",
+    "control_contract"
+  ],
+  "offline_target_pseudo_labels_generated": false,
+  "source_policy_rollout_success": "not_measured",
+  "target_policy_success": "not_measured"
+}

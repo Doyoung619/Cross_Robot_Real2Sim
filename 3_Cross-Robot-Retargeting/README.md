@@ -1,5 +1,7 @@
 # 3. Cross-Robot Retargeting
 
+Latest [source-only VLA pilot](../results/vla_minimal_20261113T185314Z/README.md): match A's full TCP poses using B IK/FK and static geometry, copy source object records, and render hypothetical B observations without advancing target physics. Retain 189 anchors from three A episodes. These are source-derived kinematic pseudo-labels, not successful B execution demonstrations. See [processing code](../scripts/vla_pilot_processing.py) and [English processing video](../results/vla_minimal_20261113T185314Z/videos/offline_source_processing.mp4). The wrapper below runs the historical executed-teacher baseline.
+
 Extract limited source-relative grasp/lift geometry and execute target UR5e demonstrations through its own closed-loop simulator controller.
 
 The recorded fast run generated 10/10 successful source-retargeted UR5e teachers and executed a separate live scripted Panda branch. The teachers derive from five selected Panda demos, not copied source joint commands or a pretrained source policy.

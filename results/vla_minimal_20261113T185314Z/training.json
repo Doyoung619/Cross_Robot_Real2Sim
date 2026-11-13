@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "steps": 100,
+  "training_frames": 189,
+  "batch_size": 4,
+  "trainable_parameters": 334592,
+  "rank": 8,
+  "learning_rate": 0.0001,
+  "source_checkpoint": "lerobot/smolvla_libero@a24f1f380461b665158d52acd140152c79e8b36d",
+  "normalization": "exact_saved_source_checkpoint_normalizer",
+  "training_origin": "source_derived_static_kinematic_render_only",
+  "executed_target_training_episodes": 0,
+  "duration_seconds": 17.563157806172967,
+  "adapter_sha256": "69bbd848539c89c2b534d846fbe8fecc99683fb22c2e810ba6d903f2c640f428",
+  "peak_allocated_gib": 1.5862503051757812,
+  "final_training_loss": 0.09566406160593033,
+  "source_only_validation": "not_performed_in_minimal_compute_smoke"
+}
