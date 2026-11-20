@@ -1,0 +1,9 @@
+{
+  "role": "development",
+  "count": 0,
+  "states": [],
+  "rejections": [],
+  "physics_steps_used_for_validation": 0,
+  "distribution": "Native LIBERO BDDL sampler; plate x=[.04,.06], y=[-.03,-.01]; other objects/fixtures sampled natively",
+  "note": "Distinct narrow in-distribution initial states, not broad OOD generalization; no reuse of the old two scenes"
+}

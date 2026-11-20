@@ -1,0 +1,23 @@
+{
+  "name":"full",
+  "methods":["pretrained","random_lora","b_feasible_lora","fixed_source_train","selection_only","retarget_only","cei_inspired","strap_style","fert_inspired","our_full"],
+  "budgets":[0,1,2,4,8,16],
+  "training_seeds":[0],
+  "evaluation_states":50,
+  "adaptation_states":16,
+  "development_rollouts":0,
+  "updates_initial":100,
+  "updates_per_rollout":100,
+  "batch_size":4,
+  "learning_rate":0.0001,
+  "source_episodes":3,
+  "new_source_episodes":2,
+  "horizon":220,
+  "success_hold_steps":20,
+  "state_seed":6192026,
+  "max_hours":12,
+  "record_evaluation_videos":2,
+  "feature_stride":4,
+  "dataset_track":"A_only_action_supervision",
+  "checkpoint_rule":"last_after_predeclared_updates_no_evaluation_selection"
+}

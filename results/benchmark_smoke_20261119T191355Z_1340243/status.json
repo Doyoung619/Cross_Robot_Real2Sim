@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "supervisor_pid": 1340325,
+  "deadline_utc": "2026-11-19T20:13:55.915966+00:00",
+  "started_at": "2026-11-19T19:13:55.916080+00:00",
+  "worker_pid": 1340326,
+  "exit_code": 0,
+  "finished_at": "2026-11-19T19:21:56.391857+00:00"
+}

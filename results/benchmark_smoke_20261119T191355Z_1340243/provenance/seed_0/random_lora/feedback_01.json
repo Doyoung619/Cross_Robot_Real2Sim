@@ -1,0 +1,70 @@
+{
+  "input_episode_id": "aea28cf85eea4a8ebe62e26d58fec9be",
+  "diagnostic": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 1,
+    "failed_episodes": 1,
+    "dominant_hypothesis": "insufficient_plate_contact",
+    "contact_fraction": 0.0,
+    "plate_contact_fraction": 0.0,
+    "contact_rate": 0.0,
+    "mean_eef_plate_gap_m": 0.2245756508171167,
+    "mean_near_surface_gap_m": 0.17499858653596737,
+    "mean_near_plate_height_m": 0.1857309183068111,
+    "mean_closest_surface_vector_m": [
+      0.05111022274903958,
+      -0.03297573562545293,
+      -0.1637152009524891
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.10687885162385544,
+      0.2158698512586727
+    ],
+    "direction_alignment": null,
+    "response_gain": null,
+    "mean_goal_error_m": 0.24087939224200058,
+    "mean_plate_displacement_m": 0.06750016585804325,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.4437027619053402,
+        0.8961740116057668
+      ],
+      "measured_contact_gap_vector_m": [
+        0.05111022274903958,
+        -0.03297573562545293,
+        -0.1637152009524891
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.0,
+          "near_surface_gap_m": 0.17499858653596737
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": null
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": null
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "feedback_mode": "none",
+  "target_actions_used_as_labels": false,
+  "source_pool": "same50 successful Panda demonstrations"
+}

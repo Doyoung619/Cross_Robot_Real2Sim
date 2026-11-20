@@ -1,0 +1,34 @@
+{
+  "as_of_utc": "2026-11-20T04:22:43.300536+00:00",
+  "run_id": "benchmark_pilot_20261120T041649Z_1451454",
+  "status": {
+    "status": "running",
+    "supervisor_pid": 1451464,
+    "deadline_utc": "2026-11-20T06:16:49.319472+00:00",
+    "started_at": "2026-11-20T04:16:49.319606+00:00",
+    "worker_pid": 1451466
+  },
+  "state_banks": {
+    "counts": {
+      "adaptation": 1,
+      "evaluation": 50,
+      "development": 0
+    },
+    "all_full_states_disjoint": true,
+    "all_plate_positions_distinct": true,
+    "camera_sha256": "847ebb6d094239316e7b23c0880fcba007135973211d2ee6e6c00fa4a1f563bf",
+    "files": {
+      "adaptation.json": "f5f3bbe7c3127b69bf21ec23ded8713d73d30c7dda1ef8a14973f3bfda0fffae",
+      "adaptation.npz": "b5ced09898a6d0ecbd64e042d6c6a4cb4c8bdece5902f74a612d2c0c2ecfe6d6",
+      "development.json": "a0db8f7e90a7a37916d4cc1c7c6d2a094324b94ee43fcd57299d55e80c8e02c1",
+      "evaluation.json": "c29daae6137c26be800f86593fc982039a61ff6455ad1584880b16169bf70a44",
+      "evaluation.npz": "8a6fe9f122d4741e283f4ec462a265dd298b9f570833b536b4c435cdf0869810"
+    }
+  },
+  "actual_started_episodes": {
+    "adaptation": 2,
+    "development": 0,
+    "evaluation": 18
+  },
+  "note": "In-progress launch/accounting snapshot; not a completed checkpoint performance result. No evaluation information is used for adaptation."
+}

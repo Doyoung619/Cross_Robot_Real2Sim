@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "adaptation": 1,
+    "evaluation": 2,
+    "development": 0
+  },
+  "all_full_states_disjoint": true,
+  "all_plate_positions_distinct": true,
+  "camera_sha256": "847ebb6d094239316e7b23c0880fcba007135973211d2ee6e6c00fa4a1f563bf",
+  "files": {
+    "adaptation.json": "04710dd3fb449b500ba0a05be4d4b3538b3a79b7697f0fe8730d7458a171d48e",
+    "adaptation.npz": "c1c73469a7bcbbe8da0056268c2ac6cc2f7ec6958e955e8a26dd0d9a65d5faba",
+    "development.json": "a0db8f7e90a7a37916d4cc1c7c6d2a094324b94ee43fcd57299d55e80c8e02c1",
+    "evaluation.json": "c9252004a21c63e3df92716c468697f300a7843b347781fe53c4a970d4bcaff8",
+    "evaluation.npz": "866101104b8cbf6e84e4acd1fbcc74ffb5232e1c9434fc7576bdedd200ed6af5"
+  }
+}

@@ -1,0 +1,9 @@
+method,training_seed,budget_K,actual_K,n,success_rate,goal_error_m,anchors,delta_success_vs_fixed_source
+fixed_source_train,0,0,0,2,0.0,0.2480857529163149,45,0.0
+fixed_source_train,0,1,1,2,0.0,0.2480857529163149,45,0.0
+selection_only,0,0,0,2,0.0,0.2480857529163149,45,0.0
+selection_only,0,1,1,2,0.0,0.2480857529163149,45,0.0
+retarget_only,0,0,0,2,0.0,0.2480857529163149,45,0.0
+retarget_only,0,1,1,2,0.0,0.2480857529163149,90,0.0
+our_full,0,0,0,2,0.0,0.2480857529163149,45,0.0
+our_full,0,1,1,2,0.0,0.2480857529163149,76,0.0

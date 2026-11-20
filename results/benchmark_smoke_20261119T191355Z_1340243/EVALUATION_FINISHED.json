@@ -1,0 +1,8 @@
+{
+  "requested_checkpoints": 20,
+  "recorded_checkpoints": 20,
+  "actual_evaluation_rollouts": 24,
+  "adaptation_rollouts": 8,
+  "development_rollouts": 0,
+  "evaluation_used_for_learning": false
+}

@@ -1,0 +1,56 @@
+{
+  "role": "evaluation",
+  "count": 2,
+  "states": [
+    {
+      "id": "evaluation_0000",
+      "role": "evaluation",
+      "simulator_seed": 76292026,
+      "index": 0,
+      "signature": "b48642260aba490eff8c2cc103831c490b623e1dfb1fba6c96a4bc4de6bb9809",
+      "plate_xy": [
+        0.06239643941083411,
+        -0.006784378211678297
+      ],
+      "initial_canonical_state": [
+        -0.214681476354599,
+        -0.0033622179180383682,
+        1.1600232124328613,
+        3.160278797149658,
+        -0.02000436559319496,
+        -0.1020246222615242,
+        0.03999999910593033,
+        -0.03999999910593033
+      ],
+      "validation": "static_native_reset_valid",
+      "physics_steps": 0
+    },
+    {
+      "id": "evaluation_0001",
+      "role": "evaluation",
+      "simulator_seed": 76292027,
+      "index": 1,
+      "signature": "7172c9257c3febfc0d729551a1a26ca218f35c9693babc53dc4e3d9b4a2f61aa",
+      "plate_xy": [
+        0.04669136467041887,
+        -0.022680650641681795
+      ],
+      "initial_canonical_state": [
+        -0.214681476354599,
+        -0.0033622179180383682,
+        1.1600232124328613,
+        3.160278797149658,
+        -0.02000436559319496,
+        -0.1020246222615242,
+        0.03999999910593033,
+        -0.03999999910593033
+      ],
+      "validation": "static_native_reset_valid",
+      "physics_steps": 0
+    }
+  ],
+  "rejections": [],
+  "physics_steps_used_for_validation": 0,
+  "distribution": "Native LIBERO BDDL sampler; plate x=[.04,.06], y=[-.03,-.01]; other objects/fixtures sampled natively",
+  "note": "Distinct narrow in-distribution initial states, not broad OOD generalization; no reuse of the old two scenes"
+}

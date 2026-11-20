@@ -1,0 +1,33 @@
+{
+  "role": "adaptation",
+  "count": 1,
+  "states": [
+    {
+      "id": "adaptation_0000",
+      "role": "adaptation",
+      "simulator_seed": 76192026,
+      "index": 0,
+      "signature": "78c9a9d52bb46c0de5bfcab7643154c37c8fadd99e029231dbcd054766aa6e52",
+      "plate_xy": [
+        0.05687074980971164,
+        -0.005867585274023484
+      ],
+      "initial_canonical_state": [
+        -0.214681476354599,
+        -0.0033622179180383682,
+        1.1600232124328613,
+        3.160278797149658,
+        -0.02000436559319496,
+        -0.1020246222615242,
+        0.03999999910593033,
+        -0.03999999910593033
+      ],
+      "validation": "static_native_reset_valid",
+      "physics_steps": 0
+    }
+  ],
+  "rejections": [],
+  "physics_steps_used_for_validation": 0,
+  "distribution": "Native LIBERO BDDL sampler; plate x=[.04,.06], y=[-.03,-.01]; other objects/fixtures sampled natively",
+  "note": "Distinct narrow in-distribution initial states, not broad OOD generalization; no reuse of the old two scenes"
+}

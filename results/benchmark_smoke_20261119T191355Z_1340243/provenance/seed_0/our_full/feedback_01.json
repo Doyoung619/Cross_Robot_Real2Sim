@@ -1,0 +1,386 @@
+{
+  "input_episode_id": "f03490906cb44a45875f52fefbc4df77",
+  "diagnostic": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 1,
+    "failed_episodes": 1,
+    "dominant_hypothesis": "insufficient_plate_contact",
+    "contact_fraction": 0.0,
+    "plate_contact_fraction": 0.0,
+    "contact_rate": 0.0,
+    "mean_eef_plate_gap_m": 0.22614726804570157,
+    "mean_near_surface_gap_m": 0.17685375496197253,
+    "mean_near_plate_height_m": 0.18685565795372272,
+    "mean_closest_surface_vector_m": [
+      0.05165848168251517,
+      -0.035338770405966106,
+      -0.1650374505948919
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.10687885162385544,
+      0.2158698512586727
+    ],
+    "direction_alignment": null,
+    "response_gain": null,
+    "mean_goal_error_m": 0.24087939224200058,
+    "mean_plate_displacement_m": 0.06750016585804325,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.4437027619053402,
+        0.8961740116057668
+      ],
+      "measured_contact_gap_vector_m": [
+        0.05165848168251517,
+        -0.035338770405966106,
+        -0.1650374505948919
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.0,
+          "near_surface_gap_m": 0.17685375496197253
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": null
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": null
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "feedback_mode": "full",
+  "target_actions_used_as_labels": false,
+  "source_pool": "same50 successful Panda demonstrations",
+  "rankings": [
+    {
+      "demo_id": "demo_37",
+      "score": 2.9713236655990665,
+      "start": 31,
+      "end": 203
+    },
+    {
+      "demo_id": "demo_36",
+      "score": 2.935514429065655,
+      "start": 31,
+      "end": 145
+    },
+    {
+      "demo_id": "demo_14",
+      "score": 2.9091002854561996,
+      "start": 22,
+      "end": 178
+    },
+    {
+      "demo_id": "demo_10",
+      "score": 2.8947475719031526,
+      "start": 25,
+      "end": 215
+    },
+    {
+      "demo_id": "demo_33",
+      "score": 2.8922831699125964,
+      "start": 25,
+      "end": 126
+    },
+    {
+      "demo_id": "demo_20",
+      "score": 2.889884940626435,
+      "start": 25,
+      "end": 175
+    },
+    {
+      "demo_id": "demo_41",
+      "score": 2.8842559430696055,
+      "start": 30,
+      "end": 188
+    },
+    {
+      "demo_id": "demo_28",
+      "score": 2.882273052204088,
+      "start": 28,
+      "end": 147
+    },
+    {
+      "demo_id": "demo_24",
+      "score": 2.8795418142689724,
+      "start": 34,
+      "end": 169
+    },
+    {
+      "demo_id": "demo_25",
+      "score": 2.8758620090527107,
+      "start": 24,
+      "end": 153
+    },
+    {
+      "demo_id": "demo_43",
+      "score": 2.8748537692735776,
+      "start": 33,
+      "end": 182
+    },
+    {
+      "demo_id": "demo_2",
+      "score": 2.8716599133271297,
+      "start": 26,
+      "end": 125
+    },
+    {
+      "demo_id": "demo_6",
+      "score": 2.867310491915247,
+      "start": 27,
+      "end": 154
+    },
+    {
+      "demo_id": "demo_34",
+      "score": 2.860690287935496,
+      "start": 22,
+      "end": 154
+    },
+    {
+      "demo_id": "demo_22",
+      "score": 2.859597286877175,
+      "start": 20,
+      "end": 147
+    },
+    {
+      "demo_id": "demo_17",
+      "score": 2.8592456328209246,
+      "start": 30,
+      "end": 134
+    },
+    {
+      "demo_id": "demo_31",
+      "score": 2.847613372319306,
+      "start": 24,
+      "end": 135
+    },
+    {
+      "demo_id": "demo_16",
+      "score": 2.8441187383402604,
+      "start": 22,
+      "end": 206
+    },
+    {
+      "demo_id": "demo_46",
+      "score": 2.841762462029909,
+      "start": 30,
+      "end": 138
+    },
+    {
+      "demo_id": "demo_4",
+      "score": 2.839897509696097,
+      "start": 27,
+      "end": 193
+    },
+    {
+      "demo_id": "demo_29",
+      "score": 2.8340761724446946,
+      "start": 27,
+      "end": 136
+    },
+    {
+      "demo_id": "demo_21",
+      "score": 2.8314333341926585,
+      "start": 18,
+      "end": 149
+    },
+    {
+      "demo_id": "demo_30",
+      "score": 2.824938007841112,
+      "start": 30,
+      "end": 142
+    },
+    {
+      "demo_id": "demo_49",
+      "score": 2.823374420789433,
+      "start": 28,
+      "end": 118
+    },
+    {
+      "demo_id": "demo_35",
+      "score": 2.8190700426013318,
+      "start": 20,
+      "end": 169
+    },
+    {
+      "demo_id": "demo_40",
+      "score": 2.8175446848280554,
+      "start": 39,
+      "end": 128
+    },
+    {
+      "demo_id": "demo_42",
+      "score": 2.8172494815827274,
+      "start": 28,
+      "end": 130
+    },
+    {
+      "demo_id": "demo_27",
+      "score": 2.816608107847271,
+      "start": 38,
+      "end": 220
+    },
+    {
+      "demo_id": "demo_32",
+      "score": 2.8093114071612013,
+      "start": 28,
+      "end": 115
+    },
+    {
+      "demo_id": "demo_38",
+      "score": 2.8072289589434547,
+      "start": 29,
+      "end": 134
+    },
+    {
+      "demo_id": "demo_3",
+      "score": 2.80475203853402,
+      "start": 33,
+      "end": 200
+    },
+    {
+      "demo_id": "demo_26",
+      "score": 2.802622844158591,
+      "start": 36,
+      "end": 145
+    },
+    {
+      "demo_id": "demo_12",
+      "score": 2.7911110796809697,
+      "start": 36,
+      "end": 142
+    },
+    {
+      "demo_id": "demo_48",
+      "score": 2.789220701152943,
+      "start": 37,
+      "end": 183
+    },
+    {
+      "demo_id": "demo_7",
+      "score": 2.7870773278001675,
+      "start": 26,
+      "end": 123
+    },
+    {
+      "demo_id": "demo_9",
+      "score": 2.78411032074649,
+      "start": 17,
+      "end": 146
+    },
+    {
+      "demo_id": "demo_13",
+      "score": 2.780220157727093,
+      "start": 34,
+      "end": 151
+    },
+    {
+      "demo_id": "demo_19",
+      "score": 2.776165067097987,
+      "start": 26,
+      "end": 163
+    },
+    {
+      "demo_id": "demo_39",
+      "score": 2.7750382277032295,
+      "start": 34,
+      "end": 146
+    },
+    {
+      "demo_id": "demo_1",
+      "score": 2.771607184385108,
+      "start": 28,
+      "end": 128
+    },
+    {
+      "demo_id": "demo_8",
+      "score": 2.767238907709457,
+      "start": 28,
+      "end": 139
+    },
+    {
+      "demo_id": "demo_15",
+      "score": 2.7663441652196665,
+      "start": 23,
+      "end": 136
+    },
+    {
+      "demo_id": "demo_0",
+      "score": 2.7647389698910385,
+      "start": 33,
+      "end": 155
+    },
+    {
+      "demo_id": "demo_11",
+      "score": 2.7641748834094475,
+      "start": 21,
+      "end": 144
+    },
+    {
+      "demo_id": "demo_47",
+      "score": 2.757343136138937,
+      "start": 25,
+      "end": 141
+    },
+    {
+      "demo_id": "demo_45",
+      "score": 2.753927119936131,
+      "start": 26,
+      "end": 132
+    },
+    {
+      "demo_id": "demo_18",
+      "score": 2.734532981077634,
+      "start": 24,
+      "end": 167
+    },
+    {
+      "demo_id": "demo_44",
+      "score": 2.7237711206239448,
+      "start": 27,
+      "end": 143
+    },
+    {
+      "demo_id": "demo_23",
+      "score": 2.708870957510288,
+      "start": 21,
+      "end": 129
+    }
+  ],
+  "chosen": [
+    {
+      "demo_id": "demo_32",
+      "score": 2.8093114071612013,
+      "start": 28,
+      "end": 115
+    }
+  ],
+  "new_anchors": 31,
+  "data_audit": "/home/dheo/Cross_Robot_Real2Sim/runs/benchmark_smoke_20261119T191355Z_1340243/shared/data/ec9ddfe553f37dd5da6f30af63caa2a2b4366d4275b111e9a9e69d6a700c3b93/audit.json",
+  "offsets": [
+    {
+      "demo_id": "demo_32",
+      "offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

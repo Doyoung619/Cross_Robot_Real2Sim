@@ -1,0 +1,170 @@
+{
+  "created_at": "2026-11-19T19:14:11.622083+00:00",
+  "config_sha256": "0bf64656075ac10ddc8e7d3d66f69fb463bc1632166ed383c51e3f2e43ae1778",
+  "code_sha256": {
+    "scripts/vla_feedback_processing.py": "847fb6cce06749ca82cef71118cf18c3abf401012bc3094c6d6f4a01b876d6ca",
+    "scripts/vla_pilot_common.py": "3f71000da8ac62ca8a4b7cde6232f86215185b6e1e805e5b2bcf997695f332a5",
+    "scripts/vla_pilot_learning.py": "90df67ce307ba5adee9264eb9775eab9d6460e76ffb45c1062e1d88b9aa9636e",
+    "src/cross_robot_real2sim/benchmark/__init__.py": "9ce1e1a517602175171ce8540ca6cdaf5228799ced2f7b4f5c283ad4e819ba25",
+    "src/cross_robot_real2sim/benchmark/__main__.py": "d43055dbee17c1b028d410a6d617d6e71e7bf0f66dcdb4add368e1f305ae742b",
+    "src/cross_robot_real2sim/benchmark/core.py": "e7cb76292585040dd94cf36fe91f82c8985692d658b5c815d914878499b88367",
+    "src/cross_robot_real2sim/benchmark/data.py": "42fb62f2d1e640af5e19703f25e6d4b5587abb32f0544dc91bbc8cebf846ed8a",
+    "src/cross_robot_real2sim/benchmark/environment.py": "222383ff884789654d7449ec0c67286800f806709b4f053b0d31d455ddf45fa3",
+    "src/cross_robot_real2sim/benchmark/evaluation.py": "f2b36cee3eced7c9aee66a2b9c67a2e25a1fa07ce4701356da8c4e8632cacabf",
+    "src/cross_robot_real2sim/benchmark/experiment.py": "d53d9e0a0b50802aedf34fa3ca60d5e7575cba9b24f18c88a842cd9b1df720df",
+    "src/cross_robot_real2sim/benchmark/gr1.py": "c95c12676a15195e0c639584363bdc242c10e44fc6bba22be224d3a916b4fee0",
+    "src/cross_robot_real2sim/benchmark/learning.py": "4b069e8697d7d0c1fb7ab2bfab3132dcb538eb45b8ee34d07acc37193cffff94",
+    "src/cross_robot_real2sim/benchmark/report.py": "1ccd275e06ea82e401099b82013da42a1949a0eab3265dc32b3afa503bcc7e79",
+    "src/cross_robot_real2sim/benchmark/retrieval.py": "718f10a89e23055e5b4fc5848574126ae4a02da2e27140f55b1e1c2ce8087526",
+    "scripts/vla_pilot_processing.py::resolve_xml": "e7a5fb38e7963245a4cae82d6815cac38023913b72062ded03dc660113dcf1a5",
+    "scripts/vla_pilot_processing.py::source_model": "8f2aeacb4d0ecad9d17a9f2ade93af43446e269e7392184da290423d3cd0271e",
+    "scripts/vla_pilot_processing.py::restore": "dfb686cf59c2f91f7f1ad869887c0b9912524b6413bd0d078fcec0f00adb312f",
+    "scripts/vla_pilot_processing.py::dataset_pose": "edaa077c8aae03ddb6c035d7f0634b367f03a5810b69ab6818047ac5c874e079",
+    "scripts/vla_pilot_processing.py::copy_scene": "803a0b897b9cacd49a6ad6d615e44d24c1932cbad1e2fbc9beb1ffc3187ca209",
+    "scripts/vla_pilot_processing.py::raw_target": "f48778efb8dd41b5230454b2f384a6950a234d15096181d1e90b8a8898b13a31",
+    "scripts/vla_pilot_processing.py::ik": "e9d83019e96e04da5781bc4e4f6704d84fc636e23a10fbcb2b70182bc6c65b9e",
+    "scripts/vla_pilot_processing.py::canonical_state": "7d0fc8fdd35c71c8b035a54675fa3106f2285399095f6c5e84a8582c7189c1a1",
+    "scripts/vla_pilot_processing.py::unintended_contacts": "390905e6a9b206e16bda5cf30df093cfd886d587db8bc83fd6a8843a2e4d6875",
+    "scripts/vla_pilot_processing.py::camera_calibration": "3d80e8654aa72f5bb7fe19c79e392c71addbc338b05f4f30470cbb9a276e0255",
+    "scripts/vla_feedback_rollouts.py::_contact_ids": "540c345d7c771f3355f1026ab78f62eef42fbddae542ddbc2b21e5e287268627",
+    "scripts/vla_feedback_rollouts.py::_contact_measurement": "69258827ab1c302835d676fb32f47f5b51557a7109b4f9af2954bb914fffda39",
+    "scripts/vla_feedback_rollouts.py::_aggregate": "9e3c9819fe8af53a00fb1a6f2bee0b6bf0be5f1edafc041194d56cb8c3e45d83",
+    "scripts/vla_feedback_rollouts.py::diagnose": "e567bfa65b0f3004a0dd9a02950396cc080e44ce380b1d5da1599abd81c6edd1"
+  },
+  "state_files": {
+    "adaptation.json": "04710dd3fb449b500ba0a05be4d4b3538b3a79b7697f0fe8730d7458a171d48e",
+    "adaptation.npz": "c1c73469a7bcbbe8da0056268c2ac6cc2f7ec6958e955e8a26dd0d9a65d5faba",
+    "development.json": "a0db8f7e90a7a37916d4cc1c7c6d2a094324b94ee43fcd57299d55e80c8e02c1",
+    "evaluation.json": "c9252004a21c63e3df92716c468697f300a7843b347781fe53c4a970d4bcaff8",
+    "evaluation.npz": "866101104b8cbf6e84e4acd1fbcc74ffb5232e1c9434fc7576bdedd200ed6af5",
+    "manifest.json": "a4aad5c5df40b73b79afa104ee1e7f030fe41dfbe12f819ec59f4903443027d9"
+  },
+  "shared_assets": {
+    "camera_calibration.npz": "847ebb6d094239316e7b23c0880fcba007135973211d2ee6e6c00fa4a1f563bf",
+    "gr1_model/robot.xml": "152fb78cf79692f6312a76a44fc3e27f6d623328579bd65e44d5ce51fe2423fa"
+  },
+  "source_hdf5_sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+  "pretrained_weight_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+  "model": "lerobot/smolvla_libero@a24f1f380461b665158d52acd140152c79e8b36d",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch": "2.6.0+cu124"
+  },
+  "common_target": "GR1 right arm + Robotiq85; all other joints removed at unchanged fixed poses",
+  "initial_controller": "OSC_POSE20Hz,50 predicted actions,5 executed,10 flow steps",
+  "selection_rule": "No final evaluation model/hyperparameter selection; fixed last checkpoint at each allowed K",
+  "development_rollout_budget": 0,
+  "preparation_wall_seconds": 16.34169834200293,
+  "methods": {
+    "pretrained": {
+      "id": "pretrained",
+      "label": "Pretrained SmolVLA",
+      "selection": "none",
+      "retarget": "legacy",
+      "feedback": "none",
+      "train_more": false,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "random_lora": {
+      "id": "random_lora",
+      "label": "Random source + LoRA",
+      "selection": "random",
+      "retarget": "legacy",
+      "feedback": "none",
+      "train_more": true,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "b_feasible_lora": {
+      "id": "b_feasible_lora",
+      "label": "B-feasible source + LoRA (frozen after K=0)",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "none",
+      "train_more": false,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "fixed_source_train": {
+      "id": "fixed_source_train",
+      "label": "Fixed-source additional LoRA",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "none",
+      "train_more": true,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "selection_only": {
+      "id": "selection_only",
+      "label": "Failure-guided selection only",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "selection",
+      "train_more": true,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "retarget_only": {
+      "id": "retarget_only",
+      "label": "Failure-guided retargeting only",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "retarget",
+      "train_more": true,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    },
+    "cei_inspired": {
+      "id": "cei_inspired",
+      "label": "CEI-inspired geometry alignment",
+      "selection": "feasible",
+      "retarget": "functional",
+      "feedback": "none",
+      "train_more": true,
+      "available": true,
+      "fidelity": "inspired",
+      "unavailable_reason": ""
+    },
+    "strap_style": {
+      "id": "strap_style",
+      "label": "STRAP-style subtrajectory retrieval",
+      "selection": "strap",
+      "retarget": "legacy",
+      "feedback": "strap",
+      "train_more": true,
+      "available": true,
+      "fidelity": "style",
+      "unavailable_reason": ""
+    },
+    "fert_inspired": {
+      "id": "fert_inspired",
+      "label": "FERT-inspired failure retrieval",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "fert",
+      "train_more": true,
+      "available": true,
+      "fidelity": "inspired",
+      "unavailable_reason": ""
+    },
+    "our_full": {
+      "id": "our_full",
+      "label": "Failure-guided selection + retargeting",
+      "selection": "feasible",
+      "retarget": "legacy",
+      "feedback": "full",
+      "train_more": true,
+      "available": true,
+      "fidelity": "ablation",
+      "unavailable_reason": ""
+    }
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "input_episode_id": "fedc0a527912428daeda754860cf29ff",
+  "diagnostic": {
+    "status": "diagnosed",
+    "classification": "heuristic_candidates_not_causal_proof",
+    "evaluated_episodes": 1,
+    "failed_episodes": 1,
+    "dominant_hypothesis": "insufficient_plate_contact",
+    "contact_fraction": 0.0,
+    "plate_contact_fraction": 0.0,
+    "contact_rate": 0.0,
+    "mean_eef_plate_gap_m": 0.22483129332948404,
+    "mean_near_surface_gap_m": 0.1753507355000402,
+    "mean_near_plate_height_m": 0.1858718713707759,
+    "mean_closest_surface_vector_m": [
+      0.05117902657287624,
+      -0.03366251520952622,
+      -0.1639245813524121
+    ],
+    "mean_remaining_goal_vector_xy": [
+      -0.10687885162385544,
+      0.2158698512586727
+    ],
+    "direction_alignment": null,
+    "response_gain": null,
+    "mean_goal_error_m": 0.24087939224200058,
+    "mean_plate_displacement_m": 0.06750016585804314,
+    "feedback_request": {
+      "source_query": "successful contact-rich A segments aligned with remaining goal direction",
+      "desired_push_direction_xy": [
+        -0.4437027619053402,
+        0.8961740116057668
+      ],
+      "measured_contact_gap_vector_m": [
+        0.05117902657287624,
+        -0.03366251520952622,
+        -0.1639245813524121
+      ],
+      "max_contact_position_correction_m": 0.02,
+      "max_height_correction_m": 0.01,
+      "require_recomputed_full_action_chunks": true,
+      "target_trace_action_supervision_allowed": false
+    },
+    "hypotheses": [
+      {
+        "name": "contact_geometry",
+        "evidence": {
+          "contact_fraction": 0.0,
+          "near_surface_gap_m": 0.1753507355000402
+        }
+      },
+      {
+        "name": "push_direction",
+        "evidence": {
+          "alignment": null
+        }
+      },
+      {
+        "name": "contact_dynamics_or_action_scale",
+        "evidence": {
+          "response_gain": null
+        },
+        "causally_verified": false
+      }
+    ]
+  },
+  "feedback_mode": "strap",
+  "target_actions_used_as_labels": false,
+  "source_pool": "same50 successful Panda demonstrations",
+  "chosen": [
+    {
+      "demo_id": "demo_19",
+      "start": 0,
+      "end": 47,
+      "cost": 0.7248769823991617,
+      "matched_start": 0,
+      "matched_end": 17
+    },
+    {
+      "demo_id": "demo_49",
+      "start": 0,
+      "end": 39,
+      "cost": 0.7420450161594205,
+      "matched_start": 0,
+      "matched_end": 9
+    }
+  ],
+  "retrieval": {
+    "query_control_steps": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "rankings": [
+      {
+        "demo_id": "demo_19",
+        "start": 0,
+        "end": 47,
+        "cost": 0.7248769823991617,
+        "matched_start": 0,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_49",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7420450161594205,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_47",
+        "start": 0,
+        "end": 47,
+        "cost": 0.7498838759956119,
+        "matched_start": 0,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_41",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7600411185225179,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_26",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7640547112668427,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_23",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7722243873732544,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_21",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7783685796195052,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_40",
+        "start": 0,
+        "end": 47,
+        "cost": 0.7803562863405309,
+        "matched_start": 8,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_20",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7836116694864138,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_27",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7849401937276177,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_38",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7856572932699923,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_36",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7866176561254341,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_35",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7872209438925275,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_13",
+        "start": 0,
+        "end": 39,
+        "cost": 0.787396384907044,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_33",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7918938666291058,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_30",
+        "start": 0,
+        "end": 39,
+        "cost": 0.79288693909441,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_11",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7976182929730311,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_18",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7989191678026054,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_25",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7992850773191231,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_46",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7995007586361722,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_5",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7998494245821759,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_0",
+        "start": 0,
+        "end": 39,
+        "cost": 0.7998586853472289,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_45",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8001481833967639,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_16",
+        "start": 0,
+        "end": 47,
+        "cost": 0.8022240503561305,
+        "matched_start": 0,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_28",
+        "start": 0,
+        "end": 39,
+        "cost": 0.80257195675751,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_10",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8036130673676258,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_32",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8049725710028105,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_7",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8087169786166741,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_22",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8110727321081065,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_48",
+        "start": 0,
+        "end": 47,
+        "cost": 0.8111394154617093,
+        "matched_start": 0,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_2",
+        "start": 0,
+        "end": 39,
+        "cost": 0.812932440518386,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_42",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8142925094214756,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_8",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8146309972587922,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_24",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8151018289681299,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_31",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8158383368703684,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_9",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8159065393743594,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_44",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8159483389960323,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_43",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8165164982896463,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_1",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8183499945213443,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_14",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8193733191435879,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_29",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8194421472562105,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_37",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8212223377524155,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_4",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8246109759649609,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_34",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8266421187967821,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_17",
+        "start": 0,
+        "end": 39,
+        "cost": 0.834008226518834,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_3",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8344112949977085,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_6",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8363827084543203,
+        "matched_start": 8,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_15",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8483495250756237,
+        "matched_start": 0,
+        "matched_end": 9
+      },
+      {
+        "demo_id": "demo_12",
+        "start": 0,
+        "end": 47,
+        "cost": 0.8551691584983616,
+        "matched_start": 8,
+        "matched_end": 17
+      },
+      {
+        "demo_id": "demo_39",
+        "start": 0,
+        "end": 39,
+        "cost": 0.8617860666445214,
+        "matched_start": 0,
+        "matched_end": 9
+      }
+    ],
+    "slope_constraint": "standard_three_way",
+    "target_success_demonstrations_used": 0,
+    "replay_source": "successful A demonstrations converted offline; not a native successful B buffer"
+  },
+  "new_anchors": 41,
+  "data_audit": "/home/dheo/Cross_Robot_Real2Sim/runs/benchmark_smoke_20261119T191355Z_1340243/shared/data/65251fa3f58d8af1f3a482289eab834bd62ffdfb45ab3481ce52450d8b89df00/audit.json",
+  "offsets": [
+    {
+      "demo_id": "demo_19",
+      "offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "demo_id": "demo_49",
+      "offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2011 @@
+{
+  "episodes": [
+    {
+      "demo_id": "demo_0",
+      "steps": 155,
+      "initial_plate_xyz": [
+        0.0407576338036232,
+        -0.009042719945926888,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0004965842478832716,
+          "orientation_error_rad": 0.02934444032809423,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00022988655427554666,
+          "orientation_error_rad": 0.00031795151769669955,
+          "feasible": true,
+          "joint_margin_rad": 0.2618139661669027,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.044824122879891036,
+          "orientation_error_rad": 0.08609727859557999,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0019766486509540833,
+          "orientation_error_rad": 0.0035740041458953782,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_1",
+      "steps": 128,
+      "initial_plate_xyz": [
+        0.03893894747025666,
+        -0.021896267519568247,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005900334962002941,
+          "orientation_error_rad": 0.024230274025340497,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.02609445241583064,
+          "orientation_error_rad": 0.10921928956720194,
+          "feasible": false,
+          "joint_margin_rad": 0.23852734175887852,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06227764957681031,
+          "orientation_error_rad": 0.2989460062764725,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1911203494285746,
+          "orientation_error_rad": 0.40736331112996,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_2",
+      "steps": 125,
+      "initial_plate_xyz": [
+        0.047391036077170046,
+        -0.03370109712459088,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0010738070791919266,
+          "orientation_error_rad": 0.0031671089366022065,
+          "feasible": true,
+          "joint_margin_rad": 0.03325530907167275,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.025609752064072313,
+          "orientation_error_rad": 0.11836384035159023,
+          "feasible": false,
+          "joint_margin_rad": 0.233082673679036,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07580125348272702,
+          "orientation_error_rad": 0.2657183570279369,
+          "feasible": false,
+          "joint_margin_rad": 0.05275117039380567,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 9.432346202595013e-05,
+          "orientation_error_rad": 3.3525824195468386e-05,
+          "feasible": true,
+          "joint_margin_rad": 0.1683375284523817,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_3",
+      "steps": 200,
+      "initial_plate_xyz": [
+        0.05065287510604998,
+        -0.010873379996335492,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0004638713584365449,
+          "orientation_error_rad": 0.031294962313293595,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.029065700757532342,
+          "orientation_error_rad": 0.07083924508986954,
+          "feasible": false,
+          "joint_margin_rad": 0.07467647139789296,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1292986258590711,
+          "orientation_error_rad": 0.6125636425959902,
+          "feasible": false,
+          "joint_margin_rad": 0.07467647139789296,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.18142812280619183,
+          "orientation_error_rad": 0.3527656957091168,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_4",
+      "steps": 193,
+      "initial_plate_xyz": [
+        0.04638080742452954,
+        -0.008405154252623642,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0007729963972533005,
+          "orientation_error_rad": 0.023719036130278103,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0468786805807966,
+          "orientation_error_rad": 0.3560395007828748,
+          "feasible": false,
+          "joint_margin_rad": 0.20595426007929818,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.14420603965608086,
+          "orientation_error_rad": 0.48251258383693973,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.035130042330778495,
+          "orientation_error_rad": 0.06560333420126521,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_5",
+      "steps": 117,
+      "initial_plate_xyz": [
+        0.05654521740042337,
+        -0.005524125054985286,
+        0.9023145976636144
+      ],
+      "feasible": true,
+      "probes": [
+        {
+          "position_error_m": 0.0005291268005549306,
+          "orientation_error_rad": 0.027069069573085653,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0056982100929147675,
+          "orientation_error_rad": 0.020034728521226862,
+          "feasible": true,
+          "joint_margin_rad": 0.1012391222984263,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00535039690014235,
+          "orientation_error_rad": 0.011548793226430439,
+          "feasible": true,
+          "joint_margin_rad": 0.09116149951740088,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00011599525487694933,
+          "orientation_error_rad": 9.509047723916656e-05,
+          "feasible": true,
+          "joint_margin_rad": 0.29938949233197754,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_6",
+      "steps": 154,
+      "initial_plate_xyz": [
+        0.06183077038765336,
+        -0.009029438590742577,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00041297545856429536,
+          "orientation_error_rad": 0.03195987421222038,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.028001497699817055,
+          "orientation_error_rad": 0.1039766299442306,
+          "feasible": false,
+          "joint_margin_rad": 0.01948500204622855,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10108693768299536,
+          "orientation_error_rad": 0.22723110692252194,
+          "feasible": false,
+          "joint_margin_rad": 0.01948500204622855,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08087812069861319,
+          "orientation_error_rad": 0.44389760331637146,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_7",
+      "steps": 123,
+      "initial_plate_xyz": [
+        0.047409494133511275,
+        -0.012104879746643947,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0010242047358948038,
+          "orientation_error_rad": 0.003128413678975714,
+          "feasible": true,
+          "joint_margin_rad": 0.006419167126217181,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0003799179087727173,
+          "orientation_error_rad": 0.0005111511482486129,
+          "feasible": true,
+          "joint_margin_rad": 0.25759967091786384,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.008444717245582876,
+          "orientation_error_rad": 0.02015860133135581,
+          "feasible": true,
+          "joint_margin_rad": 0.0517110727049086,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.7153960992521918,
+          "orientation_error_rad": 2.430000347743793,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_8",
+      "steps": 139,
+      "initial_plate_xyz": [
+        0.04265284948536993,
+        -0.01665655652371364,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.000572019422021169,
+          "orientation_error_rad": 0.032313041105707034,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0013201770652577114,
+          "orientation_error_rad": 0.0007797660179598012,
+          "feasible": true,
+          "joint_margin_rad": 0.2254842411233163,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0377001546230616,
+          "orientation_error_rad": 0.16639584713945754,
+          "feasible": false,
+          "joint_margin_rad": 0.005151413008282868,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.001453394635971452,
+          "orientation_error_rad": 0.00440308570981399,
+          "feasible": true,
+          "joint_margin_rad": 0.1967988867765167,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_9",
+      "steps": 146,
+      "initial_plate_xyz": [
+        0.03796559278483339,
+        -0.01715562780000932,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0015134907198284875,
+          "orientation_error_rad": 0.003711859855770723,
+          "feasible": true,
+          "joint_margin_rad": 0.06102453538228338,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.03637623981318002,
+          "orientation_error_rad": 0.1539830303392203,
+          "feasible": false,
+          "joint_margin_rad": 0.22545879893510684,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0712909035081412,
+          "orientation_error_rad": 0.3763892197867749,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.11174009924307536,
+          "orientation_error_rad": 0.21352623672359908,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_10",
+      "steps": 215,
+      "initial_plate_xyz": [
+        0.04541779209544355,
+        -0.025746786194001857,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00014688182374107626,
+          "orientation_error_rad": 0.0005030070267164306,
+          "feasible": true,
+          "joint_margin_rad": 0.0021181121662337075,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04634775174221256,
+          "orientation_error_rad": 0.23380303192893218,
+          "feasible": false,
+          "joint_margin_rad": 0.09500219543001981,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1193892688460193,
+          "orientation_error_rad": 0.28289857103124866,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00818795307830712,
+          "orientation_error_rad": 0.5553934156228397,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_11",
+      "steps": 144,
+      "initial_plate_xyz": [
+        0.03835651210832804,
+        -0.013093296180064749,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005055777965618731,
+          "orientation_error_rad": 0.023863968065187837,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00037437973981200353,
+          "orientation_error_rad": 0.00032707996033151193,
+          "feasible": true,
+          "joint_margin_rad": 0.25580424786865336,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04019053245906946,
+          "orientation_error_rad": 0.09783673051774208,
+          "feasible": false,
+          "joint_margin_rad": 0.01781684153124058,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.21923062274476016,
+          "orientation_error_rad": 0.4613366685931554,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_12",
+      "steps": 142,
+      "initial_plate_xyz": [
+        0.04455713837964196,
+        -0.01877285246095084,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.000432770381475898,
+          "orientation_error_rad": 0.03331179660277115,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.043398642731982205,
+          "orientation_error_rad": 0.30133550421686894,
+          "feasible": false,
+          "joint_margin_rad": 0.25957335497605044,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08309920873542243,
+          "orientation_error_rad": 0.1544716832668586,
+          "feasible": false,
+          "joint_margin_rad": 0.09532059950166272,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10679374623571936,
+          "orientation_error_rad": 0.19838561752688763,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_13",
+      "steps": 151,
+      "initial_plate_xyz": [
+        0.06282815887527868,
+        -0.019769244359703998,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0006593741775866697,
+          "orientation_error_rad": 0.023408759011927523,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.11629709378616121,
+          "orientation_error_rad": 0.43137330985343575,
+          "feasible": false,
+          "joint_margin_rad": 0.22832097987054734,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.16605478820736094,
+          "orientation_error_rad": 0.3217070469435381,
+          "feasible": false,
+          "joint_margin_rad": 0.13481380145428445,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.09154695909497564,
+          "orientation_error_rad": 0.1696229309143985,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_14",
+      "steps": 178,
+      "initial_plate_xyz": [
+        0.06422655617567448,
+        -0.019194386242143126,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00015770900348885866,
+          "orientation_error_rad": 0.02811305828261159,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.05373277907530245,
+          "orientation_error_rad": 0.19984157827811375,
+          "feasible": false,
+          "joint_margin_rad": 0.09602632698289343,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.15142679095228648,
+          "orientation_error_rad": 0.3829798759706198,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.001963779547097739,
+          "orientation_error_rad": 0.0034938192432459473,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_15",
+      "steps": 136,
+      "initial_plate_xyz": [
+        0.05949382724239373,
+        -0.008492967701109133,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0008241195388256865,
+          "orientation_error_rad": 0.003760450168409069,
+          "feasible": true,
+          "joint_margin_rad": 0.005377631346845315,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.05199518396519478,
+          "orientation_error_rad": 0.20586123666230868,
+          "feasible": false,
+          "joint_margin_rad": 0.10021028628693923,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1945735823719716,
+          "orientation_error_rad": 0.6229646670976783,
+          "feasible": false,
+          "joint_margin_rad": 0.08545153319022725,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1833882417503803,
+          "orientation_error_rad": 0.37843848005479136,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_16",
+      "steps": 206,
+      "initial_plate_xyz": [
+        0.04796362115212757,
+        -0.014575412018043922,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00017335820868659977,
+          "orientation_error_rad": 0.007412789364694685,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.036201357749529116,
+          "orientation_error_rad": 0.2112285747352267,
+          "feasible": false,
+          "joint_margin_rad": 0.2162077572393385,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.13388804623565417,
+          "orientation_error_rad": 0.515653758522133,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 6.280347672203392e-05,
+          "orientation_error_rad": 8.289608009044282e-05,
+          "feasible": true,
+          "joint_margin_rad": 0.3227786111913704,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_17",
+      "steps": 134,
+      "initial_plate_xyz": [
+        0.04808577276573624,
+        -0.019994133899100406,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0006196487037876549,
+          "orientation_error_rad": 0.02649091608791923,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04479269059228481,
+          "orientation_error_rad": 0.2586971846513407,
+          "feasible": false,
+          "joint_margin_rad": 0.25140987998875264,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07722193627732696,
+          "orientation_error_rad": 0.3233716343135157,
+          "feasible": false,
+          "joint_margin_rad": 0.03339857582994088,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10371196701666921,
+          "orientation_error_rad": 0.190775855349302,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_18",
+      "steps": 167,
+      "initial_plate_xyz": [
+        0.04969600768798311,
+        -0.01883254070095063,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005035668327679659,
+          "orientation_error_rad": 0.03162563763516076,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.002022874749980994,
+          "orientation_error_rad": 0.00619434914188222,
+          "feasible": true,
+          "joint_margin_rad": 0.1612318266924071,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.16865701469432137,
+          "orientation_error_rad": 0.5587654749994512,
+          "feasible": false,
+          "joint_margin_rad": 0.06120012148858128,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.576612227539074,
+          "orientation_error_rad": 2.1702860800510493,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_19",
+      "steps": 163,
+      "initial_plate_xyz": [
+        0.04540812898652391,
+        -0.008543888375955374,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0019508918035386845,
+          "orientation_error_rad": 0.01636857289707735,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0019630933032580697,
+          "orientation_error_rad": 0.002443338250927275,
+          "feasible": true,
+          "joint_margin_rad": 0.1572772943298243,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.09079290621259851,
+          "orientation_error_rad": 0.5582460355249896,
+          "feasible": false,
+          "joint_margin_rad": 0.14745130503913284,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0685968658769962,
+          "orientation_error_rad": 0.13421537489019383,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_20",
+      "steps": 175,
+      "initial_plate_xyz": [
+        0.046749590935248324,
+        -0.025261258615196663,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00032533024326032093,
+          "orientation_error_rad": 0.030078332089195525,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0003937531590670951,
+          "orientation_error_rad": 0.0005511827806953965,
+          "feasible": true,
+          "joint_margin_rad": 0.2752186741372697,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08080253527110608,
+          "orientation_error_rad": 0.144288558402649,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08601213642603536,
+          "orientation_error_rad": 0.1676306241651776,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_21",
+      "steps": 149,
+      "initial_plate_xyz": [
+        0.06461138364513028,
+        -0.023244969347707055,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.001104674643592673,
+          "orientation_error_rad": 0.003928952672125858,
+          "feasible": true,
+          "joint_margin_rad": 0.013066929203700376,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0019096803808594548,
+          "orientation_error_rad": 0.001712927116351464,
+          "feasible": true,
+          "joint_margin_rad": 0.28809066087912344,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.02721307673542039,
+          "orientation_error_rad": 0.17291515662934748,
+          "feasible": false,
+          "joint_margin_rad": 0.08364992694249918,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.035922093850199906,
+          "orientation_error_rad": 0.06705988802074363,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_22",
+      "steps": 147,
+      "initial_plate_xyz": [
+        0.05253659216484348,
+        -0.015301568410802944,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.001413035443671122,
+          "orientation_error_rad": 0.004230043377352619,
+          "feasible": true,
+          "joint_margin_rad": 0.01199911850641641,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0004601979526068726,
+          "orientation_error_rad": 0.0006521455440159582,
+          "feasible": true,
+          "joint_margin_rad": 0.32573927370244316,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.16127416064246913,
+          "orientation_error_rad": 0.24729790407948105,
+          "feasible": false,
+          "joint_margin_rad": 0.005054293991313408,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.19592288553652518,
+          "orientation_error_rad": 0.413130174705271,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_23",
+      "steps": 129,
+      "initial_plate_xyz": [
+        0.035619955422819656,
+        -0.012329780712882408,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005059320723676496,
+          "orientation_error_rad": 0.02650918709639315,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0002193062969074963,
+          "orientation_error_rad": 0.0003062982732735871,
+          "feasible": true,
+          "joint_margin_rad": 0.27817300505419856,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04798348371372439,
+          "orientation_error_rad": 0.3351028670220286,
+          "feasible": false,
+          "joint_margin_rad": 0.012144812535955396,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.09364306470142525,
+          "orientation_error_rad": 0.1857110809976335,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_24",
+      "steps": 169,
+      "initial_plate_xyz": [
+        0.049551798293992005,
+        -0.025409290382770417,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0009030974626177986,
+          "orientation_error_rad": 0.032690542633747086,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00018886131158339444,
+          "orientation_error_rad": 0.00027394455105243397,
+          "feasible": true,
+          "joint_margin_rad": 0.23392534618558108,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06048275712387421,
+          "orientation_error_rad": 0.22746245825512934,
+          "feasible": false,
+          "joint_margin_rad": 0.08792427798479024,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1507214882494566,
+          "orientation_error_rad": 0.27790198349402073,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_25",
+      "steps": 153,
+      "initial_plate_xyz": [
+        0.03889143257313755,
+        -0.02608918237925523,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0016139444142537142,
+          "orientation_error_rad": 0.03176464414999356,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00040090085298038943,
+          "orientation_error_rad": 0.00043460831248933677,
+          "feasible": true,
+          "joint_margin_rad": 0.31171802819044914,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06861606491904615,
+          "orientation_error_rad": 0.402489742300345,
+          "feasible": false,
+          "joint_margin_rad": 0.07874675522287866,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.159612358480576,
+          "orientation_error_rad": 0.32723312812506405,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_26",
+      "steps": 145,
+      "initial_plate_xyz": [
+        0.06243392476744152,
+        -0.034995935233892966,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005096409188132858,
+          "orientation_error_rad": 0.02916861729991388,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0655082200204044,
+          "orientation_error_rad": 0.2111454669015797,
+          "feasible": false,
+          "joint_margin_rad": 0.035447768847404026,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10205948863156568,
+          "orientation_error_rad": 0.1816771973036219,
+          "feasible": false,
+          "joint_margin_rad": 0.035447768847404026,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.02134787519982007,
+          "orientation_error_rad": 0.03979000206229164,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_27",
+      "steps": 220,
+      "initial_plate_xyz": [
+        0.05109257862251863,
+        -0.026450392722261774,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.001079976396711139,
+          "orientation_error_rad": 0.01973040403572101,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.015941166421354017,
+          "orientation_error_rad": 0.036329416303188755,
+          "feasible": false,
+          "joint_margin_rad": 0.19422424016759776,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08782134076389647,
+          "orientation_error_rad": 0.1889489212158617,
+          "feasible": false,
+          "joint_margin_rad": 0.17812554402592212,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.01778023197999128,
+          "orientation_error_rad": 0.03493144992612678,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_28",
+      "steps": 147,
+      "initial_plate_xyz": [
+        0.04895796262971455,
+        -0.013245169505353845,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0004949665810006628,
+          "orientation_error_rad": 0.02842716905253182,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.03576824833369302,
+          "orientation_error_rad": 0.09986865944919368,
+          "feasible": false,
+          "joint_margin_rad": 0.23130334877344055,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08957973549744243,
+          "orientation_error_rad": 0.4833148905039807,
+          "feasible": false,
+          "joint_margin_rad": 0.12367030810742408,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.5904299844909398,
+          "orientation_error_rad": 2.6110907752823986,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_29",
+      "steps": 136,
+      "initial_plate_xyz": [
+        0.036281102696467504,
+        -0.027716989091354248,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0003565569117567345,
+          "orientation_error_rad": 0.034616660716375286,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.009688217943954188,
+          "orientation_error_rad": 0.06300815007073968,
+          "feasible": true,
+          "joint_margin_rad": 0.24467606164903805,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08733675980532607,
+          "orientation_error_rad": 0.33396123196880056,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.038737522233273376,
+          "orientation_error_rad": 0.07416707770058507,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_30",
+      "steps": 142,
+      "initial_plate_xyz": [
+        0.05447925902700831,
+        -0.027766642700837042,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0003593919602428207,
+          "orientation_error_rad": 0.0269893115272092,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0004620566387572996,
+          "orientation_error_rad": 0.0006336737955497719,
+          "feasible": true,
+          "joint_margin_rad": 0.3306925450846541,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07033515416404101,
+          "orientation_error_rad": 0.207547145143026,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.14562268213340815,
+          "orientation_error_rad": 0.284017052062425,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_31",
+      "steps": 135,
+      "initial_plate_xyz": [
+        0.05659739917552271,
+        -0.02079263478455643,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00031833580094493786,
+          "orientation_error_rad": 0.03153885203401668,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06774388192013617,
+          "orientation_error_rad": 0.30359528853657286,
+          "feasible": false,
+          "joint_margin_rad": 0.1966285373612574,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10723456011183265,
+          "orientation_error_rad": 0.5624600952569295,
+          "feasible": false,
+          "joint_margin_rad": 0.10901501632549043,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.6733159812783679,
+          "orientation_error_rad": 2.3137685588901875,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_32",
+      "steps": 115,
+      "initial_plate_xyz": [
+        0.04978607749039175,
+        -0.018800030140622804,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0013826838778345978,
+          "orientation_error_rad": 0.0038272897169653003,
+          "feasible": true,
+          "joint_margin_rad": 0.021152188702808404,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00028578610302325963,
+          "orientation_error_rad": 0.00027512591887359964,
+          "feasible": true,
+          "joint_margin_rad": 0.24725511494011457,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0019984530623000166,
+          "orientation_error_rad": 0.0054939099894442175,
+          "feasible": true,
+          "joint_margin_rad": 0.11598832012502638,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.24304502574045944,
+          "orientation_error_rad": 0.5170577116892106,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_33",
+      "steps": 126,
+      "initial_plate_xyz": [
+        0.050210537647593846,
+        -0.019640722031675967,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0008069156071297835,
+          "orientation_error_rad": 0.02457453065398739,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.011559114774365793,
+          "orientation_error_rad": 0.03849568896498738,
+          "feasible": true,
+          "joint_margin_rad": 0.05525887658507406,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.03989400462450745,
+          "orientation_error_rad": 0.24753670125142255,
+          "feasible": false,
+          "joint_margin_rad": 0.05525887658507406,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1638633955885649,
+          "orientation_error_rad": 0.3430686582125307,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_34",
+      "steps": 154,
+      "initial_plate_xyz": [
+        0.054804142710323744,
+        -0.019344623899637748,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0006412399950560026,
+          "orientation_error_rad": 0.01570133104087842,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0017109865914178815,
+          "orientation_error_rad": 0.0011912811928014703,
+          "feasible": true,
+          "joint_margin_rad": 0.2859367910450933,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.051176315876991674,
+          "orientation_error_rad": 0.08973508614813124,
+          "feasible": false,
+          "joint_margin_rad": 0.017542927421090038,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.20023982858574998,
+          "orientation_error_rad": 0.41967947172663966,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_35",
+      "steps": 169,
+      "initial_plate_xyz": [
+        0.05021058665060329,
+        -0.007244373248560602,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0018758735892254576,
+          "orientation_error_rad": 0.005306141281683223,
+          "feasible": true,
+          "joint_margin_rad": 0.05126821779352563,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0013723173856673742,
+          "orientation_error_rad": 0.0007846019116727271,
+          "feasible": true,
+          "joint_margin_rad": 0.2678380639938137,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0606926715423009,
+          "orientation_error_rad": 0.20001089006010772,
+          "feasible": false,
+          "joint_margin_rad": 0.0020000000000000018,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.1552504883244434,
+          "orientation_error_rad": 0.3141078544974078,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_36",
+      "steps": 145,
+      "initial_plate_xyz": [
+        0.05739815170145995,
+        -0.0324995421418679,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.000365052086471745,
+          "orientation_error_rad": 0.0287097377684936,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.08032597504029004,
+          "orientation_error_rad": 0.538021373539238,
+          "feasible": false,
+          "joint_margin_rad": 0.2434674546242176,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.05347973699284058,
+          "orientation_error_rad": 0.2224228495614236,
+          "feasible": false,
+          "joint_margin_rad": 0.031170547384407832,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.31370666918254164,
+          "orientation_error_rad": 2.2775387841002983,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_37",
+      "steps": 203,
+      "initial_plate_xyz": [
+        0.050506334318084344,
+        -0.03478731950406779,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.00021746535621757987,
+          "orientation_error_rad": 0.029933403200358352,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.03712295282399091,
+          "orientation_error_rad": 0.09102488391307355,
+          "feasible": false,
+          "joint_margin_rad": 0.06447168276107412,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0788249904025403,
+          "orientation_error_rad": 0.0941826008458774,
+          "feasible": false,
+          "joint_margin_rad": 0.06447168276107412,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.20118908407001743,
+          "orientation_error_rad": 0.3908190361408538,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_38",
+      "steps": 134,
+      "initial_plate_xyz": [
+        0.03545498322532273,
+        -0.033041517454237355,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0004097615043366177,
+          "orientation_error_rad": 0.027241592551728925,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00023189723565860952,
+          "orientation_error_rad": 0.0003456568777539708,
+          "feasible": true,
+          "joint_margin_rad": 0.31702919913910743,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.032880468632326874,
+          "orientation_error_rad": 0.11009842587876235,
+          "feasible": false,
+          "joint_margin_rad": 0.15492211859117327,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.00021298086330393765,
+          "orientation_error_rad": 0.0001082660514563925,
+          "feasible": true,
+          "joint_margin_rad": 0.11329925304304633,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_39",
+      "steps": 146,
+      "initial_plate_xyz": [
+        0.045345195752684,
+        -0.01328887769703601,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 5.360732387169082e-05,
+          "orientation_error_rad": 0.0017344122828913118,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04244816506025696,
+          "orientation_error_rad": 0.37789421461281925,
+          "feasible": false,
+          "joint_margin_rad": 0.1993927026821965,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.11374144453796252,
+          "orientation_error_rad": 0.5984438076012994,
+          "feasible": false,
+          "joint_margin_rad": 0.09497150868439086,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.04364855528013315,
+          "orientation_error_rad": 0.08392586370873066,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_40",
+      "steps": 128,
+      "initial_plate_xyz": [
+        0.05658638233732274,
+        -0.018666375618357458,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0011145944363771313,
+          "orientation_error_rad": 0.0031163244501038784,
+          "feasible": true,
+          "joint_margin_rad": 0.026229840703092575,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.004540494002061133,
+          "orientation_error_rad": 0.014960738002820644,
+          "feasible": true,
+          "joint_margin_rad": 0.16116395578443315,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07706744742732002,
+          "orientation_error_rad": 0.23281809579582827,
+          "feasible": false,
+          "joint_margin_rad": 0.04681852376896356,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10303614966926608,
+          "orientation_error_rad": 0.34274053978596447,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_41",
+      "steps": 188,
+      "initial_plate_xyz": [
+        0.05685730227500485,
+        -0.02386330627862727,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0007802102137060736,
+          "orientation_error_rad": 0.023954831152329915,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06904190298770049,
+          "orientation_error_rad": 0.17160660054879234,
+          "feasible": false,
+          "joint_margin_rad": 0.020317244820031055,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.041344353109082146,
+          "orientation_error_rad": 0.2769572570591354,
+          "feasible": false,
+          "joint_margin_rad": 0.09171117935694684,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.30163732226994205,
+          "orientation_error_rad": 0.7726227341195411,
+          "feasible": false,
+          "joint_margin_rad": 0.33397382022696886,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_42",
+      "steps": 130,
+      "initial_plate_xyz": [
+        0.052308329819342,
+        -0.009807026800407046,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0017933858255327023,
+          "orientation_error_rad": 0.004112427324575823,
+          "feasible": true,
+          "joint_margin_rad": 0.0718179632392222,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.039118296553775175,
+          "orientation_error_rad": 0.11621059710580421,
+          "feasible": false,
+          "joint_margin_rad": 0.2226654678957274,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07476801291697854,
+          "orientation_error_rad": 0.34899710710237697,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.16133206660280297,
+          "orientation_error_rad": 0.3150045120585066,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_43",
+      "steps": 182,
+      "initial_plate_xyz": [
+        0.05442315325032517,
+        -0.02641559783294404,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0003203435111339326,
+          "orientation_error_rad": 0.030282311142122386,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.01585523947772843,
+          "orientation_error_rad": 0.05761274807592605,
+          "feasible": false,
+          "joint_margin_rad": 0.04611719112559254,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.14400139143437674,
+          "orientation_error_rad": 0.3663944515050532,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.11462909195174395,
+          "orientation_error_rad": 0.9330540164150223,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_44",
+      "steps": 143,
+      "initial_plate_xyz": [
+        0.056917108025971684,
+        -0.013972348127376431,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0014958674944259495,
+          "orientation_error_rad": 0.0017834259732420342,
+          "feasible": true,
+          "joint_margin_rad": 0.016920216962274727,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07963550990263628,
+          "orientation_error_rad": 0.43142728960969473,
+          "feasible": false,
+          "joint_margin_rad": 0.20114776898328024,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07831080124671289,
+          "orientation_error_rad": 0.36506570538409183,
+          "feasible": false,
+          "joint_margin_rad": 0.04437510732940875,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.05205754380345502,
+          "orientation_error_rad": 0.1017757206497267,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_45",
+      "steps": 132,
+      "initial_plate_xyz": [
+        0.05476221660691738,
+        -0.006488132976587427,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0001381941771612293,
+          "orientation_error_rad": 0.030852131455278427,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.026109650896246405,
+          "orientation_error_rad": 0.16115268119871223,
+          "feasible": false,
+          "joint_margin_rad": 0.020343901854428137,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.06831149610227054,
+          "orientation_error_rad": 0.2716445827177335,
+          "feasible": false,
+          "joint_margin_rad": 0.020343901854428137,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.07179690361696932,
+          "orientation_error_rad": 0.13999171910520006,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_46",
+      "steps": 138,
+      "initial_plate_xyz": [
+        0.05707312296827241,
+        -0.013756616725346867,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.000262052441307158,
+          "orientation_error_rad": 0.028001484881174866,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0016436519089025332,
+          "orientation_error_rad": 0.0016688121217883296,
+          "feasible": true,
+          "joint_margin_rad": 0.3144668391297782,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.03166340149241438,
+          "orientation_error_rad": 0.13276159726219858,
+          "feasible": false,
+          "joint_margin_rad": 0.024348868606965335,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.21980124702441428,
+          "orientation_error_rad": 0.45982583849282876,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_47",
+      "steps": 141,
+      "initial_plate_xyz": [
+        0.06324879859039102,
+        -0.017480457096229574,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0005672248908267368,
+          "orientation_error_rad": 0.02900428191041879,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.028464381681929718,
+          "orientation_error_rad": 0.10432823031716439,
+          "feasible": false,
+          "joint_margin_rad": 0.07449087726424125,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.09246008430958233,
+          "orientation_error_rad": 0.29254903090137196,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.10194500646455304,
+          "orientation_error_rad": 0.19347819842120526,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_48",
+      "steps": 183,
+      "initial_plate_xyz": [
+        0.0573604196250587,
+        -0.01568235015587865,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 0.0009613661698209123,
+          "orientation_error_rad": 0.0191234377001931,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.01894329120266472,
+          "orientation_error_rad": 0.07179223881563726,
+          "feasible": false,
+          "joint_margin_rad": 0.04814586107787944,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.074414546751309,
+          "orientation_error_rad": 0.1428613826252264,
+          "feasible": false,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.005380572789491435,
+          "orientation_error_rad": 0.009107539987413872,
+          "feasible": true,
+          "joint_margin_rad": 0.002,
+          "arm_collision_count": 0
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_49",
+      "steps": 118,
+      "initial_plate_xyz": [
+        0.061847585896198806,
+        -0.026541280983497385,
+        0.9023145976636144
+      ],
+      "feasible": false,
+      "probes": [
+        {
+          "position_error_m": 2.0109559650131474e-05,
+          "orientation_error_rad": 7.407868119164147e-05,
+          "feasible": true,
+          "joint_margin_rad": 0.03447035416889908,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.0758439969542673,
+          "orientation_error_rad": 0.42295556706767806,
+          "feasible": false,
+          "joint_margin_rad": 0.2205200569402791,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.09846515870155097,
+          "orientation_error_rad": 0.41341613361308605,
+          "feasible": false,
+          "joint_margin_rad": 0.0020516407210771637,
+          "arm_collision_count": 0
+        },
+        {
+          "position_error_m": 0.11319755247548366,
+          "orientation_error_rad": 0.21672134699902434,
+          "feasible": false,
+          "joint_margin_rad": 0.0019999999999997797,
+          "arm_collision_count": 0
+        }
+      ]
+    }
+  ],
+  "successful_source_episodes": 50,
+  "eligible_count": 1,
+  "wall_seconds": 11.367178949993104,
+  "source_hdf5_sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+  "target_physics_steps": 0,
+  "inherited_limits": "15mm TCP position,0.15rad orientation, native joint limits, static robot-environment penetration test",
+  "note": "All50 A demonstrations are the common source pool; fresh evaluation states are not HDF5 scene replays"
+}
